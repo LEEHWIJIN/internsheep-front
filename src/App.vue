@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-
     <v-resume></v-resume>
   </div>
 </template>
