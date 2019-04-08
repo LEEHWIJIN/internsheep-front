@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+
     <v-resume></v-resume>
   </div>
 </template>
@@ -22,9 +23,7 @@
         
     },
     methods: {
-      resumepage(){
-        this.$router.push('/resume')
-      }
+      
     }
   }
 </script>
