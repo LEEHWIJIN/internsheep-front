@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    이력서 예시 입니다. 이런식으로 만들어 주시면 됩니다.
+    이력서 예시 입니다. 이런식으로 만들어 주시면 됩니다. 테스트 커밋
     2. build job 과 deploy job 나누기.
+    
     <v-resume></v-resume>
   </div>
 </template>
