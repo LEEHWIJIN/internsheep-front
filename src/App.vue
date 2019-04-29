@@ -4,7 +4,7 @@
       <div class="naviagtion fixed-top transition">
         <div class="container">
           <nav class="navbar navbar-expand-lg navbar-dark p-0">
-            <a class="navbar-brand p-0" href="index.html"><img src="images/logo/logo.png" alt="Agico"></a>
+            <!-- <a class="navbar-brand p-0" href="index.html"><img src="images/logo/logo.png" alt="Agico"></a> -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation"
               aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -14,7 +14,8 @@
               <ul class="navbar-nav mx-auto">
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle text-white active text-capitalize" href="#"  data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">Home</a>
+                  aria-haspopup="true" aria-expan
+                  ded="false"><router-link :to="{name: 'Home'}">Home</router-link></a>
                   <div class="dropdown-menu">
                     <a class="dropdown-item text-color" href="index.html">Homepage 1</a>
                     <a class="dropdown-item text-color" href="homepage2.html">Homepage 2</a>
@@ -46,7 +47,7 @@
                   <a class="nav-link text-white text-capitalize dropdown-toggle" href="#" data-toggle="dropdown"
                   aria-haspopup="true" aria-expanded="false">이휘진</a>
                   <div class="dropdown-menu">
-                    <a class="dropdown-item text-color" href="#" @click="goResume">이력서 관리</a>
+                    <a class="dropdown-item text-color" href="#"><router-link :to="{name: 'Resume'}">이력서 관리</router-link></a>
                     <a class="dropdown-item text-color" href="pricing.html">지원 현황</a>
                     <a class="dropdown-item text-color" href="career.html">보고서 및 후기관리</a>
                     <a class="dropdown-item text-color" href="team.html">찜한 기업 목록</a>
@@ -61,9 +62,10 @@
         </div>
       </div>
       <!-- nav part end -->
+      <router-view/>
 
       <!-- banner -->
-      <div class="hero-area bg-cover">
+      <!-- <div class="hero-area bg-cover">
         <div class="container">
           <div class="row align-items-center justify-content-between">
             <div class="col-lg-6 pl-lg-0 text-center text-lg-left">
@@ -77,7 +79,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <!-- /banner --> 
 
     <!-- 이력서 예시 입니다. 이런식으로 만들어 주시면 됩니다. 테스트 커밋
@@ -115,6 +117,6 @@
 
 <style scoped>
 #app {
- background-image: url('../public/images/background/banner.png');
+ /* background-image: url('../public/images/background/banner.png'); */
 }
 </style>
