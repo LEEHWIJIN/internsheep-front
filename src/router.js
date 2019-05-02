@@ -4,6 +4,7 @@ import Router from 'vue-router'
 import Resume from './components/Resume/Index.vue'
 import Login from './components/Login/Index.vue'
 import Home from './components/Home/Index.vue'
+import Apply from './components/ApplyList/Index.vue'
 
 Vue.use(Router)
 
@@ -15,11 +16,6 @@ export default new Router ({
             path: '/resume',
             name: 'Resume',
             component: Resume,
-            //component: ()=> import('./components/Resume/Index'),
-            // meta: {
-            //   permission: -1,
-            //   restrict: false,
-            // }
         },
         {
             path: '/home',
@@ -35,6 +31,16 @@ export default new Router ({
             path : '/login',
             name : 'login',
             component : Login,
-        }
+        },
+        // {
+        //     path: '/home',
+        //     name: 'Home',
+        //     component: ()=> import('./components/ApplyList/Index.vue'),
+        // },
+        {
+            path: '/apply',
+            name: 'Apply',
+            component : Apply,
+        },
     ]
 })

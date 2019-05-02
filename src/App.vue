@@ -17,7 +17,7 @@
                   aria-haspopup="true" aria-expan
                   ded="false"><router-link :to="{name: 'Home'}">Home</router-link></a>
                   <div class="dropdown-menu">
-                    <a class="dropdown-item text-color" href="index.html">Homepage 1</a>
+                    <a class="dropdown-item text-color" href="#"><router-link :to="{name: 'Apply'}">Homepage 1</router-link></a>
                     <a class="dropdown-item text-color" href="homepage2.html">Homepage 2</a>
                     <a class="dropdown-item text-color" href="homepage3.html">Homepage 3</a>
                   </div>
