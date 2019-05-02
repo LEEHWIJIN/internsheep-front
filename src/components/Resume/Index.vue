@@ -49,9 +49,7 @@
       },
       methods: {
         submitResume(){
-          this.$http.post('http://localhost:8888/std/resume',{sNum:this.sNum,sName: this.sName}).then((response) => {
-              console.log(this.sName)
-              console.log(this.sNum)
+          this.$http.post('http://localhost:8888/std/mypage/resume',{sNum:this.sNum,sName: this.sName}).then((response) => {
               this.sName = "";
               this.sNum="";
             })
