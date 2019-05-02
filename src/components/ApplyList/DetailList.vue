@@ -16,7 +16,7 @@
       name: 'applyList',
       data() {
         return {
-            sName:"이모씨"
+            sName:"박모양"
         }
       },
       components: {
@@ -33,9 +33,15 @@
     },
       methods: {
         applyStd(cName){
-            //지원하기 전에 이 학생이 지원했는지에 대한 여부를 판단하는 것(get)도 필요함.
-            this.$http.post('http://localhost:8888/std/mypage/applyCo',{cName : cName, sName : this.sName}).then((response) => {
-              //팝업을 띄우던 그런식으로 해야 할 것 같음.
+            this.$http.get('http://localhost:8888/std/mypage/applyStatus',{params:{sName : this.sName}}).then((response)=>{
+            if(response.data != false){
+                alert("이미 지원을 한 상태 입니다.")
+            }
+            else{
+                this.$http.post('http://localhost:8888/std/mypage/applyCo',{cName : cName, sName : this.sName}).then((response) => {
+                    alert("지원을 성공 하셨습니다.!")
+                })
+            }
             })
         },
       }
