@@ -5,6 +5,7 @@ import Resume from './components/Resume/Index.vue'
 import Login from './components/Login/Index.vue'
 import Home from './components/Home/Index.vue'
 import Apply from './components/ApplyList/Index.vue'
+import Reportreview from './components/ReportReview/Index.vue'
 
 Vue.use(Router)
 
@@ -32,15 +33,16 @@ export default new Router ({
             name : 'login',
             component : Login,
         },
-        // {
-        //     path: '/home',
-        //     name: 'Home',
-        //     component: ()=> import('./components/ApplyList/Index.vue'),
-        // },
         {
             path: '/apply',
             name: 'Apply',
             component : Apply,
         },
+        {
+            path: '/reportreview',
+            name: 'Reportreview',
+            component : Reportreview,
+        },
+        
     ]
 })

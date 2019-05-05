@@ -49,7 +49,7 @@
                   <div class="dropdown-menu">
                     <a class="dropdown-item text-color" href="#"><router-link :to="{name: 'Resume'}">이력서 관리</router-link></a>
                     <a class="dropdown-item text-color" href="pricing.html">지원 현황</a>
-                    <a class="dropdown-item text-color" href="career.html">보고서 및 후기관리</a>
+                    <a class="dropdown-item text-color" href="#"><router-link :to="{name: 'Reportreview'}">보고서 및 후기관리</router-link></a>
                     <a class="dropdown-item text-color" href="team.html">찜한 기업 목록</a>
                     <a class="dropdown-item text-color" href="pricing.html">회원 정보 수정</a>
                     <a class="dropdown-item text-color" href="career.html">보고서 및 후기관리</a>
