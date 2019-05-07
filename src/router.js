@@ -6,6 +6,7 @@ import Login from './components/Login/Index.vue'
 import Home from './components/Home/Index.vue'
 import Apply from './components/ApplyList/Index.vue'
 import Reportreview from './components/ReportReview/Index.vue'
+import Applystatus from './components/ApplyStatus/Index.vue'
 
 Vue.use(Router)
 
@@ -42,6 +43,11 @@ export default new Router ({
             path: '/reportreview',
             name: 'Reportreview',
             component : Reportreview,
+        },
+        {
+            path: '/apply-status',
+            name: 'Applystatus',
+            component : Applystatus,
         },
         
     ]
