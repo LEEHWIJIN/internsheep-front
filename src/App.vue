@@ -43,7 +43,7 @@
                 <li class="nav-item">
                   <a class="nav-link text-white text-capitalize" href="contact.html">contact</a>
                 </li>
-                <li class="nav-item dropdown">
+                <!-- <li class="nav-item dropdown">
                   <a class="nav-link text-white text-capitalize dropdown-toggle" href="#" data-toggle="dropdown"
                   aria-haspopup="true" aria-expanded="false">이휘진</a>
                   <div class="dropdown-menu">
@@ -54,9 +54,9 @@
                     <a class="dropdown-item text-color" href="pricing.html">회원 정보 수정</a>
                     <a class="dropdown-item text-color" href="career.html">보고서 및 후기관리</a>
                   </div>
-                </li>
+                </li> -->
               </ul>
-              <!-- <a href="#" class="btn btn-outline-primary text-white ml-3">sign up</a> -->
+              <a href="#" class="btn btn-outline-primary text-white ml-3"><router-link :to="{name: 'login'}">log in</router-link></a>
             </div>
           </nav>
         </div>
@@ -64,29 +64,7 @@
       <!-- nav part end -->
       <router-view/>
 
-      <!-- banner -->
-      <!-- <div class="hero-area bg-cover">
-        <div class="container">
-          <div class="row align-items-center justify-content-between">
-            <div class="col-lg-6 pl-lg-0 text-center text-lg-left">
-              <h1 class="text-white position-relative">Build Your Business Together<span class="watermark">Build</span></h1>
-              <p class="text-white pt-2 pb-3">Cupidatat non proident sunt culpa qui officia deserunt mollit <br> anim idest
-                laborum sed ut perspiciatis.</p>
-              <a href="#" class="btn btn-primary">Get Agico</a>
-            </div>
-            <div class="col-lg-5 pl-lg-0 pt-5 pt-lg-0 text-lg-right text-center">
-              <img src="images/banner/banner-1.png" class="img-fluid" alt="">
-            </div>
-          </div>
-        </div>
-      </div> -->
-      <!-- /banner --> 
-
-    <!-- 이력서 예시 입니다. 이런식으로 만들어 주시면 됩니다. 테스트 커밋
-    2. build job 과 deploy job 나누기.
-    -->
-    <!-- <v-resume></v-resume> -->
-
+     
   </div>
 </template>
 
