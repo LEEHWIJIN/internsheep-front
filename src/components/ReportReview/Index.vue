@@ -13,9 +13,9 @@
     <textarea v-model="review" placeholder="후기를 작성해주세요"></textarea>
     <input class="hello" type="submit" value="확인" @click="submitFileAndReview">
     <br/>
-    <a v-bind:href="url" v-bind:download="fileName" type = "application/unknown">다운로드</a>
-    <!-- <div id="container">
-      <div>
+    <a v-bind:href="url" download>{{fileName}}</a>
+
+    <!-- <div id="container">      <div>
         <div class="upload" v-for="(upload, index) in uploads" :key="index">
             <div class="ext" :style="{'background-color': upload.color}">
               <p>{{upload.ext.toUpperCase()}}</p>
@@ -49,10 +49,11 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
       name: 'reportreview',
       data() {
         return {
-          sName : "박수연",
+          sName : "최혜지",
           file : null,
           uploadFile : null,
           review : 0,
+            sNum : "201620420",
           cName : "고비포선라이즈",
           url : "",
           fileName : ""
@@ -65,6 +66,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
       },
       created(){
         this.downloadButton()
+          this.loadFileName()
       },
       methods: {
           // getRandomColor() { //나중에 사용할 ux/ui
@@ -110,10 +112,12 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
           //   if (progress + 10 === 100) clearInterval(this.uploads[index].progressTimer);
           // }
           downloadButton(){
-              this.$http.get('http://localhost:8888/std/mypage/downloadReport',{params:{sName : this.sName}}).then((response)=>{
-                  console.log(decodeURIComponent(response.data.filePath))
-                  this.url=response.data.filePath;
-                  this.fileName = response.data.fileName;
+              this.url = 'http://49.236.137.151:8888/std/mypage/downloadReport?sName='+this.sName
+              this.loadFileName()
+          },
+          loadFileName(){
+              this.$http.get('http://49.236.137.151:8888/std/mypage/loadFileName',{params:{sName : this.sName}}).then((response)=>{
+                      this.fileName = response.data
               })
           },
           upload(event){
@@ -122,11 +126,14 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
           submitFileAndReview(){
             var data = new FormData();
             data.append('name', this.uploadFile.name)
+              data.append('sNum', this.sNum)
             data.append('cName',this.cName)
             data.append('sName',this.sName)
             data.append('starScore',this.review)
             data.append('file', this.uploadFile) //formdata 는 console.log를 찍어도 확인 할 수 없다.
-            // for (var key of data.keys()) {
+
+              console.log(data)
+              // for (var key of data.keys()) {
             //   console.log(key);
             // }
             // for (var value of data.values()) {
@@ -138,10 +145,20 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
                 'Content-Type' : 'multipart/form-data'
               }
             }
-            this.$http.post('http://localhost:8888/std/mypage/postReportAndReview', data, config).then(
-              response => {
-              }
-            )
+            if(this.fileName==''){
+                this.$http.post('http://49.236.137.151:8888/std/mypage/postReportAndReview', data, config).then(
+                    (response) => {
+                        this.$router.push({name: "Reportreview"})
+                    }
+                )
+            }
+            else{
+                this.$http.post('http://49.236.137.151:8888/std/mypage/modifyReportAndReview', data, config).then(
+                    (response) => {
+                        this.$router.push({name: "Reportreview"})
+                    }
+                )
+            }
           },
         }
     }
