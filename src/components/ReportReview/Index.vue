@@ -6,11 +6,14 @@
       placeholder="Choose a file..."
       drop-placeholder="Drop file here..."
       @change="upload($event)"
+      enctype="multipart/form-data"
     ></b-form-file>
     <div class="mt-3">Selected file: {{ file ? file.name : '' }}</div>
     <label>후기를 작성해주세요</label><br>
     <textarea v-model="review" placeholder="후기를 작성해주세요"></textarea>
     <input class="hello" type="submit" value="확인" @click="submitFileAndReview">
+    <br/>
+    <a v-bind:href="url" v-bind:download="fileName" type = "application/unknown">다운로드</a>
     <!-- <div id="container">
       <div>
         <div class="upload" v-for="(upload, index) in uploads" :key="index">
@@ -46,11 +49,13 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
       name: 'reportreview',
       data() {
         return {
-          sName : "이휘진",
+          sName : "박수연",
           file : null,
           uploadFile : null,
           review : 0,
           cName : "고비포선라이즈",
+          url : "",
+          fileName : ""
           //uploads: [],
 		      //colors: ["#24bddf", "#5fcc9c", "#6a65d8"],
         }
@@ -59,7 +64,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
           
       },
       created(){
-      
+        this.downloadButton()
       },
       methods: {
           // getRandomColor() { //나중에 사용할 ux/ui
@@ -104,6 +109,13 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
           //   this.$set(this.uploads[index], "progress", `${progress + 10}%`);
           //   if (progress + 10 === 100) clearInterval(this.uploads[index].progressTimer);
           // }
+          downloadButton(){
+              this.$http.get('http://localhost:8888/std/mypage/downloadReport',{params:{sName : this.sName}}).then((response)=>{
+                  console.log(decodeURIComponent(response.data.filePath))
+                  this.url=response.data.filePath;
+                  this.fileName = response.data.fileName;
+              })
+          },
           upload(event){
             this.uploadFile = event.target.files[0];
           },
