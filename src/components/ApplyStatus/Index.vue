@@ -2,6 +2,7 @@
 
 <section class="section section-lg-bottom bg-light">
   <div class="container" id="applystatus">
+    <v-base></v-base>
     <div class="row">
       <!-- 카테고리란 -->
       <div class="col-lg-3">
@@ -52,25 +53,31 @@
 </template>
 
 <script>
+ import VBase from '../Base/Index.vue'
   export default{
     name: 'Applystatus',
     data() {
       return {
-        sName : "이모씨",
+        user:{},
         cName : "",
         YN : "",
       }
     },
     components: {
-
+        VBase,
     },
     created(){
-        this.getApplyStatus();
+        // this.getApplyStatus();
+        this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+              this.user={};
+              this.user = res.data.user;
+              this.getApplyStatus(this.user.name);
+          })
     },
     methods: {
-      getApplyStatus() {
-        this.$http.get('http://localhost:8888/std/mypage/applyStatus',{params:{sName : this.sName}}).then((response)=>{
-          this.cName = response.data[0].cName;
+      getApplyStatus(name) {
+        this.$http.get('http://localhost:8888/std/mypage/applyStatus',{params:{sName : name}}).then((response)=>{
+          this.cName = response.data[0].cName;  
           if(response.data[0].YN) this.YN = "합격입니다.";
           else this.YN = "심사중입니다."
         })

@@ -1,6 +1,6 @@
 <template>
-
   <section class="section section-lg-bottom bg-light">
+    <v-base></v-base>
     <div class="container" id="reportreview">
       <div class="row">
         <!-- 카테고리란 -->
@@ -99,6 +99,7 @@
 </template>
 
 <script>
+import VBase from '../Base/Index.vue'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
   export default{
       name: 'reportreview',
@@ -114,7 +115,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
         }
       },
       components: {
-
+          VBase,
       },
       created(){
 

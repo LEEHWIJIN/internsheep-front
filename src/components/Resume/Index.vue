@@ -1,6 +1,7 @@
 <template>
 
 <section class="section section-lg-bottom bg-light">
+  <v-base></v-base>
   <div class="container" id="resume">
     <div class="row">
       <!-- 카테고리란 -->
@@ -144,6 +145,7 @@
 
 <script>
 //import Vue from 'vue';
+ import VBase from '../Base/Index.vue'
   export default{
       name: 'Resume',
       data() {
@@ -152,13 +154,20 @@
           sName:[],
           sNum:[],
           email:[],
+          user:{},
         }
       },
       components: {
-
+        VBase,
+      },
+      beforeMount(){
+        this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+            //console.log(res.data.user);
+            this.user = res.data.user;
+        })
       },
       created(){
-
+        
       },
       methods: {
         submitResume(){
