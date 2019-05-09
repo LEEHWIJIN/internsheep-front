@@ -5,15 +5,10 @@
 </template>
 
 <script>
-  //import Vue from 'vue';
-  //import VResume from './components/Resume/Index.vue';
-  //import Vtest from '../test/test.vue'
   export default{
     name: 'app',
     data() {
       return {
-        user:{},
-        auth : 0,
       }
     },
     components: {
@@ -30,5 +25,9 @@
 <style scoped>
 #app {
  /* background-image: url('../public/images/background/banner.png'); */
+}
+.naviagtion {
+  background: linear-gradient(80deg, #0030cc 0%, #00a4db 100%);
+  padding: 15px 0;
 }
 </style>
