@@ -9,39 +9,14 @@
               aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-      
+
             <div class="collapse navbar-collapse text-center" id="navigation">
               <ul class="navbar-nav mx-auto">
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle text-white active text-capitalize" href="#"  data-toggle="dropdown"
-                  aria-haspopup="true" aria-expan
-                  ded="false"><router-link :to="{name: 'Home'}">Home</router-link></a>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item text-color" href="#"><router-link :to="{name: 'Apply'}">Homepage 1</router-link></a>
-                    <a class="dropdown-item text-color" href="homepage2.html">Homepage 2</a>
-                    <a class="dropdown-item text-color" href="homepage3.html">Homepage 3</a>
-                  </div>
+                <li class="nav-item">
+                  <a class="nav-link text-white text-capitalize" href="blog.html">공지사항</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white text-capitalize" href="about.html">about</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-white text-capitalize" href="services.html">services</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link text-white text-capitalize dropdown-toggle" href="#" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">pages</a>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item text-color" href="team.html">Our Team</a>
-                    <a class="dropdown-item text-color" href="pricing.html">Our Pricing</a>
-                    <a class="dropdown-item text-color" href="career.html">Our Career</a>
-                  </div>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-white text-capitalize" href="blog.html">blog</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-white text-capitalize" href="contact.html">contact</a>
+                  <a class="nav-link text-white text-capitalize" href="contact.html">기업목록</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link text-white text-capitalize dropdown-toggle" href="#" data-toggle="dropdown"
@@ -80,7 +55,7 @@
           </div>
         </div>
       </div> -->
-      <!-- /banner --> 
+      <!-- /banner -->
 
     <!-- 이력서 예시 입니다. 이런식으로 만들어 주시면 됩니다. 테스트 커밋
     2. build job 과 deploy job 나누기.
@@ -98,14 +73,14 @@
     name: 'app',
     data() {
       return {
-       
+
       }
     },
     components: {
         //VResume
     },
     created(){
-        
+
     },
     methods: {
       goResume(){
@@ -118,5 +93,9 @@
 <style scoped>
 #app {
  /* background-image: url('../public/images/background/banner.png'); */
+}
+.naviagtion {
+  background: linear-gradient(80deg, #0030cc 0%, #00a4db 100%);
+  padding: 15px 0;
 }
 </style>
