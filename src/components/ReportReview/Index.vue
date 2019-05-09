@@ -1,43 +1,101 @@
 <template>
-  <div id="reportreview">
-    <b-form-file
-      v-model="file"
-      :state="Boolean(file)"
-      placeholder="Choose a file..."
-      drop-placeholder="Drop file here..."
-      @change="upload($event)"
-    ></b-form-file>
-    <div class="mt-3">Selected file: {{ file ? file.name : '' }}</div>
-    <label>후기를 작성해주세요</label><br>
-    <textarea v-model="review" placeholder="후기를 작성해주세요"></textarea>
-    <input class="hello" type="submit" value="확인" @click="submitFileAndReview">
-    <!-- <div id="container">
-      <div>
-        <div class="upload" v-for="(upload, index) in uploads" :key="index">
-            <div class="ext" :style="{'background-color': upload.color}">
-              <p>{{upload.ext.toUpperCase()}}</p>
-            </div>
-            <div class="upload-details">
-              <div class="name-container">
-                <p class="filename">{{upload.name}}</p>
-                <div>
-                  <p class="filesize">{{upload.size}}</p>
-                  <p @click="removeUpload(index)" class="cancel-btn" v-if="upload.progress !== '100%'">x</p>
-                </div>
-              </div>
-              <div class="upload-bar" v-if="upload.progress !== '100%'">
-                <div class="upload-progress" :style="{width: upload.progress}"></div>
-              </div>
+
+  <section class="section section-lg-bottom bg-light">
+    <div class="container" id="reportreview">
+      <div class="row">
+        <!-- 카테고리란 -->
+        <div class="col-lg-3">
+          <div class="rounded-sm shadow bg-white pb-4">
+            <div class="widget">
+              <h4>Category</h4>
+              <ul class="list-styled list-bordered">
+                <li><a class="text-color d-block py-3" href="blog-details.html">이력서 관리</a></li>
+                <li><a class="text-color d-block py-3" href="blog-details.html">지원 현황</a></li>
+                <li><a class="text-color d-block py-3" href="blog-details.html">보고서 및 후기관리</a></li>
+                <li><a class="text-color d-block py-3" href="blog-details.html">찜한 기업 목록</a></li>
+                <li><a class="text-color d-block py-3" href="blog-details.html">보고서 및 후기 관리</a></li>
+                <li><a class="text-color d-block py-3" href="blog-details.html">회원정보 수정</a></li>
+              </ul>
             </div>
           </div>
         </div>
-        <div @click="openFilePicker" id="uploader">
-          <p><span>Click</span> to choose a file to upload :)</p>
-          <input type="file" ref="filepicker" @change="uploadFile" />
+        <!-- 공백 -->
+        <div class="col-lg-1">
         </div>
-    </div> -->
+        <!-- 보고서 및 후기 작성란 -->
+        <div class="col-lg-8">
+            <div class="row">
+              <!-- 대제목 -->
+              <div class="col-lg-12 text-center">
+                <p class="subtitle">Review</p>
+                <h2 class="section-title">Write a Review</h2>
+              </div>
+              <!-- 보고서 첨부 -->
+              <div class="row">
+                <div class="col-lg-12">
+                  <li><label style="font-weight:bold;">보고서</label></li>
+                </div>
 
-  </div>
+                <div class="col-lg-12 mb-0">
+                  <b-form-file
+                    v-model="file"
+                    :state="Boolean(file)"
+                    placeholder="Choose a file..."
+                    drop-placeholder="Drop file here..."
+                    @change="upload($event)"
+                  ></b-form-file>
+                </div>
+
+                <div class="col-lg-12 mb-4">
+                  <div >Selected file: {{ file ? file.name : '' }}</div>
+                </div>
+
+                <div class="col-lg-12">
+                  <li><label style="font-weight:bold;">실습 후기</label></li>
+                </div>
+
+                <div class="col-lg-12 mb-4">
+                  <textarea class="form-control mb-4" v-model="review" placeholder="실습 내용, 사내문화 등을 자유롭게 평가해주세요."></textarea>
+                </div>
+
+                <div class="col-12 text-center">
+                  <button class="btn btn-primary" type="submit" @click="submitFileAndReview">저장하기</button>
+                </div>
+                <!-- <div id="container">
+                  <div>
+                    <div class="upload" v-for="(upload, index) in uploads" :key="index">
+                        <div class="ext" :style="{'background-color': upload.color}">
+                          <p>{{upload.ext.toUpperCase()}}</p>
+                        </div>
+                        <div class="upload-details">
+                          <div class="name-container">
+                            <p class="filename">{{upload.name}}</p>
+                            <div>
+                              <p class="filesize">{{upload.size}}</p>
+                              <p @click="removeUpload(index)" class="cancel-btn" v-if="upload.progress !== '100%'">x</p>
+                            </div>
+                          </div>
+                          <div class="upload-bar" v-if="upload.progress !== '100%'">
+                            <div class="upload-progress" :style="{width: upload.progress}"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div @click="openFilePicker" id="uploader">
+                      <p><span>Click</span> to choose a file to upload :)</p>
+                      <input type="file" ref="filepicker" @change="uploadFile" />
+                    </div>
+                </div> -->
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
 </template>
 
 <script>
@@ -49,17 +107,17 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
           sName : "이휘진",
           file : null,
           uploadFile : null,
-          review : 0,
+          review : "",
           cName : "고비포선라이즈",
           //uploads: [],
 		      //colors: ["#24bddf", "#5fcc9c", "#6a65d8"],
         }
       },
       components: {
-          
+
       },
       created(){
-      
+
       },
       methods: {
           // getRandomColor() { //나중에 사용할 ux/ui
@@ -120,7 +178,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
             // for (var value of data.values()) {
             //   console.log(value);
 
-            // } //이렇게 key 값과 value값을 확인하면 확인 가능하다. 
+            // } //이렇게 key 값과 value값을 확인하면 확인 가능하다.
             let config = {
               header : {
                 'Content-Type' : 'multipart/form-data'
@@ -136,124 +194,4 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 </script>
 
 <style scoped lang="scss">
-#reportreview{
-  margin-left: 200px;
-  margin-top: 200px;
-}
-body {
-	background-color: #bff4ed;
-	display: flex;
-	height: 100vh;
-	font-family: Arial;
-}
-
-#container {
-	width: 60%;
-	background-color: white;
-	margin: auto;
-	box-shadow: 0px 40px 25px 0px rgba(132, 223, 220, 0.3);
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	padding: 16px;
-}
-
-#uploader {
-	width: calc(100% - 32px);
-	height: 100px;
-	border: 2px dashed #d9f0ef;
-	border-radius: 10px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	cursor: pointer;
-	text-align: center;
-	padding: 0px 16px;
-
-	input {
-		display: none;
-	}
-
-	p {
-		font-size: 18px;
-		color: #b6b6b6;
-
-		span {
-			color: #59dada;
-			font-weight: bold;
-		}
-	}
-}
-
-.upload {
-	margin-bottom: 24px;
-	display: flex;
-	align-items: center;
-
-	.ext {
-		width: 56px;
-		height: 48px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		border-radius: 10px;
-		margin-right: 16px;
-
-		p {
-			font-size: 14px;
-			color: white;
-			font-weight: bold;
-		}
-	}
-
-	.name-container {
-		display: flex;
-		justify-content: space-between;
-		font-size: 15px;
-
-		.filename {
-			color: #424242;
-			font-weight: bold;
-			margin-right: 16px;
-		}
-
-		div {
-			display: flex;
-			align-items: center;
-
-			p:nth-child(1) {
-				color: #9d9d9d;
-			}
-
-			p:nth-child(2) {
-				margin-left: 16px;
-				cursor: pointer;
-				color: #e4e4e4;
-			}
-		}
-	}
-
-	.upload-details {
-		width: 100%;
-	}
-
-	.upload-bar {
-		width: 100%;
-		margin-top: 8px;
-		border-radius: 5px;
-		background-color: #ebf6f4;
-
-		.upload-progress {
-			height: 10px;
-			background-color: #04cd8e;
-			border-radius: 5px;
-		}
-	}
-}
-
-@media screen and (max-width: 567px){
-	#container{
-		width: 85%;
-	}
-}
 </style>

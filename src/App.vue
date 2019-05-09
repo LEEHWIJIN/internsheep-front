@@ -86,6 +86,12 @@
       goResume(){
         this.$router.push({name: "Resume"})
       },
+      goApplystatus(){
+        this.$router.push({name: "Applystatus"})
+      },
+      goReportreview(){
+        this.$router.push({name: "Reportreview"})
+      },
     }
   }
 </script>
