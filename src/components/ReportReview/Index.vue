@@ -1,5 +1,6 @@
 <template>
   <div id="reportreview">
+    <v-base></v-base>
     <b-form-file
       v-model="file"
       :state="Boolean(file)"
@@ -41,6 +42,7 @@
 </template>
 
 <script>
+import VBase from '../Base/Index.vue'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
   export default{
       name: 'reportreview',
@@ -56,7 +58,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
         }
       },
       components: {
-          
+          VBase,
       },
       created(){
       

@@ -1,5 +1,6 @@
 <template>
   <div id="apply">
+    <v-base></v-base>
     <!-- <v-CoList :applylist="applylist" @clickCo="clickCo"></v-CoList> -->
     <div class="comanyList">
         <div v-for='(AL,index) in applylist' :key="AL.cNoticeID" @click="clickCo(index)">
@@ -14,6 +15,7 @@
 
 
 <script>
+ import VBase from '../Base/Index.vue'
 // import VCoList from "./CoList.vue"
  import VDetailList from "./DetailList.vue"
   export default{
@@ -27,6 +29,7 @@
       components: {
           //VCoList,
           VDetailList,
+          VBase,
       },
       created(){
         this.applyList();
@@ -46,7 +49,7 @@
         },
         clickCo(selectedNum){
           this.selectedCo=[]
-          console.log(selectedNum)
+          //console.log(selectedNum)
           this.selectedCo.push({
             cManagerName : this.applylist[selectedNum].cManagerName,
             cName : this.applylist[selectedNum].cName,

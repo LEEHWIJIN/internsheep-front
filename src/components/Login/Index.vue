@@ -43,7 +43,7 @@
         this.$http.post('http://localhost:8888/std/auth/login',{user: this.user}).then((response)=>{
              alert('success');
              localStorage.setItem('token',response.data.token);
-            // this.$router.push({name: "Home"});
+             this.$router.push({name: "Home"});
         },(error)=>{
             console.log('err')
             alert(error.response.data.error)
@@ -72,6 +72,9 @@
   text-align: center;
   color: #2c3e50;
 }
-
+#login{
+  margin-left: 200px;
+  margin-top: 200px;
+}
 
 </style>

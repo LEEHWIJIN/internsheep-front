@@ -1,5 +1,7 @@
 <template>
   <div id="resume">
+    <v-base></v-base>
+    {{user.name}}님의 resume 입니다.<br>
     <form v-on:submit.prevent='submitResume'>
       <label>이메일 주소*</label><br>
       <input v-model="email" placeholder="이메일 주소"><br>
@@ -31,6 +33,7 @@
 
 <script>
 //import Vue from 'vue';
+ import VBase from '../Base/Index.vue'
   export default{
       name: 'Resume',
       data() {
@@ -39,13 +42,20 @@
           sName:[],
           sNum:[],
           email:[],
+          user:{},
         }
       },
       components: {
-          
+        VBase,
+      },
+      beforeMount(){
+        this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+            //console.log(res.data.user);
+            this.user = res.data.user;
+        })
       },
       created(){
-
+        
       },
       methods: {
         submitResume(){

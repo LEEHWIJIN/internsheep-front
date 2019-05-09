@@ -14,7 +14,7 @@ Vue.use(Router)
 function loggedin(to, from, next) {
     if(!localStorage.token){
       alert('로그인 하세요')
-      next('/')
+      next('/login')
     }
     else{
       next();
@@ -34,15 +34,23 @@ export default new Router ({
     base: process.env.BASE_URL,
     routes: [
         {
+            path: '/',
+            name: 'root',
+            component: ()=> import('./components/Home/Index.vue'),
+            //component: Resume,
+            //beforeEnter : loggedin,
+        },
+        {
             path: '/resume',
             name: 'Resume',
             component: Resume,
-
+            beforeEnter : loggedin,
         },
         {
             path: '/home',
             name: 'Home',
             component: Home,
+            beforeEnter: loggedin,
             //component: ()=> import('./components/Resume/Index'),
             // meta: {
             //   permission: -1,
@@ -53,12 +61,13 @@ export default new Router ({
             path : '/login',
             name : 'login',
             component : Login,
+            beforeEnter: login
         },
         {
             path: '/signup',
             name: 'SignUp',
             component: SignUp,
-            //beforeEnter: login
+            beforeEnter: login
         },
         // {
         //     path: '/',
