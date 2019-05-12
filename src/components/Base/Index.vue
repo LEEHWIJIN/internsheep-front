@@ -80,19 +80,26 @@
     components: {
         //VResume
     },
-    beforeMount(){
+    created(){
         if(localStorage.token){
           this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+              if(res.data.result==1){
+                localStorage.removeItem('token')
+                this.user={};
+                this.auth=0;
+                return;
+              }
               this.user={};
               this.user = res.data.user;
               this.auth = 1;
           })
         }
         else{
+          this.user={};
           this.auth=0;
         }
     },
-    created(){
+    beforeMount(){
 
     },
     methods: {
