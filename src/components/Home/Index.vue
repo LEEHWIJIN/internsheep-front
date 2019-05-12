@@ -1,5 +1,6 @@
 <template>
     <div id="Home">
+      <v-base></v-base>
         <!-- banner -->
         <div class="hero-area bg-cover">
             <div class="container">
@@ -15,31 +16,55 @@
                 </div>
             </div>
             </div>
+
         </div>
-        <!-- /banner --> 
+        <!-- /banner -->
+        <section class="bg-light py-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3 col-sm-6 mb-4 mb-md-0 text-center">
+                <p class="h2 font-weight-light text-dark"><span class="counter" data-count="8">0</span>K+</p>
+                <h6 class="text-dark font-weight-normal">Downloads per day</h6>
+              </div>
+              <div class="col-md-3 col-sm-6 mb-4 mb-md-0 text-center">
+                <p class="h2 font-weight-light text-dark"><span class="counter" data-count="20">0</span>+</p>
+                <h6 class="text-dark font-weight-normal">Design awards</h6>
+              </div>
+              <div class="col-md-3 col-sm-6 mb-4 mb-md-0 text-center">
+                <p class="h2 font-weight-light text-dark"><span class="counter" data-count="25">0</span>K+</p>
+                <h6 class="text-dark font-weight-normal">Totally satisfied users</h6>
+              </div>
+              <div class="col-md-3 col-sm-6 mb-4 mb-md-0 text-center">
+                <p class="h2 font-weight-light text-dark"><span class="counter" data-count="30">0</span>+</p>
+                <h6 class="text-dark font-weight-normal">People behind this app</h6>
+              </div>
+            </div>
+          </div>
+        </section>
     </div>
+
 </template>
 <script>
   //import Vue from 'vue';
   //import VResume from './components/Resume/Index.vue';
   //import Vtest from '../test/test.vue'
+  import VBase from '../Base/Index.vue'
   export default{
     name: 'Home',
     data() {
       return {
-       
+
       }
     },
     components: {
         //VResume
+        VBase,
     },
     created(){
-        
+
     },
     methods: {
-      goResume(){
-        this.$router.push({name: "Resume"})
-      },
+      
     }
   }
 </script>
