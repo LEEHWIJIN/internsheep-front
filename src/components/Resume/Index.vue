@@ -48,6 +48,7 @@
                 </div>
                 <div class="col-lg-6">
                   <div class="apply-list  rounded-xl  bg-white mb-4">
+
                       <h6 style="font-weight:bold">학년정보(현재 학기 기준)*</h6>
                       <!--
                       <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
@@ -57,8 +58,8 @@
                       <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
                       <label for="mike">4학년 1학기</label><br>
                       -->
-                      <input class="inp-cbx" id="cbx" value="1" type="checkbox" v-model="checkedNames3" style="display: none;">
-                      <label class="cbx" for="cbx">
+                      <input class="inp-cbx" id="cbx1" value="1" type="checkbox" v-model="checkedNames4" style="display: none;">
+                      <label class="cbx" for="cbx1">
                         <span>
                           <svg width="12px" height="10px" viewbox="0 0 12 10">
                             <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
@@ -66,8 +67,8 @@
                         </span>
                         <span>3학년 1학기</span>
                       </label><br>
-                      <input class="inp-cbx" id="cbx" value="1" type="checkbox" v-model="checkedNames3" style="display: none;">
-                      <label class="cbx" for="cbx">
+                      <input class="inp-cbx" id="cbx2" value="1" type="checkbox" v-model="checkedNames5" style="display: none;">
+                      <label class="cbx" for="cbx2">
                         <span>
                           <svg width="12px" height="10px" viewbox="0 0 12 10">
                             <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
@@ -75,8 +76,8 @@
                         </span>
                         <span>3학년 2학기</span>
                       </label><br>
-                      <input class="inp-cbx" id="cbx" value="1" type="checkbox" v-model="checkedNames3" style="display: none;">
-                      <label class="cbx" for="cbx">
+                      <input class="inp-cbx" id="cbx3" value="1" type="checkbox" v-model="checkedNames6" style="display: none;">
+                      <label class="cbx" for="cbx3">
                         <span>
                           <svg width="12px" height="10px" viewbox="0 0 12 10">
                             <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
@@ -97,8 +98,8 @@
                     <input type="checkbox" id="mike" value="Mike" v-model="checkedNames0">
                     <label for="mike">기타</label><br>
                     -->
-                    <input class="inp-cbx" id="cbx" value="1" type="checkbox" v-model="checkedNames3" style="display: none;">
-                    <label class="cbx" for="cbx">
+                    <input class="inp-cbx" id="cbx4" value="1" type="checkbox" v-model="checkedNames1" style="display: none;">
+                    <label class="cbx" for="cbx4">
                       <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
                           <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
@@ -106,8 +107,8 @@
                       </span>
                       <span>소프트웨어학과</span>
                     </label><br>
-                    <input class="inp-cbx" id="cbx" value="1" type="checkbox" v-model="checkedNames3" style="display: none;">
-                    <label class="cbx" for="cbx">
+                    <input class="inp-cbx" id="cbx5" value="1" type="checkbox" v-model="checkedNames2" style="display: none;">
+                    <label class="cbx" for="cbx5">
                       <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
                           <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
@@ -115,8 +116,8 @@
                       </span>
                       <span>ICT융합전공</span>
                     </label><br>
-                    <input class="inp-cbx" id="cbx" value="1" type="checkbox" v-model="checkedNames3" style="display: none;">
-                    <label class="cbx" for="cbx">
+                    <input class="inp-cbx" id="cbx6" value="1" type="checkbox" v-model="checkedNames3" style="display: none;">
+                    <label class="cbx" for="cbx6">
                       <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
                           <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
@@ -150,7 +151,12 @@
       name: 'Resume',
       data() {
         return {
-          checkedNames:[],
+          checkedNames1:[],
+          checkedNames2:[],
+          checkedNames3:[],
+          checkedNames4:[],
+          checkedNames5:[],
+          checkedNames6:[],
           sName:[],
           sNum:[],
           email:[],
@@ -167,7 +173,7 @@
         })
       },
       created(){
-        
+
       },
       methods: {
         submitResume(){
