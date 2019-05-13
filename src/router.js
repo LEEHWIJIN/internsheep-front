@@ -44,7 +44,7 @@ export default new Router ({
             path: '/resume',
             name: 'Resume',
             component: Resume,
-            beforeEnter : loggedin,
+            //beforeEnter : loggedin,
         },
         {
             path: '/home',
@@ -90,6 +90,6 @@ export default new Router ({
             name: 'Applystatus',
             component : Applystatus,
         },
-        
+
     ]
 })
