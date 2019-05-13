@@ -834,7 +834,7 @@ textarea.form-control {
 
 /* /form style */
 .naviagtion {
-  padding: 45px 0;
+  padding: 45px 10px;
 }
 
 @media (max-width: 991px) {
