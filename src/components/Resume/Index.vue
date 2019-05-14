@@ -1,5 +1,4 @@
 <template>
-
 <section class="section section-lg-bottom bg-light">
   <v-base></v-base>
   <div class="container" id="resume">

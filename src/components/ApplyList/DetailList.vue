@@ -20,7 +20,7 @@
         }
       },
       components: {
-        
+
       },
       props:{
         selectedCo:{
@@ -49,8 +49,5 @@
 </script>
 
 <style scoped>
-#applyList{
-  margin-left: 600px;
-  margin-top: 600px;
-}
+
 </style>
