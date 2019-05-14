@@ -1,7 +1,8 @@
 <template>
-  <section class="section section-lg-bottom bg-light">
-    <div id="resumeIndex">
-      <v-base></v-base>
+<section class="section section-lg-bottom bg-light">
+  <v-base></v-base>
+  <div class="container" id="resume">
+    <div class="row">
       <!-- 카테고리란 -->
               <div class="col-lg-3">
                   <div class="rounded-sm shadow bg-white pb-4">

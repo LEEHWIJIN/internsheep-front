@@ -763,8 +763,8 @@ a.text-light:hover {
   text-decoration: underline;
 }
 
-.list-bordered li:not(:last-child) {
-  border-bottom: 1px solid #e5e5e5;
+.list-bordered li{
+  border-bottom: 1px solid #e5e5e5 !important;
 }
 
 /* /list style */
@@ -834,7 +834,7 @@ textarea.form-control {
 
 /* /form style */
 .naviagtion {
-  padding: 45px 0;
+  padding: 45px 10px;
 }
 
 @media (max-width: 991px) {
@@ -1415,6 +1415,10 @@ textarea.form-control {
 
 .icon-orange {
   color: #ff7c17;
+}
+
+.icon-grey {
+  color: #060E89;
 }
 
 .icon-green {

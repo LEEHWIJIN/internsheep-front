@@ -6,38 +6,44 @@
             <div class="container">
             <div class="row align-items-center justify-content-between">
                 <div class="col-lg-6 pl-lg-0 text-center text-lg-left">
-                <h1 class="text-white position-relative">Build Your Business Together<span class="watermark">Build</span></h1>
-                <p class="text-white pt-2 pb-3">Cupidatat non proident sunt culpa qui officia deserunt mollit <br> anim idest
-                    laborum sed ut perspiciatis.</p>
-                <a href="#" class="btn btn-primary">Get Agico</a>
+                <h1 class="text-white position-relative">Intern - Sheep<span class="watermark">Intern</span></h1>
+                <p class="text-white pt-2 pb-3">An internship will give you practical skills, workplace experience and greater knowledge of that industry, in exchange for the employer benefiting from your labour.</p>
+                <a href="#" class="btn btn-primary">Go Apply</a>
                 </div>
                 <div class="col-lg-5 pl-lg-0 pt-5 pt-lg-0 text-lg-right text-center">
                 <img src="images/banner/banner-1.png" class="img-fluid" alt="">
                 </div>
             </div>
             </div>
-
         </div>
         <!-- /banner -->
         <section class="bg-light py-5">
           <div class="container">
             <div class="row">
-              <div class="col-md-3 col-sm-6 mb-4 mb-md-0 text-center">
+              <div class="col-md-1 col-sm-6 mb-4 mb-md-0 text-center">
+              </div>
+              <div class="col-md-1 col-sm-6 mb-4 mb-md-0 text-center">
                 <p class="h2 font-weight-light text-dark"><span class="counter" data-count="8">0</span>K+</p>
-                <h6 class="text-dark font-weight-normal">Downloads per day</h6>
               </div>
-              <div class="col-md-3 col-sm-6 mb-4 mb-md-0 text-center">
+              <div class="col-md-2 col-sm-6 mb-4 mb-md-0 text-center">
+                <p class="h4 text-dark font-weight-normal">명의 학생과 <span class="h2"></span></p>
+              </div>
+              <div class="col-md-1 col-sm-6 mb-4 mb-md-0 text-center">
                 <p class="h2 font-weight-light text-dark"><span class="counter" data-count="20">0</span>+</p>
-                <h6 class="text-dark font-weight-normal">Design awards</h6>
               </div>
-              <div class="col-md-3 col-sm-6 mb-4 mb-md-0 text-center">
+              <div class="col-md-6 col-sm-6 mb-4 mb-md-0 text-center">
+                <p class="h4 text-dark font-weight-normal">명의  기업이  <span class="h2 font-weight-light">인턴쉽</span>에  참여하고  있습니다.</p>
+              </div>
+              <div class="col-md-1 col-sm-6 mb-4 mb-md-0 text-center">
+              </div>
+              <!-- <div class="col-md-3 col-sm-6 mb-4 mb-md-0 text-center">
                 <p class="h2 font-weight-light text-dark"><span class="counter" data-count="25">0</span>K+</p>
                 <h6 class="text-dark font-weight-normal">Totally satisfied users</h6>
               </div>
               <div class="col-md-3 col-sm-6 mb-4 mb-md-0 text-center">
                 <p class="h2 font-weight-light text-dark"><span class="counter" data-count="30">0</span>+</p>
                 <h6 class="text-dark font-weight-normal">People behind this app</h6>
-              </div>
+              </div> -->
             </div>
           </div>
         </section>
@@ -64,7 +70,7 @@
 
     },
     methods: {
-      
+
     }
   }
 </script>

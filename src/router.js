@@ -8,6 +8,8 @@ import Apply from './components/ApplyList/Index.vue'
 import Reportreview from './components/ReportReview/Index.vue'
 import Applystatus from './components/ApplyStatus/Index.vue'
 import SignUp from './components/SignUp/Index.vue'
+import Admin from './components/Admin/Index.vue'
+import Modify from './components/Admin/modify.vue'
 
 Vue.use(Router)
 
@@ -87,6 +89,15 @@ export default new Router ({
             path: '/apply-status',
             name: 'Applystatus',
             component : Applystatus,
+        },
+        {
+            path : '/admin',
+            name : 'admin',
+            component : Admin,
+        },{
+            path : '/admin/modify',
+            name : 'modify',
+            component : Modify,
         },
 
     ]
