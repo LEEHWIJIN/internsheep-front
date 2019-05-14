@@ -22,10 +22,11 @@
                   <!-- 공백 -->
               <div class="col-lg-1">
               </div>
-      <v-user-info v-if="$store.state.resume.resume_state==0"></v-user-info>
-      <v-user-eng v-else-if="$store.state.resume.resume_state==1"></v-user-eng>
-      <v-user-grade v-else-if="$store.state.resume.resume_state==2"></v-user-grade>
-      <v-user-s-w v-else-if="$store.state.resume.resume_state==3"></v-user-s-w>
+              <v-user-info v-if="$store.state.resume.resume_state==0"></v-user-info>
+              <v-user-eng v-else-if="$store.state.resume.resume_state==1"></v-user-eng>
+              <v-user-grade v-else-if="$store.state.resume.resume_state==2"></v-user-grade>
+              <v-user-s-w v-else-if="$store.state.resume.resume_state==3"></v-user-s-w>
+      </div>
     </div>
   </section>
 </template>
