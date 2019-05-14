@@ -4,195 +4,88 @@
   <div class="container" id="resume">
     <div class="row">
       <!-- 카테고리란 -->
-      <div class="col-lg-3">
-        <div class="rounded-sm shadow bg-white pb-4">
-          <div class="widget">
-            <h4>Category</h4>
-            <ul class="list-styled list-bordered">
-              <li><a class="text-color d-block py-3" href="blog-details.html">이력서 관리</a></li>
-              <li><a class="text-color d-block py-3" href="blog-details.html">지원 현황</a></li>
-              <li><a class="text-color d-block py-3" href="blog-details.html">보고서 및 후기관리</a></li>
-              <li><a class="text-color d-block py-3" href="blog-details.html">찜한 기업 목록</a></li>
-              <li><a class="text-color d-block py-3" href="blog-details.html">보고서 및 후기 관리</a></li>
-              <li><a class="text-color d-block py-3" href="blog-details.html">회원정보 수정</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <!-- 공백 -->
-      <div class="col-lg-1">
-      </div>
-      <!-- 이력서 작성  -->
-      <div class="col-lg-8">
-          <div class="row">
-            <!-- 대제목 -->
-            <div class="col-lg-12 text-center">
-              <p class="subtitle">Notice</p>
-              <h2 class="section-title">Write a Notice</h2>
-            </div>
-            <!-- 실제로 들어가는 빈칸 내용 -->
-            <div class="col-lg-12 p-0">
-              <form class="row" v-on:submit.prevent='submitResume'>
-                <div class="col-lg-6">
-                  <input class="form-control mb-4" v-model="sName" placeholder="이름*">
-                </div>
-                <div class="col-lg-6">
-                  <input class="form-control mb-4" v-model="email" placeholder="e-mail">
-                </div>
-                <div class="col-lg-6">
-                  <input class="form-control mb-4" v-model="sNum" placeholder="학번*">
-                </div>
-                <div class="col-lg-6">
-                  <input class="form-control mb-4" v-model="email" placeholder="전화번호*">
-                </div>
-                <div class="col-lg-6">
-                  <div class="apply-list  rounded-xl  bg-white mb-4">
-
-                      <h6 style="font-weight:bold">학년정보(현재 학기 기준)*</h6>
-                      <!--
-                      <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
-                      <label for="jack">3학년 1학기</label><br>
-                      <input type="checkbox" id="john" value="John" v-model="checkedNames">
-                      <label for="john">3학년 2학기</label><br>
-                      <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
-                      <label for="mike">4학년 1학기</label><br>
-                      -->
-                      <input class="inp-cbx" id="cbx1" value="1" type="checkbox" v-model="checkedNames4" style="display: none;">
-                      <label class="cbx" for="cbx1">
-                        <span>
-                          <svg width="12px" height="10px" viewbox="0 0 12 10">
-                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                          </svg>
-                        </span>
-                        <span>3학년 1학기</span>
-                      </label><br>
-                      <input class="inp-cbx" id="cbx2" value="1" type="checkbox" v-model="checkedNames5" style="display: none;">
-                      <label class="cbx" for="cbx2">
-                        <span>
-                          <svg width="12px" height="10px" viewbox="0 0 12 10">
-                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                          </svg>
-                        </span>
-                        <span>3학년 2학기</span>
-                      </label><br>
-                      <input class="inp-cbx" id="cbx3" value="1" type="checkbox" v-model="checkedNames6" style="display: none;">
-                      <label class="cbx" for="cbx3">
-                        <span>
-                          <svg width="12px" height="10px" viewbox="0 0 12 10">
-                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                          </svg>
-                        </span>
-                        <span>4학년 1학기</span>
-                      </label><br>
+              <div class="col-lg-3">
+                  <div class="rounded-sm shadow bg-white pb-4">
+                      <div class="widget">
+                          <h4>Category</h4>
+                          <ul class="list-styled list-bordered">
+                          <li><a class="text-color d-block py-3" href="blog-details.html">이력서 관리</a></li>
+                          <li><a class="text-color d-block py-3" href="blog-details.html">지원 현황</a></li>
+                          <li><a class="text-color d-block py-3" href="blog-details.html">보고서 및 후기관리</a></li>
+                          <li><a class="text-color d-block py-3" href="blog-details.html">찜한 기업 목록</a></li>
+                          <li><a class="text-color d-block py-3" href="blog-details.html">보고서 및 후기 관리</a></li>
+                          <li><a class="text-color d-block py-3" href="blog-details.html">회원정보 수정</a></li>
+                          </ul>
+                      </div>
                   </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="apply-list rounded-xl  bg-white mb-4">
-                    <h6 style="font-weight:bold">소속학과*</h6>
-                    <!--
-                    <input type="checkbox" id="jack" value="Jack" v-model="checkedNames0">
-                    <label for="jack">소프트웨어학과</label><br>
-                    <input type="checkbox" id="john" value="John" v-model="checkedNames0">
-                    <label for="john">ICT융합전공</label><br>
-                    <input type="checkbox" id="mike" value="Mike" v-model="checkedNames0">
-                    <label for="mike">기타</label><br>
-                    -->
-                    <input class="inp-cbx" id="cbx4" value="1" type="checkbox" v-model="checkedNames1" style="display: none;">
-                    <label class="cbx" for="cbx4">
-                      <span>
-                        <svg width="12px" height="10px" viewbox="0 0 12 10">
-                          <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                        </svg>
-                      </span>
-                      <span>소프트웨어학과</span>
-                    </label><br>
-                    <input class="inp-cbx" id="cbx5" value="1" type="checkbox" v-model="checkedNames2" style="display: none;">
-                    <label class="cbx" for="cbx5">
-                      <span>
-                        <svg width="12px" height="10px" viewbox="0 0 12 10">
-                          <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                        </svg>
-                      </span>
-                      <span>ICT융합전공</span>
-                    </label><br>
-                    <input class="inp-cbx" id="cbx6" value="1" type="checkbox" v-model="checkedNames3" style="display: none;">
-                    <label class="cbx" for="cbx6">
-                      <span>
-                        <svg width="12px" height="10px" viewbox="0 0 12 10">
-                          <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                        </svg>
-                      </span>
-                      <span>기타</span>
-                    </label><br>
-
-                  </div>
-                </div>
-                <br>
-                <div class="col-12 text-center">
-                  <button class="btn btn-primary" type="submit">이력서 저장하기</button>
-                </div>
-            </form>
-            </div>
-          </div>
-      </div>
+              </div>
+                  <!-- 공백 -->
+              <div class="col-lg-1">
+              </div>
+      <v-user-info v-if="$store.state.resume.resume_state==0"></v-user-info>
+      <v-user-eng v-else-if="$store.state.resume.resume_state==1"></v-user-eng>
+      <v-user-grade v-else-if="$store.state.resume.resume_state==2"></v-user-grade>
+      <v-user-s-w v-else-if="$store.state.resume.resume_state==3"></v-user-s-w>
     </div>
-
-  </div>
-</section>
-
+  </section>
 </template>
 
 
 <script>
 //import Vue from 'vue';
  import VBase from '../Base/Index.vue'
+ import VUserInfo from './UserInfo.vue'
+ import VUserEng from './UserEng.vue'
+ import VUserGrade from './UserGrade.vue'
+ import VUserSW from './UserSW.vue'
+//  import { mapActions, mapGetters } from "vuex";
   export default{
       name: 'Resume',
       data() {
         return {
-          checkedNames1:[],
-          checkedNames2:[],
-          checkedNames3:[],
-          checkedNames4:[],
-          checkedNames5:[],
-          checkedNames6:[],
-          sName:[],
-          sNum:[],
-          email:[],
-          user:{},
+          user : {},
         }
       },
       components: {
         VBase,
-      },
-      beforeMount(){
-        this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
-            //console.log(res.data.user);
-            this.user = res.data.user;
-        })
+        VUserInfo,
+        VUserEng,
+        VUserGrade,
+        VUserSW,
       },
       created(){
-
+        this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+          this.user = res.data.user;
+          console.log("유저입니다 : ",this.user.loginId)
+          this.getResume(this.user.loginId);
+        });
+        
       },
+      // created(){
+
+      // },
       methods: {
-        submitResume(){
-          this.$http.post('http://localhost:8888/std/mypage/resume',{sNum:this.sNum,sName: this.sName}).then((response) => {
-              this.sName = "";
-              this.sNum="";
-            })
+        getResume(loginId){
+          this.$http.get('http://localhost:8888/std/mypage/watchResume',{params:{sLoginID : loginId}}).then(res =>{
+            // console.log(this.user.loginId)
+            // {params:{sLoginID : this.user.loginId}}
+            if(res.data != false){
+                  this.$store.dispatch('resume/setResumeState',4);
+            }
+            else this.$store.dispatch('resume/setResumeState',0);//맨 첫장
+          });
+        
         },
+        // submitResume(){
+        //   this.$http.post('http://localhost:8888/std/mypage/resume',{sNum:this.sNum,sName: this.sName}).then((response) => {
+        //       this.sName = "";
+        //       this.sNum="";
+        //     })
+        // },
       }
   }
 </script>
 
 <style scoped>
-/* #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-} */
-
 
 </style>

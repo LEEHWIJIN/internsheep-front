@@ -39,8 +39,6 @@ export default new Router ({
             path: '/',
             name: 'root',
             component: ()=> import('./components/Home/Index.vue'),
-            //component: Resume,
-            //beforeEnter : loggedin,
         },
         {
             path: '/resume',
