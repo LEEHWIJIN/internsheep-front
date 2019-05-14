@@ -1,14 +1,29 @@
-import defaultState from './state';
+import stateStatus from './state';
+export const RESETSTATE = 'RESETSTATE';
+export const SUBMIT_USERINFO = 'SUBMIT_USERINFO';
+export const SUBMIT_USERENG = 'SUBMIT_USERENG';
+export const SUBMIT_USERGRADE = 'SUBMIT_USERGRADE';
+export const SUBMIT_USERSW = 'SUBMIT_USERSW';
+export const SETRESUMESTATE = 'SETRESUMESTATE';
 
+    
 export default {
-    reset_state(state){
-        Object.assign(state, defaultState());
+    [RESETSTATE](state){
+        Object.assign(state, stateStatus);
     },
-    submit(state, result){
-        state.receive_codeArray = result;
+    [SUBMIT_USERINFO](state, result){
+        state.userInfo = result;
     },
-    setResumeState(state,result){
+    [SUBMIT_USERENG](state, result){
+        state.userEng = result;
+    },
+    [SUBMIT_USERGRADE](state, result){
+        state.userGrade = result;
+    },
+    [SUBMIT_USERSW](state, result){
+        state.userSW = result;
+    },
+    [SETRESUMESTATE](state,result){
         state.resume_state = result;
     }
-    
-  };
+};

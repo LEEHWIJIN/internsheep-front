@@ -1845,6 +1845,7 @@ form textarea {
 .inp-cbx:checked + .cbx span:first-child svg {
   stroke-dashoffset: 0;
 }
+
 .inp-cbx:checked + .cbx span:first-child:before {
   transform: scale(3.5);
   opacity: 0;

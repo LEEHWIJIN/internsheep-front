@@ -40,7 +40,7 @@
     },
     methods: {
       login() {
-        this.$http.post('http://localhost:8888/std/auth/login',{user: this.user}).then((response)=>{
+        this.$http.post('http://localhost:8888/auth/std/login',{user: this.user}).then((response)=>{
              alert('success');
              localStorage.setItem('token',response.data.token);
              this.$router.push({name: "Home"});
