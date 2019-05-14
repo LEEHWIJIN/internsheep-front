@@ -22,7 +22,7 @@
                   </div>
                 </li> -->
                 <li class="nav-item">
-                  <a class="nav-link text-white text-capitalize" href="about.html">기업 목록</a>
+                  <a class="nav-link text-white text-capitalize" href="#" @click="goApplyList">기업 목록</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link text-white text-capitalize" href="services.html">공지 사항</a>
@@ -97,8 +97,8 @@
         goApplyStatus(){
             this.$router.push({name: "Applystatus"})
         },
-        goApplyStatus(){
-            this.$router.push({name: "Applystatus"})
+        goApplyList(){
+            this.$router.push({name: "Apply"})
         },
         goReportreview(){
             this.$router.push({name: "Reportreview"})
