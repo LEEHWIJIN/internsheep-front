@@ -2,9 +2,9 @@
   <div class="row">
     <!-- 대제목 -->
     <div class="col-lg-12 text-center">
-      <p class="subtitle">Notice</p>
-      <h2 class="section-title">주요 전공과목 학습 성취도</h2>
-      <h3>다음 과목들에 대해 본인의 학점을 체크해 주세요.*</h3>
+      <p class="subtitle">Grade</p>
+      <h2 class="section-title mb-2">주요 전공과목 학습 성취도</h2>
+      <h5 class="mb-4">다음 과목들에 대해 본인의 학점을 체크해 주세요.</h5>
     </div>
     <!-- 이력서 내용 -->
     <div class="col-lg-12 p-0">

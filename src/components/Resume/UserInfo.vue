@@ -2,8 +2,8 @@
   <div class="row">
     <!-- 대제목 -->
     <div class="col-lg-12 text-center">
-      <p class="subtitle">Notice</p>
-      <h2 class="section-title">Write a Notice</h2>
+      <p class="subtitle">Profile</p>
+      <h2 class="section-title">Edit Profile</h2>
     </div>
     <!-- 이력서 내용 -->
     <div class="col-lg-12 p-0">
