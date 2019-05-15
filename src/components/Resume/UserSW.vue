@@ -2,7 +2,7 @@
   <div class="row">
       <!-- 대제목 -->
     <div class="col-lg-12 text-center">
-    <p class="subtitle">Notice</p>
+    <p class="subtitle">Skills</p>
     <h2 class="section-title">SW기술분야 숙련도</h2>
     <h3>다음 과목들에 대해 본인의 학점을 체크해 주세요.*</h3>
     </div>
