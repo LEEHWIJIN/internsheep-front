@@ -138,6 +138,7 @@
     </div>
 
   </div>
+  <v-footer></v-footer>
 </section>
 
 </template>
@@ -146,6 +147,7 @@
 <script>
 //import Vue from 'vue';
  import VBase from '../Base/Index.vue'
+ import VFooter from '../Footer/Index.vue'
   export default{
       name: 'Resume',
       data() {
@@ -164,6 +166,7 @@
       },
       components: {
         VBase,
+        VFooter,
       },
       beforeMount(){
         this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {

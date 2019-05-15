@@ -91,6 +91,7 @@
         </div>
       </div>
     </div>
+    <v-footer></v-footer>
   </section>
 
 
@@ -100,6 +101,7 @@
 
 <script>
 import VBase from '../Base/Index.vue'
+import VFooter from '../Footer/Index.vue'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
   export default{
       name: 'reportreview',
@@ -116,6 +118,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
       },
       components: {
           VBase,
+          VFooter,
       },
       created(){
 

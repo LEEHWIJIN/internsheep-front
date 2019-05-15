@@ -48,12 +48,14 @@
       </div>
     </div>
   </div>
+  <v-footer></v-footer>
 </section>
 
 </template>
 
 <script>
  import VBase from '../Base/Index.vue'
+ import VFooter from '../Footer/Index.vue'
   export default{
     name: 'Applystatus',
     data() {
@@ -65,6 +67,7 @@
     },
     components: {
         VBase,
+        VFooter,
     },
     created(){
         // this.getApplyStatus();
@@ -77,7 +80,7 @@
     methods: {
       getApplyStatus(name) {
         this.$http.get('http://localhost:8888/std/mypage/applyStatus',{params:{sName : name}}).then((response)=>{
-          this.cName = response.data[0].cName;  
+          this.cName = response.data[0].cName;
           if(response.data[0].YN) this.YN = "합격입니다.";
           else this.YN = "심사중입니다."
         })
