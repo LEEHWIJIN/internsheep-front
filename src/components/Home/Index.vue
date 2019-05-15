@@ -36,14 +36,6 @@
               </div>
               <div class="col-md-1 col-sm-6 mb-4 mb-md-0 text-center">
               </div>
-              <!-- <div class="col-md-3 col-sm-6 mb-4 mb-md-0 text-center">
-                <p class="h2 font-weight-light text-dark"><span class="counter" data-count="25">0</span>K+</p>
-                <h6 class="text-dark font-weight-normal">Totally satisfied users</h6>
-              </div>
-              <div class="col-md-3 col-sm-6 mb-4 mb-md-0 text-center">
-                <p class="h2 font-weight-light text-dark"><span class="counter" data-count="30">0</span>+</p>
-                <h6 class="text-dark font-weight-normal">People behind this app</h6>
-              </div> -->
             </div>
           </div>
         </section>
