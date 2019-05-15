@@ -198,4 +198,13 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 </script>
 
 <style scoped lang="scss">
+
+.section {
+  padding-top: 130px;
+  padding-bottom: 0px;
+}
+
+.container {
+  padding-bottom: 50px;
+}
 </style>
