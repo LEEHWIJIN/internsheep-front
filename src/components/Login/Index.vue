@@ -37,27 +37,7 @@
     </div>
   </div>
   </section>
-  <!-- <div class="container" style="  width: 380px;">
-        <h1>Login</h1>
-        <form v-on:submit.prevent='login'>
-          ID: <input type="text" id="userId" v-model="userId" name="userId"><br>
-          Password: <input type="password" id="password" v-model="password" name="password"><br>
-          <input type="submit" id="login" value="login" />
-        </form>
-    </div> -->
-  <!-- <div id="login">
-    <div class="container" style="  width: 380px;">
-        <h1>Login</h1>
-        <form v-on:submit.prevent='login'>
-            <input id="loginId" type="text" placeholder="ID" name="loginid" v-model="user.id" style="margin-top: 20px;"><br>
-            <input type="password" name="loginpassword" placeholder="Password" v-model="user.password"><br>
-            <input type="submit" value="login" id="form">
-
-            <router-link to="/signup" id="link">Sign Up</router-link>
-        </form>
-    </div>
-  </div> -->
-</template>
+  </template>
 
 <script>
   export default{
