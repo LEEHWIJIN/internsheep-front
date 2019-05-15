@@ -12,7 +12,7 @@
           <input class="form-control mb-4" v-model="sName" placeholder="이름*">
         </div> -->
         <div class="col-lg-6">
-          <input class="form-control mb-4" v-model="sEmail" placeholder="e-mail">
+          <input class="form-control mb-4" v-model="sEmail" placeholder="e-mail" readonly="readonly">
         </div>
         <!-- <div class="col-lg-6">
           <input class="form-control mb-4" v-model="sNum" placeholder="학번*">
@@ -31,7 +31,7 @@
               <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
               <label for="mike">4학년 1학기</label><br>
               -->
-              <input class="inp-cbx" id="cbx1" value="3학년 1학기" type="checkbox" v-model="sGrade" style="display: none;">
+              <input class="inp-cbx" id="cbx1" value="3학년 1학기" type="checkbox" v-model="sGrade" style="display: none;" onclick="return false">
               <label class="cbx" for="cbx1">
                 <span>
                   <svg width="12px" height="10px" viewbox="0 0 12 10">

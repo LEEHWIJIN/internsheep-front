@@ -43,7 +43,6 @@
                     <a class="dropdown-item text-color" href="#" @click="goReportreview">보고서 및 후기관리</a>
                     <a class="dropdown-item text-color" href="team.html">찜한 기업 목록</a>
                     <a class="dropdown-item text-color" href="pricing.html">회원 정보 수정</a>
-                    <a class="dropdown-item text-color" href="career.html">보고서 및 후기관리</a>
                   </div>
                 </li>
                 <a v-if="auth == 0" href="#" class="btn btn-outline-primary text-white ml-3" @click="goLogin">log in</a>
