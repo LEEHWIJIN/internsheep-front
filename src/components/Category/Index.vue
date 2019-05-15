@@ -3,7 +3,8 @@
       <div class="widget">
           <h4>Category</h4>
           <ul class="list-styled list-bordered">
-          <li><a class="text-color d-block py-3" href="#" @click="goResume">이력서 관리</a></li>
+          <li><a class="text-color d-block py-3" href="#" @click="goReadResume">이력서 보기</a></li>
+          <li><a class="text-color d-block py-3" href="#" @click="goResume">이력서 수정</a></li>
           <li><a class="text-color d-block py-3" href="#" @click="goApplyStatus">지원 현황</a></li>
           <li><a class="text-color d-block py-3" href="#" @click="goReportreview">보고서 및 후기관리</a></li>
           <li><a class="text-color d-block py-3" href="#">찜한 기업 목록</a></li>
@@ -26,6 +27,9 @@
     methods: {
       goResume(){
       this.$router.push({name: "Resume"})
+      },
+      goReadResume(){
+      this.$router.push({name: "ReadResume"})
       },
       goHome(){
           this.$router.push({name: "Home"})

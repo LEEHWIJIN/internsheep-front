@@ -24,7 +24,6 @@
         <div class="col-lg-6">
           <div class="apply-list  rounded-xl  bg-white mb-4">
               <h6 style="font-weight:bold">학년정보(현재 학기 기준)*</h6>
-
               <!--
               <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
               <label for="jack">3학년 1학기</label><br>
@@ -33,6 +32,7 @@
               <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
               <label for="mike">4학년 1학기</label><br>
               -->
+<!-- <input class="inp-cbx" id="cbx1" value="3학년 1학기" type="checkbox" v-model="sGrade" style="display: none;" onclick="return false"> -->
               <input class="inp-cbx" id="cbx1" value="3학년 1학기" type="checkbox" v-model="sGrade" style="display: none;">
               <label class="cbx" for="cbx1">
                 <span>
@@ -136,6 +136,47 @@
               </label><br>
           </div>
         </div>
+        <!-- <div class="col-lg-6">
+          <div class="apply-list rounded-xl  bg-white mb-4">
+            <h6 style="font-weight:bold">소속학과*</h6> -->
+            <!--
+            <input type="checkbox" id="jack" value="Jack" v-model="checkedNames0">
+            <label for="jack">소프트웨어학과</label><br>
+            <input type="checkbox" id="john" value="John" v-model="checkedNames0">
+            <label for="john">ICT융합전공</label><br>
+            <input type="checkbox" id="mike" value="Mike" v-model="checkedNames0">
+            <label for="mike">기타</label><br>
+            -->
+            <!-- <input class="inp-cbx" id="cbx4" value="1" type="checkbox" v-model="checkedNames1" style="display: none;">
+            <label class="cbx" for="cbx4">
+              <span>
+                <svg width="12px" height="10px" viewbox="0 0 12 10">
+                  <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                </svg>
+              </span>
+              <span>소프트웨어학과</span>
+            </label><br>
+            <input class="inp-cbx" id="cbx5" value="1" type="checkbox" v-model="checkedNames2" style="display: none;">
+            <label class="cbx" for="cbx5">
+              <span>
+                <svg width="12px" height="10px" viewbox="0 0 12 10">
+                  <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                </svg>
+              </span>
+              <span>ICT융합전공</span>
+            </label><br>
+            <input class="inp-cbx" id="cbx6" value="1" type="checkbox" v-model="checkedNames3" style="display: none;">
+            <label class="cbx" for="cbx6">
+              <span>
+                <svg width="12px" height="10px" viewbox="0 0 12 10">
+                  <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                </svg>
+              </span>
+              <span>기타</span>
+            </label><br>
+
+          </div>
+        </div> -->
         <br>
         <div class="col-12 text-center">
           <button class="btn btn-primary" type="submit">다음</button>
@@ -147,10 +188,19 @@
 
 
 <script>
+//import Vue from 'vue';
+//  import VBase from '../Base/Index.vue'
   export default{
       name: 'UserInfo',
       data() {
         return {
+          // checkedNames1:[],
+          // checkedNames2:[],
+          // checkedNames3:[],
+          // checkedNames4:[],
+          // checkedNames5:[],
+          // checkedNames6:[],
+          //sName:[],
           sHope : [],
           sHopeTerm : [],
           sPhone:[],
