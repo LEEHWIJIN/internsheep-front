@@ -26,8 +26,4 @@
 #app {
  /* background-image: url('../public/images/background/banner.png'); */
 }
-.naviagtion {
-  background: linear-gradient(80deg, #0030cc 0%, #00a4db 100%);
-  padding: 15px 0;
-}
 </style>

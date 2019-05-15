@@ -66,12 +66,14 @@
         </div>
       </div>
     </div>
+    <v-footer class="mt-4"></v-footer>
   </section>
 </template>
 
 
 <script>
  import VBase from '../Base/Index.vue'
+ import VFooter from '../Footer/Index.vue'
 // import VCoList from "./CoList.vue"
  import VDetailList from "./DetailList.vue"
   export default{
@@ -86,6 +88,7 @@
           //VCoList,
           VDetailList,
           VBase,
+          VFooter,
       },
       created(){
         this.applyList();
@@ -117,6 +120,16 @@
 </script>
 
 <style scoped>
+
+.section {
+  padding-top: 170px;
+  padding-bottom: 0px;
+}
+
+/* .container {
+  padding-bottom: 110px;
+} */
+
 
 .company-item {
   padding:15px;
