@@ -4,7 +4,7 @@
       <div class="naviagtion fixed-top transition">
         <div class="container">
           <nav class="navbar navbar-expand-lg navbar-dark p-1">
-            <!-- <a class="navbar-brand p-0" href="index.html"><img src="images/logo/logo.png" alt="Agico"></a> -->
+            <a class="navbar-brand p-0" href="#" @click="goHome"><img src="images/logo/logo.png" style="filter: brightness(0) invert(1);"alt="Intern Sheep"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation"
               aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>

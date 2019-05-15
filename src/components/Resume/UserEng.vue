@@ -2,7 +2,7 @@
   <div class="row">
     <!-- 대제목 -->
     <div class="col-lg-12 text-center">
-    <p class="subtitle">Notice</p>
+    <p class="subtitle">Languages</p>
     <h2 class="section-title">영어 및 기타 외국어 활용 역량 질문</h2>
     </div>
     <!-- 이력서 내용 -->
