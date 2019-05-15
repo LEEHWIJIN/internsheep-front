@@ -28,13 +28,16 @@
               <v-user-s-w v-else-if="$store.state.resume.resume_state==3"></v-user-s-w>
       </div>
     </div>
-  </section>
+  </div>
+  <v-footer></v-footer>
+</section>
 </template>
 
 
 <script>
 //import Vue from 'vue';
  import VBase from '../Base/Index.vue'
+ import VFooter from '../Footer/Index.vue'
  import VUserInfo from './UserInfo.vue'
  import VUserEng from './UserEng.vue'
  import VUserGrade from './UserGrade.vue'
@@ -49,6 +52,7 @@
       },
       components: {
         VBase,
+        VFooter,
         VUserInfo,
         VUserEng,
         VUserGrade,

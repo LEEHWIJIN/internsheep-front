@@ -47,6 +47,7 @@
             </div>
           </div>
         </section>
+      <v-footer></v-footer>
     </div>
 
 </template>
@@ -55,6 +56,7 @@
   //import VResume from './components/Resume/Index.vue';
   //import Vtest from '../test/test.vue'
   import VBase from '../Base/Index.vue'
+  import VFooter from '../Footer/Index.vue'
   export default{
     name: 'Home',
     data() {
@@ -65,6 +67,7 @@
     components: {
         //VResume
         VBase,
+        VFooter,
     },
     created(){
 

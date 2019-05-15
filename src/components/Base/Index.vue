@@ -126,9 +126,13 @@
   }
 </script>
 
-<style scoped>
+<style>
+.naviagtion {
+  background: linear-gradient(80deg, #0030cc 0%, #00a4db 100%);
+  padding: 10px 0;
+}
 .naviagtion.nav-bg {
   background: linear-gradient(80deg, #0030cc 0%, #00a4db 100%);
-  padding: 5px 0;
+  padding: 1px 0;
 }
 </style>
