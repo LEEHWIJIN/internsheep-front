@@ -11,64 +11,21 @@
 
                 <h5 class="title">현재 공고 수정창</h5>
 
-                <div>
-                    <form v-on:submit.prevent='modifysubmit' class="form-signin">
-                        공고 시작일 : <input type="text" v-model="applyStart"><br/>
-                          공고 마감일 : <input type="text"  v-model="applyEnd"><br/>
-                          공고 학기 : <input type="text"  v-model="applySemester"><br/>
-                          공고 차수 : <input type="text" v-model="applyOrder"><br/>
-                        <button class="btn btn-primary" type="submit">수정하기</button>
-                    </form>
+                  <div>
+                      <form v-on:submit.prevent='modifysubmit' class="form-signin">
+                          공고 시작일 : <input type="text" v-model="applyStart"><br/>
+                            공고 마감일 : <input type="text"  v-model="applyEnd"><br/>
+                            공고 학기 : <input type="text"  v-model="applySemester"><br/>
+                            공고 차수 : <input type="text" v-model="applyOrder"><br/>
+                          <button class="btn btn-primary" type="submit">수정하기</button>
+                      </form>
+                  </div>
                 </div>
-
-                <!--<div class="form-label-group">-->
-                  <!--<input v-model="user.id" type="id" id="loginId" class="form-control1" placeholder="Id" required autofocus>-->
-                  <!--<label for="loginId">Id</label>-->
-                <!--</div>-->
-
-                <!--<div class="form-label-group">-->
-                  <!--<input v-model="user.password" type="password" id="inputPassword" class="form-control1"  placeholder="Password" required autofocus>-->
-                  <!--<label for="inputPassword">Password</label>-->
-                <!--</div>-->
-
-                <!--<div class="custom-control custom-checkbox mb-3">-->
-                  <!--<input type="checkbox" class="custom-control-input" id="customCheck1">-->
-                  <!--<label class="custom-control-label" for="customCheck1">Remember password</label>-->
-                <!--</div>-->
-
-                <!--<button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button><br>-->
-
-                <!--<div class="text-center">-->
-                  <!--<router-link to="/signup" id="link">Sign Up</router-link>-->
-                <!--</div>-->
-
-
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-  <!-- <div class="container" style="  width: 380px;">
-        <h1>Login</h1>
-        <form v-on:submit.prevent='login'>
-          ID: <input type="text" id="userId" v-model="userId" name="userId"><br>
-          Password: <input type="password" id="password" v-model="password" name="password"><br>
-          <input type="submit" id="login" value="login" />
-        </form>
-    </div> -->
-  <!-- <div id="login">
-    <div class="container" style="  width: 380px;">
-        <h1>Login</h1>
-        <form v-on:submit.prevent='login'>
-            <input id="loginId" type="text" placeholder="ID" name="loginid" v-model="user.id" style="margin-top: 20px;"><br>
-            <input type="password" name="loginpassword" placeholder="Password" v-model="user.password"><br>
-            <input type="submit" value="login" id="form">
-
-            <router-link to="/signup" id="link">Sign Up</router-link>
-        </form>
-    </div>
-  </div> -->
+      </section>
   </div>
 </template>
 

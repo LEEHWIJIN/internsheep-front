@@ -25,7 +25,10 @@
                   <a class="nav-link text-white text-capitalize" href="#" @click="goApplyList">기업 목록</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white text-capitalize" href="services.html">공지 사항</a>
+                  <a class="nav-link text-white text-capitalize" href="#">공지 사항</a>
+                </li>
+                <li class="nav-item">
+                  <a v-if="auth == 2" class="nav-link text-white text-capitalize" href="#" @click="goAdminPage">관리자페이지</a>
                 </li>
                 <li v-if="auth!=0" class="nav-item dropdown">
                   <a class="nav-link text-white text-capitalize dropdown-toggle" href="#" data-toggle="dropdown"
@@ -71,12 +74,17 @@
               if(res.data.result==1){
                 localStorage.removeItem('token')
                 this.user={};
-                this.auth=0;
+                this.auth=0;//로그인이 안 되어있는 상태
                 return;
               }
               this.user={};
               this.user = res.data.user;
-              this.auth = 1;
+              if(this.user.loginId=="admin1234"){
+                this.auth = 2;//admin인 상태
+                return;
+              }
+              this.auth = 1;//로그인이 되어있는 상태
+
           })
         }
         else{
@@ -111,7 +119,9 @@
         this.auth = 0;
         this.$router.push('login')
         },
-
+        goAdminPage(){
+          this.$router.push({name: "Admin"})
+        },
     }
   }
 </script>
