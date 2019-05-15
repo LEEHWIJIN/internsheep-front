@@ -122,9 +122,14 @@
 <style scoped>
 
 .section {
-  padding-top: 100px;
+  padding-top: 170px;
   padding-bottom: 0px;
 }
+
+/* .container {
+  padding-bottom: 110px;
+} */
+
 
 .company-item {
   padding:15px;

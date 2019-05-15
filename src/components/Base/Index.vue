@@ -26,25 +26,28 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link text-white text-capitalize" href="#">공지 사항</a>
+
                 </li>
+              </ul>
+
+              <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                  <a v-if="auth == 2" class="nav-link text-white text-capitalize" href="#" @click="goAdminPage">관리자페이지</a>
+                  <a v-if="auth == 2" class="name nav-link text-white text-capitalize" href="#" @click="goAdminPage">관리자페이지</a>
                 </li>
                 <li v-if="auth!=0" class="nav-item dropdown">
-                  <a class="nav-link text-white text-capitalize dropdown-toggle" href="#" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">{{user.name}}</a>
+                  <a class="name nav-link text-white text-capitalize dropdown-toggle" href="#" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false"><i class="fas fa-user-graduate mr-1"></i> {{user.name}}님</a>
                   <div class="dropdown-menu">
                     <a class="dropdown-item text-color" href="#" @click="goResume">이력서 관리</a>
                     <a class="dropdown-item text-color" href="#" @click="goApplyStatus">지원 현황</a>
                     <a class="dropdown-item text-color" href="#" @click="goReportreview">보고서 및 후기관리</a>
                     <a class="dropdown-item text-color" href="team.html">찜한 기업 목록</a>
                     <a class="dropdown-item text-color" href="pricing.html">회원 정보 수정</a>
-                    <a class="dropdown-item text-color" href="career.html">보고서 및 후기관리</a>
                   </div>
                 </li>
+                <a v-if="auth == 0" href="#" class="btn btn-outline-primary text-white ml-3" @click="goLogin">log in</a>
+                <button v-if="auth !=0" class="btn btn-outline-primary text-white ml-3" @click="logout">log out</button>
               </ul>
-              <a v-if="auth == 0" href="#" class="btn btn-outline-primary text-white ml-3" @click="goLogin">log in</a>
-              <button v-if="auth !=0" class="btn btn-outline-primary text-white ml-3" @click="logout">log out</button>
             </div>
           </nav>
         </div>
@@ -134,5 +137,10 @@
 .naviagtion.nav-bg {
   background: linear-gradient(80deg, #0030cc 0%, #00a4db 100%);
   padding: 1px 0;
+}
+
+.ul{
+   list-style:none;
+   padding-left:0px;
 }
 </style>

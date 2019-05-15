@@ -5,19 +5,7 @@
       <div class="row">
         <!-- 카테고리란 -->
         <div class="col-lg-3">
-          <div class="rounded-sm shadow bg-white pb-4">
-            <div class="widget">
-              <h4>Category</h4>
-              <ul class="list-styled list-bordered">
-                <li><a class="text-color d-block py-3" href="blog-details.html">이력서 관리</a></li>
-                <li><a class="text-color d-block py-3" href="blog-details.html">지원 현황</a></li>
-                <li><a class="text-color d-block py-3" href="blog-details.html">보고서 및 후기관리</a></li>
-                <li><a class="text-color d-block py-3" href="blog-details.html">찜한 기업 목록</a></li>
-                <li><a class="text-color d-block py-3" href="blog-details.html">보고서 및 후기 관리</a></li>
-                <li><a class="text-color d-block py-3" href="blog-details.html">회원정보 수정</a></li>
-              </ul>
-            </div>
-          </div>
+          <v-category></v-category>
         </div>
         <!-- 공백 -->
         <div class="col-lg-1">
@@ -102,6 +90,7 @@
 <script>
 import VBase from '../Base/Index.vue'
 import VFooter from '../Footer/Index.vue'
+import VCategory from '../Category/Index.vue'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
   export default{
       name: 'reportreview',
@@ -119,6 +108,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
       components: {
           VBase,
           VFooter,
+          VCategory,
       },
       created(){
 
@@ -198,4 +188,13 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 </script>
 
 <style scoped lang="scss">
+
+.section {
+  padding-top: 130px;
+  padding-bottom: 0px;
+}
+
+.container {
+  padding-bottom: 50px;
+}
 </style>
