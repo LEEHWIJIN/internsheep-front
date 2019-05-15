@@ -38,7 +38,8 @@
                   <a class="name nav-link text-white text-capitalize dropdown-toggle" href="#" data-toggle="dropdown"
                   aria-haspopup="true" aria-expanded="false"><i class="fas fa-user-graduate mr-1"></i> {{user.name}}님</a>
                   <div class="dropdown-menu">
-                    <a class="dropdown-item text-color" href="#" @click="goResume">이력서 관리</a>
+                    <a class="dropdown-item text-color" href="#" @click="goReadResume">이력서 보기</a>
+                    <a class="dropdown-item text-color" href="#" @click="goResume">이력서 수정</a>
                     <a class="dropdown-item text-color" href="#" @click="goApplyStatus">지원 현황</a>
                     <a class="dropdown-item text-color" href="#" @click="goReportreview">보고서 및 후기관리</a>
                     <a class="dropdown-item text-color" href="team.html">찜한 기업 목록</a>
@@ -101,6 +102,9 @@
     methods: {
         goResume(){
         this.$router.push({name: "Resume"})
+        },
+        goReadResume(){
+        this.$router.push({name: "ReadResume"})
         },
         goHome(){
             this.$router.push({name: "Home"})

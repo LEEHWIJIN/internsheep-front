@@ -10,6 +10,7 @@ import Applystatus from './components/ApplyStatus/Index.vue'
 import SignUp from './components/SignUp/Index.vue'
 import Admin from './components/Admin/Index.vue'
 import Modify from './components/Admin/modify.vue'
+import ReadResume from './components/ReadResume/Index.vue'
 
 Vue.use(Router)
 
@@ -44,6 +45,12 @@ export default new Router ({
             path: '/resume',
             name: 'Resume',
             component: Resume,
+            //beforeEnter : loggedin,
+        },
+        {
+            path: '/readResume',
+            name: 'ReadResume',
+            component: ReadResume,
             //beforeEnter : loggedin,
         },
         {
