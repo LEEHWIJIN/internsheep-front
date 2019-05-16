@@ -82,6 +82,12 @@
         return {
           applylist:[],
           selectedCo:[],
+          applyTerm : {
+              applyStart : '',
+              applyEnd : '',
+              applySemester : '',
+              applyOrder : ''
+          },
         }
       },
       components: {
@@ -92,6 +98,7 @@
       },
       created(){
         this.applyList();
+        this.compareDate();
 
       },
       methods: {
@@ -115,6 +122,16 @@
             cNoticeID : this.applylist[selectedNum].cNoticeID
           })
         },
+          compareDate(){
+              this.$http.get('http://localhost:8888/admin/recentApplyTerm').then((response) => {
+                      this.applyTerm = {
+                          applyStart : response.data[0].applyStart,
+                          applyEnd : response.data[0].applyEnd,
+                          applySemester : response.data[0].applySemester,
+                          applyOrder : response.data[0].applyOrder
+                      }
+              })
+          },
       }
   }
 </script>
