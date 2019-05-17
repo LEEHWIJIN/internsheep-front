@@ -11,7 +11,7 @@
                 <i class="far fa-heart" style="margin-left: 18px;"><span style="font-color:white; font-weight: bold;"> 기업 찜하기</span></i>
               </div>
               <div class="apply">
-                <i class="fas fa-walking" ><span style="font-color:white;"> 지원하기</span></i>
+                <i class="fas fa-walking" ><span @click="applyStd(sc.cName)" style="font-color:white;cursor:Pointer;"> 지원하기</span></i>
               </div>
             </div>
             <br><br><br>
@@ -171,7 +171,7 @@
       name: 'applyList',
       data() {
         return {
-            sName:"박모양"
+            user : {},
         }
       },
       components: {
@@ -184,16 +184,19 @@
         },
       },
       created(){
-          console.log(this.selectedCo)
+        this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+            this.user = res.data.user;
+            return this.user;
+        })
       },
       methods: {
         applyStd(cName){
-            this.$http.get('http://localhost:8888/std/mypage/applyStatus',{params:{sName : this.sName}}).then((response)=>{
+            this.$http.get('http://localhost:8888/std/mypage/applyStatus',{params:{sLoginID : this.user.loginId}}).then((response)=>{
             if(response.data != false){
                 alert("이미 지원을 한 상태 입니다.")
             }
             else{
-                this.$http.post('http://localhost:8888/std/mypage/applyCo',{cName : cName, sName : this.sName}).then((response) => {
+                this.$http.post('http://localhost:8888/std/mypage/applyCo',{cName : cName, sLoginID : this.user.loginId}).then((response) => {
                     alert("지원을 성공 하셨습니다.!")
                 })
             }
