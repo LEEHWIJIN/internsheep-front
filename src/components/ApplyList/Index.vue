@@ -22,36 +22,36 @@
                       <img src="images/career/logo-1.png" class="mr-sm-0 mb-4 mb-sm-0 rounded p-3" alt="logo-1">
                       <div class="media-body text-center text-sm-left mb-4 mb-sm-0" style="line-height:120%">
                         <!-- 모집 직군 -->
-                        <span class="h6">백엔드 개발자</span><br>
+                        <span class="h6">{{AL.cOccupation}}</span><br>
                         <!-- 기업명 -->
-                        <span style="font-size: 12px;">카카오{{AL.cName}}<br></span>
+                        <span style="font-size: 12px;">{{AL.cName}}<br></span>
                         <!-- 태그 -->
-                        <span style="font-size: 12px;">#C #JAVA #Python{{AL.cName}}<br></span>
+                        <span style="font-size: 12px;">{{AL.cTag}}<br></span>
                       </div>
                       <!-- 경쟁률 -->
                       <div class="" style="line-height:120%">
                         <br><br>
                         <a class="mr-sm-3 paragraph">
-                          <span style="font-size: 12px">모집:</span>1
+                          <span style="font-size: 12px">모집:</span>{{AL.cNumOfPeople}}
                           <span class="h4" style="color:#0097d5;">
-                          <span style="font-size: 12px">지원:</span>7</span>
+                          <span style="font-size: 12px">지원:</span>{{AL.applyStdNum}}</span>
                         </a>
                       </div>
                     </div></li>
                   </div>
 
                   <!-- 샘플. 나중에 지워주세요. -->
-                  <li><a class="text-color d-block py-3" href="blog-details.html">사케우동</a></li>
-                  <li><a class="text-color d-block py-3" href="blog-details.html">심심이</a></li>
-                  <li><a class="text-color d-block py-3" href="blog-details.html">네이버</a></li>
-                  <li><a class="text-color d-block py-3" href="blog-details.html">카카오</a></li>
-                  <li><a class="text-color d-block py-3" href="blog-details.html">(주)삼겹살</a></li>
-                  <li><a class="text-color d-block py-3" href="blog-details.html">김치찌개</a></li>
-                  <li><a class="text-color d-block py-3" href="blog-details.html">(주)고구마</a></li>
-                  <li><a class="text-color d-block py-3" href="blog-details.html">(주)이누야샤</a></li>
-                  <li><a class="text-color d-block py-3" href="blog-details.html">페이스북</a></li>
-                  <li><a class="text-color d-block py-3" href="blog-details.html">구글</a></li>
-                  <li><a class="text-color d-block py-3" href="blog-details.html">인스타그램</a></li>
+                  <!--<li><a class="text-color d-block py-3" href="blog-details.html">사케우동</a></li>-->
+                  <!--<li><a class="text-color d-block py-3" href="blog-details.html">심심이</a></li>-->
+                  <!--<li><a class="text-color d-block py-3" href="blog-details.html">네이버</a></li>-->
+                  <!--<li><a class="text-color d-block py-3" href="blog-details.html">카카오</a></li>-->
+                  <!--<li><a class="text-color d-block py-3" href="blog-details.html">(주)삼겹살</a></li>-->
+                  <!--<li><a class="text-color d-block py-3" href="blog-details.html">김치찌개</a></li>-->
+                  <!--<li><a class="text-color d-block py-3" href="blog-details.html">(주)고구마</a></li>-->
+                  <!--<li><a class="text-color d-block py-3" href="blog-details.html">(주)이누야샤</a></li>-->
+                  <!--<li><a class="text-color d-block py-3" href="blog-details.html">페이스북</a></li>-->
+                  <!--<li><a class="text-color d-block py-3" href="blog-details.html">구글</a></li>-->
+                  <!--<li><a class="text-color d-block py-3" href="blog-details.html">인스타그램</a></li>-->
 
                 </ul>
             </div>
@@ -97,18 +97,28 @@
           VFooter,
       },
       created(){
-        this.applyList();
-        this.compareDate();
-
+          this.compareDate();
       },
       methods: {
         applyList(){
-          this.$http.get('http://localhost:8888/std/list').then((response) => {
+          this.$http.get('http://localhost:8888/std/list',{params:{applyOrder:this.applyTerm.applyOrder, applySemester: this.applyTerm.applySemester}}).then((response) => {
               for(var i=0; i<response.data.length;i++){
                   this.applylist.push({
+                      cBenefit : response.data[i].cBenefit,
+                      cPay : response.data[i].cPay,
+                      internTermStart : response.data[i].internTermStart,
+                      internTermEnd : response.data[i].internTermEnd,
+                      cManagerPhone : response.data[i].cManagerPhone,
+                      cImage : response.data[i].cImage,
+                      cLocation : response.data[i].cLocation,
                     cManagerName : response.data[i].cManagerName,
                     cName : response.data[i].cName,
-                    cNoticeID : response.data[i].cNoticeID
+                      cOccupation : response.data[i].cOccupation,
+                      cTag : response.data[i].cTag,
+                      cNumOfPeople :response.data[i].cNumOfPeople,
+                      applyStdNum : response.data[i].applyStdNum,
+                      cInfo : response.data[i].cInfo,
+                      cEmail : response.data[i].cEmail,
                   })
               }
             })
@@ -117,9 +127,21 @@
           this.selectedCo=[]
           //console.log(selectedNum)
           this.selectedCo.push({
-            cManagerName : this.applylist[selectedNum].cManagerName,
-            cName : this.applylist[selectedNum].cName,
-            cNoticeID : this.applylist[selectedNum].cNoticeID
+              cBenefit : this.applylist[selectedNum].cBenefit,
+              cPay : this.applylist[selectedNum].cPay,
+              internTermStart : this.applylist[selectedNum].internTermStart.split('T')[0],
+              internTermEnd : this.applylist[selectedNum].internTermEnd.split('T')[0],
+              cManagerPhone : this.applylist[selectedNum].cManagerPhone,
+              cImage : this.applylist[selectedNum].cImage,
+              cLocation : this.applylist[selectedNum].cLocation,
+              cManagerName : this.applylist[selectedNum].cManagerName,
+              cName : this.applylist[selectedNum].cName,
+              cOccupation : this.applylist[selectedNum].cOccupation,
+              cTag : this.applylist[selectedNum].cTag,
+              cNumOfPeople :this.applylist[selectedNum].cNumOfPeople,
+              applyStdNum : this.applylist[selectedNum].applyStdNum,
+              cInfo : this.applylist[selectedNum].cInfo,
+              cEmail : this.applylist[selectedNum].cEmail,
           })
         },
           compareDate(){
@@ -130,6 +152,7 @@
                           applySemester : response.data[0].applySemester,
                           applyOrder : response.data[0].applyOrder
                       }
+                      this.applyList();
               })
           },
       }
