@@ -3,8 +3,13 @@
     <div class="outer">
       <div class="inner">
         <div class="centered">
+          <!-- 이력서 페이지 -->
           <h3 style="font-weight:bold;">어머나, <br>아직 이력서 작성을<br>안하셨어요! </h3><br>
-          <h4>이력서 작성하러 가기 -></h4>
+          <h4 href="#" @click="goResume">이력서 작성하러 가기 -></h4>
+
+          <!-- 보고서 작성 페이지  || 후기 작성 페이지일 경우-->
+          <!-- <h3 style="font-weight:bold;">어머나, <br>아직 실습중이<br>아니시네요! </h3><br>
+          <h4 href="#" @click="goHome">홈으로 돌아가기 -></h4> -->
         </div>
       </div>
     </div>
@@ -12,7 +17,23 @@
 </template>
 
 <script>
-export default {
+export default{
+  name: 'app',
+  data() {
+    return {
+    }
+  },
+  components: {
+      //VResume
+  },
+  methods: {
+    goResume(){
+    this.$router.push({name: "Resume"})
+    },
+    goHome(){
+    this.$router.push({name: "Home"})
+    },
+  }
 }
 </script>
 

@@ -12,6 +12,7 @@
           </div>
           <!-- 이력서 정보 -->
           <div class="col-lg-8">
+            <!-- <v-error></v-error> -->
             <v-user-info v-if="$store.state.resume.resume_state==0"></v-user-info>
             <v-user-eng v-else-if="$store.state.resume.resume_state==1"></v-user-eng>
             <v-user-grade v-else-if="$store.state.resume.resume_state==2"></v-user-grade>
