@@ -33,7 +33,7 @@
               <label for="mike">4학년 1학기</label><br>
               -->
 <!-- <input class="inp-cbx" id="cbx1" value="3학년 1학기" type="checkbox" v-model="sGrade" style="display: none;" onclick="return false"> -->
-              <input class="inp-cbx" id="cbx1" value="3학년 1학기" type="checkbox" v-model="sGrade" style="display: none;">
+              <input class="inp-cbx" id="cbx1" value=" 3학년 1학기" type="checkbox" v-model="sGrade" style="display: none;" >
               <label class="cbx" for="cbx1">
                 <span>
                   <svg width="12px" height="10px" viewbox="0 0 12 10">

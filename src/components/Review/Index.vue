@@ -1,7 +1,8 @@
+<!-- Review 후기 관리 페이지 -->
 <template>
   <section class="section section-lg-bottom bg-light">
     <v-base></v-base>
-    <div class="container" id="reportreview">
+    <div class="container" id="review">
       <div class="row">
         <!-- 카테고리란 -->
         <div class="col-lg-3">
@@ -18,63 +19,43 @@
                 <p class="subtitle">Review</p>
                 <h2 class="section-title">Write a Review</h2>
               </div>
-              <!-- 보고서 첨부 -->
-              <div class="row">
-                <div class="col-lg-12">
-                  <li><label style="font-weight:bold;">보고서</label></li>
-                </div>
+              <!-- 후기 작성란 -->
+              <div class="col-lg-12">
+                <li><label style="font-weight:bold;">실습 후기</label></li>
+              </div>
 
-                <div class="col-lg-12 mb-0">
-                  <b-form-file
-                    v-model="file"
-                    :state="Boolean(file)"
-                    placeholder="Choose a file..."
-                    drop-placeholder="Drop file here..."
-                    @change="upload($event)"
-                  ></b-form-file>
-                </div>
+              <div class="col-lg-12 mb-4">
+                <textarea class="form-control mb-4" v-model="review" placeholder="실습 내용, 사내문화 등을 자유롭게 평가해주세요."></textarea>
+              </div>
 
-                <div class="col-lg-12 mb-4">
-                  <div >Selected file: {{ file ? file.name : '' }}</div>
-                </div>
-
-                <div class="col-lg-12">
-                  <li><label style="font-weight:bold;">실습 후기</label></li>
-                </div>
-
-                <div class="col-lg-12 mb-4">
-                  <textarea class="form-control mb-4" v-model="review" placeholder="실습 내용, 사내문화 등을 자유롭게 평가해주세요."></textarea>
-                </div>
-
-                <div class="col-12 text-center">
-                  <button class="btn btn-primary" type="submit" @click="submitFileAndReview">저장하기</button>
-                </div>
-                <!-- <div id="container">
-                  <div>
-                    <div class="upload" v-for="(upload, index) in uploads" :key="index">
-                        <div class="ext" :style="{'background-color': upload.color}">
-                          <p>{{upload.ext.toUpperCase()}}</p>
+              <div class="col-12 text-center">
+                <button class="btn btn-primary" type="submit" @click="submitFileAndReview">저장하기</button>
+              </div>
+              <!-- <div id="container">
+                <div>
+                  <div class="upload" v-for="(upload, index) in uploads" :key="index">
+                      <div class="ext" :style="{'background-color': upload.color}">
+                        <p>{{upload.ext.toUpperCase()}}</p>
+                      </div>
+                      <div class="upload-details">
+                        <div class="name-container">
+                          <p class="filename">{{upload.name}}</p>
+                          <div>
+                            <p class="filesize">{{upload.size}}</p>
+                            <p @click="removeUpload(index)" class="cancel-btn" v-if="upload.progress !== '100%'">x</p>
+                          </div>
                         </div>
-                        <div class="upload-details">
-                          <div class="name-container">
-                            <p class="filename">{{upload.name}}</p>
-                            <div>
-                              <p class="filesize">{{upload.size}}</p>
-                              <p @click="removeUpload(index)" class="cancel-btn" v-if="upload.progress !== '100%'">x</p>
-                            </div>
-                          </div>
-                          <div class="upload-bar" v-if="upload.progress !== '100%'">
-                            <div class="upload-progress" :style="{width: upload.progress}"></div>
-                          </div>
+                        <div class="upload-bar" v-if="upload.progress !== '100%'">
+                          <div class="upload-progress" :style="{width: upload.progress}"></div>
                         </div>
                       </div>
                     </div>
-                    <div @click="openFilePicker" id="uploader">
-                      <p><span>Click</span> to choose a file to upload :)</p>
-                      <input type="file" ref="filepicker" @change="uploadFile" />
-                    </div>
-                </div> -->
-              </div>
+                  </div>
+                  <div @click="openFilePicker" id="uploader">
+                    <p><span>Click</span> to choose a file to upload :)</p>
+                    <input type="file" ref="filepicker" @change="uploadFile" />
+                  </div>
+              </div> -->
             </div>
         </div>
       </div>
@@ -93,7 +74,7 @@ import VFooter from '../Footer/Index.vue'
 import VCategory from '../Category/Index.vue'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
   export default{
-      name: 'reportreview',
+      name: 'review',
       data() {
         return {
           sName : "이휘진",

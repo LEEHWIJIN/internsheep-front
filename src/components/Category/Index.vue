@@ -6,9 +6,10 @@
           <li><a class="text-color d-block py-3" href="#" @click="goReadResume">이력서 보기</a></li>
           <li><a class="text-color d-block py-3" href="#" @click="goResume">이력서 수정</a></li>
           <li><a class="text-color d-block py-3" href="#" @click="goApplyStatus">지원 현황</a></li>
-          <li><a class="text-color d-block py-3" href="#" @click="goReportreview">보고서 및 후기관리</a></li>
+          <li><a class="text-color d-block py-3" href="#" @click="goReport">보고서 관리</a></li>
+          <li><a class="text-color d-block py-3" href="#" @click="goReview">후기 관리</a></li>
           <li><a class="text-color d-block py-3" href="#">찜한 기업 목록</a></li>
-          <li><a class="text-color d-block py-3" href="#">회원정보 수정</a></li>
+          <li><a class="text-color d-block py-3" href="#" @click="goProfile">회원정보 수정</a></li>
           </ul>
       </div>
   </div>
@@ -40,8 +41,14 @@
       goApplyList(){
           this.$router.push({name: "Apply"})
       },
-      goReportreview(){
-          this.$router.push({name: "Reportreview"})
+      goReport(){
+          this.$router.push({name: "Report"})
+      },
+      goReview(){
+          this.$router.push({name: "Review"})
+      },
+      goProfile(){
+          this.$router.push({name: "Profile"})
       },
       goLogin(){
           this.$router.push({name: "login"})
