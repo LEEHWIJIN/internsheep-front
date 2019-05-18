@@ -16,6 +16,13 @@
             <v-user-eng v-else-if="$store.state.resume.resume_state==1"></v-user-eng>
             <v-user-grade v-else-if="$store.state.resume.resume_state==2"></v-user-grade>
             <v-user-s-w v-else-if="$store.state.resume.resume_state==3"></v-user-s-w>
+            <v-modify-user-info v-if="$store.state.resume.resume_state==6"></v-modify-user-info>
+            <v-modify-user-eng v-else-if="$store.state.resume.resume_state==7"></v-modify-user-eng>
+            <v-modify-user-grade v-else-if="$store.state.resume.resume_state==8"></v-modify-user-grade>
+            <v-modify-user-s-w v-else-if="$store.state.resume.resume_state==9"></v-modify-user-s-w>
+          </div>
+          수정 전용 정보
+          <div class="col-lg-8">
           </div>
         </div>
     </div>
@@ -33,6 +40,10 @@
  import VUserEng from './UserEng.vue'
  import VUserGrade from './UserGrade.vue'
  import VUserSW from './UserSW.vue'
+ import VModifyUserInfo from '../ModifyResume/UserInfo.vue'
+ import VModifyUserEng from '../ModifyResume/UserEng.vue'
+ import VModifyUserGrade from '../ModifyResume/UserGrade.vue'
+ import VModifyUserSW from '../ModifyResume/UserSW.vue'
 //  import { mapActions, mapGetters } from "vuex";
   export default{
       name: 'Resume',
@@ -49,6 +60,10 @@
         VUserEng,
         VUserGrade,
         VUserSW,
+        VModifyUserInfo,
+        VModifyUserEng,
+        VModifyUserGrade,
+        VModifyUserSW,
       },
       created(){
         this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {

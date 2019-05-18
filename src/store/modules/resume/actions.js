@@ -31,5 +31,10 @@ export default {
     setResumeState({commit}, data){
         commit(mutation.SETRESUMESTATE, data);
     },
+
+    setModifyResumeState({commit}, data){
+        commit(mutation.SETMODIFYRESUMESTATE, data);
+    },
+
     
 };

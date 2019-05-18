@@ -63,13 +63,10 @@
       methods: {
         getResume(loginId){
           this.$http.get('http://localhost:8888/std/mypage/watchResume',{params:{sLoginID : loginId}}).then(res =>{
-            // console.log(this.user.loginId)
-            // {params:{sLoginID : this.user.loginId}}
-            // if(res.data != false){
-            //       this.$store.dispatch('resume/setResumeState',4);
-            // }
-            // else this.$store.dispatch('resume/setResumeState',0);//맨 첫장
-            this.$store.dispatch('resume/setResumeState',0);
+            if(res.data != false){//resume가 있을때 읽기전용
+                  this.$store.dispatch('resume/setResumeState',0);
+            }
+            else this.$store.dispatch('resume/setResumeState',4);
           });
 
         },

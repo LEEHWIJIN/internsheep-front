@@ -131,7 +131,6 @@
         <br>
         <div class="col-12 text-center">
           <button class="btn btn-primary" type="submit">다음</button>
-          <button class="btn btn-primary" @click="modifyResume">수정하기</button>
         </div>
       </form>
     </div>
@@ -212,10 +211,6 @@
         //   }];
         //   this.$store.dispatch('resume/submit_userInfo', data);
           this.$store.dispatch('resume/setResumeState',1);
-        },
-        modifyResume(){
-          this.$store.dispatch('resume/setResumeState',5);
-          // this.$store.dispatch('resume/setModifyResumeState',0);
         },
       }
   }
