@@ -12,8 +12,8 @@
           </div>
           <!-- 이력서 정보 -->
           <div class="col-lg-8">
-            <v-user-info ></v-user-info>
-            <v-user-eng v-if="$store.state.resume.resume_state==1"></v-user-eng>
+            <v-user-info v-if="$store.state.resume.resume_state==0"></v-user-info>
+            <v-user-eng v-else-if="$store.state.resume.resume_state==1"></v-user-eng>
             <v-user-grade v-else-if="$store.state.resume.resume_state==2"></v-user-grade>
             <v-user-s-w v-else-if="$store.state.resume.resume_state==3"></v-user-s-w>
           </div>
@@ -63,11 +63,10 @@
       methods: {
         getResume(loginId){
           this.$http.get('http://localhost:8888/std/mypage/watchResume',{params:{sLoginID : loginId}}).then(res =>{
-            
-            if(res.data != false){
-                  this.$store.dispatch('resume/setResumeState',4);
+            if(res.data != false){//resume가 있을때 읽기전용
+                  this.$store.dispatch('resume/setResumeState',0);
             }
-            else this.$store.dispatch('resume/setResumeState',0);//맨 첫장
+            else this.$store.dispatch('resume/setResumeState',4);
           });
 
         },
