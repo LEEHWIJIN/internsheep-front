@@ -134,7 +134,8 @@
             <div class="pl-3">
               <h6 class="text-dark">주소</h6>
               <ul class="list-unstyled">
-                <li>{{sc.cLocation}}</li>
+                <vue-daum-map :appKey="appKey" :center.sync="center" :level.sync="level" :mapTypeId="mapTypeId" :libraries="libraries" @load="onLoad" style="width:500px;height:400px;">
+                </vue-daum-map>
               </ul>
             </div>
           </li>
@@ -167,16 +168,24 @@
 
 
 <script>
+    import VueDaumMap from 'vue-daum-map';
+
   export default{
       name: 'applyList',
       data() {
         return {
             user : {},
             applyTerm : {},
+            appKey: '843e68ace7c69cb699e9d969ee289d4c',
+            center: {lat:33.450701, lng:126.570667},
+            level: 3,
+            libraries: ['services', 'clusterer', 'drawing'],
+            mapTypeId: VueDaumMap.MapTypeId.NORMAL, // 맵 타입
+            mapObject: null
         }
       },
       components: {
-
+          VueDaumMap
       },
       props:{
         selectedCo:{
@@ -202,16 +211,46 @@
       methods: {
         applyStd(cName){
             this.$http.get('http://localhost:8888/std/mypage/applyStatus',{params:{sLoginID : this.user.loginId}}).then((response)=>{
-            if(response.data != false){
+            if(response.data != '0'){
                 alert("이미 지원을 한 상태 입니다.")
             }
             else{
                 this.$http.post('http://localhost:8888/std/mypage/applyCo',{cName : cName, sLoginID : this.user.loginId,applySemester: this.applyTerm.applySemester,applyOrder:this.applyTerm.applyOrder}).then((response) => {
-                    alert("지원을 성공 하셨습니다.!")
+                    if(response.data == '0'){
+                        alert("이력서가 없습니다. 이력서를 작성해주세요")
+                    }
+                    else {
+                        alert("지원을 성공 하셨습니다.!")
+                    }
                 })
             }
             })
         },
+          onLoad (map) {
+              var geocoder = new daum.maps.services.Geocoder();
+              geocoder.addressSearch(this.selectedCo[0].cLocation, function(result, status) {
+
+                  if (status === daum.maps.services.Status.OK) {
+
+                      var coords = new daum.maps.LatLng(result[0].y, result[0].x);
+
+                      // 결과값으로 받은 위치를 마커로 표시합니다
+                      var marker = new daum.maps.Marker({
+                          map: map,
+                          position: coords
+                      });
+                      // 인포윈도우로 장소에 대한 설명을 표시합니다
+                      var infowindow = new daum.maps.InfoWindow({
+                          content: '<div style="width:150px;text-align:center;padding:6px 0;">회사</div>'
+                      });
+                      infowindow.open(map, marker);
+                      map.setCenter(coords);
+
+                  }
+              });
+
+
+          }
       }
   }
 </script>

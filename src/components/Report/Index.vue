@@ -37,6 +37,14 @@
               <div class="col-lg-12 mb-4">
                 <div >Selected file: {{ file ? file.name : '' }}</div>
               </div>
+
+              <div class="col-lg-12 mb-4">
+                <li><label style="font-weight:bold;">이전 보고서</label>
+                  <br/><a v-bind:href="url" download>{{fileName}}</a></li>
+              </div>
+              <div class="col-12 text-center">
+                <button class="btn btn-primary" type="submit" @click="submitFileAndReview">저장하기</button>
+              </div>
               <!-- <div id="container">
                 <div>
                   <div class="upload" v-for="(upload, index) in uploads" :key="index">
@@ -83,11 +91,11 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
       name: 'report',
       data() {
         return {
-          sName : "이휘진",
-          file : null,
-          uploadFile : null,
-          review : "",
-          cName : "고비포선라이즈",
+            user:{},
+            file : null,
+            uploadFile : null,
+            url : "",
+            fileName : ""
           //uploads: [],
 		      //colors: ["#24bddf", "#5fcc9c", "#6a65d8"],
         }
@@ -98,9 +106,27 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
           VCategory,
       },
       created(){
-
+          this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+              this.user = res.data.user;
+              console.log("유저입니다 : ",this.user.loginId)
+              this.downloadButton(this.user.loginId)
+              this.loadFileName(this.user.loginId)
+              return this.user.loginId
+          })
       },
       methods: {
+          downloadButton(loginId){
+              this.url = 'http://localhost:8888/std/mypage/downloadReport?sLoginID='+loginId
+              this.loadFileName(loginId)
+          },
+          loadFileName(loginId){
+              this.$http.get('http://localhost:8888/std/mypage/loadFileName',{params:{sLoginID : loginId}}).then((response)=>{
+                  if(response.data == '0'){
+                      this.fileName = ""
+                  }
+                  else {this.fileName = response.data}
+              })
+          },
           // getRandomColor() { //나중에 사용할 ux/ui
           //   const randomIndex = Math.floor(Math.random() * 2);
           //     return this.colors[randomIndex];
@@ -147,12 +173,10 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
             this.uploadFile = event.target.files[0];
           },
           submitFileAndReview(){
-            var data = new FormData();
-            data.append('name', this.uploadFile.name)
-            data.append('cName',this.cName)
-            data.append('sName',this.sName)
-            data.append('starScore',this.review)
-            data.append('file', this.uploadFile) //formdata 는 console.log를 찍어도 확인 할 수 없다.
+              var data = new FormData();
+              data.append('name', this.uploadFile.name)
+              data.append('sLoginID',this.user.loginId)
+              data.append('file', this.uploadFile) //formdata 는 console.log를 찍어도 확인 할 수 없다.
             // for (var key of data.keys()) {
             //   console.log(key);
             // }
@@ -165,10 +189,18 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
                 'Content-Type' : 'multipart/form-data'
               }
             }
-            this.$http.post('http://localhost:8888/std/mypage/postReportAndReview', data, config).then(
-              response => {
-              }
-            )
+            if(this.fileName == '') {
+                this.$http.post('http://localhost:8888/std/mypage/postReport', data, config).then(
+                    response => {
+                    }
+                )
+            }
+            else{
+                this.$http.post('http://localhost:8888/std/mypage/modifyReport', data, config).then(
+                    response => {
+                    }
+                )
+            }
           },
         }
     }
