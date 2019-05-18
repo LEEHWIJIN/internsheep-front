@@ -5,8 +5,8 @@
         <!-- 파란 사각형 -->
         <div class="topImage shadow-sm" style="line-height:130%">
           <div class="row">
-            <div class="col-lg-12">
-              <div class="heart">
+            <div class="col-lg-12 mb-4">
+              <div class="heart mr-sm-2 mt-sm-2">
                 <!-- 만약 찜했을 경우 font-weight: bold; 로 바꾸면 됨. -->
                 <i class="far fa-heart" style="margin-left: 18px;"><span style="font-color:white; font-weight: bold;"> 기업 찜하기</span></i>
               </div>
@@ -14,26 +14,25 @@
                 <i class="fas fa-walking" ><span @click="applyStd(sc.cName)" style="font-color:white;cursor:Pointer;"> 지원하기</span></i>
               </div>
             </div>
-            <br><br><br>
+
             <div class="col-lg-12">
               <div class="job-intro media align-items-center flex-column flex-sm-row">
                 <!-- 회사 사진 -->
-                <img src="images/career/logo-1.png" class="mr-sm-0 mb-4 mb-sm-0 rounded p-3" alt="logo-1">
-                <div class="media-body text-center text-sm-left mb-4 mb-sm-0" style="line-height:120%; text-shadow: 1.5px 1.5px 1.5px #306aff;">
+                <img src="images/career/logo-1.png" class="img mr-sm-0 mb-4 mb-sm-0 rounded p-3" alt="logo-1">
+                <div class="info media-body text-center text-sm-left mb-4 mb-sm-0" style="line-height:120%;">
                   <!-- 모집 직군 -->
-                  <span class="text-white" style="">{{sc.cOccupation}}<br></span>
+                  <span class="text-white" style="font-size: 20px;">{{sc.cOccupation}}<br></span>
                   <!-- 기업명 -->
-                  <span class="text-white" style="font-size: 12px;">{{sc.cName}}<br></span>
+                  <span class="text-white" style="font-size: 13px;">{{sc.cName}}<br></span>
                   <!-- 태그 -->
-                  <span class="text-white" style="font-size: 12px;">{{sc.cTag}}<br></span>
+                  <span class="text-white" style="font-size: 13px;">{{sc.cTag}}<br></span>
                 </div>
                 <!-- 경쟁률 -->
                 <div class="" style="line-height:120%">
                   <br><br>
-                  <a class="mr-sm-3 paragraph text-white">
-                    <span class="text-white" style="font-size: 12px">모집:{{sc.cNumOfPeople}}</span>
-                    <span class="h4 text-white">
-                    <span style="font-size: 12px">지원:</span>{{sc.applyStdNum}}</span>
+                  <a class="mr-sm-2 mb-sm-2 paragraph text-white">
+                    <span class="text-white" style="font-size: 13px">모집:</span>{{sc.cNumOfPeople}}
+                    <span class="h4 text-white"><span style="font-size: 13px">지원:</span>{{sc.applyStdNum}}</span>
                   </a>
                 </div>
               </div>
@@ -41,13 +40,9 @@
           </div>
 
         </div>
+
         <!-- 상세 정보  -->
-
-        <!-- 기업명 : {{sc.cName}}<br>
-        매니저 : {{sc.cManagerName}}<br><br>
-        <button @click="applyStd(sc.cName)">지원하기</button> -->
-
-        <ul class="list-unstyled pt-4" >
+        <ul class="list-unstyled pt-4 pl-3" >
           <li class="d-flex mb-4">
             <i class="fa fa-building icon-grey"></i>
             <div class="pl-3">
@@ -77,17 +72,6 @@
               </ul>
             </div>
           </li>
-
-          <!--<li class="d-flex mb-4">-->
-            <!--<i class="fa fa-archive icon-grey"></i>-->
-            <!--<div class="pl-3">-->
-              <!--<h6 class="text-dark">필요 역량</h6>-->
-              <!--<ul class="list-unstyled">-->
-                <!--<li>Node.js 초급 이상</li>-->
-                <!--<li>MySql 초급 이상</li>-->
-              <!--</ul>-->
-            <!--</div>-->
-          <!--</li>-->
 
           <li class="d-flex mb-4">
             <i class="fa fa-won-sign icon-grey"></i>
@@ -119,22 +103,13 @@
             </div>
           </li>
 
-          <!--<li class="d-flex mb-4">-->
-            <!--<i class="fas fa-business-time icon-grey"></i>-->
-            <!--<div class="pl-2">-->
-              <!--<h6 class="text-dark">실습 시간</h6>-->
-              <!--<ul class="list-unstyled">-->
-                <!--<li>08:30 - 18:00</li>-->
-              <!--</ul>-->
-            <!--</div>-->
-          <!--</li>-->
-
           <li class="d-flex mb-4">
             <i class="fa fa-map-o icon-grey"></i>
             <div class="pl-3">
               <h6 class="text-dark">주소</h6>
               <ul class="list-unstyled">
-                <vue-daum-map :appKey="appKey" :center.sync="center" :level.sync="level" :mapTypeId="mapTypeId" :libraries="libraries" @load="onLoad" style="width:500px;height:400px;">
+                <li class="mb-1">{{sc.cLocation}}</li>
+                <vue-daum-map :appKey="appKey" :center.sync="center" :level.sync="level" :mapTypeId="mapTypeId" :libraries="libraries" @load="onLoad" style="width:520px;height:300px;">
                 </vue-daum-map>
               </ul>
             </div>
@@ -153,12 +128,16 @@
           <li class="d-flex mb-4">
             <i class="fa fa-phone icon-grey"></i>
             <div class="pl-3">
-              <h6 class="text-dark">연락처</h6>
+              <h6 class="text-dark">담당자 성함 및 연락처</h6>
               <ul class="list-unstyled">
-                <li>담당자 연락처 : {{sc.cManagerPhone}}</li>
+                <li>{{sc.cManagerName}} {{sc.cManagerPhone}}</li>
               </ul>
             </div>
           </li>
+
+          <div class="col-12 text-center">
+            <button class="btn btn-primary" type="submit" >저장하기</button>
+          </div>
 
         </ul>
       </div>
@@ -276,5 +255,14 @@
 
 .job-intro p {
   font-color: white !important;
+}
+
+.img {
+  height: 100px;
+  width: 100px;
+}
+
+.info {
+  color: white;
 }
 </style>
