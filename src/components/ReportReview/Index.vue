@@ -211,17 +211,23 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
                       'Content-Type' : 'multipart/form-data'
                   }
               }
-              if(this.fileName=='' && this.review == ""){
-                  this.$http.post('http://localhost:8888/std/mypage/postReportAndReview', data, config).then(
+              if(this.fileName==''){
+                  this.$http.post('http://localhost:8888/std/mypage/postReport', data, config).then(
                       (response) => {
                           this.$router.push({name: "Reportreview"})
                       }
                   )
               }
-              else{
-                  this.$http.post('http://localhost:8888/std/mypage/modifyReportAndReview', data, config).then(
+              if(this.review==''){
+                  this.$http.post('http://localhost:8888/std/mypage/postReview', data, config).then(
                       (response) => {
-                          this.$router.push({name: "Reportreview"})
+                      }
+                  )
+              }
+              if(this.uploadFile == null){
+                  this.$http.post('http://localhost:8888/std/mypage/modifyReport', data, config).then(
+                      (response) => {
+
                       }
                   )
               }
