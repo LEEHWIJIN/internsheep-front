@@ -172,6 +172,7 @@
       data() {
         return {
             user : {},
+            applyTerm : {},
         }
       },
       components: {
@@ -183,10 +184,19 @@
             required: true,
         },
       },
-      created(){
-        this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+      async created(){
+        await this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
             this.user = res.data.user;
             return this.user;
+        })
+        await this.$http.get('http://localhost:8888/admin/recentApplyTerm').then((response) => {
+          this.applyTerm = {
+              applyStart : response.data[0].applyStart,
+              applyEnd : response.data[0].applyEnd,
+              applySemester : response.data[0].applySemester,
+              applyOrder : response.data[0].applyOrder
+          }
+          return this.applyTerm;
         })
       },
       methods: {
@@ -196,7 +206,7 @@
                 alert("이미 지원을 한 상태 입니다.")
             }
             else{
-                this.$http.post('http://localhost:8888/std/mypage/applyCo',{cName : cName, sLoginID : this.user.loginId}).then((response) => {
+                this.$http.post('http://localhost:8888/std/mypage/applyCo',{cName : cName, sLoginID : this.user.loginId,applySemester: this.applyTerm.applySemester,applyOrder:this.applyTerm.applyOrder}).then((response) => {
                     alert("지원을 성공 하셨습니다.!")
                 })
             }

@@ -12,14 +12,14 @@
           <input class="form-control mb-4" v-model="sName" placeholder="이름*">
         </div> -->
         <div class="col-lg-6">
-          <!-- <input class="form-control mb-4" v-model="sEmail" placeholder="e-mail" readonly="readonly"> -->
-          <input class="form-control mb-4" v-model="sEmail" placeholder="e-mail" >
+          <input class="form-control mb-4" v-model="sEmail" placeholder="e-mail" readonly="readonly">
+          <!-- <input class="form-control mb-4" v-model="sEmail" placeholder="e-mail" > -->
         </div>
         <!-- <div class="col-lg-6">
           <input class="form-control mb-4" v-model="sNum" placeholder="학번*">
         </div> -->
         <div class="col-lg-6">
-          <input class="form-control mb-4" v-model="sPhone" placeholder="전화번호*">
+          <input class="form-control mb-4" v-model="sPhone" placeholder="전화번호*" readonly="readonly">
         </div>
         <div class="col-lg-6">
           <div class="apply-list  rounded-xl  bg-white mb-4">
@@ -33,7 +33,7 @@
               <label for="mike">4학년 1학기</label><br>
               -->
 <!-- <input class="inp-cbx" id="cbx1" value="3학년 1학기" type="checkbox" v-model="sGrade" style="display: none;" onclick="return false"> -->
-              <input class="inp-cbx" id="cbx1" value="3학년 1학기" type="checkbox" v-model="sGrade" style="display: none;">
+              <input class="inp-cbx" id="cbx1" name="grade" value="3학년 1학기" type="checkbox" style="display: none;" onclick="return false">
               <label class="cbx" for="cbx1">
                 <span>
                   <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -42,7 +42,7 @@
                 </span>
                 <span>3학년 1학기</span>
               </label><br>
-              <input class="inp-cbx" id="cbx2" value="3학년 2학기" type="checkbox" v-model="sGrade" style="display: none;">
+              <input class="inp-cbx" id="cbx2" name="grade" value="3학년 2학기" type="checkbox" style="display: none;" onclick="return false">
               <label class="cbx" for="cbx2">
                 <span>
                   <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -51,7 +51,7 @@
                 </span>
                 <span>3학년 2학기</span>
               </label><br>
-              <input class="inp-cbx" id="cbx3" value="4학년 1학기" type="checkbox" v-model="sGrade" style="display: none;">
+              <input class="inp-cbx" id="cbx3" name="grade" value="4학년 1학기" type="checkbox" style="display: none;" onclick="return false">
               <label class="cbx" for="cbx3">
                 <span>
                   <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -65,7 +65,7 @@
         <div class="col-lg-6">
           <div class="apply-list  rounded-xl  bg-white mb-4">
               <h6 style="font-weight:bold">희망하는 현장실습 업무 분야(복수체크 가능)*</h6>
-              <input class="inp-cbx" id="cbx4" value="SW 개발" type="checkbox" v-model="sHope" style="display: none;">
+              <input class="inp-cbx" id="cbx4" value="SW 개발" name="grade" type="checkbox" style="display: none;" onclick="return false">
               <label class="cbx" for="cbx4">
                 <span>
                   <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -74,7 +74,7 @@
                 </span>
                 <span>SW 개발</span>
               </label><br>
-              <input class="inp-cbx" id="cbx5" value="데이터 분석" type="checkbox" v-model="sHope" style="display: none;">
+              <input class="inp-cbx" id="cbx5" value="데이터 분석" name="grade" type="checkbox" style="display: none;" onclick="return false">
               <label class="cbx" for="cbx5">
                 <span>
                   <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -83,7 +83,7 @@
                 </span>
                 <span>데이터 분석</span>
               </label><br>
-              <input class="inp-cbx" id="cbx6" value="SW 테스트 및 품질관리" type="checkbox" v-model="sHope" style="display: none;">
+              <input class="inp-cbx" id="cbx6" value="SW 테스트 및 품질관리" name="grade" type="checkbox" style="display: none;" onclick="return false">
               <label class="cbx" for="cbx6">
                 <span>
                   <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -92,7 +92,7 @@
                 </span>
                 <span>SW 테스트 및 품질관리</span>
               </label><br>
-              <input class="inp-cbx" id="cbx7" value="IT시스템 운영" type="checkbox" v-model="sHope" style="display: none;">
+              <input class="inp-cbx" id="cbx7" value="IT시스템 운영" type="checkbox" name="grade" style="display: none;" onclick="return false">
               <label class="cbx" for="cbx7">
                 <span>
                   <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -101,7 +101,7 @@
                 </span>
                 <span>IT시스템 운영</span>
               </label><br>
-              <input class="inp-cbx" id="cbx8" value="마켓팅 혹은 기획" type="checkbox" v-model="sHope" style="display: none;">
+              <input class="inp-cbx" id="cbx8" value="마켓팅 혹은 기획" type="checkbox" name="grade" style="display: none;" onclick="return false">
               <label class="cbx" for="cbx8">
                 <span>
                   <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -116,7 +116,7 @@
         <div class="col-lg-6">
           <div class="apply-list  rounded-xl  bg-white mb-4">
               <h6 style="font-weight:bold">희망 실습기간 및 형태*</h6>
-              <input class="inp-cbx" id="cbx9" value="8주" type="checkbox" v-model="sHopeTerm" style="display: none;">
+              <input class="inp-cbx" id="cbx9" value="8주" type="checkbox" style="display: none;" onclick="return false">
               <label class="cbx" for="cbx9">
                 <span>
                   <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -125,7 +125,7 @@
                 </span>
                 <span>8주</span>
               </label><br>
-              <input class="inp-cbx" id="cbx10" value="12주 이상(장기)" type="checkbox" v-model="sHopeTerm" style="display: none;">
+              <input class="inp-cbx" id="cbx10" value="12주 이상(장기)" type="checkbox" style="display: none;" onclick="return false">
               <label class="cbx" for="cbx10">
                 <span>
                   <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -212,11 +212,45 @@
       components: {
         // VBase,
       },
-      beforeMount(){
-        this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+      async beforeMount(){
+        await this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
             //console.log(res.data.user);
             this.user = res.data.user;
-        })
+            return this.user
+        });
+        await this.$http.get('http://localhost:8888/std/mypage/watchResume',{params:{sLoginID : this.user.loginId}}).then(res =>{
+            console.log(res)
+            this.sEmail = res.data.sEmail;
+            // var checkbox = document.getElementsByName('Javascript').value;
+            // console.log(checkbox.value)
+            var grade = res.data.sGrade;
+            var chkbox = document.getElementsByName('grade').length;
+            // console.log(chkbox)
+            // console.log(document.getElementsByName('grade').value)
+            var docheck = [];
+            for(var i=0;i<chkbox;i++){
+              docheck.push(document.getElementsByName('grade')[i].value);
+              if(grade==docheck[i]){
+                document.getElementsByName('grade')[i].checked = true;
+              }
+            }
+            // console.log(docheck)
+            // docheck.push(document.getElementsByName('grade').value)
+            // this.sGrade.push(res.data.sGrade);
+            // console.log(docheck)
+            // console.log(grade)
+            // if(grade == docheck.value){
+            // //   console.log("같음")
+            // //   console.log(checkbox)
+            //   // console.log(document.getElementById('cbx3').checked)
+            //   document.getElementsByName('cbx3').checked = true;
+            // // }
+            // }
+            if(res.data != false){
+                  this.$store.dispatch('resume/setResumeState',4);
+            }
+            else this.$store.dispatch('resume/setResumeState',0);//맨 첫장
+          });
       },
       created(){
 
