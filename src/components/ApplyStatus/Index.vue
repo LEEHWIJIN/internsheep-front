@@ -19,20 +19,38 @@
               <h2 class="section-title">Apply Status</h2>
             </div>
 
+            <div v-if="current == 1" class="col-lg-12 p-0">
+              <li><label style="font-weight:bold;">현재 지원</label></li>
+              <div class="col-lg-12 bg-white p-4 rounded shadow my-3">
+                <div class="media align-items-center flex-column flex-sm-row">
+                  <img src="images/career/logo-1.png" class="mr-sm-3 mb-4 mb-sm-0 border rounded p-2" alt="logo-1">
+                  <div class="media-body text-center text-sm-left mb-4 mb-sm-0">
+                    <h6 class="mt-0">{{cName}}</h6>
+                    <p class="mb-0 text-gray"> {{cOccupation}}</p>
+                  </div>
+                  <div class="btn btn-outline-primary">{{YN}}</div>
+                </div>
+              </div>
+            </div>
+
             <!-- 회사 목록 (카드 형식)-->
             <div v-if="confirm == 1" class="col-lg-12 p-0">
-               <div class="col-lg-12 bg-white p-4 rounded shadow my-3">
+              <li><label style="font-weight:bold;">이전 지원</label></li>
+               <div v-for='al in applylist' class="col-lg-12 bg-white p-4 rounded shadow my-3">
                  <div class="media align-items-center flex-column flex-sm-row">
                    <img src="images/career/logo-1.png" class="mr-sm-3 mb-4 mb-sm-0 border rounded p-2" alt="logo-1">
                    <div class="media-body text-center text-sm-left mb-4 mb-sm-0">
-                     <h6 class="mt-0">{{cName}}</h6>
-                     <p class="mb-0 text-gray"> {{cOccupation}}</p>
+                     <h6 class="mt-0">{{al.cName}}</h6>
+                     <p class="mb-0 text-gray"> {{al.cOccupation}}</p>
                    </div>
-                   <div class="btn btn-outline-primary">{{YN}}</div>
+                   <div class="btn btn-outline-primary">{{al.YN}}</div>
+                 </div>
+                 <div class="col-12 text-center">
+                   <button class="btn btn-primary" @click="giveup">포기하기</button>
                  </div>
                </div>
             </div>
-            <div v-if="confirm == 0">
+            <div v-if="confirm == 2">
               지원한 기업이 없습니다.
             </div>
           </div>
@@ -53,11 +71,13 @@
       return {
         user:{},
         cName : "",
-        YN : "",
-        cOccupation : "",
-        cImage : "",
+          applylist : [],
           applyTerm:{},
           confirm : 0,
+          cName : "",
+          cOccupation: "",
+          YN : "",
+          current : 0,
       }
     },
     components: {
@@ -70,8 +90,46 @@
         this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
             this.user = res.data.user;
             console.log("유저입니다 : ",this.user.loginId)
-            this.getApplyStatus(this.user.loginId)
+            this.getApplyTerm(this.user.loginId)
           })
+
+    },
+    methods: {
+      getApplyStatus(loginId) {
+        this.$http.get('http://localhost:8888/std/mypage/applyStatus',{params:{sLoginID : loginId, applySemester : this.applyTerm.applySemester}}).then((response)=>{
+            if(response.data=='0'){
+                this.confirm = 2
+            }
+            else {
+                for(var i=0; i<response.data.length;i++) {
+                    if(this.applyTerm.applyOrder == response.data[i].applyOrder){
+                        this.current = 1
+                        this.cName = response.data[i].cName
+                        this.cOccupation = response.data[i].cOccupation
+                        if (response.data[i].YN == 1) this.YN = "합격";
+                        else if (response.data[i].YN == -1) this.YN = "심사중";
+                        else if (response.data[i].YN == 0) this.YN = "불합격";
+                        else if (response.data[i].YN == 2) this.YN = "포기";
+                    }
+                    else {
+                        this.confirm = 1
+                        this.applylist.push({
+                            cOccupation: response.data[i].cOccupation,
+                            cImage: response.data[i].cImage,
+                            YN: "",
+                            cName: response.data[i].cName,
+                            applyOrder: response.data[i].applyOrder
+                        })
+                        if (response.data[i].YN == 1) this.applylist[i].YN = "합격";
+                        else if (response.data[i].YN == -1) this.applylist[i].YN = "심사중";
+                        else if (response.data[i].YN == 0) this.applylist[i].YN = "불합격";
+                        else if (response.data[i].YN == 2) this.applylist[i].YN = "포기";
+                    }
+                }
+            }
+        })
+      },
+        getApplyTerm(loginId){
             this.$http.get('http://localhost:8888/admin/recentApplyTerm').then((response) => {
                 this.applyTerm = {
                     applyStart : response.data[0].applyStart,
@@ -79,23 +137,18 @@
                     applySemester : response.data[0].applySemester,
                     applyOrder : response.data[0].applyOrder
                 }
+                this.getApplyStatus(loginId)
             })
-    },
-    methods: {
-      getApplyStatus(loginId) {
-        this.$http.get('http://localhost:8888/std/mypage/applyStatus',{params:{sLoginID : loginId}}).then((response)=>{
-            if(response.data=='0'){
-            }
-            else {
-                this.confirm == 1
-                this.cName = response.data[0].cName;
-                if (response.data[0].YN == 1) this.YN = "합격입니다.";
-                else if (response.data[0].YN == -1) this.YN = "심사중입니다.";
-                else this.YN = "불합격 입니다.";
-                this.cOccupation = response.data[0].cOccupation
-            }
-        })
-      },
+        },
+        giveup(){
+          if(this.applylist.YN == '심사중'){
+            this.$http.post('http://localhost:8888/std/mypage/giveup',{sLoginID : this.user.loginId, applySemester : this.applyTerm.applySemester, applyOrder : this.applyTerm.applyOrder}).then((response) => {
+            })
+          }
+          else{
+              alert('포기할 수 없는 상태 입니다.')
+          }
+        }
     }
   }
 </script>

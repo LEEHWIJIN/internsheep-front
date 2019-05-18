@@ -31,12 +31,11 @@
                 <!-- 기업명 -->
                 <span v-model="cName"><span style="color:#000000; font-weight:bold; font-size:20px; color:#242f3e;">{{cName}}</span> <br></span>
                 <!-- 모집 직군 -->
-                <span style="font-weight:bold;">실습 직군<br></span>
-                <!-- 태그 -->
-                <span>기업 여부 <br></span>
+                <span v-model="cOccupation"><span style="font-weight:bold;">{{cOccupation}}<br></span></span>
               </div>
             </div>
 
+            <form class="row" v-on:submit.prevent='submitFileAndReview'>
             <div class="col-lg-12 mb-3">
               <li><label style="font-weight:bold;"> 별점</label></li>
               <fieldset class="rating ml-3">
@@ -54,16 +53,16 @@
             </div>
 
             <!-- 후기 작성란 -->
-            <div class="col-lg-12">
-              <li><label style="font-weight:bold;"> 후기 한줄평</label></li>
+            <div class="col-lg-12 mb-4">
+              <li><label style="font-weight:bold;"> 실습 후기 제목</label></li>
             </div>
 
             <div class="col-lg-12 mb-4">
-              <input class="form-control mb-0" v-model="ReviewTitle" placeholder="실습 후기를 한 줄로 표현해주세요.">
+              <textarea class="form-control mb-4" v-model="reviewTitle" placeholder="실습 제목을 써주세요."></textarea>
             </div>
 
             <div class="col-lg-12">
-              <li><label style="font-weight:bold;"> 실습 상세 후기</label></li>
+              <li><label style="font-weight:bold;"> 실습 후기 내용 </label></li>
             </div>
 
             <div class="col-lg-12 mb-4">
@@ -71,8 +70,9 @@
             </div>
 
             <div class="col-12 text-center">
-              <button class="btn btn-primary" type="submit" @click="submitFileAndReview">저장하기</button>
+              <button class="btn btn-primary" type="submit">저장하기</button>
             </div>
+            </form>
             <!-- <div id="container">
               <div>
                 <div class="upload" v-for="(upload, index) in uploads" :key="index">
@@ -119,11 +119,13 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
       name: 'review',
       data() {
         return {
-          sName : "이휘진",
-          file : null,
-          uploadFile : null,
+            user:{},
           review : "",
-          cName : "고비포선라이즈",
+            reviewTitle : "",
+            // starScore : "",
+            cName : "",
+            cOccupation : "",
+            confirm : 0
           //uploads: [],
 		      //colors: ["#24bddf", "#5fcc9c", "#6a65d8"],
         }
@@ -134,7 +136,12 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
           VCategory,
       },
       created(){
-
+          this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+              this.user = res.data.user;
+              console.log("유저입니다 : ",this.user.loginId)
+              this.loadReview(this.user.loginId)
+              return this.user.loginId
+          })
       },
       methods: {
           // getRandomColor() { //나중에 사용할 ux/ui
@@ -179,16 +186,38 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
           //   this.$set(this.uploads[index], "progress", `${progress + 10}%`);
           //   if (progress + 10 === 100) clearInterval(this.uploads[index].progressTimer);
           // }
-          upload(event){
-            this.uploadFile = event.target.files[0];
+          loadReview(loginId){
+              this.$http.get('http://localhost:8888/std/mypage/watchReview',{params:{sLoginID : loginId}}).then((response)=>{
+                  if(response.data != '0'){
+                      this.confirm = 1
+                      this.cName = response.data.cName
+                      this.reviewTitle = response.data.reviewTitle
+                      this.starScore = response.data.starScore
+                      this.review = response.data.reviewContent
+                      this.cOccupation = response.data.cOccupation
+                  }
+                  var starScore = document.getElementsByName("rating").length;
+                  for(var i=0;i<starScore;i++){
+                      if(this.starScore==document.getElementsByName("rating")[i].value){
+                          document.getElementsByName("rating")[i].checked = true;
+                      }
+                  }
+                  console.log(this.starScore)
+              })
           },
           submitFileAndReview(){
-            var data = new FormData();
-            data.append('name', this.uploadFile.name)
-            data.append('cName',this.cName)
-            data.append('sName',this.sName)
-            data.append('starScore',this.review)
-            data.append('file', this.uploadFile) //formdata 는 console.log를 찍어도 확인 할 수 없다.
+              var starScore = document.getElementsByName("rating").length;
+              for(var i=0;i<starScore;i++){
+                  if(document.getElementsByName("rating")[i].checked == true) {
+                      var startScoreValue = document.getElementsByName("rating")[i].value;
+                  }
+              }
+            //   console.log(startScoreValue)
+            // var data = new FormData();
+            // data.append('starScore',this.starScore)
+            //   data.append('reviewContent',this.review)
+            //   data.append('reviewTitle',this.reviewTitle)
+            //   data.append('sLoginID',this.user.loginId)
             // for (var key of data.keys()) {
             //   console.log(key);
             // }
@@ -196,15 +225,18 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
             //   console.log(value);
 
             // } //이렇게 key 값과 value값을 확인하면 확인 가능하다.
-            let config = {
-              header : {
-                'Content-Type' : 'multipart/form-data'
+              if(this.confirm == 0) {
+                  this.$http.post('http://localhost:8888/std/mypage/postReview',{sLoginID : this.user.loginId, starScore : startScoreValue, reviewContent : this.review, reviewTitle : this.reviewTitle}).then(
+                      response => {
+                      }
+                  )
               }
-            }
-            this.$http.post('http://localhost:8888/std/mypage/postReportAndReview', data, config).then(
-              response => {
+              else{
+                  this.$http.post('http://localhost:8888/std/mypage/modifyReview', {sLoginID : this.user.loginId, starScore :  startScoreValue, reviewContent : this.review, reviewTitle : this.reviewTitle}).then(
+                      response => {
+                      }
+                  )
               }
-            )
           },
         }
     }
