@@ -23,7 +23,6 @@ export default {
     },
 
     submit_ALL({commit},data){
-        console.log(data)
         axios.post('http://localhost:8888/std/mypage/resume',{req : data}).then((response) => {
                    
         })

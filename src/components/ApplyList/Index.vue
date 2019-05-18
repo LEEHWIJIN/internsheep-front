@@ -82,12 +82,13 @@
         return {
           applylist:[],
           selectedCo:[],
-          applyTerm : {
-              applyStart : '',
-              applyEnd : '',
-              applySemester : '',
-              applyOrder : ''
-          },
+          // applyTerm : {
+          //     applyStart : '',
+          //     applyEnd : '',
+          //     applySemester : '',
+          //     applyOrder : ''
+          // },
+          applyTerm:{},
         }
       },
       components: {
@@ -102,26 +103,26 @@
       methods: {
         applyList(){
           this.$http.get('http://localhost:8888/std/list',{params:{applyOrder:this.applyTerm.applyOrder, applySemester: this.applyTerm.applySemester}}).then((response) => {
-              for(var i=0; i<response.data.length;i++){
-                  this.applylist.push({
-                      cBenefit : response.data[i].cBenefit,
-                      cPay : response.data[i].cPay,
-                      internTermStart : response.data[i].internTermStart,
-                      internTermEnd : response.data[i].internTermEnd,
-                      cManagerPhone : response.data[i].cManagerPhone,
-                      cImage : response.data[i].cImage,
-                      cLocation : response.data[i].cLocation,
-                    cManagerName : response.data[i].cManagerName,
-                    cName : response.data[i].cName,
-                      cOccupation : response.data[i].cOccupation,
-                      cTag : response.data[i].cTag,
-                      cNumOfPeople :response.data[i].cNumOfPeople,
-                      applyStdNum : response.data[i].applyStdNum,
-                      cInfo : response.data[i].cInfo,
-                      cEmail : response.data[i].cEmail,
-                  })
-              }
-            })
+            for(var i=0; i<response.data.length;i++){
+                this.applylist.push({
+                  cBenefit : response.data[i].cBenefit,
+                  cPay : response.data[i].cPay,
+                  internTermStart : response.data[i].internTermStart,
+                  internTermEnd : response.data[i].internTermEnd,
+                  cManagerPhone : response.data[i].cManagerPhone,
+                  cImage : response.data[i].cImage,
+                  cLocation : response.data[i].cLocation,
+                  cManagerName : response.data[i].cManagerName,
+                  cName : response.data[i].cName,
+                  cOccupation : response.data[i].cOccupation,
+                  cTag : response.data[i].cTag,
+                  cNumOfPeople :response.data[i].cNumOfPeople,
+                  applyStdNum : response.data[i].applyStdNum,
+                  cInfo : response.data[i].cInfo,
+                  cEmail : response.data[i].cEmail,
+              })
+            }
+          })
         },
         clickCo(selectedNum){
           this.selectedCo=[]
@@ -144,17 +145,17 @@
               cEmail : this.applylist[selectedNum].cEmail,
           })
         },
-          compareDate(){
-              this.$http.get('http://localhost:8888/admin/recentApplyTerm').then((response) => {
-                      this.applyTerm = {
-                          applyStart : response.data[0].applyStart,
-                          applyEnd : response.data[0].applyEnd,
-                          applySemester : response.data[0].applySemester,
-                          applyOrder : response.data[0].applyOrder
-                      }
-                      this.applyList();
-              })
-          },
+        compareDate(){
+          this.$http.get('http://localhost:8888/admin/recentApplyTerm').then((response) => {
+            this.applyTerm = {
+                applyStart : response.data[0].applyStart,
+                applyEnd : response.data[0].applyEnd,
+                applySemester : response.data[0].applySemester,
+                applyOrder : response.data[0].applyOrder
+            }
+            this.applyList();
+          })
+        },
       }
   }
 </script>
