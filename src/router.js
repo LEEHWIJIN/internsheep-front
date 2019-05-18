@@ -5,12 +5,14 @@ import Resume from './components/Resume/Index.vue'
 import Login from './components/Login/Index.vue'
 import Home from './components/Home/Index.vue'
 import Apply from './components/ApplyList/Index.vue'
-import Reportreview from './components/ReportReview/Index.vue'
+import Report from './components/Report/Index.vue'
+import Review from './components/Review/Index.vue'
 import Applystatus from './components/ApplyStatus/Index.vue'
 import SignUp from './components/SignUp/Index.vue'
 import Admin from './components/Admin/Index.vue'
 import Modify from './components/Admin/modify.vue'
 import ReadResume from './components/ReadResume/Index.vue'
+import Profile from './components/Profile/Index.vue'
 
 Vue.use(Router)
 
@@ -54,6 +56,11 @@ export default new Router ({
             //beforeEnter : loggedin,
         },
         {
+            path: '/profile',
+            name: 'Profile',
+            component : Profile,
+        },
+        {
             path: '/home',
             name: 'Home',
             component: Home,
@@ -88,9 +95,14 @@ export default new Router ({
             component : Apply,
         },
         {
-            path: '/reportreview',
-            name: 'Reportreview',
-            component : Reportreview,
+            path: '/report',
+            name: 'Report',
+            component : Report,
+        },
+        {
+            path: '/review',
+            name: 'Review',
+            component : Review,
         },
         {
             path: '/apply-status',

@@ -41,13 +41,14 @@
                     <a class="dropdown-item text-color" href="#" @click="goReadResume">이력서 보기</a>
                     <a class="dropdown-item text-color" href="#" @click="goResume">이력서 수정</a>
                     <a class="dropdown-item text-color" href="#" @click="goApplyStatus">지원 현황</a>
-                    <a class="dropdown-item text-color" href="#" @click="goReportreview">보고서 및 후기관리</a>
+                    <a class="dropdown-item text-color" href="#" @click="goReport">보고서 관리</a>
+                    <a class="dropdown-item text-color" href="#" @click="goReview">후기 관리</a>
                     <a class="dropdown-item text-color" href="team.html">찜한 기업 목록</a>
-                    <a class="dropdown-item text-color" href="pricing.html">회원 정보 수정</a>
+                    <a class="dropdown-item text-color" href="#" @click="goProfile">회원 정보 수정</a>
                   </div>
                 </li>
-                <a v-if="auth == 0" href="#" class="btn btn-outline-primary text-white ml-3" @click="goLogin">log in</a>
-                <button v-if="auth !=0" class="btn btn-outline-primary text-white ml-3" @click="logout">log out</button>
+                <a v-if="auth == 0" href="#" class=" btn-sm btn-outline-primary text-white ml-3" @click="goLogin">log in</a>
+                <button v-if="auth !=0" class="btn btn-sm btn-outline-primary text-white ml-3" @click="logout">log out</button>
               </ul>
             </div>
           </nav>
@@ -115,8 +116,14 @@
         goApplyList(){
             this.$router.push({name: "Apply"})
         },
-        goReportreview(){
-            this.$router.push({name: "Reportreview"})
+        goReport(){
+            this.$router.push({name: "Report"})
+        },
+        goReview(){
+            this.$router.push({name: "Review"})
+        },
+        goProfile(){
+            this.$router.push({name: "Profile"})
         },
         goLogin(){
             this.$router.push({name: "login"})

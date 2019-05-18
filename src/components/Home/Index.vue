@@ -11,6 +11,7 @@
                 <a href="#" class="btn btn-primary">Go Apply</a>
                 </div>
                 <div class="col-lg-5 pl-lg-0 pt-5 pt-lg-0 text-lg-right text-center">
+
                 <img src="images/banner/banner-1.png" class="img-fluid" alt="">
                 </div>
             </div>
