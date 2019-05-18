@@ -12,8 +12,8 @@
           </div>
           <!-- 이력서 정보 -->
           <div class="col-lg-8">
-            <v-user-info v-if="$store.state.resume.resume_state==0"></v-user-info>
-            <v-user-eng v-else-if="$store.state.resume.resume_state==1"></v-user-eng>
+            <v-user-info ></v-user-info>
+            <v-user-eng v-if="$store.state.resume.resume_state==1"></v-user-eng>
             <v-user-grade v-else-if="$store.state.resume.resume_state==2"></v-user-grade>
             <v-user-s-w v-else-if="$store.state.resume.resume_state==3"></v-user-s-w>
           </div>
@@ -53,7 +53,6 @@
       created(){
         this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
           this.user = res.data.user;
-          console.log("유저입니다 : ",this.user.loginId)
           this.getResume(this.user.loginId);
         });
 
@@ -64,8 +63,7 @@
       methods: {
         getResume(loginId){
           this.$http.get('http://localhost:8888/std/mypage/watchResume',{params:{sLoginID : loginId}}).then(res =>{
-            // console.log(this.user.loginId)
-            // {params:{sLoginID : this.user.loginId}}
+            
             if(res.data != false){
                   this.$store.dispatch('resume/setResumeState',4);
             }
