@@ -33,6 +33,7 @@
  import VUserEng from './UserEng.vue'
  import VUserGrade from './UserGrade.vue'
  import VUserSW from './UserSW.vue'
+ import VError from './Error.vue'
 //  import { mapActions, mapGetters } from "vuex";
   export default{
       name: 'Resume',
@@ -49,6 +50,7 @@
         VUserEng,
         VUserGrade,
         VUserSW,
+        VError,
       },
       created(){
         this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
