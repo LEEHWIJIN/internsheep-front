@@ -24,17 +24,7 @@
         <div class="col-lg-6">
           <div class="apply-list  rounded-xl  bg-white mb-4">
               <h6 style="font-weight:bold">학년정보(현재 학기 기준)*</h6>
-              <!--
-              <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
-              <label for="jack">3학년 1학기</label><br>
-              <input type="checkbox" id="john" value="John" v-model="checkedNames">
-              <label for="john">3학년 2학기</label><br>
-              <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
-              <label for="mike">4학년 1학기</label><br>
-              -->
-<!-- <input class="inp-cbx" id="cbx1" value="3학년 1학기" type="checkbox" v-model="sGrade" style="display: none;" onclick="return false"> -->
-
-              <input class="inp-cbx" id="cbx1" value=" 3학년 1학기" type="checkbox" v-model="sGrade" style="display: none;" >
+              <input class="inp-cbx" id="cbx1" value=" 3학년 1학기" type="checkbox" name="grade" onclick="return false" style="display: none;" >
 
               <label class="cbx" for="cbx1">
                 <span>
@@ -67,7 +57,7 @@
         <div class="col-lg-6">
           <div class="apply-list  rounded-xl  bg-white mb-4">
               <h6 style="font-weight:bold">희망하는 현장실습 업무 분야(복수체크 가능)*</h6>
-              <input class="inp-cbx" id="cbx4" value="SW 개발" name="grade" type="checkbox" style="display: none;" onclick="return false">
+              <input class="inp-cbx" id="cbx4" value="SW 개발" name="hope" type="checkbox" style="display: none;" onclick="return false">
               <label class="cbx" for="cbx4">
                 <span>
                   <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -76,7 +66,7 @@
                 </span>
                 <span>SW 개발</span>
               </label><br>
-              <input class="inp-cbx" id="cbx5" value="데이터 분석" name="grade" type="checkbox" style="display: none;" onclick="return false">
+              <input class="inp-cbx" id="cbx5" value="데이터 분석" name="hope" type="checkbox" style="display: none;" onclick="return false">
               <label class="cbx" for="cbx5">
                 <span>
                   <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -85,7 +75,7 @@
                 </span>
                 <span>데이터 분석</span>
               </label><br>
-              <input class="inp-cbx" id="cbx6" value="SW 테스트 및 품질관리" name="grade" type="checkbox" style="display: none;" onclick="return false">
+              <input class="inp-cbx" id="cbx6" value="SW 테스트 및 품질관리" name="hope" type="checkbox" style="display: none;" onclick="return false">
               <label class="cbx" for="cbx6">
                 <span>
                   <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -94,7 +84,7 @@
                 </span>
                 <span>SW 테스트 및 품질관리</span>
               </label><br>
-              <input class="inp-cbx" id="cbx7" value="IT시스템 운영" type="checkbox" name="grade" style="display: none;" onclick="return false">
+              <input class="inp-cbx" id="cbx7" value="IT시스템 운영" type="checkbox" name="hope" style="display: none;" onclick="return false">
               <label class="cbx" for="cbx7">
                 <span>
                   <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -103,7 +93,7 @@
                 </span>
                 <span>IT시스템 운영</span>
               </label><br>
-              <input class="inp-cbx" id="cbx8" value="마켓팅 혹은 기획" type="checkbox" name="grade" style="display: none;" onclick="return false">
+              <input class="inp-cbx" id="cbx8" value="마켓팅 혹은 기획" type="checkbox" name="hope" style="display: none;" onclick="return false">
               <label class="cbx" for="cbx8">
                 <span>
                   <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -118,7 +108,7 @@
         <div class="col-lg-6">
           <div class="apply-list  rounded-xl  bg-white mb-4">
               <h6 style="font-weight:bold">희망 실습기간 및 형태*</h6>
-              <input class="inp-cbx" id="cbx9" value="8주" type="checkbox" style="display: none;" onclick="return false">
+              <input class="inp-cbx" id="cbx9" value="8주" type="checkbox" name="hopeterm" style="display: none;" onclick="return false">
               <label class="cbx" for="cbx9">
                 <span>
                   <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -127,7 +117,7 @@
                 </span>
                 <span>8주</span>
               </label><br>
-              <input class="inp-cbx" id="cbx10" value="12주 이상(장기)" type="checkbox" style="display: none;" onclick="return false">
+              <input class="inp-cbx" id="cbx10" value="12주 이상(장기)" name="hopeterm" type="checkbox" style="display: none;" onclick="return false">
               <label class="cbx" for="cbx10">
                 <span>
                   <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -138,47 +128,6 @@
               </label><br>
           </div>
         </div>
-        <!-- <div class="col-lg-6">
-          <div class="apply-list rounded-xl  bg-white mb-4">
-            <h6 style="font-weight:bold">소속학과*</h6> -->
-            <!--
-            <input type="checkbox" id="jack" value="Jack" v-model="checkedNames0">
-            <label for="jack">소프트웨어학과</label><br>
-            <input type="checkbox" id="john" value="John" v-model="checkedNames0">
-            <label for="john">ICT융합전공</label><br>
-            <input type="checkbox" id="mike" value="Mike" v-model="checkedNames0">
-            <label for="mike">기타</label><br>
-            -->
-            <!-- <input class="inp-cbx" id="cbx4" value="1" type="checkbox" v-model="checkedNames1" style="display: none;">
-            <label class="cbx" for="cbx4">
-              <span>
-                <svg width="12px" height="10px" viewbox="0 0 12 10">
-                  <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                </svg>
-              </span>
-              <span>소프트웨어학과</span>
-            </label><br>
-            <input class="inp-cbx" id="cbx5" value="1" type="checkbox" v-model="checkedNames2" style="display: none;">
-            <label class="cbx" for="cbx5">
-              <span>
-                <svg width="12px" height="10px" viewbox="0 0 12 10">
-                  <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                </svg>
-              </span>
-              <span>ICT융합전공</span>
-            </label><br>
-            <input class="inp-cbx" id="cbx6" value="1" type="checkbox" v-model="checkedNames3" style="display: none;">
-            <label class="cbx" for="cbx6">
-              <span>
-                <svg width="12px" height="10px" viewbox="0 0 12 10">
-                  <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                </svg>
-              </span>
-              <span>기타</span>
-            </label><br>
-
-          </div>
-        </div> -->
         <br>
         <div class="col-12 text-center">
           <button class="btn btn-primary" type="submit">다음</button>
@@ -190,19 +139,10 @@
 
 
 <script>
-//import Vue from 'vue';
-//  import VBase from '../Base/Index.vue'
   export default{
       name: 'UserInfo',
       data() {
         return {
-          // checkedNames1:[],
-          // checkedNames2:[],
-          // checkedNames3:[],
-          // checkedNames4:[],
-          // checkedNames5:[],
-          // checkedNames6:[],
-          //sName:[],
           sHope : [],
           sHopeTerm : [],
           sPhone:[],
@@ -221,14 +161,15 @@
             return this.user
         });
         await this.$http.get('http://localhost:8888/std/mypage/watchResume',{params:{sLoginID : this.user.loginId}}).then(res =>{
-            console.log(res)
+            // console.log(res)
             this.sEmail = res.data.sEmail;
-            // var checkbox = document.getElementsByName('Javascript').value;
-            // console.log(checkbox.value)
+            this.sPhone = res.data.sPhone;
             var grade = res.data.sGrade;
+            var hope = res.data.sHope;
+            var hopeterm = res.data.sHopeTerm;
             var chkbox = document.getElementsByName('grade').length;
-            // console.log(chkbox)
-            // console.log(document.getElementsByName('grade').value)
+            var chkboxhp = document.getElementsByName('hope').length;
+            var chkboxhpterm = document.getElementsByName('hopeterm').length;
             var docheck = [];
             for(var i=0;i<chkbox;i++){
               docheck.push(document.getElementsByName('grade')[i].value);
@@ -236,20 +177,22 @@
                 document.getElementsByName('grade')[i].checked = true;
               }
             }
-            // console.log(docheck)
-            // docheck.push(document.getElementsByName('grade').value)
-            // this.sGrade.push(res.data.sGrade);
-            // console.log(docheck)
-            // console.log(grade)
-            // if(grade == docheck.value){
-            // //   console.log("같음")
-            // //   console.log(checkbox)
-            //   // console.log(document.getElementById('cbx3').checked)
-            //   document.getElementsByName('cbx3').checked = true;
-            // // }
-            // }
+            docheck = [];
+            for(var i=0;i<chkboxhp;i++){
+              docheck.push(document.getElementsByName('hope')[i].value);
+              if(hope==docheck[i]){
+                document.getElementsByName('hope')[i].checked = true;
+              }
+            }
+            docheck = [];
+            for(var i=0;i<chkboxhpterm;i++){
+              docheck.push(document.getElementsByName('hopeterm')[i].value);
+              if(hopeterm==docheck[i]){
+                document.getElementsByName('hopeterm')[i].checked = true;
+              }
+            }
             if(res.data != false){
-                  this.$store.dispatch('resume/setResumeState',4);
+                // this.$store.dispatch('resume/setResumeState',4);
             }
             else this.$store.dispatch('resume/setResumeState',0);//맨 첫장
           });
@@ -259,14 +202,14 @@
       },
       methods: {
         submitResume(){
-          var data =[{
-            sEmail: this.sEmail,
-            sPhone : this.sPhone,
-            sGrade : this.sGrade,
-            sHopeTerm : this.sHopeTerm,
-            sHope : this.sHope,
-          }];
-          this.$store.dispatch('resume/submit_userInfo', data);
+        //   var data =[{
+        //     sEmail: this.sEmail,
+        //     sPhone : this.sPhone,
+        //     sGrade : this.sGrade,
+        //     sHopeTerm : this.sHopeTerm,
+        //     sHope : this.sHope,
+        //   }];
+        //   this.$store.dispatch('resume/submit_userInfo', data);
           this.$store.dispatch('resume/setResumeState',1);
         },
       }

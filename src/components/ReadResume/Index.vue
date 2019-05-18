@@ -12,6 +12,7 @@
           </div>
           <!-- 이력서 정보 -->
           <div class="col-lg-8">
+
             <v-error></v-error>
             <v-user-info ></v-user-info>
             <v-user-eng v-if="$store.state.resume.resume_state==1"></v-user-eng>
@@ -66,11 +67,16 @@
       methods: {
         getResume(loginId){
           this.$http.get('http://localhost:8888/std/mypage/watchResume',{params:{sLoginID : loginId}}).then(res =>{
+<<<<<<< HEAD
 
             if(res.data != false){
                   this.$store.dispatch('resume/setResumeState',4);
+=======
+            if(res.data != false){//resume가 있을때 읽기전용
+                  this.$store.dispatch('resume/setResumeState',0);
+>>>>>>> 2c0240d6fc3bd3d712742657072a5661b8a610de
             }
-            else this.$store.dispatch('resume/setResumeState',0);//맨 첫장
+            else this.$store.dispatch('resume/setResumeState',4);
           });
 
         },

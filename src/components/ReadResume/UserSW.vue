@@ -13,178 +13,192 @@
             <span>1. 프로그래밍/스크립트/마크업언어</span>
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Javascript</h6>
-                <input type="radio" name="Javascript" value="배운적 없음" v-model="programmingLang.Javascript[0]">배운적 없음<br>
-                <input type="radio" name="Javascript" value="맛보기 수준" v-model="programmingLang.Javascript[0]">맛보기 수준<br>
-                <input type="radio" name="Javascript" value="초보 수준" v-model="programmingLang.Javascript[0]">초보 수준<br>
-                <input type="radio" name="Javascript" value="실무 가능" v-model="programmingLang.Javascript[0]">실무 가능<br>
-                <input type="radio" name="Javascript" value="나름 고수" v-model="programmingLang.Javascript[0]">나름 고수
+
+<!-- 
+            <input class="inp-cbx" id="cbx3" name="grade" value="4학년 1학기" type="radio" style="display: none;">
+              <label class="cbx" for="cbx3">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>4학년 1학기</span>
+              </label><br>
+ -->
+
+                
+                <input type="radio" name="js" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="js" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="js" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="js" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="js" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">HTML</h6>
-                <input type="radio" name="HTML" value="배운적 없음" v-model="programmingLang.HTML">배운적 없음<br>
-                <input type="radio" name="HTML" value="맛보기 수준" v-model="programmingLang.HTML">맛보기 수준<br>
-                <input type="radio" name="HTML" value="초보 수준" v-model="programmingLang.HTML">초보 수준<br>
-                <input type="radio" name="HTML" value="실무 가능" v-model="programmingLang.HTML">실무 가능<br>
-                <input type="radio" name="HTML" value="나름 고수" v-model="programmingLang.HTML">나름 고수
+                <input type="radio" name="ht" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="ht" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="ht" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="ht" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="ht" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">CSS</h6>
-                <input type="radio" name="CSS" value="배운적 없음" v-model="programmingLang.CSS">배운적 없음<br>
-                <input type="radio" name="CSS" value="맛보기 수준" v-model="programmingLang.CSS">맛보기 수준<br>
-                <input type="radio" name="CSS" value="초보 수준" v-model="programmingLang.CSS">초보 수준<br>
-                <input type="radio" name="CSS" value="실무 가능" v-model="programmingLang.CSS">실무 가능<br>
-                <input type="radio" name="CSS" value="나름 고수" v-model="programmingLang.CSS">나름 고수
+                <input type="radio" name="cs" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="cs" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="cs" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="cs" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="cs" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">jQuery</h6>
-                <input type="radio" name="jQuery" value="배운적 없음" v-model="programmingLang.jQuery">배운적 없음<br>
-                <input type="radio" name="jQuery" value="맛보기 수준" v-model="programmingLang.jQuery">맛보기 수준<br>
-                <input type="radio" name="jQuery" value="초보 수준" v-model="programmingLang.jQuery">초보 수준<br>
-                <input type="radio" name="jQuery" value="실무 가능" v-model="programmingLang.jQuery">실무 가능<br>
-                <input type="radio" name="jQuery" value="나름 고수" v-model="programmingLang.jQuery">나름 고수
+                <input type="radio" name="jq" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="jq" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="jq" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="jq" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="jq" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">SQL</h6>
-                <input type="radio" name="SQL" value="배운적 없음" v-model="programmingLang.SQL">배운적 없음<br>
-                <input type="radio" name="SQL" value="맛보기 수준" v-model="programmingLang.SQL">맛보기 수준<br>
-                <input type="radio" name="SQL" value="초보 수준" v-model="programmingLang.SQL">초보 수준<br>
-                <input type="radio" name="SQL" value="실무 가능" v-model="programmingLang.SQL">실무 가능<br>
-                <input type="radio" name="SQL" value="나름 고수" v-model="programmingLang.SQL">나름 고수
+                <input type="radio" name="sq" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="sq" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="sq" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="sq" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="sq" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Java</h6>
-                <input type="radio" name="Java" value="배운적 없음" v-model="programmingLang.Java">배운적 없음<br>
-                <input type="radio" name="Java" value="맛보기 수준" v-model="programmingLang.Java">맛보기 수준<br>
-                <input type="radio" name="Java" value="초보 수준" v-model="programmingLang.Java">초보 수준<br>
-                <input type="radio" name="Java" value="실무 가능" v-model="programmingLang.Java">실무 가능<br>
-                <input type="radio" name="Java" value="나름 고수" v-model="programmingLang.Java">나름 고수
+                <input type="radio" name="jv" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="jv" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="jv" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="jv" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="jv" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Android Java</h6>
-                <input type="radio" name="AndroidJava" value="배운적 없음" v-model="programmingLang.AndroidJava">배운적 없음<br>
-                <input type="radio" name="AndroidJava" value="맛보기 수준" v-model="programmingLang.AndroidJava">맛보기 수준<br>
-                <input type="radio" name="AndroidJava" value="초보 수준" v-model="programmingLang.AndroidJava">초보 수준<br>
-                <input type="radio" name="AndroidJava" value="실무 가능" v-model="programmingLang.AndroidJava">실무 가능<br>
-                <input type="radio" name="AndroidJava" value="나름 고수" v-model="programmingLang.AndroidJava">나름 고수
+                <input type="radio" name="aj" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="aj" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="aj" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="aj" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="aj" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Swift</h6>
-                <input type="radio" name="Swift" value="배운적 없음" v-model="programmingLang.Swift">배운적 없음<br>
-                <input type="radio" name="Swift" value="맛보기 수준" v-model="programmingLang.Swift">맛보기 수준<br>
-                <input type="radio" name="Swift" value="초보 수준" v-model="programmingLang.Swift">초보 수준<br>
-                <input type="radio" name="Swift" value="실무 가능" v-model="programmingLang.Swift">실무 가능<br>
-                <input type="radio" name="Swift" value="나름 고수" v-model="programmingLang.Swift">나름 고수
+                <input type="radio" name="sf" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="sf" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="sf" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="sf" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="sf" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Objective-C</h6>
-                <input type="radio" name="Objective" value="배운적 없음" v-model="programmingLang.Objective">배운적 없음<br>
-                <input type="radio" name="Objective" value="맛보기 수준" v-model="programmingLang.Objective">맛보기 수준<br>
-                <input type="radio" name="Objective" value="초보 수준" v-model="programmingLang.Objective">초보 수준<br>
-                <input type="radio" name="Objective" value="실무 가능" v-model="programmingLang.Objective">실무 가능<br>
-                <input type="radio" name="Objective" value="나름 고수" v-model="programmingLang.Objective">나름 고수
+                <input type="radio" name="ob" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="ob" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="ob" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="ob" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="ob" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Python</h6>
-                <input type="radio" name="Python" value="배운적 없음" v-model="programmingLang.Python">배운적 없음<br>
-                <input type="radio" name="Python" value="맛보기 수준" v-model="programmingLang.Python">맛보기 수준<br>
-                <input type="radio" name="Python" value="초보 수준" v-model="programmingLang.Python">초보 수준<br>
-                <input type="radio" name="Python" value="실무 가능" v-model="programmingLang.Python">실무 가능<br>
-                <input type="radio" name="Python" value="나름 고수" v-model="programmingLang.Python">나름 고수
+                <input type="radio" name="py" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="py" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="py" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="py" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="py" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">PHP</h6>
-                <input type="radio" name="PHP" value="배운적 없음" v-model="programmingLang.PHP">배운적 없음<br>
-                <input type="radio" name="PHP" value="맛보기 수준" v-model="programmingLang.PHP">맛보기 수준<br>
-                <input type="radio" name="PHP" value="초보 수준" v-model="programmingLang.PHP">초보 수준<br>
-                <input type="radio" name="PHP" value="실무 가능" v-model="programmingLang.PHP">실무 가능<br>
-                <input type="radio" name="PHP" value="나름 고수" v-model="programmingLang.PHP">나름 고수
+                <input type="radio" name="ph" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="ph" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="ph" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="ph" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="ph" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">C/C++</h6>
-                <input type="radio" name="C" value="배운적 없음" v-model="programmingLang.C">배운적 없음<br>
-                <input type="radio" name="C" value="맛보기 수준" v-model="programmingLang.C">맛보기 수준<br>
-                <input type="radio" name="C" value="초보 수준" v-model="programmingLang.C">초보 수준<br>
-                <input type="radio" name="C" value="실무 가능" v-model="programmingLang.C">실무 가능<br>
-                <input type="radio" name="C" value="나름 고수" v-model="programmingLang.C">나름 고수
+                <input type="radio" name="langC" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="langC" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="langC" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="langC" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="langC" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Microsoft C#</h6>
-                <input type="radio" name="Microsoft" value="배운적 없음" v-model="programmingLang.Microsoft">배운적 없음<br>
-                <input type="radio" name="Microsoft" value="맛보기 수준" v-model="programmingLang.Microsoft">맛보기 수준<br>
-                <input type="radio" name="Microsoft" value="초보 수준" v-model="programmingLang.Microsoft">초보 수준<br>
-                <input type="radio" name="Microsoft" value="실무 가능" v-model="programmingLang.Microsoft">실무 가능<br>
-                <input type="radio" name="Microsoft" value="나름 고수" v-model="programmingLang.Microsoft">나름 고수
+                <input type="radio" name="mi" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="mi" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="mi" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="mi" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="mi" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Kotlin</h6>
-                <input type="radio" name="Kotlin" value="배운적 없음" v-model="programmingLang.Kotlin">배운적 없음<br>
-                <input type="radio" name="Kotlin" value="맛보기 수준" v-model="programmingLang.Kotlin">맛보기 수준<br>
-                <input type="radio" name="Kotlin" value="초보 수준" v-model="programmingLang.Kotlin">초보 수준<br>
-                <input type="radio" name="Kotlin" value="실무 가능" v-model="programmingLang.Kotlin">실무 가능<br>
-                <input type="radio" name="Kotlin" value="나름 고수" v-model="programmingLang.Kotlin">나름 고수
+                <input type="radio" name="kot" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="kot" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="kot" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="kot" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="kot" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Peral</h6>
-                <input type="radio" name="Peral" value="배운적 없음" v-model="programmingLang.Peral">배운적 없음<br>
-                <input type="radio" name="Peral" value="맛보기 수준" v-model="programmingLang.Peral">맛보기 수준<br>
-                <input type="radio" name="Peral" value="초보 수준" v-model="programmingLang.Peral">초보 수준<br>
-                <input type="radio" name="Peral" value="실무 가능" v-model="programmingLang.Peral">실무 가능<br>
-                <input type="radio" name="Peral" value="나름 고수" v-model="programmingLang.Peral">나름 고수
+                <input type="radio" name="per" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="per" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="per" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="per" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="per" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">R</h6>
-                <input type="radio" name="R" value="배운적 없음" v-model="programmingLang.R">배운적 없음<br>
-                <input type="radio" name="R" value="맛보기 수준" v-model="programmingLang.R">맛보기 수준<br>
-                <input type="radio" name="R" value="초보 수준" v-model="programmingLang.R">초보 수준<br>
-                <input type="radio" name="R" value="실무 가능" v-model="programmingLang.R">실무 가능<br>
-                <input type="radio" name="R" value="나름 고수" v-model="programmingLang.R">나름 고수
+                <input type="radio" name="langR" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="langR" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="langR" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="langR" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="langR" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">VBA</h6>
-                <input type="radio" name="VBA" value="배운적 없음" v-model="programmingLang.VBA">배운적 없음<br>
-                <input type="radio" name="VBA" value="맛보기 수준" v-model="programmingLang.VBA">맛보기 수준<br>
-                <input type="radio" name="VBA" value="초보 수준" v-model="programmingLang.VBA">초보 수준<br>
-                <input type="radio" name="VBA" value="실무 가능" v-model="programmingLang.VBA">실무 가능<br>
-                <input type="radio" name="VBA" value="나름 고수" v-model="programmingLang.VBA">나름 고수
+                <input type="radio" name="langvba" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="langvba" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="langvba" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="langvba" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="langvba" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <br>
@@ -192,95 +206,95 @@
             <span>2. 프레임워크, 라이브러리, 도구</span>
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Node.js</h6>
-                <input type="radio" name="Nodejs" value="배운적 없음" v-model="frameworkLang.Nodejs">배운적 없음<br>
-                <input type="radio" name="Nodejs" value="맛보기 수준" v-model="frameworkLang.Nodejs">맛보기 수준<br>
-                <input type="radio" name="Nodejs" value="초보 수준" v-model="frameworkLang.Nodejs">초보 수준<br>
-                <input type="radio" name="Nodejs" value="실무 가능" v-model="frameworkLang.Nodejs">실무 가능<br>
-                <input type="radio" name="Nodejs" value="나름 고수" v-model="frameworkLang.Nodejs">나름 고수
+                <input type="radio" name="nj" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="nj" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="nj" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="nj" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="nj" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Angular</h6>
-                <input type="radio" name="Angular" value="배운적 없음" v-model="frameworkLang.Angular">배운적 없음<br>
-                <input type="radio" name="Angular" value="맛보기 수준" v-model="frameworkLang.Angular">맛보기 수준<br>
-                <input type="radio" name="Angular" value="초보 수준" v-model="frameworkLang.Angular">초보 수준<br>
-                <input type="radio" name="Angular" value="실무 가능" v-model="frameworkLang.Angular">실무 가능<br>
-                <input type="radio" name="Angular" value="나름 고수" v-model="frameworkLang.Angular">나름 고수
+                <input type="radio" name="an" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="an" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="an" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="an" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="an" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">React</h6>
-                <input type="radio" name="React" value="배운적 없음" v-model="frameworkLang.React">배운적 없음<br>
-                <input type="radio" name="React" value="맛보기 수준" v-model="frameworkLang.React">맛보기 수준<br>
-                <input type="radio" name="React" value="초보 수준" v-model="frameworkLang.React">초보 수준<br>
-                <input type="radio" name="React" value="실무 가능" v-model="frameworkLang.React">실무 가능<br>
-                <input type="radio" name="React" value="나름 고수" v-model="frameworkLang.React">나름 고수
+                <input type="radio" name="rt" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="rt" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="rt" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="rt" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="rt" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Express.js</h6>
-                <input type="radio" name="Expressjs" value="배운적 없음" v-model="frameworkLang.Expressjs">배운적 없음<br>
-                <input type="radio" name="Expressjs" value="맛보기 수준" v-model="frameworkLang.Expressjs">맛보기 수준<br>
-                <input type="radio" name="Expressjs" value="초보 수준" v-model="frameworkLang.Expressjs">초보 수준<br>
-                <input type="radio" name="Expressjs" value="실무 가능" v-model="frameworkLang.Expressjs">실무 가능<br>
-                <input type="radio" name="Expressjs" value="나름 고수" v-model="frameworkLang.Expressjs">나름 고수
+                <input type="radio" name="ej" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="ej" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="ej" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="ej" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="ej" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">.Net Core</h6>
-                <input type="radio" name="NetCore" value="배운적 없음" v-model="frameworkLang.NetCore">배운적 없음<br>
-                <input type="radio" name="NetCore" value="맛보기 수준" v-model="frameworkLang.NetCore">맛보기 수준<br>
-                <input type="radio" name="NetCore" value="초보 수준" v-model="frameworkLang.NetCore">초보 수준<br>
-                <input type="radio" name="NetCore" value="실무 가능" v-model="frameworkLang.NetCore">실무 가능<br>
-                <input type="radio" name="NetCore" value="나름 고수" v-model="frameworkLang.NetCore">나름 고수
+                <input type="radio" name="net" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="net" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="net" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="net" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="net" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Spring</h6>
-                <input type="radio" name="Spring" value="배운적 없음" v-model="frameworkLang.Spring">배운적 없음<br>
-                <input type="radio" name="Spring" value="맛보기 수준" v-model="frameworkLang.Spring">맛보기 수준<br>
-                <input type="radio" name="Spring" value="초보 수준" v-model="frameworkLang.Spring">초보 수준<br>
-                <input type="radio" name="Spring" value="실무 가능" v-model="frameworkLang.Spring">실무 가능<br>
-                <input type="radio" name="Spring" value="나름 고수" v-model="frameworkLang.Spring">나름 고수
+                <input type="radio" name="spr" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="spr" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="spr" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="spr" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="spr" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Django</h6>
-                <input type="radio" name="Django" value="배운적 없음" v-model="frameworkLang.Django">배운적 없음<br>
-                <input type="radio" name="Django" value="맛보기 수준" v-model="frameworkLang.Django">맛보기 수준<br>
-                <input type="radio" name="Django" value="초보 수준" v-model="frameworkLang.Django">초보 수준<br>
-                <input type="radio" name="Django" value="실무 가능" v-model="frameworkLang.Django">실무 가능<br>
-                <input type="radio" name="Django" value="나름 고수" v-model="frameworkLang.Django">나름 고수
+                <input type="radio" name="dj" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="dj" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="dj" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="dj" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="dj" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Flask</h6>
-                <input type="radio" name="Flask" value="배운적 없음" v-model="frameworkLang.Flask">배운적 없음<br>
-                <input type="radio" name="Flask" value="맛보기 수준" v-model="frameworkLang.Flask">맛보기 수준<br>
-                <input type="radio" name="Flask" value="초보 수준" v-model="frameworkLang.Flask">초보 수준<br>
-                <input type="radio" name="Flask" value="실무 가능" v-model="frameworkLang.Flask">실무 가능<br>
-                <input type="radio" name="Flask" value="나름 고수" v-model="frameworkLang.Flask">나름 고수
+                <input type="radio" name="fl" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="fl" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="fl" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="fl" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="fl" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Cordova</h6>
-                <input type="radio" name="Cordova" value="배운적 없음" v-model="frameworkLang.Cordova">배운적 없음<br>
-                <input type="radio" name="Cordova" value="맛보기 수준" v-model="frameworkLang.Cordova">맛보기 수준<br>
-                <input type="radio" name="Cordova" value="초보 수준" v-model="frameworkLang.Cordova">초보 수준<br>
-                <input type="radio" name="Cordova" value="실무 가능" v-model="frameworkLang.Cordova">실무 가능<br>
-                <input type="radio" name="Cordova" value="나름 고수" v-model="frameworkLang.Cordova">나름 고수
+                <input type="radio" name="cd" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="cd" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="cd" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="cd" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="cd" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <br>
@@ -288,84 +302,84 @@
             <span>3. 데이터베이스</span>
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">MySql</h6>
-                <input type="radio" name="MySql" value="배운적 없음" v-model="databaseLang.MySql">배운적 없음<br>
-                <input type="radio" name="MySql" value="맛보기 수준" v-model="databaseLang.MySql">맛보기 수준<br>
-                <input type="radio" name="MySql" value="초보 수준" v-model="databaseLang.MySql">초보 수준<br>
-                <input type="radio" name="MySql" value="실무 가능" v-model="databaseLang.MySql">실무 가능<br>
-                <input type="radio" name="MySql" value="나름 고수" v-model="databaseLang.MySql">나름 고수
+                <input type="radio" name="mys" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="mys" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="mys" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="mys" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="mys" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">SQL Server</h6>
-                <input type="radio" name="SQLServer" value="배운적 없음" v-model="databaseLang.SQLServer">배운적 없음<br>
-                <input type="radio" name="SQLServer" value="맛보기 수준" v-model="databaseLang.SQLServer">맛보기 수준<br>
-                <input type="radio" name="SQLServer" value="초보 수준" v-model="databaseLang.SQLServer">초보 수준<br>
-                <input type="radio" name="SQLServer" value="실무 가능" v-model="databaseLang.SQLServer">실무 가능<br>
-                <input type="radio" name="SQLServer" value="나름 고수" v-model="databaseLang.SQLServer">나름 고수
+                <input type="radio" name="sqls" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="sqls" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="sqls" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="sqls" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="sqls" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">MongoDB</h6>
-                <input type="radio" name="MongoDB" value="배운적 없음" v-model="databaseLang.MongoDB">배운적 없음<br>
-                <input type="radio" name="MongoDB" value="맛보기 수준" v-model="databaseLang.MongoDB">맛보기 수준<br>
-                <input type="radio" name="MongoDB" value="초보 수준" v-model="databaseLang.MongoDB">초보 수준<br>
-                <input type="radio" name="MongoDB" value="실무 가능" v-model="databaseLang.MongoDB">실무 가능<br>
-                <input type="radio" name="MongoDB" value="나름 고수" v-model="databaseLang.MongoDB">나름 고수
+                <input type="radio" name="mong" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="mong" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="mong" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="mong" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="mong" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">SQLite</h6>
-                <input type="radio" name="SQLite" value="배운적 없음" v-model="databaseLang.SQLite">배운적 없음<br>
-                <input type="radio" name="SQLite" value="맛보기 수준" v-model="databaseLang.SQLite">맛보기 수준<br>
-                <input type="radio" name="SQLite" value="초보 수준" v-model="databaseLang.SQLite">초보 수준<br>
-                <input type="radio" name="SQLite" value="실무 가능" v-model="databaseLang.SQLite">실무 가능<br>
-                <input type="radio" name="SQLite" value="나름 고수" v-model="databaseLang.SQLite">나름 고수
+                <input type="radio" name="sqli" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="sqli" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="sqli" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="sqli" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="sqli" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Redis</h6>
-                <input type="radio" name="Redis" value="배운적 없음" v-model="databaseLang.Redis">배운적 없음<br>
-                <input type="radio" name="Redis" value="맛보기 수준" v-model="databaseLang.Redis">맛보기 수준<br>
-                <input type="radio" name="Redis" value="초보 수준" v-model="databaseLang.Redis">초보 수준<br>
-                <input type="radio" name="Redis" value="실무 가능" v-model="databaseLang.Redis">실무 가능<br>
-                <input type="radio" name="Redis" value="나름 고수" v-model="databaseLang.Redis">나름 고수
+                <input type="radio" name="rdis" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="rdis" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="rdis" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="rdis" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="rdis" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Oracle</h6>
-                <input type="radio" name="Oracle" value="배운적 없음" v-model="databaseLang.Oracle">배운적 없음<br>
-                <input type="radio" name="Oracle" value="맛보기 수준" v-model="databaseLang.Oracle">맛보기 수준<br>
-                <input type="radio" name="Oracle" value="초보 수준" v-model="databaseLang.Oracle">초보 수준<br>
-                <input type="radio" name="Oracle" value="실무 가능" v-model="databaseLang.Oracle">실무 가능<br>
-                <input type="radio" name="Oracle" value="나름 고수" v-model="databaseLang.Oracle">나름 고수
+                <input type="radio" name="orl" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="orl" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="orl" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="orl" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="orl" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Flask</h6>
-                <input type="radio" name="Flask_1" value="배운적 없음" v-model="databaseLang.Flask">배운적 없음<br>
-                <input type="radio" name="Flask_1" value="맛보기 수준" v-model="databaseLang.Flask">맛보기 수준<br>
-                <input type="radio" name="Flask_1" value="초보 수준" v-model="databaseLang.Flask">초보 수준<br>
-                <input type="radio" name="Flask_1" value="실무 가능" v-model="databaseLang.Flask">실무 가능<br>
-                <input type="radio" name="Flask_1" value="나름 고수" v-model="databaseLang.Flask">나름 고수
+                <input type="radio" name="fla_data" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="fla_data" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="fla_data" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="fla_data" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="fla_data" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Cordova</h6>
-                <input type="radio" name="Cordova_1" value="배운적 없음" v-model="databaseLang.Cordova">배운적 없음<br>
-                <input type="radio" name="Cordova_1" value="맛보기 수준" v-model="databaseLang.Cordova">맛보기 수준<br>
-                <input type="radio" name="Cordova_1" value="초보 수준" v-model="databaseLang.Cordova">초보 수준<br>
-                <input type="radio" name="Cordova_1" value="실무 가능" v-model="databaseLang.Cordova">실무 가능<br>
-                <input type="radio" name="Cordova_1" value="나름 고수" v-model="databaseLang.Cordova">나름 고수
+                <input type="radio" name="cor_data" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="cor_data" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="cor_data" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="cor_data" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="cor_data" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <br>
@@ -373,105 +387,105 @@
             <span>4. 클라우드 / 플랫폼 / 운영체제</span>
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">AWS</h6>
-                <input type="radio" name="AWS" value="배운적 없음" v-model="cloudLang.AWS">배운적 없음<br>
-                <input type="radio" name="AWS" value="맛보기 수준" v-model="cloudLang.AWS">맛보기 수준<br>
-                <input type="radio" name="AWS" value="초보 수준" v-model="cloudLang.AWS">초보 수준<br>
-                <input type="radio" name="AWS" value="실무 가능" v-model="cloudLang.AWS">실무 가능<br>
-                <input type="radio" name="AWS" value="나름 고수" v-model="cloudLang.AWS">나름 고수
+                <input type="radio" name="aw" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="aw" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="aw" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="aw" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="aw" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Azure</h6>
-                <input type="radio" name="Azure" value="배운적 없음" v-model="cloudLang.Azure">배운적 없음<br>
-                <input type="radio" name="Azure" value="맛보기 수준" v-model="cloudLang.Azure">맛보기 수준<br>
-                <input type="radio" name="Azure" value="초보 수준" v-model="cloudLang.Azure">초보 수준<br>
-                <input type="radio" name="Azure" value="실무 가능" v-model="cloudLang.Azure">실무 가능<br>
-                <input type="radio" name="Azure" value="나름 고수" v-model="cloudLang.Azure">나름 고수
+                <input type="radio" name="az" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="az" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="az" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="az" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="az" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Google Cloud Platform / App Engine</h6>
-                <input type="radio" name="GCP" value="배운적 없음" v-model="cloudLang.GCP">배운적 없음<br>
-                <input type="radio" name="GCP" value="맛보기 수준" v-model="cloudLang.GCP">맛보기 수준<br>
-                <input type="radio" name="GCP" value="초보 수준" v-model="cloudLang.GCP">초보 수준<br>
-                <input type="radio" name="GCP" value="실무 가능" v-model="cloudLang.GCP">실무 가능<br>
-                <input type="radio" name="GCP" value="나름 고수" v-model="cloudLang.GCP">나름 고수
+                <input type="radio" name="gc" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="gc" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="gc" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="gc" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="gc" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Linux</h6>
-                <input type="radio" name="Linux" value="배운적 없음" v-model="cloudLang.Linux">배운적 없음<br>
-                <input type="radio" name="Linux" value="맛보기 수준" v-model="cloudLang.Linux">맛보기 수준<br>
-                <input type="radio" name="Linux" value="초보 수준" v-model="cloudLang.Linux">초보 수준<br>
-                <input type="radio" name="Linux" value="실무 가능" v-model="cloudLang.Linux">실무 가능<br>
-                <input type="radio" name="Linux" value="나름 고수" v-model="cloudLang.Linux">나름 고수
+                <input type="radio" name="lin" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="lin" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="lin" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="lin" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="lin" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Wordpress</h6>
-                <input type="radio" name="Wordpress" value="배운적 없음" v-model="cloudLang.Wordpress">배운적 없음<br>
-                <input type="radio" name="Wordpress" value="맛보기 수준" v-model="cloudLang.Wordpress">맛보기 수준<br>
-                <input type="radio" name="Wordpress" value="초보 수준" v-model="cloudLang.Wordpress">초보 수준<br>
-                <input type="radio" name="Wordpress" value="실무 가능" v-model="cloudLang.Wordpress">실무 가능<br>
-                <input type="radio" name="Wordpress" value="나름 고수" v-model="cloudLang.Wordpress">나름 고수
+                <input type="radio" name="wp" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="wp" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="wp" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="wp" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="wp" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Raspberry Pi</h6>
-                <input type="radio" name="RaspberryPi" value="배운적 없음" v-model="cloudLang.RaspberryPi">배운적 없음<br>
-                <input type="radio" name="RaspberryPi" value="맛보기 수준" v-model="cloudLang.RaspberryPi">맛보기 수준<br>
-                <input type="radio" name="RaspberryPi" value="초보 수준" v-model="cloudLang.RaspberryPi">초보 수준<br>
-                <input type="radio" name="RaspberryPi" value="실무 가능" v-model="cloudLang.RaspberryPi">실무 가능<br>
-                <input type="radio" name="RaspberryPi" value="나름 고수" v-model="cloudLang.RaspberryPi">나름 고수
+                <input type="radio" name="rp" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="rp" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="rp" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="rp" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="rp" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Arduino</h6>
-                <input type="radio" name="Arduino" value="배운적 없음" v-model="programmingLang.Arduino">배운적 없음<br>
-                <input type="radio" name="Arduino" value="맛보기 수준" v-model="programmingLang.Arduino">맛보기 수준<br>
-                <input type="radio" name="Arduino" value="초보 수준" v-model="programmingLang.Arduino">초보 수준<br>
-                <input type="radio" name="Arduino" value="실무 가능" v-model="programmingLang.Arduino">실무 가능<br>
-                <input type="radio" name="Arduino" value="나름 고수" v-model="programmingLang.Arduino">나름 고수
+                <input type="radio" name="ard" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="ard" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="ard" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="ard" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="ard" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Firebase</h6>
-                <input type="radio" name="Firebase" value="배운적 없음" v-model="cloudLang.Firebase">배운적 없음<br>
-                <input type="radio" name="Firebase" value="맛보기 수준" v-model="cloudLang.Firebase">맛보기 수준<br>
-                <input type="radio" name="Firebase" value="초보 수준" v-model="cloudLang.Firebase">초보 수준<br>
-                <input type="radio" name="Firebase" value="실무 가능" v-model="cloudLang.Firebase">실무 가능<br>
-                <input type="radio" name="Firebase" value="나름 고수" v-model="cloudLang.Firebase">나름 고수
+                <input type="radio" name="fire" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="fire" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="fire" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="fire" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="fire" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Docker</h6>
-                <input type="radio" name="Docker" value="배운적 없음" v-model="cloudLang.Docker">배운적 없음<br>
-                <input type="radio" name="Docker" value="맛보기 수준" v-model="cloudLang.Docker">맛보기 수준<br>
-                <input type="radio" name="Docker" value="초보 수준" v-model="cloudLang.Docker">초보 수준<br>
-                <input type="radio" name="Docker" value="실무 가능" v-model="cloudLang.Docker">실무 가능<br>
-                <input type="radio" name="Docker" value="나름 고수" v-model="cloudLang.Docker">나름 고수
+                <input type="radio" name="dock" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="dock" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="dock" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="dock" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="dock" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Go Ethereum / Solidity</h6>
-                <input type="radio" name="Go" value="배운적 없음" v-model="cloudLang.Go">배운적 없음<br>
-                <input type="radio" name="Go" value="맛보기 수준" v-model="cloudLang.Go">맛보기 수준<br>
-                <input type="radio" name="Go" value="초보 수준" v-model="cloudLang.Go">초보 수준<br>
-                <input type="radio" name="Go" value="실무 가능" v-model="cloudLang.Go">실무 가능<br>
-                <input type="radio" name="Go" value="나름 고수" v-model="cloudLang.Go">나름 고수
+                <input type="radio" name="goe" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="goe" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="goe" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="goe" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="goe" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <br>
@@ -479,90 +493,90 @@
             <span>5. 머신러닝 / VR / AR / 비전</span>
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Tensorflow</h6>
-                <input type="radio" name="Tensorflow" value="배운적 없음" v-model="machineLang.Tensorflow">배운적 없음<br>
-                <input type="radio" name="Tensorflow" value="맛보기 수준" v-model="machineLang.Tensorflow">맛보기 수준<br>
-                <input type="radio" name="Tensorflow" value="초보 수준" v-model="machineLang.Tensorflow">초보 수준<br>
-                <input type="radio" name="Tensorflow" value="실무 가능" v-model="machineLang.Tensorflow">실무 가능<br>
-                <input type="radio" name="Tensorflow" value="나름 고수" v-model="machineLang.Tensorflow">나름 고수
+                <input type="radio" name="tens" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="tens" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="tens" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="tens" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="tens" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Caffe</h6>
-                <input type="radio" name="Caffe" value="배운적 없음" v-model="machineLang.Caffe">배운적 없음<br>
-                <input type="radio" name="Caffe" value="맛보기 수준" v-model="machineLang.Caffe">맛보기 수준<br>
-                <input type="radio" name="Caffe" value="초보 수준" v-model="machineLang.Caffe">초보 수준<br>
-                <input type="radio" name="Caffe" value="실무 가능" v-model="machineLang.Caffe">실무 가능<br>
-                <input type="radio" name="Caffe" value="나름 고수" v-model="machineLang.Caffe">나름 고수
+                <input type="radio" name="caf" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="caf" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="caf" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="caf" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="caf" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">OpenCV</h6>
-                <input type="radio" name="OpenCV" value="배운적 없음" v-model="machineLang.OpenCV">배운적 없음<br>
-                <input type="radio" name="OpenCV" value="맛보기 수준" v-model="machineLang.OpenCV">맛보기 수준<br>
-                <input type="radio" name="OpenCV" value="초보 수준" v-model="machineLang.OpenCV">초보 수준<br>
-                <input type="radio" name="OpenCV" value="실무 가능" v-model="machineLang.OpenCV">실무 가능<br>
-                <input type="radio" name="OpenCV" value="나름 고수" v-model="machineLang.OpenCV">나름 고수
+                <input type="radio" name="ocv" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="ocv" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="ocv" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="ocv" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="ocv" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">DLib</h6>
-                <input type="radio" name="DLib" value="배운적 없음" v-model="machineLang.DLib">배운적 없음<br>
-                <input type="radio" name="DLib" value="맛보기 수준" v-model="machineLang.DLib">맛보기 수준<br>
-                <input type="radio" name="DLib" value="초보 수준" v-model="machineLang.DLib">초보 수준<br>
-                <input type="radio" name="DLib" value="실무 가능" v-model="machineLang.DLib">실무 가능<br>
-                <input type="radio" name="DLib" value="나름 고수" v-model="machineLang.DLib">나름 고수
+                <input type="radio" name="dli" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="dli" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="dli" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="dli" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="dli" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">OpenGL</h6>
-                <input type="radio" name="OpenGL" value="배운적 없음" v-model="machineLang.OpenGL">배운적 없음<br>
-                <input type="radio" name="OpenGL" value="맛보기 수준" v-model="machineLang.OpenGL">맛보기 수준<br>
-                <input type="radio" name="OpenGL" value="초보 수준" v-model="machineLang.OpenGL">초보 수준<br>
-                <input type="radio" name="OpenGL" value="실무 가능" v-model="machineLang.OpenGL">실무 가능<br>
-                <input type="radio" name="OpenGL" value="나름 고수" v-model="machineLang.OpenGL">나름 고수
+                <input type="radio" name="ogl" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="ogl" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="ogl" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="ogl" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="ogl" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Unity</h6>
-                <input type="radio" name="Unity" value="배운적 없음" v-model="machineLang.Unity">배운적 없음<br>
-                <input type="radio" name="Unity" value="맛보기 수준" v-model="machineLang.Unity">맛보기 수준<br>
-                <input type="radio" name="Unity" value="초보 수준" v-model="machineLang.Unity">초보 수준<br>
-                <input type="radio" name="Unity" value="실무 가능" v-model="machineLang.Unity">실무 가능<br>
-                <input type="radio" name="Unity" value="나름 고수" v-model="machineLang.Unity">나름 고수
+                <input type="radio" name="uni" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="uni" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="uni" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="uni" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="uni" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <br>
          <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Arduino</h6>
-                <input type="radio" name="Arduino_1" value="배운적 없음" v-model="machineLang.Arduino">배운적 없음<br>
-                <input type="radio" name="Arduino_1" value="맛보기 수준" v-model="machineLang.Arduino">맛보기 수준<br>
-                <input type="radio" name="Arduino_1" value="초보 수준" v-model="machineLang.Arduino">초보 수준<br>
-                <input type="radio" name="Arduino_1" value="실무 가능" v-model="machineLang.Arduino">실무 가능<br>
-                <input type="radio" name="Arduino_1" value="나름 고수" v-model="machineLang.Arduino">나름 고수
+                <input type="radio" name="ardu_mac" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="ardu_mac" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="ardu_mac" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="ardu_mac" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="ardu_mac" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Firebase</h6>
-                <input type="radio" name="Firebase_5" value="배운적 없음" v-model="machineLang.Firebase">배운적 없음<br>
-                <input type="radio" name="Firebase_5" value="맛보기 수준" v-model="machineLang.Firebase">맛보기 수준<br>
-                <input type="radio" name="Firebase_5" value="초보 수준" v-model="machineLang.Firebase">초보 수준<br>
-                <input type="radio" name="Firebase_5" value="실무 가능" v-model="machineLang.Firebase">실무 가능<br>
-                <input type="radio" name="Firebase_5" value="나름 고수" v-model="machineLang.Firebase">나름 고수
+                <input type="radio" name="fir_mac" value="배운적 없음" onclick="return false">배운적 없음<br>
+                <input type="radio" name="fir_mac" value="맛보기 수준" onclick="return false">맛보기 수준<br>
+                <input type="radio" name="fir_mac" value="초보 수준" onclick="return false">초보 수준<br>
+                <input type="radio" name="fir_mac" value="실무 가능" onclick="return false">실무 가능<br>
+                <input type="radio" name="fir_mac" value="나름 고수" onclick="return false">나름 고수
             </div>
         </div>
         <br>
-        <div class="col-12 text-center">
+        <!-- <div class="col-12 text-center">
             <button class="btn btn-primary" type="submit">제출하기</button>
-        </div>
+        </div> -->
       </form>
     </div>
   </div>
@@ -650,39 +664,485 @@ import { mapActions, mapGetters } from "vuex";
             getUserSW : 'resume/getUserSW',
         }),
     },
-    beforeMount(){
-        this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+    async beforeMount(){
+        await this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
             //console.log(res.data.user);
-            this.user = res.data.user;
-        })
+            return this.user = res.data.user;
+        });
+        await this.$http.get('http://localhost:8888/std/mypage/watchResume',{params:{sLoginID : this.user.loginId}}).then(res =>{
+            //  console.log(res)
+            var programmingLang = JSON.parse(res.data.programmingLang);
+            var Javascript = programmingLang.Javascript;
+            var HTML = programmingLang.HTML;
+            var CSS = programmingLang.CSS;
+            var jQuery = programmingLang.jQuery;
+            var SQL = programmingLang.SQL;
+            var Java = programmingLang.Java;
+            var AndroidJava = programmingLang.AndroidJava;
+            var Swift = programmingLang.Swift;
+            var Objective = programmingLang.Objective;
+            var Python = programmingLang.Python;
+            var PHP = programmingLang.PHP;
+            var C = programmingLang.C;
+            var Microsoft = programmingLang.Microsoft;
+            var Kotlin = programmingLang.Kotlin;
+            var Peral = programmingLang.Peral;
+            var R = programmingLang.R;
+            var VBA = programmingLang.VBA;
+            console.log(Javascript)
+
+            var frameworkLang = JSON.parse(res.data.frameworkLang);
+            var Nodejs = frameworkLang.Nodejs;
+            var Angular = frameworkLang.Angular;
+            var React = frameworkLang.React;
+            var Expressjs = frameworkLang.Expressjs;
+            var NetCore = frameworkLang.NetCore;
+            var Spring = frameworkLang.Spring;
+            var Django = frameworkLang.Django;
+            var Flask = frameworkLang.Flask;
+            var Cordova = frameworkLang.Cordova;
+
+            var databaseLang = JSON.parse(res.data.databaseLang);
+            var MySql = databaseLang.MySql;
+            var SQLServer = databaseLang.SQLServer;
+            var MongoDB = databaseLang.MongoDB;
+            var SQLite = databaseLang.SQLite;
+            var Redis = databaseLang.Redis;
+            var Oracle = databaseLang.Oracle;
+            var Flask_data = databaseLang.Flask;
+            var Cordova_data = databaseLang.Cordova;
+
+            var cloudLang = JSON.parse(res.data.cloudLang);
+            var AWS = cloudLang.AWS;
+            var Azure = cloudLang.Azure;
+            var GCP = cloudLang.GCP;
+            var Linux = cloudLang.Linux;
+            var Wordpress = cloudLang.Wordpress;
+            var RaspberryPi = cloudLang.RaspberryPi;
+            var Arduino = cloudLang.Arduino;
+            var Firebase = cloudLang.Firebase;
+            var Docker = cloudLang.Docker;
+            var Go = cloudLang.Go;
+            
+            var machineLang = JSON.parse(res.data.machineLang);
+            var Tensorflow = machineLang.Tensorflow;
+            var Caffe = machineLang.Caffe;
+            var OpenCV = machineLang.OpenCV;
+            var DLib = machineLang.DLib;
+            var OpenGL = machineLang.OpenGL;
+            var Unity = machineLang.Unity;
+            var Arduino_mac = machineLang.Arduino;
+            var Firebase_mac = machineLang.Firebase;
+
+            var chkleng = document.getElementsByName('js').length;
+
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName('js')[i].value);
+              if(Javascript==docheck[i]){
+                document.getElementsByName('js')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName('ht')[i].value);
+              if(HTML==docheck[i]){
+                document.getElementsByName('ht')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName('cs')[i].value);
+              if(CSS==docheck[i]){
+                document.getElementsByName('cs')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName('jq')[i].value);
+              if(jQuery==docheck[i]){
+                document.getElementsByName('jq')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName('sq')[i].value);
+              if(SQL==docheck[i]){
+                document.getElementsByName('sq')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName('jv')[i].value);
+              if(Java==docheck[i]){
+                document.getElementsByName('jv')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("aj")[i].value);
+              if(AndroidJava==docheck[i]){
+                document.getElementsByName('aj')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("sf")[i].value);
+              if(Swift==docheck[i]){
+                document.getElementsByName('sf')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("ob")[i].value);
+              if(Objective==docheck[i]){
+                document.getElementsByName('ob')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("py")[i].value);
+              if(Python==docheck[i]){
+                document.getElementsByName('py')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("langC")[i].value);
+              if(C==docheck[i]){
+                document.getElementsByName('langC')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("mi")[i].value);
+              if(Microsoft==docheck[i]){
+                document.getElementsByName('mi')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("kot")[i].value);
+              if(Kotlin==docheck[i]){
+                document.getElementsByName('kot')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("per")[i].value);
+              if(Peral==docheck[i]){
+                document.getElementsByName('per')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("langR")[i].value);
+              if(R==docheck[i]){
+                document.getElementsByName('langR')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("langvba")[i].value);
+              if(VBA==docheck[i]){
+                document.getElementsByName('langvba')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("nj")[i].value);
+              if(Nodejs==docheck[i]){
+                document.getElementsByName('nj')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("an")[i].value);
+              if(Angular==docheck[i]){
+                document.getElementsByName('an')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("rt")[i].value);
+              if(React==docheck[i]){
+                document.getElementsByName('rt')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("ej")[i].value);
+              if(Expressjs==docheck[i]){
+                document.getElementsByName('ej')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("net")[i].value);
+              if(NetCore==docheck[i]){
+                document.getElementsByName('net')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("spr")[i].value);
+              if(Spring==docheck[i]){
+                document.getElementsByName('spr')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("dj")[i].value);
+              if(Django==docheck[i]){
+                document.getElementsByName('dj')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("fl")[i].value);
+              if(Flask==docheck[i]){
+                document.getElementsByName('fl')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("cd")[i].value);
+              if(Cordova==docheck[i]){
+                document.getElementsByName('cd')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("langvba")[i].value);
+              if(VBA==docheck[i]){
+                document.getElementsByName('langvba')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("mys")[i].value);
+              if(MySql==docheck[i]){
+                document.getElementsByName('mys')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("sqls")[i].value);
+              if(SQLServer==docheck[i]){
+                document.getElementsByName('sqls')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("mong")[i].value);
+              if(MongoDB==docheck[i]){
+                document.getElementsByName('mong')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("sqli")[i].value);
+              if(SQLite==docheck[i]){
+                document.getElementsByName('sqli')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("rdis")[i].value);
+              if(Redis==docheck[i]){
+                document.getElementsByName('rdis')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("orl")[i].value);
+              if(Oracle==docheck[i]){
+                document.getElementsByName('orl')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("fla_data")[i].value);
+              if(Flask_data==docheck[i]){
+                document.getElementsByName('fla_data')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("cor_data")[i].value);
+              if(Cordova_data==docheck[i]){
+                document.getElementsByName('cor_data')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("cor_data")[i].value);
+              if(Cordova_data==docheck[i]){
+                document.getElementsByName('cor_data')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("cor_data")[i].value);
+              if(Cordova_data==docheck[i]){
+                document.getElementsByName('cor_data')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("aw")[i].value);
+              if(AWS==docheck[i]){
+                document.getElementsByName('aw')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("az")[i].value);
+              if(Azure==docheck[i]){
+                document.getElementsByName('az')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("gc")[i].value);
+              if(GCP==docheck[i]){
+                document.getElementsByName('gc')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("lin")[i].value);
+              if(Linux==docheck[i]){
+                document.getElementsByName('lin')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("wp")[i].value);
+              if(Wordpress==docheck[i]){
+                document.getElementsByName('wp')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("rp")[i].value);
+              if(RaspberryPi==docheck[i]){
+                document.getElementsByName('rp')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("ard")[i].value);
+              if(Arduino==docheck[i]){
+                document.getElementsByName('ard')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("fire")[i].value);
+              if(Firebase==docheck[i]){
+                document.getElementsByName('fire')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("dock")[i].value);
+              if(Docker==docheck[i]){
+                document.getElementsByName('dock')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("goe")[i].value);
+              if(Go==docheck[i]){
+                document.getElementsByName('goe')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("tens")[i].value);
+              if(Tensorflow==docheck[i]){
+                document.getElementsByName('tens')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("caf")[i].value);
+              if(Caffe==docheck[i]){
+                document.getElementsByName('caf')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("ocv")[i].value);
+              if(OpenCV==docheck[i]){
+                document.getElementsByName('ocv')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("dli")[i].value);
+              if(DLib==docheck[i]){
+                document.getElementsByName('dli')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("ogl")[i].value);
+              if(OpenGL==docheck[i]){
+                document.getElementsByName('ogl')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("uni")[i].value);
+              if(Unity==docheck[i]){
+                document.getElementsByName('uni')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("ardu_mac")[i].value);
+              if(Arduino_mac==docheck[i]){
+                document.getElementsByName('ardu_mac')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("fir_mac")[i].value);
+              if(Firebase_mac==docheck[i]){
+                document.getElementsByName('fir_mac')[i].checked = true;
+              }
+            };
+        });
     },
     created(){
 
     },
     methods: {
         submitResume(){
-        var data =[{
-            programmingLang : this.programmingLang,
-            frameworkLang : this.frameworkLang,
-            databaseLang : this.databaseLang,
-            cloudLang : this.cloudLang,
-            machineLang : this.machineLang,
-        }];
-        this.$store.dispatch('resume/submit_SW', data);
+        // var data =[{
+        //     programmingLang : this.programmingLang,
+        //     frameworkLang : this.frameworkLang,
+        //     databaseLang : this.databaseLang,
+        //     cloudLang : this.cloudLang,
+        //     machineLang : this.machineLang,
+        // }];
+        // this.$store.dispatch('resume/submit_SW', data);
 
-        var submit_resume = {
-            sLoginID : this.user.loginId,
-            getUserInfo : this.getUserInfo,
-            getUserEng : this.getUserEng,
-            getUserGrade : this.getUserGrade,
-            programmingLang : this.programmingLang,
-            frameworkLang : this.frameworkLang,
-            databaseLang : this.databaseLang,
-            cloudLang : this.cloudLang,
-            machineLang : this.machineLang,
-        };
-        this.$store.dispatch('resume/submit_ALL', submit_resume);
-        this.$router.push({name: "Home"})
+        // var submit_resume = {
+        //     sLoginID : this.user.loginId,
+        //     getUserInfo : this.getUserInfo,
+        //     getUserEng : this.getUserEng,
+        //     getUserGrade : this.getUserGrade,
+        //     programmingLang : this.programmingLang,
+        //     frameworkLang : this.frameworkLang,
+        //     databaseLang : this.databaseLang,
+        //     cloudLang : this.cloudLang,
+        //     machineLang : this.machineLang,
+        // };
+        // this.$store.dispatch('resume/submit_ALL', submit_resume);
+        // this.$router.push({name: "Home"})
         },
     }
   }
