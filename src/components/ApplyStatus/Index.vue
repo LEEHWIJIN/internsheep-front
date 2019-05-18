@@ -18,8 +18,9 @@
               <p class="subtitle">Status</p>
               <h2 class="section-title">Apply Status</h2>
             </div>
+
             <!-- 회사 목록 (카드 형식)-->
-            <div class="col-lg-12 p-0">
+            <div v-if="confirm == 1" class="col-lg-12 p-0">
                <div class="col-lg-12 bg-white p-4 rounded shadow my-3">
                  <div class="media align-items-center flex-column flex-sm-row">
                    <img src="images/career/logo-1.png" class="mr-sm-3 mb-4 mb-sm-0 border rounded p-2" alt="logo-1">
@@ -30,6 +31,9 @@
                    <div class="btn btn-outline-primary">{{YN}}</div>
                  </div>
                </div>
+            </div>
+            <div v-if="confirm == 0">
+              지원한 기업이 없습니다.
             </div>
           </div>
         </div>
@@ -51,7 +55,9 @@
         cName : "",
         YN : "",
         cOccupation : "",
-        cImage : ""
+        cImage : "",
+          applyTerm:{},
+          confirm : 0,
       }
     },
     components: {
@@ -66,18 +72,30 @@
             console.log("유저입니다 : ",this.user.loginId)
             this.getApplyStatus(this.user.loginId)
           })
+            this.$http.get('http://localhost:8888/admin/recentApplyTerm').then((response) => {
+                this.applyTerm = {
+                    applyStart : response.data[0].applyStart,
+                    applyEnd : response.data[0].applyEnd,
+                    applySemester : response.data[0].applySemester,
+                    applyOrder : response.data[0].applyOrder
+                }
+            })
     },
     methods: {
       getApplyStatus(loginId) {
-          console.log(loginId)
         this.$http.get('http://localhost:8888/std/mypage/applyStatus',{params:{sLoginID : loginId}}).then((response)=>{
-          this.cName = response.data[0].cName;
-          if(response.data[0].YN==1) this.YN = "합격입니다.";
-          else if(response.data[0].YN==-1) this.YN = "심사중입니다.";
-          else this.YN = "불합격 입니다.";
-          this.cOccupation =  response.data[0].cOccupation
+            if(response.data=='0'){
+            }
+            else {
+                this.confirm == 1
+                this.cName = response.data[0].cName;
+                if (response.data[0].YN == 1) this.YN = "합격입니다.";
+                else if (response.data[0].YN == -1) this.YN = "심사중입니다.";
+                else this.YN = "불합격 입니다.";
+                this.cOccupation = response.data[0].cOccupation
+            }
         })
-      }
+      },
     }
   }
 </script>

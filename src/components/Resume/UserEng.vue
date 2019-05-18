@@ -168,6 +168,7 @@
         </div>
         <br>
         <div class="col-12 text-center">
+            <button class="btn btn-primary mr-4" @click="before">이전</button>
             <button class="btn btn-primary" type="submit">다음</button>
         </div>
         </form>
@@ -210,6 +211,9 @@
           this.$store.dispatch('resume/submit_userEng', data);
           this.$store.dispatch('resume/setResumeState',2);
         },
+          before(){
+              this.$store.dispatch('resume/setResumeState',0);
+          }
       }
   }
 </script>
