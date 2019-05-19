@@ -14,7 +14,7 @@
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Javascript</h6>
 
-<!-- 
+<!--
             <input class="inp-cbx" id="cbx3" name="grade" value="4학년 1학기" type="radio" style="display: none;">
               <label class="cbx" for="cbx3">
                 <span>
@@ -26,7 +26,32 @@
               </label><br>
  -->
 
-                
+ <!-- <input class="inp-cbx" id="cbx1" value="영어로 구글링을 하는데 불편함을 많이 느낀다." type="radio" name="search" onclick="return false" style="display: none;">
+ <label class="cbx" for="cbx1">
+     <span><svg width="10px" height="10px" viewbox="0 0 12 10"><polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span>
+     배운적 없음
+ </label><br>
+ <input class="inp-cbx" id="cbx1" value="맛보기 수준" type="radio" name="search" onclick="return false" style="display: none;">
+ <label class="cbx" for="cbx1">
+     <span><svg width="10px" height="10px" viewbox="0 0 12 10"><polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span>
+     맛보기 수준
+ </label><br>
+ <input class="inp-cbx" id="cbx1" value="초보 수준" type="radio" name="search" onclick="return false" style="display: none;">
+ <label class="cbx" for="cbx1">
+     <span><svg width="10px" height="10px" viewbox="0 0 12 10"><polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span>
+     초보 수준
+ </label><br>
+ <input class="inp-cbx" id="cbx1" value="실무 가능" type="radio" name="search" onclick="return false" style="display: none;">
+ <label class="cbx" for="cbx1">
+     <span><svg width="10px" height="10px" viewbox="0 0 12 10"><polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span>
+     실무 가능
+ </label><br>
+ <input class="inp-cbx" id="cbx1" value="나름 고수" type="radio" name="search" onclick="return false" style="display: none;">
+ <label class="cbx" for="cbx1">
+     <span><svg width="10px" height="10px" viewbox="0 0 12 10"><polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span>
+     나름 고수
+ </label><br> -->
+
                 <input type="radio" name="js" value="배운적 없음" onclick="return false">배운적 없음<br>
                 <input type="radio" name="js" value="맛보기 수준" onclick="return false">맛보기 수준<br>
                 <input type="radio" name="js" value="초보 수준" onclick="return false">초보 수준<br>
@@ -723,7 +748,7 @@ import { mapActions, mapGetters } from "vuex";
             var Firebase = cloudLang.Firebase;
             var Docker = cloudLang.Docker;
             var Go = cloudLang.Go;
-            
+
             var machineLang = JSON.parse(res.data.machineLang);
             var Tensorflow = machineLang.Tensorflow;
             var Caffe = machineLang.Caffe;

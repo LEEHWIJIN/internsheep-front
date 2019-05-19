@@ -24,7 +24,7 @@
         <div class="col-lg-6">
           <div class="apply-list  rounded-xl  bg-white mb-4">
               <h6 style="font-weight:bold">학년정보(현재 학기 기준)*</h6>
-              <input class="inp-cbx" id="cbx1" value=" 3학년 1학기" type="checkbox" name="grade" style="display: none;" >
+              <input class="inp-cbx" id="cbx1" value=" 3학년 1학기" type="radio" name="grade" style="display: none;" >
 
               <label class="cbx" for="cbx1">
                 <span>
@@ -34,7 +34,7 @@
                 </span>
                 <span>3학년 1학기</span>
               </label><br>
-              <input class="inp-cbx" id="cbx2" name="grade" value="3학년 2학기" type="checkbox" style="display: none;">
+              <input class="inp-cbx" id="cbx2" name="grade" value="3학년 2학기" type="radio" style="display: none;">
               <label class="cbx" for="cbx2">
                 <span>
                   <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -43,7 +43,7 @@
                 </span>
                 <span>3학년 2학기</span>
               </label><br>
-              <input class="inp-cbx" id="cbx3" name="grade" value="4학년 1학기" type="checkbox" style="display: none;">
+              <input class="inp-cbx" id="cbx3" name="grade" value="4학년 1학기" type="radio" style="display: none;">
               <label class="cbx" for="cbx3">
                 <span>
                   <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -57,7 +57,7 @@
         <div class="col-lg-6">
           <div class="apply-list  rounded-xl  bg-white mb-4">
               <h6 style="font-weight:bold">희망하는 현장실습 업무 분야(복수체크 가능)*</h6>
-              <input class="inp-cbx" id="cbx4" value="SW 개발" name="hope" type="checkbox" style="display: none;">
+              <input class="inp-cbx" id="cbx4" value="SW 개발" name="hope" type="radio" style="display: none;">
               <label class="cbx" for="cbx4">
                 <span>
                   <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -66,7 +66,7 @@
                 </span>
                 <span>SW 개발</span>
               </label><br>
-              <input class="inp-cbx" id="cbx5" value="데이터 분석" name="hope" type="checkbox" style="display: none;">
+              <input class="inp-cbx" id="cbx5" value="데이터 분석" name="hope" type="radio" style="display: none;">
               <label class="cbx" for="cbx5">
                 <span>
                   <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -75,7 +75,7 @@
                 </span>
                 <span>데이터 분석</span>
               </label><br>
-              <input class="inp-cbx" id="cbx6" value="SW 테스트 및 품질관리" name="hope" type="checkbox" style="display: none;">
+              <input class="inp-cbx" id="cbx6" value="SW 테스트 및 품질관리" name="hope" type="radio" style="display: none;">
               <label class="cbx" for="cbx6">
                 <span>
                   <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -84,7 +84,7 @@
                 </span>
                 <span>SW 테스트 및 품질관리</span>
               </label><br>
-              <input class="inp-cbx" id="cbx7" value="IT시스템 운영" type="checkbox" name="hope" style="display: none;">
+              <input class="inp-cbx" id="cbx7" value="IT시스템 운영" type="radio" name="hope" style="display: none;">
               <label class="cbx" for="cbx7">
                 <span>
                   <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -93,7 +93,7 @@
                 </span>
                 <span>IT시스템 운영</span>
               </label><br>
-              <input class="inp-cbx" id="cbx8" value="마켓팅 혹은 기획" type="checkbox" name="hope" style="display: none;">
+              <input class="inp-cbx" id="cbx8" value="마켓팅 혹은 기획" type="radio" name="hope" style="display: none;">
               <label class="cbx" for="cbx8">
                 <span>
                   <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -108,7 +108,7 @@
         <div class="col-lg-6">
           <div class="apply-list  rounded-xl  bg-white mb-4">
               <h6 style="font-weight:bold">희망 실습기간 및 형태*</h6>
-              <input class="inp-cbx" id="cbx9" value="8주" type="checkbox" name="hopeterm" style="display: none;">
+              <input class="inp-cbx" id="cbx9" value="8주" type="radio" name="hopeterm" style="display: none;">
               <label class="cbx" for="cbx9">
                 <span>
                   <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -117,7 +117,7 @@
                 </span>
                 <span>8주</span>
               </label><br>
-              <input class="inp-cbx" id="cbx10" value="12주 이상(장기)" name="hopeterm" type="checkbox" style="display: none;">
+              <input class="inp-cbx" id="cbx10" value="12주 이상(장기)" name="hopeterm" type="radio" style="display: none;">
               <label class="cbx" for="cbx10">
                 <span>
                   <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -227,7 +227,7 @@
             sHopeTerm : this.sHopeTerm,
             sHope : this.sHope,
           }];
-          
+
           this.$store.dispatch('resume/submit_userInfo', data);
           this.$store.dispatch('resume/setResumeState',7);
         },
