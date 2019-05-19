@@ -27,178 +27,178 @@
  -->
 
                 
-                <input type="radio" name="js" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="js" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="js" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="js" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="js" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="js" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="js" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="js" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="js" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="js" value="나름 고수" >나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">HTML</h6>
-                <input type="radio" name="ht" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="ht" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="ht" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="ht" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="ht" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="ht" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="ht" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="ht" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="ht" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="ht" value="나름 고수" >나름 고수
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">CSS</h6>
-                <input type="radio" name="cs" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="cs" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="cs" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="cs" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="cs" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="cs" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="cs" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="cs" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="cs" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="cs" value="나름 고수" >나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">jQuery</h6>
-                <input type="radio" name="jq" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="jq" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="jq" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="jq" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="jq" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="jq" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="jq" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="jq" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="jq" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="jq" value="나름 고수" >나름 고수
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">SQL</h6>
-                <input type="radio" name="sq" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="sq" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="sq" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="sq" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="sq" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="sq" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="sq" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="sq" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="sq" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="sq" value="나름 고수" >나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Java</h6>
-                <input type="radio" name="jv" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="jv" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="jv" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="jv" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="jv" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="jv" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="jv" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="jv" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="jv" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="jv" value="나름 고수" >나름 고수
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Android Java</h6>
-                <input type="radio" name="aj" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="aj" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="aj" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="aj" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="aj" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="aj" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="aj" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="aj" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="aj" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="aj" value="나름 고수" >나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Swift</h6>
-                <input type="radio" name="sf" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="sf" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="sf" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="sf" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="sf" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="sf" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="sf" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="sf" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="sf" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="sf" value="나름 고수" >나름 고수
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Objective-C</h6>
-                <input type="radio" name="ob" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="ob" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="ob" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="ob" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="ob" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="ob" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="ob" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="ob" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="ob" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="ob" value="나름 고수" >나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Python</h6>
-                <input type="radio" name="py" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="py" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="py" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="py" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="py" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="py" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="py" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="py" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="py" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="py" value="나름 고수" >나름 고수
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">PHP</h6>
-                <input type="radio" name="ph" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="ph" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="ph" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="ph" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="ph" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="ph" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="ph" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="ph" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="ph" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="ph" value="나름 고수" >나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">C/C++</h6>
-                <input type="radio" name="langC" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="langC" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="langC" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="langC" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="langC" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="langC" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="langC" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="langC" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="langC" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="langC" value="나름 고수" >나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Microsoft C#</h6>
-                <input type="radio" name="mi" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="mi" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="mi" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="mi" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="mi" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="mi" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="mi" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="mi" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="mi" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="mi" value="나름 고수" >나름 고수
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Kotlin</h6>
-                <input type="radio" name="kot" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="kot" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="kot" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="kot" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="kot" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="kot" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="kot" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="kot" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="kot" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="kot" value="나름 고수" >나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Peral</h6>
-                <input type="radio" name="per" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="per" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="per" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="per" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="per" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="per" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="per" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="per" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="per" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="per" value="나름 고수" >나름 고수
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">R</h6>
-                <input type="radio" name="langR" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="langR" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="langR" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="langR" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="langR" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="langR" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="langR" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="langR" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="langR" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="langR" value="나름 고수" >나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">VBA</h6>
-                <input type="radio" name="langvba" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="langvba" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="langvba" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="langvba" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="langvba" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="langvba" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="langvba" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="langvba" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="langvba" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="langvba" value="나름 고수" >나름 고수
             </div>
         </div>
         <br>
@@ -206,95 +206,95 @@
             <span>2. 프레임워크, 라이브러리, 도구</span>
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Node.js</h6>
-                <input type="radio" name="nj" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="nj" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="nj" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="nj" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="nj" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="nj" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="nj" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="nj" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="nj" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="nj" value="나름 고수" >나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Angular</h6>
-                <input type="radio" name="an" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="an" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="an" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="an" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="an" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="an" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="an" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="an" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="an" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="an" value="나름 고수" >나름 고수
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">React</h6>
-                <input type="radio" name="rt" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="rt" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="rt" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="rt" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="rt" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="rt" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="rt" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="rt" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="rt" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="rt" value="나름 고수" >나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Express.js</h6>
-                <input type="radio" name="ej" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="ej" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="ej" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="ej" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="ej" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="ej" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="ej" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="ej" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="ej" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="ej" value="나름 고수" >나름 고수
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">.Net Core</h6>
-                <input type="radio" name="net" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="net" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="net" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="net" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="net" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="net" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="net" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="net" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="net" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="net" value="나름 고수" >나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Spring</h6>
-                <input type="radio" name="spr" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="spr" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="spr" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="spr" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="spr" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="spr" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="spr" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="spr" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="spr" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="spr" value="나름 고수" >나름 고수
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Django</h6>
-                <input type="radio" name="dj" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="dj" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="dj" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="dj" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="dj" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="dj" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="dj" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="dj" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="dj" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="dj" value="나름 고수" >나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Flask</h6>
-                <input type="radio" name="fl" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="fl" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="fl" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="fl" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="fl" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="fl" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="fl" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="fl" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="fl" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="fl" value="나름 고수" >나름 고수
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Cordova</h6>
-                <input type="radio" name="cd" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="cd" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="cd" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="cd" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="cd" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="cd" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="cd" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="cd" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="cd" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="cd" value="나름 고수" >나름 고수
             </div>
         </div>
         <br>
@@ -302,84 +302,84 @@
             <span>3. 데이터베이스</span>
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">MySql</h6>
-                <input type="radio" name="mys" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="mys" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="mys" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="mys" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="mys" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="mys" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="mys" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="mys" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="mys" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="mys" value="나름 고수" >나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">SQL Server</h6>
-                <input type="radio" name="sqls" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="sqls" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="sqls" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="sqls" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="sqls" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="sqls" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="sqls" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="sqls" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="sqls" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="sqls" value="나름 고수" >나름 고수
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">MongoDB</h6>
-                <input type="radio" name="mong" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="mong" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="mong" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="mong" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="mong" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="mong" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="mong" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="mong" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="mong" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="mong" value="나름 고수" >나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">SQLite</h6>
-                <input type="radio" name="sqli" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="sqli" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="sqli" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="sqli" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="sqli" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="sqli" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="sqli" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="sqli" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="sqli" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="sqli" value="나름 고수" >나름 고수
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Redis</h6>
-                <input type="radio" name="rdis" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="rdis" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="rdis" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="rdis" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="rdis" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="rdis" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="rdis" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="rdis" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="rdis" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="rdis" value="나름 고수" >나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Oracle</h6>
-                <input type="radio" name="orl" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="orl" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="orl" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="orl" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="orl" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="orl" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="orl" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="orl" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="orl" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="orl" value="나름 고수" >나름 고수
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Flask</h6>
-                <input type="radio" name="fla_data" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="fla_data" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="fla_data" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="fla_data" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="fla_data" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="fla_data" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="fla_data" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="fla_data" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="fla_data" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="fla_data" value="나름 고수" >나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Cordova</h6>
-                <input type="radio" name="cor_data" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="cor_data" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="cor_data" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="cor_data" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="cor_data" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="cor_data" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="cor_data" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="cor_data" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="cor_data" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="cor_data" value="나름 고수" >나름 고수
             </div>
         </div>
         <br>
@@ -387,105 +387,105 @@
             <span>4. 클라우드 / 플랫폼 / 운영체제</span>
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">AWS</h6>
-                <input type="radio" name="aw" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="aw" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="aw" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="aw" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="aw" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="aw" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="aw" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="aw" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="aw" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="aw" value="나름 고수" >나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Azure</h6>
-                <input type="radio" name="az" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="az" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="az" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="az" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="az" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="az" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="az" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="az" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="az" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="az" value="나름 고수" >나름 고수
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Google Cloud Platform / App Engine</h6>
-                <input type="radio" name="gc" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="gc" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="gc" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="gc" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="gc" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="gc" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="gc" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="gc" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="gc" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="gc" value="나름 고수" >나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Linux</h6>
-                <input type="radio" name="lin" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="lin" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="lin" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="lin" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="lin" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="lin" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="lin" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="lin" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="lin" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="lin" value="나름 고수" >나름 고수
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Wordpress</h6>
-                <input type="radio" name="wp" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="wp" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="wp" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="wp" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="wp" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="wp" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="wp" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="wp" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="wp" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="wp" value="나름 고수" >나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Raspberry Pi</h6>
-                <input type="radio" name="rp" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="rp" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="rp" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="rp" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="rp" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="rp" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="rp" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="rp" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="rp" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="rp" value="나름 고수" >나름 고수
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Arduino</h6>
-                <input type="radio" name="ard" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="ard" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="ard" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="ard" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="ard" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="ard" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="ard" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="ard" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="ard" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="ard" value="나름 고수" >나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Firebase</h6>
-                <input type="radio" name="fire" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="fire" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="fire" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="fire" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="fire" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="fire" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="fire" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="fire" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="fire" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="fire" value="나름 고수" >나름 고수
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Docker</h6>
-                <input type="radio" name="dock" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="dock" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="dock" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="dock" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="dock" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="dock" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="dock" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="dock" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="dock" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="dock" value="나름 고수" >나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Go Ethereum / Solidity</h6>
-                <input type="radio" name="goe" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="goe" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="goe" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="goe" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="goe" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="goe" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="goe" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="goe" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="goe" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="goe" value="나름 고수" >나름 고수
             </div>
         </div>
         <br>
@@ -493,90 +493,90 @@
             <span>5. 머신러닝 / VR / AR / 비전</span>
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Tensorflow</h6>
-                <input type="radio" name="tens" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="tens" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="tens" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="tens" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="tens" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="tens" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="tens" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="tens" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="tens" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="tens" value="나름 고수" >나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Caffe</h6>
-                <input type="radio" name="caf" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="caf" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="caf" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="caf" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="caf" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="caf" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="caf" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="caf" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="caf" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="caf" value="나름 고수" >나름 고수
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">OpenCV</h6>
-                <input type="radio" name="ocv" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="ocv" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="ocv" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="ocv" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="ocv" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="ocv" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="ocv" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="ocv" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="ocv" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="ocv" value="나름 고수" >나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">DLib</h6>
-                <input type="radio" name="dli" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="dli" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="dli" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="dli" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="dli" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="dli" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="dli" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="dli" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="dli" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="dli" value="나름 고수" >나름 고수
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">OpenGL</h6>
-                <input type="radio" name="ogl" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="ogl" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="ogl" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="ogl" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="ogl" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="ogl" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="ogl" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="ogl" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="ogl" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="ogl" value="나름 고수" >나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Unity</h6>
-                <input type="radio" name="uni" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="uni" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="uni" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="uni" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="uni" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="uni" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="uni" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="uni" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="uni" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="uni" value="나름 고수" >나름 고수
             </div>
         </div>
         <br>
          <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Arduino</h6>
-                <input type="radio" name="ardu_mac" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="ardu_mac" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="ardu_mac" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="ardu_mac" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="ardu_mac" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="ardu_mac" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="ardu_mac" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="ardu_mac" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="ardu_mac" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="ardu_mac" value="나름 고수" >나름 고수
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Firebase</h6>
-                <input type="radio" name="fir_mac" value="배운적 없음" onclick="return false">배운적 없음<br>
-                <input type="radio" name="fir_mac" value="맛보기 수준" onclick="return false">맛보기 수준<br>
-                <input type="radio" name="fir_mac" value="초보 수준" onclick="return false">초보 수준<br>
-                <input type="radio" name="fir_mac" value="실무 가능" onclick="return false">실무 가능<br>
-                <input type="radio" name="fir_mac" value="나름 고수" onclick="return false">나름 고수
+                <input type="radio" name="fir_mac" value="배운적 없음" >배운적 없음<br>
+                <input type="radio" name="fir_mac" value="맛보기 수준" >맛보기 수준<br>
+                <input type="radio" name="fir_mac" value="초보 수준" >초보 수준<br>
+                <input type="radio" name="fir_mac" value="실무 가능" >실무 가능<br>
+                <input type="radio" name="fir_mac" value="나름 고수" >나름 고수
             </div>
         </div>
         <br>
-        <!-- <div class="col-12 text-center">
+        <div class="col-12 text-center">
             <button class="btn btn-primary" type="submit">제출하기</button>
-        </div> -->
+        </div>
       </form>
     </div>
   </div>
@@ -689,7 +689,7 @@ import { mapActions, mapGetters } from "vuex";
             var Peral = programmingLang.Peral;
             var R = programmingLang.R;
             var VBA = programmingLang.VBA;
-            console.log(Javascript)
+            // console.log(Javascript)
 
             var frameworkLang = JSON.parse(res.data.frameworkLang);
             var Nodejs = frameworkLang.Nodejs;
@@ -808,6 +808,13 @@ import { mapActions, mapGetters } from "vuex";
             };
             var docheck = [];
             for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("ph")[i].value);
+              if(Python==docheck[i]){
+                document.getElementsByName('ph')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
               docheck.push(document.getElementsByName("langC")[i].value);
               if(C==docheck[i]){
                 document.getElementsByName('langC')[i].checked = true;
@@ -911,13 +918,13 @@ import { mapActions, mapGetters } from "vuex";
                 document.getElementsByName('cd')[i].checked = true;
               }
             };
-            var docheck = [];
-            for(var i=0;i<chkleng;i++){
-              docheck.push(document.getElementsByName("langvba")[i].value);
-              if(VBA==docheck[i]){
-                document.getElementsByName('langvba')[i].checked = true;
-              }
-            };
+            // var docheck = [];
+            // for(var i=0;i<chkleng;i++){
+            //   docheck.push(document.getElementsByName("langvba")[i].value);
+            //   if(VBA==docheck[i]){
+            //     document.getElementsByName('langvba')[i].checked = true;
+            //   }
+            // };
             var docheck = [];
             for(var i=0;i<chkleng;i++){
               docheck.push(document.getElementsByName("mys")[i].value);
@@ -974,20 +981,20 @@ import { mapActions, mapGetters } from "vuex";
                 document.getElementsByName('cor_data')[i].checked = true;
               }
             };
-            var docheck = [];
-            for(var i=0;i<chkleng;i++){
-              docheck.push(document.getElementsByName("cor_data")[i].value);
-              if(Cordova_data==docheck[i]){
-                document.getElementsByName('cor_data')[i].checked = true;
-              }
-            };
-            var docheck = [];
-            for(var i=0;i<chkleng;i++){
-              docheck.push(document.getElementsByName("cor_data")[i].value);
-              if(Cordova_data==docheck[i]){
-                document.getElementsByName('cor_data')[i].checked = true;
-              }
-            };
+            // var docheck = [];
+            // for(var i=0;i<chkleng;i++){
+            //   docheck.push(document.getElementsByName("cor_data")[i].value);
+            //   if(Cordova_data==docheck[i]){
+            //     document.getElementsByName('cor_data')[i].checked = true;
+            //   }
+            // };
+            // var docheck = [];
+            // for(var i=0;i<chkleng;i++){
+            //   docheck.push(document.getElementsByName("cor_data")[i].value);
+            //   if(Cordova_data==docheck[i]){
+            //     document.getElementsByName('cor_data')[i].checked = true;
+            //   }
+            // };
             var docheck = [];
             for(var i=0;i<chkleng;i++){
               docheck.push(document.getElementsByName("aw")[i].value);
@@ -1121,28 +1128,289 @@ import { mapActions, mapGetters } from "vuex";
     },
     methods: {
         submitResume(){
-        // var data =[{
-        //     programmingLang : this.programmingLang,
-        //     frameworkLang : this.frameworkLang,
-        //     databaseLang : this.databaseLang,
-        //     cloudLang : this.cloudLang,
-        //     machineLang : this.machineLang,
-        // }];
+            var chkleng = document.getElementsByName('js').length;
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('js')[i].checked == true){
+                    this.programmingLang.Javascript = document.getElementsByName('js')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('ht')[i].checked == true){
+                    this.programmingLang.HTML = document.getElementsByName('ht')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('cs')[i].checked == true){
+                    this.programmingLang.CSS = document.getElementsByName('cs')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('jq')[i].checked == true){
+                    this.programmingLang.jQuery = document.getElementsByName('jq')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('sq')[i].checked == true){
+                    this.programmingLang.SQL = document.getElementsByName('sq')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('jv')[i].checked == true){
+                    this.programmingLang.Java = document.getElementsByName('jv')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('aj')[i].checked == true){
+                    this.programmingLang.AndroidJava = document.getElementsByName('aj')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('sf')[i].checked == true){
+                    this.programmingLang.Swift = document.getElementsByName('sf')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('ob')[i].checked == true){
+                    this.programmingLang.Objective = document.getElementsByName('ob')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('py')[i].checked == true){
+                    this.programmingLang.Python = document.getElementsByName('py')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('ph')[i].checked == true){
+                    this.programmingLang.PHP = document.getElementsByName('ph')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('langC')[i].checked == true){
+                    this.programmingLang.C = document.getElementsByName('langC')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('mi')[i].checked == true){
+                    this.programmingLang.Microsoft = document.getElementsByName('mi')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('kot')[i].checked == true){
+                    this.programmingLang.Kotlin = document.getElementsByName('kot')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('per')[i].checked == true){
+                    this.programmingLang.Peral = document.getElementsByName('per')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('langR')[i].checked == true){
+                    this.programmingLang.R = document.getElementsByName('langR')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('langvba')[i].checked == true){
+                    this.programmingLang.VBA = document.getElementsByName('langvba')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('nj')[i].checked == true){
+                    this.frameworkLang.Nodejs = document.getElementsByName('nj')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('an')[i].checked == true){
+                    this.frameworkLang.Angular = document.getElementsByName('an')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('rt')[i].checked == true){
+                    this.frameworkLang.React = document.getElementsByName('rt')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('ej')[i].checked == true){
+                    this.frameworkLang.Expressjs = document.getElementsByName('ej')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('net')[i].checked == true){
+                    this.frameworkLang.NetCore = document.getElementsByName('net')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('spr')[i].checked == true){
+                    this.frameworkLang.Spring = document.getElementsByName('spr')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('dj')[i].checked == true){
+                    this.frameworkLang.Django = document.getElementsByName('dj')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('fl')[i].checked == true){
+                    this.frameworkLang.Flask = document.getElementsByName('fl')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('cd')[i].checked == true){
+                    this.frameworkLang.Cordova = document.getElementsByName('cd')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('mys')[i].checked == true){
+                    this.databaseLang.MySql = document.getElementsByName('mys')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('sqls')[i].checked == true){
+                    this.databaseLang.SQLServer = document.getElementsByName('sqls')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('mong')[i].checked == true){
+                    this.databaseLang.MongoDB = document.getElementsByName('mong')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('sqli')[i].checked == true){
+                    this.databaseLang.SQLite = document.getElementsByName('sqli')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('rdis')[i].checked == true){
+                    this.databaseLang.Redis = document.getElementsByName('rdis')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('orl')[i].checked == true){
+                    this.databaseLang.Oracle = document.getElementsByName('orl')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('fla_data')[i].checked == true){
+                    this.databaseLang.Flask = document.getElementsByName('fla_data')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('cor_data')[i].checked == true){
+                    this.databaseLang.Cordova = document.getElementsByName('cor_data')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('aw')[i].checked == true){
+                    this.cloudLang.AWS = document.getElementsByName('aw')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('az')[i].checked == true){
+                    this.cloudLang.Azure = document.getElementsByName('az')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('gc')[i].checked == true){
+                    this.cloudLang.GCP = document.getElementsByName('gc')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('lin')[i].checked == true){
+                    this.cloudLang.Linux = document.getElementsByName('lin')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('wp')[i].checked == true){
+                    this.cloudLang.Wordpress = document.getElementsByName('wp')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('rp')[i].checked == true){
+                    this.cloudLang.RaspberryPi = document.getElementsByName('rp')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('ard')[i].checked == true){
+                    this.cloudLang.Arduino = document.getElementsByName('ard')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('fire')[i].checked == true){
+                    this.cloudLang.Firebase = document.getElementsByName('fire')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('dock')[i].checked == true){
+                    this.cloudLang.Docker = document.getElementsByName('dock')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('goe')[i].checked == true){
+                    this.cloudLang.Go = document.getElementsByName('goe')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('tens')[i].checked == true){
+                    this.machineLang.Tensorflow = document.getElementsByName('tens')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('caf')[i].checked == true){
+                    this.machineLang.Caffe = document.getElementsByName('caf')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('ocv')[i].checked == true){
+                    this.machineLang.OpenCV = document.getElementsByName('ocv')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('dli')[i].checked == true){
+                    this.machineLang.DLib = document.getElementsByName('dli')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('ogl')[i].checked == true){
+                    this.machineLang.OpenGL = document.getElementsByName('ogl')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('uni')[i].checked == true){
+                    this.machineLang.Unity = document.getElementsByName('uni')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('ardu_mac')[i].checked == true){
+                    this.machineLang.Arduino = document.getElementsByName('ardu_mac')[i].value;
+                };
+            }
+            for(var i=0;i<chkleng;i++){
+                if(document.getElementsByName('fir_mac')[i].checked == true){
+                    this.machineLang.Firebase = document.getElementsByName('fir_mac')[i].value;
+                };
+            }
+        var data =[{
+            programmingLang : this.programmingLang,
+            frameworkLang : this.frameworkLang,
+            databaseLang : this.databaseLang,
+            cloudLang : this.cloudLang,
+            machineLang : this.machineLang,
+        }];
         // this.$store.dispatch('resume/submit_SW', data);
-
-        // var submit_resume = {
-        //     sLoginID : this.user.loginId,
-        //     getUserInfo : this.getUserInfo,
-        //     getUserEng : this.getUserEng,
-        //     getUserGrade : this.getUserGrade,
-        //     programmingLang : this.programmingLang,
-        //     frameworkLang : this.frameworkLang,
-        //     databaseLang : this.databaseLang,
-        //     cloudLang : this.cloudLang,
-        //     machineLang : this.machineLang,
-        // };
-        // this.$store.dispatch('resume/submit_ALL', submit_resume);
-        // this.$router.push({name: "Home"})
+        var submit_resume = {
+            sLoginID : this.user.loginId,
+            getUserInfo : this.getUserInfo,
+            getUserEng : this.getUserEng,
+            getUserGrade : this.getUserGrade,
+            programmingLang : this.programmingLang,
+            frameworkLang : this.frameworkLang,
+            databaseLang : this.databaseLang,
+            cloudLang : this.cloudLang,
+            machineLang : this.machineLang,
+        };
+        this.$store.dispatch('resume/submit_Modify', submit_resume);
+        // this.$router.push({name: "ReadResume"});
+        location.reload();
         },
     }
   }

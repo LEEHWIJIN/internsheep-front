@@ -4,7 +4,7 @@
           <h4>Category</h4>
           <ul class="list-styled list-bordered">
           <!-- <li><a class="text-color d-block py-3" href="#" @click="goReadResume">이력서 보기</a></li> -->
-          <li><a class="text-color d-block py-3" href="#" @click="goResume">이력서 작성</a></li>
+          <!-- <li><a class="text-color d-block py-3" href="#" @click="goResume">이력서 작성</a></li> -->
           <li><a class="text-color d-block py-3" href="#" @click="goReadResume">이력서 관리</a></li>
           <li><a class="text-color d-block py-3" href="#" @click="goApplyStatus">지원 현황</a></li>
           <li><a class="text-color d-block py-3" href="#" @click="goReport">보고서 관리</a></li>
@@ -32,6 +32,7 @@
       },
       goReadResume(){
       this.$router.push({name: "ReadResume"})
+      location.reload()
       },
       goHome(){
           this.$router.push({name: "Home"})

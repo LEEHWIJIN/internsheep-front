@@ -28,6 +28,12 @@ export default {
         })
     },
 
+    submit_Modify({commit},data){
+        axios.post('http://localhost:8888/std/mypage/modifyResume',{req : data}).then((response) => {
+                   
+        })
+    },
+
     setResumeState({commit}, data){
         commit(mutation.SETRESUMESTATE, data);
     },

@@ -13,11 +13,11 @@
             <span>1. 프로그래밍/스크립트/마크업언어</span>
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Javascript</h6>
-                <input type="radio" name="Javascript" value="배운적 없음" v-model="programmingLang.Javascript[0]">배운적 없음<br>
-                <input type="radio" name="Javascript" value="맛보기 수준" v-model="programmingLang.Javascript[0]">맛보기 수준<br>
-                <input type="radio" name="Javascript" value="초보 수준" v-model="programmingLang.Javascript[0]">초보 수준<br>
-                <input type="radio" name="Javascript" value="실무 가능" v-model="programmingLang.Javascript[0]">실무 가능<br>
-                <input type="radio" name="Javascript" value="나름 고수" v-model="programmingLang.Javascript[0]">나름 고수
+                <input type="radio" name="Javascript" value="배운적 없음" v-model="programmingLang.Javascript">배운적 없음<br>
+                <input type="radio" name="Javascript" value="맛보기 수준" v-model="programmingLang.Javascript">맛보기 수준<br>
+                <input type="radio" name="Javascript" value="초보 수준" v-model="programmingLang.Javascript">초보 수준<br>
+                <input type="radio" name="Javascript" value="실무 가능" v-model="programmingLang.Javascript">실무 가능<br>
+                <input type="radio" name="Javascript" value="나름 고수" v-model="programmingLang.Javascript">나름 고수
             </div>
         </div>
         <div class="col-lg-6">
@@ -682,7 +682,7 @@ import { mapActions, mapGetters } from "vuex";
             machineLang : this.machineLang,
         };
         this.$store.dispatch('resume/submit_ALL', submit_resume);
-        this.$router.push({name: "Home"})
+        location.reload();
         },
     }
   }

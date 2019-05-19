@@ -130,10 +130,11 @@
         </div>
         <br>
         <div class="col-12 text-center">
-          <button class="btn btn-primary" type="submit">다음</button>
-          <button class="btn btn-primary" @click="modifyResume">수정하기</button>
+          <button class="btn btn-primary" @click="submitResume">다음</button>
         </div>
       </form>
+          <button class="btn btn-primary" @click="modifyResume">수정하기</button>
+          <!-- 수정하기 버튼은 무조건 form 뒤에 있어야 합니다. -->
     </div>
   </div>
 </template>
@@ -162,6 +163,10 @@
             return this.user
         });
         await this.$http.get('http://localhost:8888/std/mypage/watchResume',{params:{sLoginID : this.user.loginId}}).then(res =>{
+            if(res.data != false){
+                // this.$store.dispatch('resume/setResumeState',4);
+            }
+            else this.$store.dispatch('resume/setResumeState',0);//맨 첫장
             // console.log(res)
             this.sEmail = res.data.sEmail;
             this.sPhone = res.data.sPhone;
@@ -192,10 +197,6 @@
                 document.getElementsByName('hopeterm')[i].checked = true;
               }
             }
-            if(res.data != false){
-                // this.$store.dispatch('resume/setResumeState',4);
-            }
-            else this.$store.dispatch('resume/setResumeState',0);//맨 첫장
           });
       },
       created(){
@@ -214,7 +215,7 @@
           this.$store.dispatch('resume/setResumeState',1);
         },
         modifyResume(){
-          this.$store.dispatch('resume/setResumeState',5);
+          this.$store.dispatch('resume/setResumeState',6);
           // this.$store.dispatch('resume/setModifyResumeState',0);
         },
       }
