@@ -14,7 +14,7 @@
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Javascript</h6>
 
-<!-- 
+<!--
             <input class="inp-cbx" id="cbx3" name="grade" value="4학년 1학기" type="radio" style="display: none;">
               <label class="cbx" for="cbx3">
                 <span>
@@ -26,7 +26,7 @@
               </label><br>
  -->
 
-                
+
                 <input type="radio" name="js" value="배운적 없음" >배운적 없음<br>
                 <input type="radio" name="js" value="맛보기 수준" >맛보기 수준<br>
                 <input type="radio" name="js" value="초보 수준" >초보 수준<br>
@@ -723,7 +723,7 @@ import { mapActions, mapGetters } from "vuex";
             var Firebase = cloudLang.Firebase;
             var Docker = cloudLang.Docker;
             var Go = cloudLang.Go;
-            
+
             var machineLang = JSON.parse(res.data.machineLang);
             var Tensorflow = machineLang.Tensorflow;
             var Caffe = machineLang.Caffe;
