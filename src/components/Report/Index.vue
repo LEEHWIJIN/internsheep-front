@@ -95,7 +95,8 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
             file : null,
             uploadFile : null,
             url : "",
-            fileName : ""
+            fileName : "",
+            applyTerm :{},
           //uploads: [],
 		      //colors: ["#24bddf", "#5fcc9c", "#6a65d8"],
         }
@@ -106,15 +107,30 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
           VCategory,
       },
       created(){
+
           this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
               this.user = res.data.user;
               console.log("유저입니다 : ",this.user.loginId)
-              this.downloadButton(this.user.loginId)
-              this.loadFileName(this.user.loginId)
+             this.loadTerm(this.user.loginId)
               return this.user.loginId
           })
+
+
       },
       methods: {
+          loadTerm(loginId){
+              this.$http.get('http://localhost:8888/admin/recentApplyTerm').then((response) => {
+                  this.applyTerm = {
+                      applyStart : response.data.applyStart,
+                      applyEnd : response.data.applyEnd,
+                      applySemester : response.data.applySemester,
+                      applyOrder : response.data.applyOrder
+                  }
+                  this.downloadButton(loginId)
+                  this.loadFileName(loginId)
+                  this.applyStatus(loginId)
+              })
+          },
           downloadButton(loginId){
               this.url = 'http://localhost:8888/std/mypage/downloadReport?sLoginID='+loginId
               this.loadFileName(loginId)
@@ -125,6 +141,18 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
                       this.fileName = ""
                   }
                   else {this.fileName = response.data}
+              })
+          },
+          applyStatus(loginId){
+              console.log(this.applyTerm.applySemester)
+              this.$http.get('http://localhost:8888/std/mypage/applyStatus',{params:{sLoginID : loginId, applySemester : this.applyTerm.applySemester}}).then((response)=>{
+                  console.log(response.data)
+                  if (response.data.YN == 1) {
+
+                  }
+                  else {alert('실습을 하지 않으셨습니다.')
+                      this.$router.push({name: "Home"})
+                  }
               })
           },
           // getRandomColor() { //나중에 사용할 ux/ui
@@ -176,7 +204,8 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
               var data = new FormData();
               data.append('name', this.uploadFile.name)
               data.append('sLoginID',this.user.loginId)
-              data.append('file', this.uploadFile) //formdata 는 console.log를 찍어도 확인 할 수 없다.
+              data.append('file', this.uploadFile)
+              data.append('applySemester', this.applyTerm.applySemester)//formdata 는 console.log를 찍어도 확인 할 수 없다.
             // for (var key of data.keys()) {
             //   console.log(key);
             // }
@@ -192,12 +221,14 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
             if(this.fileName == '') {
                 this.$http.post('http://localhost:8888/std/mypage/postReport', data, config).then(
                     response => {
+                        alert('저장되었습니다.')
                     }
                 )
             }
             else{
                 this.$http.post('http://localhost:8888/std/mypage/modifyReport', data, config).then(
                     response => {
+                        alert('수정되었습니다.')
                     }
                 )
             }

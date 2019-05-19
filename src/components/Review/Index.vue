@@ -139,11 +139,35 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
           this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
               this.user = res.data.user;
               console.log("유저입니다 : ",this.user.loginId)
+              this.loadTerm(this.user.loginId)
               this.loadReview(this.user.loginId)
               return this.user.loginId
           })
       },
       methods: {
+          loadTerm(loginId){
+              this.$http.get('http://localhost:8888/admin/recentApplyTerm').then((response) => {
+                  this.applyTerm = {
+                      applyStart : response.data.applyStart,
+                      applyEnd : response.data.applyEnd,
+                      applySemester : response.data.applySemester,
+                      applyOrder : response.data.applyOrder
+                  }
+                  this.applyStatus(loginId)
+              })
+          },
+          applyStatus(loginId){
+              console.log(this.applyTerm.applySemester)
+              this.$http.get('http://localhost:8888/std/mypage/applyStatus',{params:{sLoginID : loginId, applySemester : this.applyTerm.applySemester}}).then((response)=>{
+                  console.log(response.data)
+                  if (response.data.YN == 1) {
+
+                  }
+                  else {alert('실습을 하지 않으셨습니다.')
+                      this.$router.push({name: "Home"})
+                  }
+              })
+          },
           // getRandomColor() { //나중에 사용할 ux/ui
           //   const randomIndex = Math.floor(Math.random() * 2);
           //     return this.colors[randomIndex];
