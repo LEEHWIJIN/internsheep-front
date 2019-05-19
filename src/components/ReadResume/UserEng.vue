@@ -13,12 +13,8 @@
                 <h6 style="font-weight:bold">영어 정보 검색 및 활용 역량*</h6>
                 <input class="inp-cbx" id="cbx1" value="영어로 구글링을 하는데 불편함을 많이 느낀다." type="checkbox" name="search" onclick="return false" style="display: none;">
                 <label class="cbx" for="cbx1">
-                    <span>
-                    <svg width="12px" height="10px" viewbox="0 0 12 10">
-                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                    </svg>
-                    </span>
-                    <span>영어로 구글링을 하는데 불편함을 많이 느낀다.</span>
+                    <span><svg width="10px" height="10px" viewbox="0 0 12 10"><polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span>
+                    <span style="display:inline-block; width:30px; background-color:#CCCC">영어로 구글링을 하는데 불편함을 많이 느낀다.</span>
                 </label><br>
                 <input class="inp-cbx" id="cbx2" value="조금 불편하긴 하지만 영어로 구글링을 자주 하는 편이다." type="checkbox" name="search" onclick="return false" style="display: none;">
                 <label class="cbx" for="cbx2">
@@ -260,4 +256,8 @@
 </script>
 
 <style scoped>
+.indent {
+  text-indent: -1em;
+  margin-left: 1em;
+}
 </style>
