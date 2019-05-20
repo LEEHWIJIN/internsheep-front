@@ -56,7 +56,7 @@
         },
         methods: {
             recentApplyTerm(){
-                this.$http.get('http://106.10.46.121:10022/admin/recentApplyTerm').then((response)=>{
+                this.$http.get('http://localhost:8888/admin/recentApplyTerm').then((response)=>{
                     this.currentApplyTerm = {
                         applyStart: response.data.applyStart.split('T')[0],
                         applyEnd: response.data.applyEnd.split('T')[0],
@@ -69,7 +69,7 @@
                 })
             },
             modifysubmit(){
-                this.$http.post('http://106.10.46.121:10022/admin/updateApplyTerm',{applyStart:this.applyStart,applyEnd:this.applyEnd,applySemester:this.applySemester,applyOrder:this.applyOrder,oldApplySemester : this.oldApplySemester, oldApplyOrder : this.oldApplyOrder}).then((response)=>{
+                this.$http.post('http://localhost:8888/admin/updateApplyTerm',{applyStart:this.applyStart,applyEnd:this.applyEnd,applySemester:this.applySemester,applyOrder:this.applyOrder,oldApplySemester : this.oldApplySemester, oldApplyOrder : this.oldApplyOrder}).then((response)=>{
                     this.$router.push({name: "admin"})
                 })
             }
