@@ -191,10 +191,10 @@
         // VBase,
       },
       async beforeMount(){
-        await this.$http.get('http://api.ajou-internsheep.co/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+        await this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
             this.user = res.data.user;
         });
-        await this.$http.get('http://api.ajou-internsheep.co/std/mypage/watchResume',{params:{sLoginID : this.user.loginId}}).then(res =>{
+        await this.$http.get('http://localhost:8888/std/mypage/watchResume',{params:{sLoginID : this.user.loginId}}).then(res =>{
             // if(res.data != false){
             //     this.$store.dispatch('resume/setResumeState',4);
             // }
