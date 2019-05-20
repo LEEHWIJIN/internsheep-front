@@ -48,8 +48,8 @@
                     <a class="dropdown-item text-color" href="#" @click="goProfile">회원 정보 수정</a>
                   </div>
                 </li>
-                <a v-if="auth == 0" href="#" class=" btn-sm btn-outline-primary text-white ml-3" @click="goLogin">log in</a>
-                <button v-if="auth !=0" class="btn btn-sm btn-outline-primary text-white ml-3" @click="logout">log out</button>
+                <a v-if="auth == 0" href="#" class="btn btn-outline-primary text-white ml-3" @click="goLogin">log in</a>
+                <button v-if="auth !=0" class="btn btn-outline-primary text-white ml-3" @click="logout">log out</button>
               </ul>
             </div>
           </nav>

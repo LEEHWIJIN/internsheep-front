@@ -3,6 +3,9 @@
     <div class="container">
     <div class="row">
       <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="" style="text-align: center;">
+          <a class="" href="#" @click="goHome"><img src="images/login.png" style="text-align: center; filter: brightness(0) invert(1);"alt="Intern Sheep"></a>
+        </div>
         <div class="card card-signin my-5">
           <div class="card-body">
 
@@ -57,6 +60,9 @@
 
     },
     methods: {
+      goHome(){
+          this.$router.push({name: "Home"})
+      },
       login() {
         this.$http.post('http://localhost:8888/auth/std/login',{user: this.user}).then((response)=>{
              alert('success');
@@ -83,6 +89,9 @@
 </script>
 
 <style scoped>
+/* img {
+  width:350px;
+} */
 
 :root {
   --input-padding-x: 1.5rem;
@@ -92,14 +101,18 @@
 .section1 {
   background-color: #007bff;
   background: linear-gradient(to right, #0062E6, #33AEFF);
-  padding-bottom:100px;
-  padding-top:100px;
+  padding-bottom:120px;
+  padding-top:120px;
 }
 
 .card-signin {
   border: 0;
   border-radius: 1rem;
   box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+
+  /* padding:1rem;
+  padding-left:0.8rem;
+  padding-right:0.8rem; */
 }
 
 .card-signin .card-title{

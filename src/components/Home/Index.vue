@@ -33,7 +33,7 @@
                 <p class="h2 font-weight-light text-dark"><span class="counter" data-count="20">0</span>+</p>
               </div>
               <div class="col-md-6 col-sm-6 mb-4 mb-md-0 text-center">
-                <p class="h4 text-dark font-weight-normal">명의  기업이  <span class="h2 font-weight-light">인턴쉽</span>에  참여하고  있습니다.</p>
+                <p class="h4 text-dark font-weight-normal">명의  기업이  <span class="h2 font-weight-light"> 인턴쉽</span>에  참여하고  있습니다.</p>
               </div>
               <div class="col-md-1 col-sm-6 mb-4 mb-md-0 text-center">
               </div>
