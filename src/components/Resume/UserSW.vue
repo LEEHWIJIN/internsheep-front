@@ -682,6 +682,7 @@ import { mapActions, mapGetters } from "vuex";
             machineLang : this.machineLang,
         };
         this.$store.dispatch('resume/submit_ALL', submit_resume);
+        this.$store.dispatch('resume/setResumeState',6);
         location.reload();
         },
     }
