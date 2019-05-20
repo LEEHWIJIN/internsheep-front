@@ -245,6 +245,6 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 }
 
 .container {
-  padding-bottom: 50px;
+  padding-bottom: 110px;
 }
 </style>
