@@ -54,7 +54,7 @@
         VError,
       },
       created(){
-        this.$http.get('http://106.10.46.121:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+        this.$http.get('http://api.ajou-internsheep.co/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
           this.user = res.data.user;
           this.getResume(this.user.loginId);
         });
@@ -65,7 +65,7 @@
       // },
       methods: {
         getResume(loginId){
-          this.$http.get('http://106.10.46.121:8888/std/mypage/watchResume',{params:{sLoginID : loginId}}).then(res =>{
+          this.$http.get('http://api.ajou-internsheep.co/std/mypage/watchResume',{params:{sLoginID : loginId}}).then(res =>{
             // console.log(this.user.loginId)
             // {params:{sLoginID : this.user.loginId}}
             // if(res.data != false){
@@ -77,7 +77,7 @@
 
         },
         // submitResume(){
-        //   this.$http.post('http://106.10.46.121:8888/std/mypage/resume',{sNum:this.sNum,sName: this.sName}).then((response) => {
+        //   this.$http.post('http://api.ajou-internsheep.co/std/mypage/resume',{sNum:this.sNum,sName: this.sName}).then((response) => {
         //       this.sName = "";
         //       this.sNum="";
         //     })
