@@ -50,8 +50,18 @@
                  </div>
                </div>
             </div>
-            <div v-if="confirm == 2">
-              지원한 기업이 없습니다.
+            <div v-if="confirm == 2" class="col-lg-12 p-0">
+              <div class="container pretty">
+                  <div class="outer">
+                    <div class="inner">
+                      <div class="centered">
+                        <!-- 보고서 작성 페이지  || 후기 작성 페이지일 경우-->
+                        <h3 style="font-weight:bold;">어머나, <br>아직 지원한 기업이<br>없으시군요! </h3><br>
+                        <h4 href="#" @click="goApplyList">지원하러 가기 -></h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
             </div>
           </div>
         </div>
@@ -95,6 +105,9 @@
 
     },
     methods: {
+      goApplyList(){
+          this.$router.push({name: "Apply"})
+      },
       getApplyStatus(loginId) {
         this.$http.get('http://106.10.46.121:10022/std/mypage/applyStatus',{params:{sLoginID : loginId, applySemester : this.applyTerm.applySemester}}).then((response)=>{
             if(response.data=='0'){
@@ -164,5 +177,29 @@
 
 .container {
   padding-bottom: 170px;
+}
+
+.pretty {
+  width:100%;
+  height:100%;
+  margin: 40px auto;
+}
+.outer {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.inner {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.centered {
+  position: relative;
+  display: inline-block;
+  width: 70%;
+  padding: 1em;
 }
 </style>
