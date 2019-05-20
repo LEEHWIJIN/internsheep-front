@@ -219,14 +219,14 @@
                           content: '<div style="width:150px;text-align:center;padding:6px 0;">회사</div>'
                       });
                       infowindow.open(map, marker);
-                      console.log(coords)
+                      // console.log(coords)
                       map.setCenter(coords);
 
                   }
               });
           },
           onMapEvent (event, params) {
-              console.log(`Daum Map Event(${event})`, params);
+              // console.log(`Daum Map Event(${event})`, params);
           }
       }
   }
