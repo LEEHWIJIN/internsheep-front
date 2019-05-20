@@ -665,11 +665,11 @@ import { mapActions, mapGetters } from "vuex";
         }),
     },
     async beforeMount(){
-        await this.$http.get('http://10.41.83.72:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+        await this.$http.get('http://10.41.83.255:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
             //console.log(res.data.user);
             return this.user = res.data.user;
         });
-        await this.$http.get('http://10.41.83.72:8888/std/mypage/watchResume',{params:{sLoginID : this.user.loginId}}).then(res =>{
+        await this.$http.get('http://10.41.83.255:8888/std/mypage/watchResume',{params:{sLoginID : this.user.loginId}}).then(res =>{
             //  console.log(res)
             var programmingLang = JSON.parse(res.data.programmingLang);
             var Javascript = programmingLang.Javascript;

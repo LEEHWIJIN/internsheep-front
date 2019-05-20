@@ -56,7 +56,7 @@
         },
         methods: {
             recentApplyTerm(){
-                this.$http.get('http://10.41.83.72:8888/admin/recentApplyTerm').then((response)=>{
+                this.$http.get('http://10.41.83.255:8888/admin/recentApplyTerm').then((response)=>{
                     this.currentApplyTerm = {
                         applyStart: response.data.applyStart.split('T')[0],
                         applyEnd: response.data.applyEnd.split('T')[0],
@@ -69,7 +69,7 @@
                 })
             },
             modifysubmit(){
-                this.$http.post('http://10.41.83.72:8888/admin/updateApplyTerm',{applyStart:this.applyStart,applyEnd:this.applyEnd,applySemester:this.applySemester,applyOrder:this.applyOrder,oldApplySemester : this.oldApplySemester, oldApplyOrder : this.oldApplyOrder}).then((response)=>{
+                this.$http.post('http://10.41.83.255:8888/admin/updateApplyTerm',{applyStart:this.applyStart,applyEnd:this.applyEnd,applySemester:this.applySemester,applyOrder:this.applyOrder,oldApplySemester : this.oldApplySemester, oldApplyOrder : this.oldApplyOrder}).then((response)=>{
                     this.$router.push({name: "admin"})
                 })
             }
