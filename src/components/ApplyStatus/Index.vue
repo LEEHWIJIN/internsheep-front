@@ -36,7 +36,7 @@
             <!-- 회사 목록 (카드 형식)-->
             <div v-if="confirm == 1" class="col-lg-12 p-0">
               <li><label style="font-weight:bold;">이전 지원</label></li>
-               <div v-for='al in applylist' class="col-lg-12 bg-white p-4 rounded shadow my-3">
+               <div v-for='(al,index) in applylist' class="col-lg-12 bg-white p-4 rounded shadow my-3">
                  <div class="media align-items-center flex-column flex-sm-row">
                    <img src="images/career/logo-1.png" class="mr-sm-3 mb-4 mb-sm-0 border rounded p-2" alt="logo-1">
                    <div class="media-body text-center text-sm-left mb-4 mb-sm-0">
@@ -46,7 +46,7 @@
                    <div class="btn btn-outline-primary">{{al.YN}}</div>
                  </div>
                  <div class="col-12 text-center">
-                   <button class="btn btn-primary" @click="giveup">포기하기</button>
+                   <button class="btn btn-primary" @click="giveup(index)">포기하기</button>
                  </div>
                </div>
             </div>
@@ -140,9 +140,12 @@
                 this.getApplyStatus(loginId)
             })
         },
-        giveup(){
-          if(this.applylist.YN == '심사중'){
-            this.$http.post('http://localhost:8888/std/mypage/giveup',{sLoginID : this.user.loginId, applySemester : this.applyTerm.applySemester, applyOrder : this.applyTerm.applyOrder}).then((response) => {
+        giveup(index){
+          console.log(this.applylist)
+          if(this.applylist[index].YN == '심사중'){
+            this.$http.post('http://localhost:8888/std/mypage/giveup',{sLoginID : this.user.loginId, applySemester : this.applyTerm.applySemester, applyOrder : this.applylist[index].applyOrder}).then((response) => {
+                alert('포기되었습니다.')
+                this.$router.push({name: "Home"})
             })
           }
           else{
