@@ -118,7 +118,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
           VCategory,
       },
       created(){
-          this.$http.get('http://106.10.46.121:10022/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+          this.$http.get('http://10.41.83.72:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
               this.user = res.data.user;
               console.log("유저입니다 : ",this.user.loginId)
               this.downloadButton(this.user.loginId)
@@ -129,11 +129,11 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
       },
       methods: {
           downloadButton(loginId){
-              this.url = 'http://106.10.46.121:10022/std/mypage/downloadReport?sLoginID='+loginId
+              this.url = 'http://10.41.83.72:8888/std/mypage/downloadReport?sLoginID='+loginId
               this.loadFileName(loginId)
           },
           loadFileName(loginId){
-              this.$http.get('http://106.10.46.121:10022/std/mypage/loadFileName',{params:{sLoginID : loginId}}).then((response)=>{
+              this.$http.get('http://10.41.83.72:8888/std/mypage/loadFileName',{params:{sLoginID : loginId}}).then((response)=>{
                   if(response.data == '0'){
                       this.fileName = ""
                   }
@@ -141,7 +141,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
               })
           },
           loadReview(loginId){
-              this.$http.get('http://106.10.46.121:10022/std/mypage/watchReview',{params:{sLoginID : loginId}}).then((response)=>{
+              this.$http.get('http://10.41.83.72:8888/std/mypage/watchReview',{params:{sLoginID : loginId}}).then((response)=>{
                   if(response.data != '0'){
                       this.review = response.data.reviewContent
                   }
@@ -212,20 +212,20 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
                   }
               }
               if(this.fileName==''){
-                  this.$http.post('http://106.10.46.121:10022/std/mypage/postReport', data, config).then(
+                  this.$http.post('http://10.41.83.72:8888/std/mypage/postReport', data, config).then(
                       (response) => {
                           this.$router.push({name: "Reportreview"})
                       }
                   )
               }
               if(this.review==''){
-                  this.$http.post('http://106.10.46.121:10022/std/mypage/postReview', data, config).then(
+                  this.$http.post('http://10.41.83.72:8888/std/mypage/postReview', data, config).then(
                       (response) => {
                       }
                   )
               }
               if(this.uploadFile == null){
-                  this.$http.post('http://106.10.46.121:10022/std/mypage/modifyReport', data, config).then(
+                  this.$http.post('http://10.41.83.72:8888/std/mypage/modifyReport', data, config).then(
                       (response) => {
 
                       }

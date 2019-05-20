@@ -454,12 +454,12 @@
         // VBase,
       },
       async beforeMount(){
-        await this.$http.get('http://106.10.46.121:10022/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+        await this.$http.get('http://10.41.83.72:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
             //console.log(res.data.user);
             this.user = res.data.user;
             return this.user;
         });
-        await this.$http.get('http://106.10.46.121:10022/std/mypage/watchResume',{params:{sLoginID : this.user.loginId}}).then(res =>{
+        await this.$http.get('http://10.41.83.72:8888/std/mypage/watchResume',{params:{sLoginID : this.user.loginId}}).then(res =>{
              console.log(res)
             // console.log(JSON.parse(res.data.sEnglish))
             var sScore = JSON.parse(res.data.sScore);
