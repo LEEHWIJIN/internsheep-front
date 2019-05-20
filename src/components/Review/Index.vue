@@ -156,18 +156,18 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
                   this.applyStatus(loginId)
               })
           },
-          applyStatus(loginId){
-              console.log(this.applyTerm.applySemester)
-              this.$http.get('http://api.ajou-internsheep.co/std/mypage/applyStatus',{params:{sLoginID : loginId, applySemester : this.applyTerm.applySemester}}).then((response)=>{
-                  console.log(response.data)
-                  if (response.data.YN == 1) {
+          // applyStatus(loginId){
+          //     console.log(this.applyTerm.applySemester)
+          //     this.$http.get('http://api.ajou-internsheep.co/std/mypage/applyStatus',{params:{sLoginID : loginId, applySemester : this.applyTerm.applySemester}}).then((response)=>{
+          //         console.log(response.data)
+          //         if (response.data.YN == 1) {
 
-                  }
-                  else {alert('실습을 하지 않으셨습니다.')
-                      this.$router.push({name: "Home"})
-                  }
-              })
-          },
+          //         }
+          //         else {alert('실습을 하지 않으셨습니다.')
+          //             this.$router.push({name: "Home"})
+          //         }
+          //     })
+          // },
           // getRandomColor() { //나중에 사용할 ux/ui
           //   const randomIndex = Math.floor(Math.random() * 2);
           //     return this.colors[randomIndex];
@@ -252,12 +252,14 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
               if(this.confirm == 0) {
                   this.$http.post('http://api.ajou-internsheep.co/std/mypage/postReview',{sLoginID : this.user.loginId, starScore : startScoreValue, reviewContent : this.review, reviewTitle : this.reviewTitle}).then(
                       response => {
+                        alert("후기가 작성되었습니다.")
                       }
                   )
               }
               else{
                   this.$http.post('http://api.ajou-internsheep.co/std/mypage/modifyReview', {sLoginID : this.user.loginId, starScore :  startScoreValue, reviewContent : this.review, reviewTitle : this.reviewTitle}).then(
                       response => {
+                        alret("후기가 수정되었습니다.")
                       }
                   )
               }

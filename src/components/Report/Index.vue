@@ -143,18 +143,18 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
                   else {this.fileName = response.data}
               })
           },
-          applyStatus(loginId){
-              console.log(this.applyTerm.applySemester)
-              this.$http.get('http://api.ajou-internsheep.co/std/mypage/applyStatus',{params:{sLoginID : loginId, applySemester : this.applyTerm.applySemester}}).then((response)=>{
-                  console.log(response.data)
-                  if (response.data.YN == 1) {
+          // applyStatus(loginId){
+          //     console.log(this.applyTerm.applySemester)
+          //     this.$http.get('http://api.ajou-internsheep.co/std/mypage/applyStatus',{params:{sLoginID : loginId, applySemester : this.applyTerm.applySemester}}).then((response)=>{
+          //         console.log(response.data)
+          //         if (response.data.YN == 1) {
 
-                  }
-                  else {alert('실습을 하지 않으셨습니다.')
-                      this.$router.push({name: "Home"})
-                  }
-              })
-          },
+          //         }
+          //         else {alert('실습을 하지 않으셨습니다.')
+          //             this.$router.push({name: "Home"})
+          //         }
+          //     })
+          // },
           // getRandomColor() { //나중에 사용할 ux/ui
           //   const randomIndex = Math.floor(Math.random() * 2);
           //     return this.colors[randomIndex];
