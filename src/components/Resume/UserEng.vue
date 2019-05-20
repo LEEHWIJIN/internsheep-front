@@ -168,8 +168,8 @@
         </div>
         <br>
         <div class="col-12 text-center">
-            <button class="btn btn-primary mr-4" @click="before">이전</button>
-            <button class="btn btn-primary" type="submit">다음</button>
+            <button class="btn btn-light mr-4" @click="before">이전</button>
+            <button class="btn btn-light" type="submit">다음</button>
         </div>
         </form>
     </div>

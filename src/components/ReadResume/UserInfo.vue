@@ -130,7 +130,7 @@
         </div>
         <br>
         <div class="col-12 text-center">
-          <button class="btn btn-primary" @click="submitResume">다음</button>
+          <button class="btn btn-light" @click="submitResume">다음</button>
         </div>
       </form>
           <button class="btn btn-primary" @click="modifyResume">수정하기</button>

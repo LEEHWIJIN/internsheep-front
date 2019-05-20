@@ -162,13 +162,13 @@
                         <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
                     </svg>
                     </span>
-                    모국어와 동일한 수준으로 보고서 및 논문 작성이 가능하다.  
+                    모국어와 동일한 수준으로 보고서 및 논문 작성이 가능하다.
                 </label><br>
             </div>
         </div>
         <br>
         <div class="col-12 text-center">
-            <button class="btn btn-primary" type="submit">다음</button>
+            <button class="btn btn-light" type="submit">다음</button>
         </div>
         </form>
     </div>
