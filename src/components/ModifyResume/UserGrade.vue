@@ -12,7 +12,7 @@
             <div class="col-lg-6">
                 <div class="apply-list  rounded-xl  bg-white mb-4">
                     <h6 style="font-weight:bold">컴퓨터프로그래밍</h6>
-                    <input class="inp-cbx" id="cbx1" value="미수강" type="checkbox" name="programming" style="display: none;">
+                    <input class="inp-cbx" id="cbx1" value="미수강" type="radio" name="programming" style="display: none;">
                     <label class="cbx" for="cbx1">
                         <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -21,7 +21,7 @@
                         </span>
                         <span>미수강</span>
                     </label><br>
-                    <input class="inp-cbx" id="cbx2" value="C+ 및 이하" type="checkbox" name="programming" style="display: none;">
+                    <input class="inp-cbx" id="cbx2" value="C+ 및 이하" type="radio" name="programming" style="display: none;">
                     <label class="cbx" for="cbx2">
                         <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -30,7 +30,7 @@
                         </span>
                         <span>C+ 및 이하</span>
                     </label><br>
-                    <input class="inp-cbx" id="cbx3" value="B+,B0" type="checkbox" name="programming" style="display: none;">
+                    <input class="inp-cbx" id="cbx3" value="B+,B0" type="radio" name="programming" style="display: none;">
                     <label class="cbx" for="cbx3">
                         <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -39,7 +39,7 @@
                         </span>
                         <span>B+,B0</span>
                     </label><br>
-                    <input class="inp-cbx" id="cbx4" value="A+,A0" type="checkbox" name="programming" style="display: none;">
+                    <input class="inp-cbx" id="cbx4" value="A+,A0" type="radio" name="programming" style="display: none;">
                     <label class="cbx" for="cbx4">
                         <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -53,7 +53,7 @@
             <div class="col-lg-6">
                 <div class="apply-list  rounded-xl  bg-white mb-4">
                     <h6 style="font-weight:bold">이산수학</h6>
-                    <input class="inp-cbx" id="cbx5" value="미수강" type="checkbox" name="math" style="display: none;">
+                    <input class="inp-cbx" id="cbx5" value="미수강" type="radio" name="math" style="display: none;">
                     <label class="cbx" for="cbx5">
                         <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -62,7 +62,7 @@
                         </span>
                         <span>미수강</span>
                     </label><br>
-                    <input class="inp-cbx" id="cbx6" value="C+ 및 이하" type="checkbox" name="math" style="display: none;">
+                    <input class="inp-cbx" id="cbx6" value="C+ 및 이하" type="radio" name="math" style="display: none;">
                     <label class="cbx" for="cbx6">
                         <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -71,7 +71,7 @@
                         </span>
                         <span>C+ 및 이하</span>
                     </label><br>
-                    <input class="inp-cbx" id="cbx7" value="B+,B0" type="checkbox" name="math" style="display: none;">
+                    <input class="inp-cbx" id="cbx7" value="B+,B0" type="radio" name="math" style="display: none;">
                     <label class="cbx" for="cbx7">
                         <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -80,7 +80,7 @@
                         </span>
                         <span>B+,B0</span>
                     </label><br>
-                    <input class="inp-cbx" id="cbx8" value="A+,A0" type="checkbox" name="math" style="display: none;">
+                    <input class="inp-cbx" id="cbx8" value="A+,A0" type="radio" name="math" style="display: none;">
                     <label class="cbx" for="cbx8">
                         <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -95,7 +95,7 @@
             <div class="col-lg-6">
                 <div class="apply-list  rounded-xl  bg-white mb-4">
                     <h6 style="font-weight:bold">자료구조 및 실습</h6>
-                    <input class="inp-cbx" id="cbx9" value="미수강" type="checkbox" name="structure" style="display: none;">
+                    <input class="inp-cbx" id="cbx9" value="미수강" type="radio" name="structure" style="display: none;">
                     <label class="cbx" for="cbx9">
                         <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -104,7 +104,7 @@
                         </span>
                         <span>미수강</span>
                     </label><br>
-                    <input class="inp-cbx" id="cbx10" value="C+ 및 이하" type="checkbox" name="structure" style="display: none;">
+                    <input class="inp-cbx" id="cbx10" value="C+ 및 이하" type="radio" name="structure" style="display: none;">
                     <label class="cbx" for="cbx10">
                         <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -113,7 +113,7 @@
                         </span>
                         <span>C+ 및 이하</span>
                     </label><br>
-                    <input class="inp-cbx" id="cbx11" value="B+,B0" type="checkbox" name="structure" style="display: none;">
+                    <input class="inp-cbx" id="cbx11" value="B+,B0" type="radio" name="structure" style="display: none;">
                     <label class="cbx" for="cbx11">
                         <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -122,7 +122,7 @@
                         </span>
                         <span>B+,B0</span>
                     </label><br>
-                    <input class="inp-cbx" id="cbx12" value="A+,A0" type="checkbox" name="structure" style="display: none;">
+                    <input class="inp-cbx" id="cbx12" value="A+,A0" type="radio" name="structure" style="display: none;">
                     <label class="cbx" for="cbx12">
                         <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -136,7 +136,7 @@
             <div class="col-lg-6">
                 <div class="apply-list  rounded-xl  bg-white mb-4">
                     <h6 style="font-weight:bold">객체지향프로그래밍</h6>
-                    <input class="inp-cbx" id="cbx13" value="미수강" type="checkbox" name="objective" style="display: none;">
+                    <input class="inp-cbx" id="cbx13" value="미수강" type="radio" name="objective" style="display: none;">
                     <label class="cbx" for="cbx13">
                         <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -145,7 +145,7 @@
                         </span>
                         <span>미수강</span>
                     </label><br>
-                    <input class="inp-cbx" id="cbx14" value="C+ 및 이하" type="checkbox" name="objective" style="display: none;">
+                    <input class="inp-cbx" id="cbx14" value="C+ 및 이하" type="radio" name="objective" style="display: none;">
                     <label class="cbx" for="cbx14">
                         <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -154,7 +154,7 @@
                         </span>
                         <span>C+ 및 이하</span>
                     </label><br>
-                    <input class="inp-cbx" id="cbx15" value="B+,B0" type="checkbox" name="objective" style="display: none;">
+                    <input class="inp-cbx" id="cbx15" value="B+,B0" type="radio" name="objective" style="display: none;">
                     <label class="cbx" for="cbx15">
                         <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -163,7 +163,7 @@
                         </span>
                         <span>B+,B0</span>
                     </label><br>
-                    <input class="inp-cbx" id="cbx16" value="A+,A0" type="checkbox" name="objective" style="display: none;">
+                    <input class="inp-cbx" id="cbx16" value="A+,A0" type="radio" name="objective" style="display: none;">
                     <label class="cbx" for="cbx16">
                         <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -178,7 +178,7 @@
             <div class="col-lg-6">
                 <div class="apply-list  rounded-xl  bg-white mb-4">
                     <h6 style="font-weight:bold">컴퓨터구조</h6>
-                    <input class="inp-cbx" id="cbx17" value="미수강" type="checkbox" name="cs" style="display: none;">
+                    <input class="inp-cbx" id="cbx17" value="미수강" type="radio" name="cs" style="display: none;">
                     <label class="cbx" for="cbx17">
                         <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -187,7 +187,7 @@
                         </span>
                         <span>미수강</span>
                     </label><br>
-                    <input class="inp-cbx" id="cbx18" value="C+ 및 이하" type="checkbox" name="cs" style="display: none;">
+                    <input class="inp-cbx" id="cbx18" value="C+ 및 이하" type="radio" name="cs" style="display: none;">
                     <label class="cbx" for="cbx18">
                         <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -196,7 +196,7 @@
                         </span>
                         <span>C+ 및 이하</span>
                     </label><br>
-                    <input class="inp-cbx" id="cbx19" value="B+,B0" type="checkbox" name="cs" style="display: none;">
+                    <input class="inp-cbx" id="cbx19" value="B+,B0" type="radio" name="cs" style="display: none;">
                     <label class="cbx" for="cbx19">
                         <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -205,7 +205,7 @@
                         </span>
                         <span>B+,B0</span>
                     </label><br>
-                    <input class="inp-cbx" id="cbx20" value="A+,A0" type="checkbox" name="cs" style="display: none;">
+                    <input class="inp-cbx" id="cbx20" value="A+,A0" type="radio" name="cs" style="display: none;">
                     <label class="cbx" for="cbx20">
                         <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -219,7 +219,7 @@
             <div class="col-lg-6">
                 <div class="apply-list  rounded-xl  bg-white mb-4">
                     <h6 style="font-weight:bold">알고리즘</h6>
-                    <input class="inp-cbx" id="cbx21" value="미수강" type="checkbox" name="al" style="display: none;">
+                    <input class="inp-cbx" id="cbx21" value="미수강" type="radio" name="al" style="display: none;">
                     <label class="cbx" for="cbx21">
                         <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -228,7 +228,7 @@
                         </span>
                         <span>미수강</span>
                     </label><br>
-                    <input class="inp-cbx" id="cbx22" value="C+ 및 이하" type="checkbox" name="al" style="display: none;">
+                    <input class="inp-cbx" id="cbx22" value="C+ 및 이하" type="radio" name="al" style="display: none;">
                     <label class="cbx" for="cbx22">
                         <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -237,7 +237,7 @@
                         </span>
                         <span>C+ 및 이하</span>
                     </label><br>
-                    <input class="inp-cbx" id="cbx23" value="B+,B0" type="checkbox" name="al" style="display: none;">
+                    <input class="inp-cbx" id="cbx23" value="B+,B0" type="radio" name="al" style="display: none;">
                     <label class="cbx" for="cbx23">
                         <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -246,7 +246,7 @@
                         </span>
                         <span>B+,B0</span>
                     </label><br>
-                    <input class="inp-cbx" id="cbx24" value="A+,A0" type="checkbox" name="al" style="display: none;">
+                    <input class="inp-cbx" id="cbx24" value="A+,A0" type="radio" name="al" style="display: none;">
                     <label class="cbx" for="cbx24">
                         <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -261,7 +261,7 @@
             <div class="col-lg-6">
                 <div class="apply-list  rounded-xl  bg-white mb-4">
                     <h6 style="font-weight:bold">시스템프로그래밍</h6>
-                    <input class="inp-cbx" id="cbx25" value="미수강" type="checkbox" name="system" style="display: none;">
+                    <input class="inp-cbx" id="cbx25" value="미수강" type="radio" name="system" style="display: none;">
                     <label class="cbx" for="cbx25">
                         <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -270,7 +270,7 @@
                         </span>
                         <span>미수강</span>
                     </label><br>
-                    <input class="inp-cbx" id="cbx26" value="C+ 및 이하" type="checkbox" name="system" style="display: none;">
+                    <input class="inp-cbx" id="cbx26" value="C+ 및 이하" type="radio" name="system" style="display: none;">
                     <label class="cbx" for="cbx26">
                         <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -279,7 +279,7 @@
                         </span>
                         <span>C+ 및 이하</span>
                     </label><br>
-                    <input class="inp-cbx" id="cbx27" value="B+,B0" type="checkbox" name="system" style="display: none;">
+                    <input class="inp-cbx" id="cbx27" value="B+,B0" type="radio" name="system" style="display: none;">
                     <label class="cbx" for="cbx27">
                         <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -288,7 +288,7 @@
                         </span>
                         <span>B+,B0</span>
                     </label><br>
-                    <input class="inp-cbx" id="cbx28" value="A+,A0" type="checkbox" name="system" style="display: none;">
+                    <input class="inp-cbx" id="cbx28" value="A+,A0" type="radio" name="system" style="display: none;">
                     <label class="cbx" for="cbx28">
                         <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -302,7 +302,7 @@
             <div class="col-lg-6">
                 <div class="apply-list  rounded-xl  bg-white mb-4">
                     <h6 style="font-weight:bold">운영체제</h6>
-                    <input class="inp-cbx" id="cbx29" value="미수강" type="checkbox" name="operate" style="display: none;">
+                    <input class="inp-cbx" id="cbx29" value="미수강" type="radio" name="operate" style="display: none;">
                     <label class="cbx" for="cbx29">
                         <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -311,7 +311,7 @@
                         </span>
                         <span>미수강</span>
                     </label><br>
-                    <input class="inp-cbx" id="cbx30" value="C+ 및 이하" type="checkbox" name="operate" style="display: none;">
+                    <input class="inp-cbx" id="cbx30" value="C+ 및 이하" type="radio" name="operate" style="display: none;">
                     <label class="cbx" for="cbx30">
                         <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -320,7 +320,7 @@
                         </span>
                         <span>C+ 및 이하</span>
                     </label><br>
-                    <input class="inp-cbx" id="cbx31" value="B+,B0" type="checkbox" name="operate" style="display: none;">
+                    <input class="inp-cbx" id="cbx31" value="B+,B0" type="radio" name="operate" style="display: none;">
                     <label class="cbx" for="cbx31">
                         <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -329,7 +329,7 @@
                         </span>
                         <span>B+,B0</span>
                     </label><br>
-                    <input class="inp-cbx" id="cbx32" value="A+,A0" type="checkbox" name="operate" style="display: none;">
+                    <input class="inp-cbx" id="cbx32" value="A+,A0" type="radio" name="operate" style="display: none;">
                     <label class="cbx" for="cbx32">
                         <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -344,7 +344,7 @@
             <div class="col-lg-6">
                 <div class="apply-list  rounded-xl  bg-white mb-4">
                     <h6 style="font-weight:bold">데이터베이스</h6>
-                    <input class="inp-cbx" id="cbx33" value="미수강" type="checkbox" name="db" style="display: none;">
+                    <input class="inp-cbx" id="cbx33" value="미수강" type="radio" name="db" style="display: none;">
                     <label class="cbx" for="cbx33">
                         <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -353,7 +353,7 @@
                         </span>
                         <span>미수강</span>
                     </label><br>
-                    <input class="inp-cbx" id="cbx34" value="C+ 및 이하" type="checkbox" name="db" style="display: none;">
+                    <input class="inp-cbx" id="cbx34" value="C+ 및 이하" type="radio" name="db" style="display: none;">
                     <label class="cbx" for="cbx34">
                         <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -362,7 +362,7 @@
                         </span>
                         <span>C+ 및 이하</span>
                     </label><br>
-                    <input class="inp-cbx" id="cbx35" value="B+,B0" type="checkbox" name="db" style="display: none;">
+                    <input class="inp-cbx" id="cbx35" value="B+,B0" type="radio" name="db" style="display: none;">
                     <label class="cbx" for="cbx35">
                         <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -371,7 +371,7 @@
                         </span>
                         <span>B+,B0</span>
                     </label><br>
-                    <input class="inp-cbx" id="cbx36" value="A+,A0" type="checkbox" name="db" style="display: none;">
+                    <input class="inp-cbx" id="cbx36" value="A+,A0" type="radio" name="db" style="display: none;">
                     <label class="cbx" for="cbx36">
                         <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -385,7 +385,7 @@
             <div class="col-lg-6">
                 <div class="apply-list  rounded-xl  bg-white mb-4">
                     <h6 style="font-weight:bold">컴퓨터네트워크</h6>
-                    <input class="inp-cbx" id="cbx37" value="미수강" type="checkbox" name="nt" style="display: none;">
+                    <input class="inp-cbx" id="cbx37" value="미수강" type="radio" name="nt" style="display: none;">
                     <label class="cbx" for="cbx37">
                         <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -394,7 +394,7 @@
                         </span>
                         <span>미수강</span>
                     </label><br>
-                    <input class="inp-cbx" id="cbx38" value="C+ 및 이하" type="checkbox" name="nt" style="display: none;">
+                    <input class="inp-cbx" id="cbx38" value="C+ 및 이하" type="radio" name="nt" style="display: none;">
                     <label class="cbx" for="cbx38">
                         <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -403,7 +403,7 @@
                         </span>
                         <span>C+ 및 이하</span>
                     </label><br>
-                    <input class="inp-cbx" id="cbx39" value="B+,B0" type="checkbox" name="nt" style="display: none;">
+                    <input class="inp-cbx" id="cbx39" value="B+,B0" type="radio" name="nt" style="display: none;">
                     <label class="cbx" for="cbx39">
                         <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -412,7 +412,7 @@
                         </span>
                         <span>B+,B0</span>
                     </label><br>
-                    <input class="inp-cbx" id="cbx40" value="A+,A0" type="checkbox" name="nt" style="display: none;">
+                    <input class="inp-cbx" id="cbx40" value="A+,A0" type="radio" name="nt" style="display: none;">
                     <label class="cbx" for="cbx40">
                         <span>
                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -471,7 +471,7 @@
             var os = sScore.os;
             var database = sScore.database;
             var network = sScore.network;
-        
+
             var chkcompro = document.getElementsByName('programming').length;
             var chkcommat = document.getElementsByName('math').length;
             var chkcomstr = document.getElementsByName('structure').length;
@@ -610,7 +610,7 @@
                     this.network = document.getElementsByName('nt')[i].value;
                 };
             }
-            
+
             var data =[{
                 computerprogramming : this.computerprogramming,
                 discretemath : this.discretemath,
