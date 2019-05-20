@@ -3,6 +3,9 @@
     <div class="container">
     <div class="row">
       <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="" style="text-align: center;">
+          <a class="" href="#" @click="goHome"><img src="images/login.png" style="text-align: center; filter: brightness(0) invert(1);"alt="Intern Sheep"></a>
+        </div>
         <div class="card card-signin my-5">
           <div class="card-body">
 
@@ -82,6 +85,9 @@ export default {
 
     },
     methods:{
+        goHome(){
+            this.$router.push({name: "Home"})
+        },
         signup(){
             if(this.Isuniq==-1) alert("중복을 확인하지 않았습니다. 확인하세요")
             else if(this.Isuniq == 1) alert("중복입니다.")
@@ -134,7 +140,9 @@ export default {
         font-weight: 700;
         letter-spacing: 1.05px;
     } */
-
+    /* img {
+      width:350px;
+    } */
 
     :root {
       --input-padding-x: 1.5rem;
@@ -144,14 +152,18 @@ export default {
     .section1 {
       background-color: #007bff;
       background: linear-gradient(to right, #0062E6, #33AEFF);
-      padding-bottom:100px;
-      padding-top:100px;
+      padding-bottom:120px;
+      padding-top:120px;
     }
 
     .card-signin {
       border: 0;
       border-radius: 1rem;
       box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+
+      /* padding:1rem;
+      padding-left:0.8rem;
+      padding-right:0.8rem; */
     }
 
     .card-signin .card-title{
