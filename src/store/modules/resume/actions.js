@@ -23,13 +23,13 @@ export default {
     },
 
     submit_ALL({commit},data){
-        axios.post('http://localhost:8888/std/mypage/resume',{req : data}).then((response) => {
+        axios.post('http://106.10.46.121:10022/std/mypage/resume',{req : data}).then((response) => {
                    
         })
     },
 
     submit_Modify({commit},data){
-        axios.post('http://localhost:8888/std/mypage/modifyResume',{req : data}).then((response) => {
+        axios.post('http://106.10.46.121:10022/std/mypage/modifyResume',{req : data}).then((response) => {
                    
         })
     },

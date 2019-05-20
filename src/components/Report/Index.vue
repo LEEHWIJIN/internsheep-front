@@ -106,20 +106,20 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
           VFooter,
           VCategory,
       },
-      created(){
-
-          this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+      async created(){
+          await this.$http.get('http://106.10.46.121:10022/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
               this.user = res.data.user;
-              console.log("유저입니다 : ",this.user.loginId)
-             this.loadTerm(this.user.loginId)
+              this.loadTerm(this.user.loginId)
               return this.user.loginId
           })
-
+           await this.$http.get('http://106.10.46.121:10022/std/mypage/checkReportTerm',{params:{sLoginID : this.user.loginId}}).then(res => {
+              console.log("보고서 작성이 맞습니다.",res.data)
+          })
 
       },
       methods: {
           loadTerm(loginId){
-              this.$http.get('http://localhost:8888/admin/recentApplyTerm').then((response) => {
+              this.$http.get('http://106.10.46.121:10022/admin/recentApplyTerm').then((response) => {
                   this.applyTerm = {
                       applyStart : response.data.applyStart,
                       applyEnd : response.data.applyEnd,
@@ -132,11 +132,11 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
               })
           },
           downloadButton(loginId){
-              this.url = 'http://localhost:8888/std/mypage/downloadReport?sLoginID='+loginId
+              this.url = 'http://106.10.46.121:10022/std/mypage/downloadReport?sLoginID='+loginId
               this.loadFileName(loginId)
           },
           loadFileName(loginId){
-              this.$http.get('http://localhost:8888/std/mypage/loadFileName',{params:{sLoginID : loginId}}).then((response)=>{
+              this.$http.get('http://106.10.46.121:10022/std/mypage/loadFileName',{params:{sLoginID : loginId}}).then((response)=>{
                   if(response.data == '0'){
                       this.fileName = ""
                   }
@@ -145,7 +145,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
           },
           applyStatus(loginId){
               console.log(this.applyTerm.applySemester)
-              this.$http.get('http://localhost:8888/std/mypage/applyStatus',{params:{sLoginID : loginId, applySemester : this.applyTerm.applySemester}}).then((response)=>{
+              this.$http.get('http://106.10.46.121:10022/std/mypage/applyStatus',{params:{sLoginID : loginId, applySemester : this.applyTerm.applySemester}}).then((response)=>{
                   console.log(response.data)
                   if (response.data.YN == 1) {
 
@@ -219,14 +219,14 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
               }
             }
             if(this.fileName == '') {
-                this.$http.post('http://localhost:8888/std/mypage/postReport', data, config).then(
+                this.$http.post('http://106.10.46.121:10022/std/mypage/postReport', data, config).then(
                     response => {
                         alert('저장되었습니다.')
                     }
                 )
             }
             else{
-                this.$http.post('http://localhost:8888/std/mypage/modifyReport', data, config).then(
+                this.$http.post('http://106.10.46.121:10022/std/mypage/modifyReport', data, config).then(
                     response => {
                         alert('수정되었습니다.')
                     }
