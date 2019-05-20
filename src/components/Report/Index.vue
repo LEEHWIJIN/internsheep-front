@@ -106,15 +106,15 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
           VFooter,
           VCategory,
       },
-      created(){
-
-          this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+      async created(){
+          await this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
               this.user = res.data.user;
-              console.log("유저입니다 : ",this.user.loginId)
-             this.loadTerm(this.user.loginId)
+              this.loadTerm(this.user.loginId)
               return this.user.loginId
           })
-
+           await this.$http.get('http://localhost:8888/std/mypage/checkReportTerm',{params:{sLoginID : this.user.loginId}}).then(res => {
+              console.log("보고서 작성이 맞습니다.",res.data)
+          })
 
       },
       methods: {
