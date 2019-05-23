@@ -8,7 +8,7 @@
             <div class="col-lg-12 mb-4">
               <div class="heart mr-sm-2 mt-sm-2">
                 <!-- 만약 찜했을 경우 font-weight: bold; 로 바꾸면 됨. -->
-                <i class="far fa-heart" style="margin-left: 18px;"><span style="font-color:white; font-weight: bold;"> 기업 찜하기</span></i>
+                <i class="far fa-heart" style="margin-left: 18px;"><span @click="pickCo(sc.cName)" style="font-color:white; font-weight: bold;cursor:Pointer"> 기업 찜하기</span></i>
               </div>
               <div class="apply">
                 <i class="fas fa-walking" ><span @click="applyStd(sc.cName)" style="font-color:white;cursor:Pointer;"> 지원하기</span></i>
@@ -227,7 +227,23 @@
           },
           onMapEvent (event, params) {
               // console.log(`Daum Map Event(${event})`, params);
-          }
+          },
+          async pickCo(cName){//체크된 회사인지 아닌지 확인하고 if 문걸어야 할것같음 0 : 아직 지원하지 않은 회사임 1 : 지원한 회사임
+            await this.$http.get('http://localhost:8888/std/mypage/checkPickCo',{params:{sLoginID : this.user.loginId,cName:cName}}).then((response)=>{
+              console.log(response.data) 
+              if(response.data.result==1){//아직 지원하지 않은 회사이므로 찜 해야함
+                // this.$http.post('http://localhost:8888/std/mypage/postStdPickCo',{cName : cName, sLoginID : this.user.loginId}).then((response) => {
+            //       //꽉찬하트로 바꿔줘야 할것같음.
+            //     })
+              }
+              else{ //지원한 회사이니까 찜목록 삭제해야함
+
+              }
+            })
+            // await this.$http.post('http://localhost:8888/std/mypage/postStdPickCo',{cName : cName, sLoginID : this.user.loginId}).then((response) => {
+            //       //꽉찬하트로 바꿔줘야 할것같음.
+            //     })
+          },
       }
   }
 </script>
