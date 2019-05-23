@@ -22,28 +22,31 @@
                 </div> -->
               <ul class="list-styled list-bordered">
                   <div v-for='(AL,index) in applylist' :key="AL.cNoticeID" @click="clickCo(index)">
-                    <li><div class="media align-items-center flex-column flex-sm-row">
-                      <!-- {{index+1}} -->
-                      <!-- 회사 사진 -->
-                      <img src="images/career/logo-1.png" class="mr-sm-0 mb-4 mb-sm-0 rounded p-3" alt="logo-1">
-                      <div class="media-body text-center text-sm-left mb-4 mb-sm-0" style="line-height:100%">
-                        <!-- 모집 직군 -->
-                        <span class="h6" style="font-weight: bold;">{{AL.cOccupation}}</span><br>
-                        <!-- 기업명 -->
-                        <span style="font-size: 12px; color: #8b8e93;">{{AL.cName}}<br></span>
-                        <!-- 태그 -->
-                        <span style="font-size: 12px; color: #8b8e93;">{{AL.cTag}}<br></span>
-                      </div>
-                      <!-- 경쟁률 -->
-                      <div class="" style="line-height:120%">
-                        <br><br>
-                        <a class="mr-sm-3 paragraph">
-                          <span style="font-size: 12px">모집:</span>{{AL.cNumOfPeople}}
-                          <span class="h4" style="color:#0064db">
-                          <span style="font-size: 12px"> 지원:</span>{{AL.applyStdNum}}</span>
-                        </a>
-                      </div>
-                    </div></li>
+                    <div class="zoom">
+                      <li><a class="media align-items-center flex-column flex-sm-row">
+                        <!-- {{index+1}} -->
+                        <!-- 회사 사진 -->
+                        <img src="images/career/logo-1.png" class="mr-sm-0 mb-4 mb-sm-0 rounded p-3" alt="logo-1">
+                        <div class="media-body text-center text-sm-left mb-4 mb-sm-0" style="line-height:100%">
+                          <!-- 모집 직군 -->
+                          <span class="h6" style="font-weight: bold;">{{AL.cOccupation}}</span><br>
+                          <!-- 기업명 -->
+                          <span style="font-size: 12px; color: #8b8e93;">{{AL.cName}}<br></span>
+                          <!-- 태그 -->
+                          <span style="font-size: 12px; color: #8b8e93;">{{AL.cTag}}<br></span>
+                        </div>
+                        <!-- 경쟁률 -->
+                        <div class="" style="line-height:120%">
+                          <br><br>
+                          <a class="mr-sm-3 paragraph">
+                            <span style="font-size: 12px">모집:</span>{{AL.cNumOfPeople}}
+                            <span class="h4" style="color:#0064db">
+                            <span style="font-size: 12px"> 지원:</span>{{AL.applyStdNum}}</span>
+                          </a>
+                        </div>
+                      </a></li>
+                    </div>
+
                   </div>
 
                   <!-- 샘플. 나중에 지워주세요. -->
@@ -217,5 +220,14 @@
 .search-input:focus {
   outline: 0;
   box-shadow: none;
+}
+
+.zoom {
+   transition: all .1s ease-in-out;
+ }
+
+.zoom:hover {
+  transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    box-shadow: 0px 2px 8px 0px rgba(51, 77, 128, 0.12) !important;
 }
 </style>
