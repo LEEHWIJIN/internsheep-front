@@ -9,7 +9,7 @@
           <li><a class="text-color d-block py-3" href="#" @click="goApplyStatus">지원 현황</a></li>
           <li><a class="text-color d-block py-3" href="#" @click="goReport">보고서 관리</a></li>
           <li><a class="text-color d-block py-3" href="#" @click="goReview">후기 관리</a></li>
-          <li><a class="text-color d-block py-3" href="#">찜한 기업 목록</a></li>
+          <li><a class="text-color d-block py-3" href="#" @click="goSavedCompany">찜한 기업 목록</a></li>
           <li><a class="text-color d-block py-3" href="#" @click="goProfile">회원정보 수정</a></li>
           </ul>
       </div>
@@ -54,6 +54,9 @@
       },
       goLogin(){
           this.$router.push({name: "login"})
+      },
+      goSavedCompany(){
+          this.$router.push({name: "SavedCompany"})
       },
       logout(){
       localStorage.removeItem('token')
