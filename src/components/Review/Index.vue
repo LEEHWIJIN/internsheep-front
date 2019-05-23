@@ -136,7 +136,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
           VCategory,
       },
       created(){
-          this.$http.get('http://106.10.46.121:10022/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+          this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
               this.user = res.data.user;
               console.log("유저입니다 : ",this.user.loginId)
               this.loadTerm(this.user.loginId)
@@ -146,7 +146,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
       },
       methods: {
           loadTerm(loginId){
-              this.$http.get('http://106.10.46.121:10022/admin/recentApplyTerm').then((response) => {
+              this.$http.get('http://localhost:8888/admin/recentApplyTerm').then((response) => {
                   this.applyTerm = {
                       applyStart : response.data.applyStart,
                       applyEnd : response.data.applyEnd,
@@ -156,18 +156,18 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
                   this.applyStatus(loginId)
               })
           },
-          applyStatus(loginId){
-              console.log(this.applyTerm.applySemester)
-              this.$http.get('http://106.10.46.121:10022/std/mypage/applyStatus',{params:{sLoginID : loginId, applySemester : this.applyTerm.applySemester}}).then((response)=>{
-                  console.log(response.data)
-                  if (response.data.YN == 1) {
+          // applyStatus(loginId){
+          //     console.log(this.applyTerm.applySemester)
+          //     this.$http.get('http://localhost:8888/std/mypage/applyStatus',{params:{sLoginID : loginId, applySemester : this.applyTerm.applySemester}}).then((response)=>{
+          //         console.log(response.data)
+          //         if (response.data.YN == 1) {
 
-                  }
-                  else {alert('실습을 하지 않으셨습니다.')
-                      this.$router.push({name: "Home"})
-                  }
-              })
-          },
+          //         }
+          //         else {alert('실습을 하지 않으셨습니다.')
+          //             this.$router.push({name: "Home"})
+          //         }
+          //     })
+          // },
           // getRandomColor() { //나중에 사용할 ux/ui
           //   const randomIndex = Math.floor(Math.random() * 2);
           //     return this.colors[randomIndex];
@@ -211,7 +211,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
           //   if (progress + 10 === 100) clearInterval(this.uploads[index].progressTimer);
           // }
           loadReview(loginId){
-              this.$http.get('http://106.10.46.121:10022/std/mypage/watchReview',{params:{sLoginID : loginId}}).then((response)=>{
+              this.$http.get('http://localhost:8888/std/mypage/watchReview',{params:{sLoginID : loginId}}).then((response)=>{
                   if(response.data != '0'){
                       this.confirm = 1
                       this.cName = response.data.cName
@@ -250,14 +250,16 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 
             // } //이렇게 key 값과 value값을 확인하면 확인 가능하다.
               if(this.confirm == 0) {
-                  this.$http.post('http://106.10.46.121:10022/std/mypage/postReview',{sLoginID : this.user.loginId, starScore : startScoreValue, reviewContent : this.review, reviewTitle : this.reviewTitle}).then(
+                  this.$http.post('http://localhost:8888/std/mypage/postReview',{sLoginID : this.user.loginId, starScore : startScoreValue, reviewContent : this.review, reviewTitle : this.reviewTitle}).then(
                       response => {
+                        alert("후기가 작성되었습니다.")
                       }
                   )
               }
               else{
-                  this.$http.post('http://106.10.46.121:10022/std/mypage/modifyReview', {sLoginID : this.user.loginId, starScore :  startScoreValue, reviewContent : this.review, reviewTitle : this.reviewTitle}).then(
+                  this.$http.post('http://localhost:8888/std/mypage/modifyReview', {sLoginID : this.user.loginId, starScore :  startScoreValue, reviewContent : this.review, reviewTitle : this.reviewTitle}).then(
                       response => {
+                        alret("후기가 수정되었습니다.")
                       }
                   )
               }
