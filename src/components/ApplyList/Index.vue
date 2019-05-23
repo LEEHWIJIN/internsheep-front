@@ -147,15 +147,15 @@
               cInfo : this.applylist[selectedNum].cInfo,
               cEmail : this.applylist[selectedNum].cEmail,
           })
-            await this.$http.get('http://localhost:8888/std/loadCoReview',{params:{cName:this.selectedCo.cName}}).then((response) => {
+            await this.$http.get('http://localhost:8888/std/loadCoReview',{params:{cName:this.applylist[selectedNum].cName}}).then((response) => {
                 for(var i =0; i<response.data.length;i++) {
                     this.companyReview.push({
                         cName: response.data[i].cName,
                         starScore: response.data[i].starScore,
                         reviewContent: response.data[i].reviewContent,
                         reviewTitle: response.data[i].reviewTitle,
-                        internTermStart: response.data[i].internTermStart,
-                        internTermEnd: response.data[i].internTermEnd
+                        internTermStart: response.data[i].internTermStart.split('T')[0],
+                        internTermEnd: response.data[i].internTermEnd.split('T')[0]
                     })
                 }
             });

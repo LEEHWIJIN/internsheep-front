@@ -109,28 +109,33 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
       async created(){
           await this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
               this.user = res.data.user;
-              this.loadTerm(this.user.loginId)
               return this.user.loginId
           })
-           await this.$http.get('http://localhost:8888/std/mypage/checkReportTerm',{params:{sLoginID : this.user.loginId}}).then(res => {
-              console.log("보고서 작성이 맞습니다.",res.data)
+          await this.$http.get('http://localhost:8888/admin/recentApplyTerm').then((response) => {
+              this.applyTerm = {
+                  applyStart : response.data.applyStart,
+                  applyEnd : response.data.applyEnd,
+                  applySemester : response.data.applySemester,
+                  applyOrder : response.data.applyOrder
+              }
+              this.downloadButton(this.user.loginId)
+              this.loadFileName(this.user.loginId)
+              return this.applyTerm
+          })
+           await this.$http.get('http://localhost:8888/std/mypage/checkReportTerm',{params:{sLoginID : this.user.loginId, applySemester: this.applyTerm.applySemester}}).then(res => {
+               console.log('sdfsdf'+res.data)
+              if(res.data =='실습한 기업 없음'){
+                  alert('실습한 기업이 없습니다.')
+                  this.$router.push({name: "Home"})
+              }
+              else if(res.data == 0){
+                   alert('보고서 작성기간이 아닙니다.')
+                  this.$router.push({name: "Home"})
+               }
           })
 
       },
       methods: {
-          loadTerm(loginId){
-              this.$http.get('http://localhost:8888/admin/recentApplyTerm').then((response) => {
-                  this.applyTerm = {
-                      applyStart : response.data.applyStart,
-                      applyEnd : response.data.applyEnd,
-                      applySemester : response.data.applySemester,
-                      applyOrder : response.data.applyOrder
-                  }
-                  this.downloadButton(loginId)
-                  this.loadFileName(loginId)
-                  this.applyStatus(loginId)
-              })
-          },
           downloadButton(loginId){
               this.url = 'http://localhost:8888/std/mypage/downloadReport?sLoginID='+loginId
               this.loadFileName(loginId)
@@ -141,18 +146,6 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
                       this.fileName = ""
                   }
                   else {this.fileName = response.data}
-              })
-          },
-          applyStatus(loginId){
-              console.log(this.applyTerm.applySemester)
-              this.$http.get('http://localhost:8888/std/mypage/applyStatus',{params:{sLoginID : loginId, applySemester : this.applyTerm.applySemester}}).then((response)=>{
-                  console.log(response.data)
-                  if (response.data.YN == 1) {
-
-                  }
-                  else {alert('실습을 하지 않으셨습니다.')
-                      this.$router.push({name: "Home"})
-                  }
               })
           },
           // getRandomColor() { //나중에 사용할 ux/ui
