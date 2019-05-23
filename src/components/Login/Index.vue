@@ -43,6 +43,10 @@
   </template>
 
 <script>
+
+  import Const from '../../constant/constant';
+
+
   export default{
     name: 'login',
     data() {
@@ -64,7 +68,8 @@
           this.$router.push({name: "Home"})
       },
       login() {
-        this.$http.post('http://localhost:8888/auth/std/login',{user: this.user}).then((response)=>{
+
+        this.$http.post(Const.API_SERVER + '/auth/std/login',{user: this.user}).then((response)=>{
              alert('success');
              localStorage.setItem('token',response.data.token);
              this.$router.push({name: "Home"});
