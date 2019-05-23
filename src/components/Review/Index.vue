@@ -155,10 +155,10 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
                   alert('실습한 기업이 없습니다.')
                   this.$router.push({name: "Home"})
               }
-              else if(res.data == 0){
-                  alert('후기 작성기간이 아닙니다.')
-                  this.$router.push({name: "Home"})
-              }
+              // else if(res.data == 0){
+              //     alert('후기 작성기간이 아닙니다.')
+              //     this.$router.push({name: "Home"})
+              // }
           })
       },
       methods: {
