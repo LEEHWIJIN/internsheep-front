@@ -44,7 +44,7 @@
                     <a class="dropdown-item text-color" href="#" @click="goApplyStatus">지원 현황</a>
                     <a class="dropdown-item text-color" href="#" @click="goReport">보고서 관리</a>
                     <a class="dropdown-item text-color" href="#" @click="goReview">후기 관리</a>
-                    <a class="dropdown-item text-color" href="team.html">찜한 기업 목록</a>
+                    <a class="dropdown-item text-color" href="#" @click="goSavedCompany">찜한 기업 목록</a>
                     <a class="dropdown-item text-color" href="#" @click="goProfile">회원 정보 수정</a>
                   </div>
                 </li>
@@ -116,6 +116,9 @@
         },
         goApplyList(){
             this.$router.push({name: "Apply"})
+        },
+        goSavedCompany(){
+            this.$router.push({name: "SavedCompany"})
         },
         goReport(){
             this.$router.push({name: "Report"})
