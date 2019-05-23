@@ -135,27 +135,33 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
           VFooter,
           VCategory,
       },
-      created(){
-          this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+      async created(){
+          await this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
               this.user = res.data.user;
               console.log("유저입니다 : ",this.user.loginId)
-              this.loadTerm(this.user.loginId)
               this.loadReview(this.user.loginId)
               return this.user.loginId
           })
-      },
-      methods: {
-          loadTerm(loginId){
-              this.$http.get('http://localhost:8888/admin/recentApplyTerm').then((response) => {
+          await this.$http.get('http://localhost:8888/admin/recentApplyTerm').then((response) => {
                   this.applyTerm = {
                       applyStart : response.data.applyStart,
                       applyEnd : response.data.applyEnd,
                       applySemester : response.data.applySemester,
                       applyOrder : response.data.applyOrder
                   }
-                  this.applyStatus(loginId)
               })
-          },
+          await this.$http.get('http://localhost:8888/std/mypage/checkReportTerm',{params:{sLoginID : this.user.loginId, applySemester: this.applyTerm.applySemester}}).then(res => {
+              if(res.data =='실습한 기업 없음'){
+                  alert('실습한 기업이 없습니다.')
+                  this.$router.push({name: "Home"})
+              }
+              else if(res.data == 0){
+                  alert('후기 작성기간이 아닙니다.')
+                  this.$router.push({name: "Home"})
+              }
+          })
+      },
+      methods: {
           // applyStatus(loginId){
           //     console.log(this.applyTerm.applySemester)
           //     this.$http.get('http://localhost:8888/std/mypage/applyStatus',{params:{sLoginID : loginId, applySemester : this.applyTerm.applySemester}}).then((response)=>{
@@ -259,7 +265,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
               else{
                   this.$http.post('http://localhost:8888/std/mypage/modifyReview', {sLoginID : this.user.loginId, starScore :  startScoreValue, reviewContent : this.review, reviewTitle : this.reviewTitle}).then(
                       response => {
-                        alret("후기가 수정되었습니다.")
+                        alert("후기가 수정되었습니다.")
                       }
                   )
               }

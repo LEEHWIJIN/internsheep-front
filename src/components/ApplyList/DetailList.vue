@@ -126,14 +126,41 @@
           </li>
 
           <li class="d-flex mb-4">
-            <i class="fa fa-phone icon-grey"></i>
+          <i class="fa fa-phone icon-grey"></i>
+          <div class="pl-3">
+            <h6 class="text-dark">담당자 성함 및 연락처</h6>
+            <ul class="list-unstyled">
+              <li>{{sc.cManagerName}} {{sc.cManagerPhone}}</li>
+            </ul>
+          </div>
+        </li>
+
+            <h6 class="text-dark">기업후기</h6>
+          <li v-for="cr in companyReview" class="d-flex mb-4">
             <div class="pl-3">
-              <h6 class="text-dark">담당자 성함 및 연락처</h6>
               <ul class="list-unstyled">
-                <li>{{sc.cManagerName}} {{sc.cManagerPhone}}</li>
+                <li>제목 : {{cr.reviewTitle}}</li>
+                <div class="col-lg-12 mb-3">
+                <li><label style="font-weight:bold;"> 별점</label></li>
+                <fieldset class="rating ml-3">
+                  <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+                  <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+                  <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+                  <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+                  <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+                  <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+                  <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+                  <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+                  <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+                  <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+                </fieldset>
+                </div>
+                <li>인턴 기간  : {{cr.internTermStart}} ~ {{cr.internTermEnd}}</li>
+                <li>내용 : {{cr.reviewContent}}</li>
               </ul>
             </div>
           </li>
+
         </ul>
       </div>
     </div>
@@ -166,12 +193,16 @@
             type:Array,
             required: true,
         },
+          companyReview: {
+              type:Array,
+              required: true,
+          }
       },
       async created(){
         await this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
             this.user = res.data.user;
             return this.user;
-        })
+        });
         await this.$http.get('http://localhost:8888/admin/recentApplyTerm').then((response) => {
           this.applyTerm = {
               applyStart : response.data.applyStart,
@@ -180,7 +211,7 @@
               applyOrder : response.data.applyOrder
           }
           return this.applyTerm;
-        })
+        });
       },
       methods: {
         applyStd(cName){
