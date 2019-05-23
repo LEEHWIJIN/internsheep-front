@@ -201,4 +201,5 @@
 .detailList {
   flex-basis: 60%;
 }
+
 </style>
