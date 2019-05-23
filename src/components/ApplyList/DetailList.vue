@@ -126,14 +126,27 @@
           </li>
 
           <li class="d-flex mb-4">
+          <i class="fa fa-phone icon-grey"></i>
+          <div class="pl-3">
+            <h6 class="text-dark">담당자 성함 및 연락처</h6>
+            <ul class="list-unstyled">
+              <li>{{sc.cManagerName}} {{sc.cManagerPhone}}</li>
+            </ul>
+          </div>
+        </li>
+
+          <div v-for="cr in companyReview" ></div>
+          <li class="d-flex mb-4">
             <i class="fa fa-phone icon-grey"></i>
             <div class="pl-3">
               <h6 class="text-dark">담당자 성함 및 연락처</h6>
               <ul class="list-unstyled">
-                <li>{{sc.cManagerName}} {{sc.cManagerPhone}}</li>
+                <li>{{cr.reviewTitle}}</li>
+                <li>{{cr.reviewContent}}</li>
               </ul>
             </div>
           </li>
+
         </ul>
       </div>
     </div>
@@ -166,12 +179,16 @@
             type:Array,
             required: true,
         },
+          companyReview: {
+              type:Array,
+              required: true,
+          }
       },
       async created(){
         await this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
             this.user = res.data.user;
             return this.user;
-        })
+        });
         await this.$http.get('http://localhost:8888/admin/recentApplyTerm').then((response) => {
           this.applyTerm = {
               applyStart : response.data.applyStart,
@@ -180,7 +197,7 @@
               applyOrder : response.data.applyOrder
           }
           return this.applyTerm;
-        })
+        });
       },
       methods: {
         applyStd(cName){

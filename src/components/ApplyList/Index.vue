@@ -59,7 +59,7 @@
           <!-- 기업 상세 목록 -->
           <div class="company-item detailList col-lg-10 ">
               <div>
-                <v-detail-list :selectedCo="selectedCo"></v-detail-list>
+                <v-detail-list :selectedCo="selectedCo" :companyReview="companyReview"></v-detail-list>
               </div>
           </div>
 
@@ -89,6 +89,7 @@
           //     applyOrder : ''
           // },
           applyTerm:{},
+            companyReview:[]
         }
       },
       components: {
@@ -101,8 +102,8 @@
           this.compareDate();
       },
       methods: {
-        applyList(){
-          this.$http.get('http://localhost:8888/std/list',{params:{applyOrder:this.applyTerm.applyOrder, applySemester: this.applyTerm.applySemester}}).then((response) => {
+        async applyList(){
+          await this.$http.get('http://localhost:8888/std/list',{params:{applyOrder:this.applyTerm.applyOrder, applySemester: this.applyTerm.applySemester}}).then((response) => {
             // console.log(response.data)
             for(var i=0; i<response.data.length;i++){
                 this.applylist.push({
@@ -123,12 +124,13 @@
                   cEmail : response.data[i].cEmail,
               })
             }
-          })
+          });
         },
-        clickCo(selectedNum){
+        async clickCo(selectedNum){
           this.selectedCo=[]
+            this.companyReview = []
           //console.log(selectedNum)
-          this.selectedCo.push({
+          await this.selectedCo.push({
               cBenefit : this.applylist[selectedNum].cBenefit,
               cPay : this.applylist[selectedNum].cPay,
               internTermStart : this.applylist[selectedNum].internTermStart.split('T')[0],
@@ -145,6 +147,18 @@
               cInfo : this.applylist[selectedNum].cInfo,
               cEmail : this.applylist[selectedNum].cEmail,
           })
+            await this.$http.get('http://localhost:8888/std/loadCoReview',{params:{cName:this.selectedCo.cName}}).then((response) => {
+                for(var i =0; i<response.data.length;i++) {
+                    this.companyReview.push({
+                        cName: response.data[i].cName,
+                        starScore: response.data[i].starScore,
+                        reviewContent: response.data[i].reviewContent,
+                        reviewTitle: response.data[i].reviewTitle,
+                        internTermStart: response.data[i].internTermStart,
+                        internTermEnd: response.data[i].internTermEnd
+                    })
+                }
+            });
         },
         compareDate(){
           this.$http.get('http://localhost:8888/admin/recentApplyTerm').then((response) => {
