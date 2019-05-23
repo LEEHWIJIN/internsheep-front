@@ -126,11 +126,11 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
                console.log('sdfsdf'+res.data)
               if(res.data =='실습한 기업 없음'){
                   alert('실습한 기업이 없습니다.')
-                  this.$router.push({name: "Home"})
+                  this.$router.push({name: "Apply"})
               }
               else if(res.data == 0){
                    alert('보고서 작성기간이 아닙니다.')
-                  this.$router.push({name: "Home"})
+                  this.$router.push({name: "Apply"})
                }
           })
 
