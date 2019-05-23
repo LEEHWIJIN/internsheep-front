@@ -15,12 +15,12 @@
           <div class="row">
             <!-- 대 제목 -->
             <div class="col-lg-12 text-center">
-              <p class="subtitle">Status</p>
-              <h2 class="section-title">Apply Status</h2>
+              <p class="subtitle">Saved</p>
+              <h2 class="section-title">Saved Company</h2>
             </div>
 
             <div v-if="current == 1" class="col-lg-12 p-0">
-              <li><label style="font-weight:bold;">현재 지원</label></li>
+              <li><label style="font-weight:bold;">찜한 기업 목록</label></li>
               <div class="col-lg-12 bg-white p-4 rounded shadow my-3">
                 <div class="media align-items-center flex-column flex-sm-row">
                   <img src="images/career/logo-1.png" class="mr-sm-3 mb-4 mb-sm-0 border rounded p-2" alt="logo-1">
@@ -55,9 +55,9 @@
                   <div class="outer">
                     <div class="inner">
                       <div class="centered">
-                        <!-- 보고서 작성 페이지  || 후기 작성 페이지일 경우-->
-                        <h3 style="font-weight:bold;">어머나, <br>아직 지원한 기업이<br>없으시군요! </h3><br>
-                        <h4 href="#" @click="goApplyList">지원하러 가기 <i class="far fa-hand-point-right"></i></h4>
+                        <!-- 찜한 기업이 없는 경우 -->
+                        <h3 style="font-weight:bold;">어머나, <br>아직 찜한 기업이<br>없으시군요! </h3><br>
+                        <h4 href="#" @click="goApplyList">찜하러 가기 <i class="far fa-hand-point-right"></i></h4>
                       </div>
                     </div>
                   </div>

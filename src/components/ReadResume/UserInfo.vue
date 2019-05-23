@@ -8,6 +8,9 @@
     <!-- 이력서 내용 -->
     <div class="col-lg-12 p-0">
       <form class="row" v-on:submit.prevent='submitResume'>
+        <div class="col-lg-12">
+          <img class="mb-4 text-center" src="images/profile.png" style="width: 110px;"alt="Intern Sheep">
+        </div>
         <!-- <div class="col-lg-6">
           <input class="form-control mb-4" v-model="sName" placeholder="이름*">
         </div> -->
