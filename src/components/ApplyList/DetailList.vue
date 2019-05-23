@@ -136,12 +136,12 @@
         </li>
 
             <h6 class="text-dark">기업후기</h6>
-          <li v-for="cr in companyReview" class="d-flex mb-4">
+          <li v-for="cr in companyReview" class="d-flex mb-4" style="color: #1b1e21">
             <div class="pl-3">
               <ul class="list-unstyled">
                 <li>제목 : {{cr.reviewTitle}}</li>
+                <li>인턴 기간  : {{cr.internTermStart}} ~ {{cr.internTermEnd}}</li>
                 <div class="col-lg-12 mb-3">
-                <li><label style="font-weight:bold;"> 별점</label></li>
                 <fieldset class="rating ml-3">
                   <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
                   <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
@@ -154,9 +154,8 @@
                   <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
                   <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
                 </fieldset>
-                </div>
-                <li>인턴 기간  : {{cr.internTermStart}} ~ {{cr.internTermEnd}}</li>
-                <li>내용 : {{cr.reviewContent}}</li>
+                </div><br/><br/>
+                <li>{{cr.reviewContent}}</li>
               </ul>
             </div>
           </li>
@@ -212,8 +211,20 @@
           }
           return this.applyTerm;
         });
+        await this.readStarScore()
       },
       methods: {
+          readStarScore(){
+              console.log(document.getElementsByClassName("d-flex mb-4"))
+              for(var k=0;k<this.companyReview.length;k++){
+                  var starScore = document.getElementsByName("rating").length;
+                  for(var i=0;i<starScore;i++){
+                      if(this.companyReview[k].starScore==document.getElementsByName("rating")[i].value){
+                          document.getElementsByName("rating")[i].checked = true;
+                      }
+                  }
+              }
+          },
         applyStd(cName){
             this.$http.get('http://localhost:8888/std/mypage/applyStatus',{params:{sLoginID : this.user.loginId, applySemester : this.applyTerm.applySemester}}).then((response)=>{
             if(response.data != '0'){
@@ -294,4 +305,40 @@
 .info {
   color: white;
 }
+
+/****** Style Star Rating Widget *****/
+
+.rating {
+  border: none;
+  float: left;
+}
+
+.rating > input { display: none; }
+.rating > label:before {
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before {
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label {
+  color: #ddd;
+  float: right;
+}
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
 </style>
