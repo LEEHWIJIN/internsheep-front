@@ -227,7 +227,7 @@
  }
 
 .zoom:hover {
-  transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  transform: scale(1.072); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
     box-shadow: 0px 2px 8px 0px rgba(51, 77, 128, 0.12) !important;
 }
 </style>

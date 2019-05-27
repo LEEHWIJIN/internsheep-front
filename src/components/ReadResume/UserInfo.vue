@@ -2,11 +2,15 @@
   <div class="row">
     <!-- 대제목 -->
     <div class="col-lg-12 text-center">
+      <div class="text-right">
+        <button class="btn btn-light btn-sm" @click="modifyResume">수정하기</button>
+      </div>
       <p class="subtitle">Profile</p>
       <h2 class="section-title">Edit Profile</h2>
     </div>
     <!-- 이력서 내용 -->
     <div class="col-lg-12 p-0">
+
       <form class="row" v-on:submit.prevent='submitResume'>
         <div class="col-lg-12">
           <div class="text-center">
@@ -136,10 +140,10 @@
         </div>
         <br>
         <div class="col-12 text-center">
-          <button class="btn btn-light" @click="submitResume">다음</button>
+          <button class="btn btn-light mb-2" @click="submitResume">다음</button>
         </div>
       </form>
-          <button class="btn btn-primary" @click="modifyResume">수정하기</button>
+
           <!-- 수정하기 버튼은 무조건 form 뒤에 있어야 합니다. -->
     </div>
   </div>
