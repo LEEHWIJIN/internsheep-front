@@ -46,9 +46,9 @@
           <li class="d-flex mb-4">
             <i class="fa fa-building icon-grey"></i>
             <div class="pl-3">
-              <h6 class="text-dark">회사 소개</h6>
+              <h6 style="font-weight:bold" class="text-dark">회사 소개</h6>
               <ul class="list-unstyled">
-                <li>{{sc.cInfo}}</li>
+                <li style="font-size:14px;">{{sc.cInfo}}</li>
               </ul>
             </div>
           </li>
@@ -56,9 +56,9 @@
           <li class="d-flex mb-4">
             <i class="fa fa-briefcase icon-grey"></i>
             <div class="pl-3">
-              <h6 class="text-dark">모집 분야</h6>
+              <h6 style="font-weight:bold"  class="text-dark">모집 분야</h6>
               <ul class="list-unstyled">
-                <li>{{sc.cOccupation}}</li>
+                <li style="font-size:14px;">{{sc.cOccupation}}</li>
               </ul>
             </div>
           </li>
@@ -66,9 +66,9 @@
           <li class="d-flex mb-4">
             <i class="fa fa-users icon-grey"></i>
             <div class="pl-3">
-              <h6 class="text-dark">모집 인원</h6>
+              <h6 style="font-weight:bold"  class="text-dark">모집 인원</h6>
               <ul class="list-unstyled">
-                <li>{{sc.cNumOfPeople}}명</li>
+                <li style="font-size:14px;">{{sc.cNumOfPeople}}명</li>
               </ul>
             </div>
           </li>
@@ -76,9 +76,9 @@
           <li class="d-flex mb-4">
             <i class="fa fa-won-sign icon-grey"></i>
             <div class="pl-3">
-              <h6 class="text-dark">급여</h6>
+              <h6 style="font-weight:bold"  class="text-dark">급여</h6>
               <ul class="list-unstyled">
-                <li>{{sc.cPay}}</li>
+                <li style="font-size:14px;">{{sc.cPay}}</li>
               </ul>
             </div>
           </li>
@@ -86,9 +86,9 @@
           <li class="d-flex mb-4">
             <i class="fa fa-coffee icon-grey"></i>
             <div class="pl-3">
-              <h6 class="text-dark">복리 후생</h6>
+              <h6 style="font-weight:bold"  class="text-dark">복리 후생</h6>
               <ul class="list-unstyled">
-                <li>{{sc.cBenefit}}</li>
+                <li style="font-size:14px;">{{sc.cBenefit}}</li>
               </ul>
             </div>
           </li>
@@ -96,9 +96,9 @@
           <li class="d-flex mb-4">
             <i class="fa fa-calendar icon-grey"></i>
             <div class="pl-3">
-              <h6 class="text-dark">실습 기간</h6>
+              <h6 style="font-weight:bold"  class="text-dark">실습 기간</h6>
               <ul class="list-unstyled">
-                <li>{{sc.internTermStart}} ~ {{sc.internTermEnd}}</li>
+                <li style="font-size:14px;">{{sc.internTermStart}} ~ {{sc.internTermEnd}}</li>
               </ul>
             </div>
           </li>
@@ -106,7 +106,7 @@
           <li class="d-flex mb-4">
             <i class="fa fa-map-o icon-grey"></i>
             <div class="pl-3">
-              <h6 class="text-dark">주소</h6>
+              <h6 style="font-weight:bold"  class="text-dark">주소</h6>
               <ul class="list-unstyled">
                 <li class="mb-1">{{sc.cLocation}}</li>
                 <vue-daum-map :appKey="appKey" :center.sync="center" :level.sync="level" :mapTypeId="mapTypeId" :libraries="libraries" @load="onLoad" @center_changed="onMapEvent('center_changed', $event)" style="width:520px;height:300px;">
@@ -118,9 +118,9 @@
           <li class="d-flex mb-4">
             <i class="fa fa-envelope-o icon-grey"></i>
             <div class="pl-3">
-              <h6 class="text-dark">Email</h6>
+              <h6 style="font-weight:bold"  class="text-dark">Email</h6>
               <ul class="list-unstyled">
-                <li>{{sc.cEmail}}</li>
+                <li style="font-size:14px;">{{sc.cEmail}}</li>
               </ul>
             </div>
           </li>
@@ -128,19 +128,19 @@
           <li class="d-flex mb-4">
           <i class="fa fa-phone icon-grey"></i>
           <div class="pl-3">
-            <h6 class="text-dark">담당자 성함 및 연락처</h6>
+            <h6 style="font-weight:bold"  class="text-dark">담당자 성함 및 연락처</h6>
             <ul class="list-unstyled">
-              <li>{{sc.cManagerName}} {{sc.cManagerPhone}}</li>
+              <li style="font-size:14px;">{{sc.cManagerName}} {{sc.cManagerPhone}}</li>
             </ul>
           </div>
         </li>
 
-            <h6 class="text-dark">기업후기</h6>
+            <h6 style="font-weight:bold"  class="text-dark">기업후기</h6>
           <li v-for="cr in companyReview" class="d-flex mb-4" style="color: #1b1e21">
             <div class="pl-3">
               <ul class="list-unstyled">
-                <li>제목 : {{cr.reviewTitle}}</li>
-                <li>인턴 기간  : {{cr.internTermStart}} ~ {{cr.internTermEnd}}</li>
+                <li style="font-size:14px;">제목 : {{cr.reviewTitle}}</li>
+                <li style="font-size:14px;">인턴 기간  : {{cr.internTermStart}} ~ {{cr.internTermEnd}}</li>
                 <div class="col-lg-12 mb-3">
                 <fieldset class="rating ml-3">
                   <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
@@ -155,7 +155,7 @@
                   <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
                 </fieldset>
                 </div><br/><br/>
-                <li>{{cr.reviewContent}}</li>
+                <li style="font-size:14px;">{{cr.reviewContent}}</li>
               </ul>
             </div>
           </li>
