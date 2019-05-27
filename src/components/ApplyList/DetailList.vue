@@ -270,23 +270,51 @@
           onMapEvent (event, params) {
               // console.log(`Daum Map Event(${event})`, params);
           },
-          async pickCo(cName){//체크된 회사인지 아닌지 확인하고 if 문걸어야 할것같음 0 : 아직 지원하지 않은 회사임 1 : 지원한 회사임
+          async pickCo(cName){//체크된 회사인지 아닌지 확인하고 if 문걸어야 할것같음 0 : 아직 찜 하지 않은 회사임 1 : 찜한한 회사임
+            console.log(cName)
             await this.$http.get('http://localhost:8888/std/mypage/checkPickCo',{params:{sLoginID : this.user.loginId,cName:cName,applySemester:this.applyTerm.applySemester,applyOrder:this.applyTerm.applyOrder}}).then((response)=>{
+              console.log(response.data)
               if(response.data==0){//아직 지원하지 않은 회사이므로 찜 해야함
-                this.$http.post('http://localhost:8888/std/mypage/postStdPickCo',{cName : cName, sLoginID : this.user.loginId}).then((response) => {
-                  //꽉찬하트로 바꿔줘야 할것같음.
-                  // var heart = document.getElementsByClassName("far fa-heart");
-                  // heart.style.font="bold";
-                })
+                this.postStdPickCo(cName);
+                return 0;
               }
               else{ //지원한 회사이니까 찜목록 삭제해야함
-                var heart = document.getElementsByClassName("far fa-heart");
-                // heart.style.font="regular";
+                this.deleteStdPickCo(cName);
+                return 0;
+              }
+              return;
+            })
+          },
+          postStdPickCo(cName){
+            this.$http.post('http://localhost:8888/std/mypage/postStdPickCo',{cName : cName, sLoginID : this.user.loginId}).then((response) => {
+                  //꽉찬하트로 바꿔줘야 할것같음.
+                  if(response.data==0){
+                    // var heart = document.getElementsByClassName("fa-heart");
+                    // heart.style.font="bold";
+                    alert("찜이 되었습니다.");
+                    return ;
+                  }
+                  else{
+                    alert("찜이 되지 않았습니다. 다시 시도해주세요")
+                    return;
+                  }
+                });
+          },
+          deleteStdPickCo(cName){
+            this.$http.post('http://localhost:8888/std/mypage/deleteStdPickCo',{cName : cName, sLoginID : this.user.loginId,applySemester:this.applyTerm.applySemester,applyOrder:this.applyTerm.applyOrder}).then((response) => {
+              // var heart = document.getElementsByClassName("far fa-heart");
+              // heart.style.font="regular";
+              if(response.data==0){
+                  // var heart = document.getElementsByClassName("fa-heart");
+                  // heart.style.font="bold";
+                alert("찜이 해제되었습니다.");
+                return ;
+              }
+              else{
+                alert("찜이 되지 않았습니다. 다시 시도해주세요")
+                return 0;
               }
             })
-            // await this.$http.post('http://localhost:8888/std/mypage/postStdPickCo',{cName : cName, sLoginID : this.user.loginId}).then((response) => {
-            //       //꽉찬하트로 바꿔줘야 할것같음.
-            //     })
           },
       }
   }
