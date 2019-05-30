@@ -141,12 +141,8 @@ import VError from './Error.vue'
                   this.$router.push({name: "Apply"})
               }
               else if(res.data == 0){
-<<<<<<< HEAD
                    alert('보고서 작성기간이 아닙니다.')
                   this.$router.push({name: "Apply"})
-=======
-                  this.report_status = -1;
->>>>>>> 19a93e6073f1bd838508a1f6ec4ad93c3d08f67b
                }
                else{this.report_status = 1;}
           })
