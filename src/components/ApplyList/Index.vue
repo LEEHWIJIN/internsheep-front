@@ -16,28 +16,30 @@
                 <ul class="list-styled list-bordered">
 
                   <div v-for='(AL,index) in applylist' :key="AL.cNoticeID" @click="clickCo(index)">
-                    <li><div class="media align-items-center flex-column flex-sm-row">
-                      <!-- {{index+1}} -->
-                      <!-- 회사 사진 -->
-                      <img src="images/career/logo-1.png" class="mr-sm-0 mb-4 mb-sm-0 rounded p-3" alt="logo-1">
-                      <div class="media-body text-center text-sm-left mb-4 mb-sm-0" style="line-height:120%">
-                        <!-- 모집 직군 -->
-                        <span class="h6">{{AL.cOccupation}}</span><br>
-                        <!-- 기업명 -->
-                        <span style="font-size: 12px;">{{AL.cName}}<br></span>
-                        <!-- 태그 -->
-                        <span style="font-size: 12px;">{{AL.cTag}}<br></span>
-                      </div>
-                      <!-- 경쟁률 -->
-                      <div class="" style="line-height:120%">
-                        <br><br>
-                        <a class="mr-sm-3 paragraph">
-                          <span style="font-size: 12px">모집:</span>{{AL.cNumOfPeople}}
-                          <span class="h4" style="color:#0097d5;">
-                          <span style="font-size: 12px">지원:</span>{{AL.applyStdNum}}</span>
-                        </a>
-                      </div>
-                    </div></li>
+                    <div v-if= "AL.cStatus == 0">
+                      <li><div class="media align-items-center flex-column flex-sm-row">
+                        <!-- {{index+1}} -->
+                        <!-- 회사 사진 -->
+                        <img src="images/career/logo-1.png" class="mr-sm-0 mb-4 mb-sm-0 rounded p-3" alt="logo-1">
+                        <div class="media-body text-center text-sm-left mb-4 mb-sm-0" style="line-height:120%">
+                          <!-- 모집 직군 -->
+                          <span class="h6">{{AL.cOccupation}}</span><br>
+                          <!-- 기업명 -->
+                          <span style="font-size: 12px;">{{AL.cName}}<br></span>
+                          <!-- 태그 -->
+                          <span style="font-size: 12px;">{{AL.cTag}}<br></span>
+                        </div>
+                        <!-- 경쟁률 -->
+                        <div class="" style="line-height:120%">
+                          <br><br>
+                          <a class="mr-sm-3 paragraph">
+                            <span style="font-size: 12px">모집:</span>{{AL.cNumOfPeople}}
+                            <span class="h4" style="color:#0097d5;">
+                            <span style="font-size: 12px">지원:</span>{{AL.applyStdNum}}</span>
+                          </a>
+                        </div>
+                      </div></li>
+                    </div>
                   </div>
 
                   <!-- 샘플. 나중에 지워주세요. -->
@@ -102,7 +104,7 @@
       },
       methods: {
         applyList(){
-          this.$http.get('http://10.41.83.72:8888/std/list',{params:{applyOrder:this.applyTerm.applyOrder, applySemester: this.applyTerm.applySemester}}).then((response) => {
+          this.$http.get('http://localhost:8888/std/list',{params:{applyOrder:this.applyTerm.applyOrder, applySemester: this.applyTerm.applySemester}}).then((response) => {
             // console.log(response.data)
             for(var i=0; i<response.data.length;i++){
                 this.applylist.push({
@@ -147,7 +149,7 @@
           })
         },
         compareDate(){
-          this.$http.get('http://10.41.83.72:8888/admin/recentApplyTerm').then((response) => {
+          this.$http.get('http://localhost:8888/admin/recentApplyTerm').then((response) => {
             this.applyTerm = {
                 applyStart : response.data.applyStart,
                 applyEnd : response.data.applyEnd,

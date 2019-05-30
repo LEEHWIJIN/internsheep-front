@@ -4,7 +4,7 @@
       <div class="naviagtion fixed-top transition">
         <div class="container">
           <nav class="navbar navbar-expand-lg navbar-dark p-1">
-            <a class="navbar-brand p-0" href="#" @click="goHome"><img src="images/logo/logo.png" style="filter: brightness(0) invert(1);"alt="Intern Sheep"></a>
+            <a class="navbar-brand p-0" href="#" @click="goHome"><img src="images/logo/logo.png" style="filter: brightness(0) invert(1);" alt="Intern Sheep"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation"
               aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -76,7 +76,7 @@
     },
     created(){
         if(localStorage.token){
-          this.$http.get('http://10.41.83.72:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+          this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
               if(res.data.result==1){
                 localStorage.removeItem('token')
                 this.user={};

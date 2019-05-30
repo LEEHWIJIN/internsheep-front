@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
         <div class="" style="text-align: center;">
-          <a class="" href="#" @click="goHome"><img src="images/login.png" style="text-align: center; filter: brightness(0) invert(1);"alt="Intern Sheep"></a>
+          <a class="" href="#" @click="goHome"><img src="images/login.png" style="text-align: center; filter: brightness(0) invert(1);" alt="Intern Sheep"></a>
         </div>
         <div class="card card-signin my-5">
           <div class="card-body">
@@ -64,7 +64,7 @@
           this.$router.push({name: "Home"})
       },
       login() {
-        this.$http.post('http://10.41.83.72:8888/auth/std/login',{user: this.user}).then((response)=>{
+        this.$http.post('http://localhost:8888/auth/std/login',{user: this.user}).then((response)=>{
              alert('success');
              localStorage.setItem('token',response.data.token);
              this.$router.push({name: "Home"});
@@ -74,7 +74,7 @@
         }).catch(error=>{
             alert(error)
         })
-        // this.$http.post('http://10.41.83.72:8888/aimsLogin/check',{userId: this.userId,password:this.password}).then((response)=>{
+        // this.$http.post('http://localhost:8888/aimsLogin/check',{userId: this.userId,password:this.password}).then((response)=>{
         //     alert('success');
         // },(error)=>{
         //     console.log('err')

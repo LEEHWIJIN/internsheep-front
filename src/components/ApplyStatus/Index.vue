@@ -97,7 +97,7 @@
     },
     created(){
         // this.getApplyStatus();
-        this.$http.get('http://10.41.83.72:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+        this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
             this.user = res.data.user;
             console.log("유저입니다 : ",this.user.loginId)
             this.getApplyTerm(this.user.loginId)
@@ -109,7 +109,7 @@
           this.$router.push({name: "Apply"})
       },
       getApplyStatus(loginId) {
-        this.$http.get('http://10.41.83.72:8888/std/mypage/applyStatus',{params:{sLoginID : loginId, applySemester : this.applyTerm.applySemester}}).then((response)=>{
+        this.$http.get('http://localhost:8888/std/mypage/applyStatus',{params:{sLoginID : loginId, applySemester : this.applyTerm.applySemester}}).then((response)=>{
             if(response.data=='0'){
                 this.confirm = 2
             }
@@ -143,7 +143,7 @@
         })
       },
         getApplyTerm(loginId){
-            this.$http.get('http://10.41.83.72:8888/admin/recentApplyTerm').then((response) => {
+            this.$http.get('http://localhost:8888/admin/recentApplyTerm').then((response) => {
                 this.applyTerm = {
                     applyStart : response.data.applyStart,
                     applyEnd : response.data.applyEnd,
@@ -156,7 +156,7 @@
         giveup(index){
           console.log(this.applylist)
           if(this.applylist[index].YN == '심사중'){
-            this.$http.post('http://10.41.83.72:8888/std/mypage/giveup',{sLoginID : this.user.loginId, applySemester : this.applyTerm.applySemester, applyOrder : this.applylist[index].applyOrder}).then((response) => {
+            this.$http.post('http://localhost:8888/std/mypage/giveup',{sLoginID : this.user.loginId, applySemester : this.applyTerm.applySemester, applyOrder : this.applylist[index].applyOrder}).then((response) => {
                 alert('포기되었습니다.')
                 this.$router.push({name: "Home"})
             })
