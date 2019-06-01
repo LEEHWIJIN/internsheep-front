@@ -17,7 +17,6 @@
         <div class="col-lg-12 text-center">
           <p class="subtitle">Profile</p>
           <h2 class="section-title">Write a Profile</h2>
-
         </div>
         <div class="col-lg-12 text-center p-0">
         <form class="row" v-on:submit.prevent='submitNotice' >

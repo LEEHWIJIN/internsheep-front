@@ -14,139 +14,607 @@
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Javascript</h6>
 
-<!--
-            <input class="inp-cbx" id="cbx3" name="grade" value="4학년 1학기" type="radio" style="display: none;">
+
+            <input class="inp-cbx" id="cbx1" name="js" value="배운적 없음" type="radio" style="display: none;">
+              <label class="cbx" for="cbx1">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>배운적 없음</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx2" name="js" value="맛보기 수준" type="radio" style="display: none;">
+              <label class="cbx" for="cbx2">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>맛보기 수준</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx3" name="js" value="초보 수준" type="radio" style="display: none;">
               <label class="cbx" for="cbx3">
                 <span>
                   <svg width="12px" height="10px" viewbox="0 0 12 10">
                     <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
                   </svg>
                 </span>
-                <span>4학년 1학기</span>
+                <span>초보 수준</span>
               </label><br>
- -->
-
-
-                <input type="radio" name="js" value="배운적 없음" >배운적 없음<br>
-                <input type="radio" name="js" value="맛보기 수준" >맛보기 수준<br>
-                <input type="radio" name="js" value="초보 수준" >초보 수준<br>
-                <input type="radio" name="js" value="실무 가능" >실무 가능<br>
-                <input type="radio" name="js" value="나름 고수" >나름 고수
+            <input class="inp-cbx" id="cbx4" name="js" value="실무 가능" type="radio" style="display: none;">
+              <label class="cbx" for="cbx4">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>실무 가능</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx5" name="js" value="나름 고수" type="radio" style="display: none;">
+              <label class="cbx" for="cbx5">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>나름 고수</span>
+              </label><br>
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">HTML</h6>
-                <input type="radio" name="ht" value="배운적 없음" >배운적 없음<br>
-                <input type="radio" name="ht" value="맛보기 수준" >맛보기 수준<br>
-                <input type="radio" name="ht" value="초보 수준" >초보 수준<br>
-                <input type="radio" name="ht" value="실무 가능" >실무 가능<br>
-                <input type="radio" name="ht" value="나름 고수" >나름 고수
+            <input class="inp-cbx" id="cbx6" name="ht" value="배운적 없음" type="radio" style="display: none;">
+              <label class="cbx" for="cbx6">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>배운적 없음</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx7" name="ht" value="맛보기 수준" type="radio" style="display: none;">
+              <label class="cbx" for="cbx7">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>맛보기 수준</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx8" name="ht" value="초보 수준" type="radio" style="display: none;">
+              <label class="cbx" for="cbx8">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>초보 수준</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx9" name="ht" value="실무 가능" type="radio" style="display: none;">
+              <label class="cbx" for="cbx9">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>실무 가능</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx10" name="ht" value="나름 고수" type="radio" style="display: none;">
+              <label class="cbx" for="cbx10">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>나름 고수</span>
+              </label><br>
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">CSS</h6>
-                <input type="radio" name="cs" value="배운적 없음" >배운적 없음<br>
-                <input type="radio" name="cs" value="맛보기 수준" >맛보기 수준<br>
-                <input type="radio" name="cs" value="초보 수준" >초보 수준<br>
-                <input type="radio" name="cs" value="실무 가능" >실무 가능<br>
-                <input type="radio" name="cs" value="나름 고수" >나름 고수
+            <input class="inp-cbx" id="cbx11" name="cs" value="배운적 없음" type="radio" style="display: none;">
+              <label class="cbx" for="cbx11">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>배운적 없음</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx12" name="cs" value="맛보기 수준" type="radio" style="display: none;">
+              <label class="cbx" for="cbx12">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>맛보기 수준</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx13" name="cs" value="초보 수준" type="radio" style="display: none;">
+              <label class="cbx" for="cbx13">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>초보 수준</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx14" name="cs" value="실무 가능" type="radio" style="display: none;">
+              <label class="cbx" for="cbx14">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>실무 가능</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx15" name="cs" value="나름 고수" type="radio" style="display: none;">
+              <label class="cbx" for="cbx15">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>나름 고수</span>
+              </label><br>
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">jQuery</h6>
-                <input type="radio" name="jq" value="배운적 없음" >배운적 없음<br>
-                <input type="radio" name="jq" value="맛보기 수준" >맛보기 수준<br>
-                <input type="radio" name="jq" value="초보 수준" >초보 수준<br>
-                <input type="radio" name="jq" value="실무 가능" >실무 가능<br>
-                <input type="radio" name="jq" value="나름 고수" >나름 고수
+            <input class="inp-cbx" id="cbx16" name="jq" value="배운적 없음" type="radio" style="display: none;">
+              <label class="cbx" for="cbx16">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>배운적 없음</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx17" name="jq" value="맛보기 수준" type="radio" style="display: none;">
+              <label class="cbx" for="cbx17">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>맛보기 수준</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx18" name="jq" value="초보 수준" type="radio" style="display: none;">
+              <label class="cbx" for="cbx18">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>초보 수준</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx19" name="jq" value="실무 가능" type="radio" style="display: none;">
+              <label class="cbx" for="cbx19">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>실무 가능</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx20" name="jq" value="나름 고수" type="radio" style="display: none;">
+              <label class="cbx" for="cbx20">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>나름 고수</span>
+              </label><br>
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">SQL</h6>
-                <input type="radio" name="sq" value="배운적 없음" >배운적 없음<br>
-                <input type="radio" name="sq" value="맛보기 수준" >맛보기 수준<br>
-                <input type="radio" name="sq" value="초보 수준" >초보 수준<br>
-                <input type="radio" name="sq" value="실무 가능" >실무 가능<br>
-                <input type="radio" name="sq" value="나름 고수" >나름 고수
+            <input class="inp-cbx" id="cbx21" name="sq" value="배운적 없음" type="radio" style="display: none;">
+              <label class="cbx" for="cbx21">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>배운적 없음</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx22" name="sq" value="맛보기 수준" type="radio" style="display: none;">
+              <label class="cbx" for="cbx22">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>맛보기 수준</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx23" name="sq" value="초보 수준" type="radio" style="display: none;">
+              <label class="cbx" for="cbx23">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>초보 수준</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx24" name="sq" value="실무 가능" type="radio" style="display: none;">
+              <label class="cbx" for="cbx24">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>실무 가능</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx25" name="sq" value="나름 고수" type="radio" style="display: none;">
+              <label class="cbx" for="cbx25">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>나름 고수</span>
+              </label><br>
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Java</h6>
-                <input type="radio" name="jv" value="배운적 없음" >배운적 없음<br>
-                <input type="radio" name="jv" value="맛보기 수준" >맛보기 수준<br>
-                <input type="radio" name="jv" value="초보 수준" >초보 수준<br>
-                <input type="radio" name="jv" value="실무 가능" >실무 가능<br>
-                <input type="radio" name="jv" value="나름 고수" >나름 고수
+            <input class="inp-cbx" id="cbx26" name="jv" value="배운적 없음" type="radio" style="display: none;">
+              <label class="cbx" for="cbx26">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>배운적 없음</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx27" name="jv" value="맛보기 수준" type="radio" style="display: none;">
+              <label class="cbx" for="cbx27">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>맛보기 수준</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx28" name="jv" value="초보 수준" type="radio" style="display: none;">
+              <label class="cbx" for="cbx28">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>초보 수준</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx29" name="jv" value="실무 가능" type="radio" style="display: none;">
+              <label class="cbx" for="cbx29">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>실무 가능</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx30" name="jv" value="나름 고수" type="radio" style="display: none;">
+              <label class="cbx" for="cbx30">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>나름 고수</span>
+              </label><br>
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Android Java</h6>
-                <input type="radio" name="aj" value="배운적 없음" >배운적 없음<br>
-                <input type="radio" name="aj" value="맛보기 수준" >맛보기 수준<br>
-                <input type="radio" name="aj" value="초보 수준" >초보 수준<br>
-                <input type="radio" name="aj" value="실무 가능" >실무 가능<br>
-                <input type="radio" name="aj" value="나름 고수" >나름 고수
+            <input class="inp-cbx" id="cbx31" name="aj" value="배운적 없음" type="radio" style="display: none;">
+              <label class="cbx" for="cbx31">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>배운적 없음</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx32" name="aj" value="맛보기 수준" type="radio" style="display: none;">
+              <label class="cbx" for="cbx32">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>맛보기 수준</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx33" name="aj" value="초보 수준" type="radio" style="display: none;">
+              <label class="cbx" for="cbx33">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>초보 수준</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx34" name="aj" value="실무 가능" type="radio" style="display: none;">
+              <label class="cbx" for="cbx34">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>실무 가능</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx35" name="aj" value="나름 고수" type="radio" style="display: none;">
+              <label class="cbx" for="cbx35">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>나름 고수</span>
+              </label><br>
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Swift</h6>
-                <input type="radio" name="sf" value="배운적 없음" >배운적 없음<br>
-                <input type="radio" name="sf" value="맛보기 수준" >맛보기 수준<br>
-                <input type="radio" name="sf" value="초보 수준" >초보 수준<br>
-                <input type="radio" name="sf" value="실무 가능" >실무 가능<br>
-                <input type="radio" name="sf" value="나름 고수" >나름 고수
+            <input class="inp-cbx" id="cbx36" name="sf" value="배운적 없음" type="radio" style="display: none;">
+              <label class="cbx" for="cbx36">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>배운적 없음</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx37" name="sf" value="맛보기 수준" type="radio" style="display: none;">
+              <label class="cbx" for="cbx37">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>맛보기 수준</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx38" name="sf" value="초보 수준" type="radio" style="display: none;">
+              <label class="cbx" for="cbx38">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>초보 수준</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx39" name="sf" value="실무 가능" type="radio" style="display: none;">
+              <label class="cbx" for="cbx39">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>실무 가능</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx40" name="sf" value="나름 고수" type="radio" style="display: none;">
+              <label class="cbx" for="cbx40">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>나름 고수</span>
+              </label><br>
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Objective-C</h6>
-                <input type="radio" name="ob" value="배운적 없음" >배운적 없음<br>
-                <input type="radio" name="ob" value="맛보기 수준" >맛보기 수준<br>
-                <input type="radio" name="ob" value="초보 수준" >초보 수준<br>
-                <input type="radio" name="ob" value="실무 가능" >실무 가능<br>
-                <input type="radio" name="ob" value="나름 고수" >나름 고수
+            <input class="inp-cbx" id="cbx41" name="ob" value="배운적 없음" type="radio" style="display: none;">
+              <label class="cbx" for="cbx41">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>배운적 없음</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx42" name="ob" value="맛보기 수준" type="radio" style="display: none;">
+              <label class="cbx" for="cbx42">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>맛보기 수준</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx43" name="ob" value="초보 수준" type="radio" style="display: none;">
+              <label class="cbx" for="cbx43">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>초보 수준</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx44" name="ob" value="실무 가능" type="radio" style="display: none;">
+              <label class="cbx" for="cbx44">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>실무 가능</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx45" name="ob" value="나름 고수" type="radio" style="display: none;">
+              <label class="cbx" for="cbx45">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>나름 고수</span>
+              </label><br>
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">Python</h6>
-                <input type="radio" name="py" value="배운적 없음" >배운적 없음<br>
-                <input type="radio" name="py" value="맛보기 수준" >맛보기 수준<br>
-                <input type="radio" name="py" value="초보 수준" >초보 수준<br>
-                <input type="radio" name="py" value="실무 가능" >실무 가능<br>
-                <input type="radio" name="py" value="나름 고수" >나름 고수
+            <input class="inp-cbx" id="cbx46" name="py" value="배운적 없음" type="radio" style="display: none;">
+              <label class="cbx" for="cbx46">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>배운적 없음</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx47" name="py" value="맛보기 수준" type="radio" style="display: none;">
+              <label class="cbx" for="cbx47">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>맛보기 수준</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx48" name="py" value="초보 수준" type="radio" style="display: none;">
+              <label class="cbx" for="cbx48">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>초보 수준</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx49" name="py" value="실무 가능" type="radio" style="display: none;">
+              <label class="cbx" for="cbx49">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>실무 가능</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx50" name="py" value="나름 고수" type="radio" style="display: none;">
+              <label class="cbx" for="cbx50">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>나름 고수</span>
+              </label><br>
             </div>
         </div>
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">PHP</h6>
-                <input type="radio" name="ph" value="배운적 없음" >배운적 없음<br>
-                <input type="radio" name="ph" value="맛보기 수준" >맛보기 수준<br>
-                <input type="radio" name="ph" value="초보 수준" >초보 수준<br>
-                <input type="radio" name="ph" value="실무 가능" >실무 가능<br>
-                <input type="radio" name="ph" value="나름 고수" >나름 고수
+            <input class="inp-cbx" id="cbx51" name="ph" value="배운적 없음" type="radio" style="display: none;">
+              <label class="cbx" for="cbx51">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>배운적 없음</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx52" name="ph" value="맛보기 수준" type="radio" style="display: none;">
+              <label class="cbx" for="cbx52">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>맛보기 수준</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx53" name="ph" value="초보 수준" type="radio" style="display: none;">
+              <label class="cbx" for="cbx53">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>초보 수준</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx54" name="ph" value="실무 가능" type="radio" style="display: none;">
+              <label class="cbx" for="cbx54">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>실무 가능</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx55" name="ph" value="나름 고수" type="radio" style="display: none;">
+              <label class="cbx" for="cbx55">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>나름 고수</span>
+              </label><br>
             </div>
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
                 <h6 style="font-weight:bold">C/C++</h6>
-                <input type="radio" name="langC" value="배운적 없음" >배운적 없음<br>
-                <input type="radio" name="langC" value="맛보기 수준" >맛보기 수준<br>
-                <input type="radio" name="langC" value="초보 수준" >초보 수준<br>
-                <input type="radio" name="langC" value="실무 가능" >실무 가능<br>
-                <input type="radio" name="langC" value="나름 고수" >나름 고수
+            <input class="inp-cbx" id="cbx56" name="langC" value="배운적 없음" type="radio" style="display: none;">
+              <label class="cbx" for="cbx56">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>배운적 없음</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx57" name="langC" value="맛보기 수준" type="radio" style="display: none;">
+              <label class="cbx" for="cbx57">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>맛보기 수준</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx58" name="langC" value="초보 수준" type="radio" style="display: none;">
+              <label class="cbx" for="cbx58">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>초보 수준</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx59" name="langC" value="실무 가능" type="radio" style="display: none;">
+              <label class="cbx" for="cbx59">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>실무 가능</span>
+              </label><br>
+            <input class="inp-cbx" id="cbx60" name="langC" value="나름 고수" type="radio" style="display: none;">
+              <label class="cbx" for="cbx60">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>나름 고수</span>
+              </label><br>
             </div>
         </div>
         <div class="col-lg-6">

@@ -57,7 +57,7 @@
                       <div class="centered">
                         <!-- 보고서 작성 페이지  || 후기 작성 페이지일 경우-->
                         <h3 style="font-weight:bold;">어머나, <br>아직 지원한 기업이<br>없으시군요! </h3><br>
-                        <h4 href="#" @click="goApplyList">지원하러 가기 -></h4>
+                        <h4 href="#" @click="goApplyList">지원하러 가기 <i class="far fa-hand-point-right"></i></h4>
                       </div>
                     </div>
                   </div>

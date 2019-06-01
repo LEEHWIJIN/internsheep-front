@@ -8,6 +8,12 @@
     <!-- 이력서 내용 -->
     <div class="col-lg-12 p-0">
       <form class="row" v-on:submit.prevent='submitResume'>
+        <div class="col-lg-12">
+          <div class="text-center">
+            <!-- 이미지 바꿔~!~!~! -->
+            <img class="mb-4 rounded" src="images/profile.png" style="width: 110px;"alt="이력서 사진">
+          </div>
+        </div>
         <!-- <div class="col-lg-6">
           <input class="form-control mb-4" v-model="sName" placeholder="이름*">
         </div> -->

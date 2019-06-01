@@ -13,6 +13,7 @@ import Admin from './components/Admin/Index.vue'
 import Modify from './components/Admin/modify.vue'
 import ReadResume from './components/ReadResume/Index.vue'
 import Profile from './components/Profile/Index.vue'
+import SavedCompany from './components/SavedCompany/Index.vue'
 
 Vue.use(Router)
 
@@ -113,10 +114,16 @@ export default new Router ({
             path : '/admin',
             name : 'Admin',
             component : Admin,
-        },{
+        },
+        {
             path : '/admin/modify',
             name : 'modify',
             component : Modify,
+        },
+        {
+            path : '/saved-company',
+            name : 'SavedCompany',
+            component : SavedCompany,
         },
 
     ]

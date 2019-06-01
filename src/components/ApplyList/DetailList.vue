@@ -8,7 +8,7 @@
             <div class="col-lg-12 mb-4">
               <div class="heart mr-sm-2 mt-sm-2">
                 <!-- 만약 찜했을 경우 font-weight: bold; 로 바꾸면 됨. -->
-                <i class="far fa-heart" style="margin-left: 18px;"><span style="font-color:white; font-weight: bold;"> 기업 찜하기</span></i>
+                <i class="far fa-heart" style="margin-left: 18px;"><span @click="pickCo(sc.cName)" style="font-color:white; font-weight: bold;cursor:Pointer"> 기업 찜하기</span></i>
               </div>
               <div class="apply">
                 <i class="fas fa-walking" ><span @click="applyStd(sc.cName)" style="font-color:white;cursor:Pointer;"> 지원하기</span></i>
@@ -46,9 +46,9 @@
           <li class="d-flex mb-4">
             <i class="fa fa-building icon-grey"></i>
             <div class="pl-3">
-              <h6 class="text-dark">회사 소개</h6>
+              <h6 style="font-weight:bold" class="text-dark">회사 소개</h6>
               <ul class="list-unstyled">
-                <li>{{sc.cInfo}}</li>
+                <li style="font-size:14px;">{{sc.cInfo}}</li>
               </ul>
             </div>
           </li>
@@ -56,9 +56,9 @@
           <li class="d-flex mb-4">
             <i class="fa fa-briefcase icon-grey"></i>
             <div class="pl-3">
-              <h6 class="text-dark">모집 분야</h6>
+              <h6 style="font-weight:bold"  class="text-dark">모집 분야</h6>
               <ul class="list-unstyled">
-                <li>{{sc.cOccupation}}</li>
+                <li style="font-size:14px;">{{sc.cOccupation}}</li>
               </ul>
             </div>
           </li>
@@ -66,9 +66,9 @@
           <li class="d-flex mb-4">
             <i class="fa fa-users icon-grey"></i>
             <div class="pl-3">
-              <h6 class="text-dark">모집 인원</h6>
+              <h6 style="font-weight:bold"  class="text-dark">모집 인원</h6>
               <ul class="list-unstyled">
-                <li>{{sc.cNumOfPeople}}명</li>
+                <li style="font-size:14px;">{{sc.cNumOfPeople}}명</li>
               </ul>
             </div>
           </li>
@@ -76,9 +76,9 @@
           <li class="d-flex mb-4">
             <i class="fa fa-won-sign icon-grey"></i>
             <div class="pl-3">
-              <h6 class="text-dark">급여</h6>
+              <h6 style="font-weight:bold"  class="text-dark">급여</h6>
               <ul class="list-unstyled">
-                <li>{{sc.cPay}}</li>
+                <li style="font-size:14px;">{{sc.cPay}}</li>
               </ul>
             </div>
           </li>
@@ -86,9 +86,9 @@
           <li class="d-flex mb-4">
             <i class="fa fa-coffee icon-grey"></i>
             <div class="pl-3">
-              <h6 class="text-dark">복리 후생</h6>
+              <h6 style="font-weight:bold"  class="text-dark">복리 후생</h6>
               <ul class="list-unstyled">
-                <li>{{sc.cBenefit}}</li>
+                <li style="font-size:14px;">{{sc.cBenefit}}</li>
               </ul>
             </div>
           </li>
@@ -96,9 +96,9 @@
           <li class="d-flex mb-4">
             <i class="fa fa-calendar icon-grey"></i>
             <div class="pl-3">
-              <h6 class="text-dark">실습 기간</h6>
+              <h6 style="font-weight:bold"  class="text-dark">실습 기간</h6>
               <ul class="list-unstyled">
-                <li>{{sc.internTermStart}} ~ {{sc.internTermEnd}}</li>
+                <li style="font-size:14px;">{{sc.internTermStart}} ~ {{sc.internTermEnd}}</li>
               </ul>
             </div>
           </li>
@@ -106,7 +106,7 @@
           <li class="d-flex mb-4">
             <i class="fa fa-map-o icon-grey"></i>
             <div class="pl-3">
-              <h6 class="text-dark">주소</h6>
+              <h6 style="font-weight:bold"  class="text-dark">주소</h6>
               <ul class="list-unstyled">
                 <li class="mb-1">{{sc.cLocation}}</li>
                 <vue-daum-map :appKey="appKey" :center.sync="center" :level.sync="level" :mapTypeId="mapTypeId" :libraries="libraries" @load="onLoad" @center_changed="onMapEvent('center_changed', $event)" style="width:520px;height:300px;">
@@ -118,9 +118,9 @@
           <li class="d-flex mb-4">
             <i class="fa fa-envelope-o icon-grey"></i>
             <div class="pl-3">
-              <h6 class="text-dark">Email</h6>
+              <h6 style="font-weight:bold"  class="text-dark">Email</h6>
               <ul class="list-unstyled">
-                <li>{{sc.cEmail}}</li>
+                <li style="font-size:14px;">{{sc.cEmail}}</li>
               </ul>
             </div>
           </li>
@@ -128,37 +128,41 @@
           <li class="d-flex mb-4">
           <i class="fa fa-phone icon-grey"></i>
           <div class="pl-3">
-            <h6 class="text-dark">담당자 성함 및 연락처</h6>
+            <h6 style="font-weight:bold"  class="text-dark">담당자 성함 및 연락처</h6>
             <ul class="list-unstyled">
-              <li>{{sc.cManagerName}} {{sc.cManagerPhone}}</li>
+              <li style="font-size:14px;">{{sc.cManagerName}} {{sc.cManagerPhone}}</li>
             </ul>
           </div>
         </li>
-
-            <h6 class="text-dark">기업후기</h6>
-          <li v-for="cr in companyReview" class="d-flex mb-4" id="review" style="color: #1b1e21">
+            <h6 style="font-weight:bold"  class="text-dark">기업후기</h6>
+          <li v-for="cr in companyReview" class="d-flex mb-4" style="color: #1b1e21">
             <div class="pl-3">
               <ul class="list-unstyled">
-                <li>제목 : {{cr.reviewTitle}}</li>
-                <li>인턴 기간  : {{cr.internTermStart}} ~ {{cr.internTermEnd}}</li>
-                <div class="col-lg-12 mb-3">
-                <fieldset class="rating ml-3">
-                  <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
-                  <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
-                  <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
-                  <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
-                  <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
-                  <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
-                  <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
-                  <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
-                  <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
-                  <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
-                </fieldset>
-                </div><br/><br/>
-                <li>{{cr.reviewContent}}</li>
+                <li style="font-size:14px;">제목 : {{cr.reviewTitle}}</li>
+                <li style="font-size:14px;">인턴 기간  : {{cr.internTermStart}} ~ {{cr.internTermEnd}}</li>
+                <!--<div class="col-lg-12 mb-3">-->
+                <!--<fieldset class="rating ml-3">-->
+                  <!--<input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>-->
+                  <!--<input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>-->
+                  <!--<input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>-->
+                  <!--<input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>-->
+                  <!--<input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>-->
+                  <!--<input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>-->
+                  <!--<input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>-->
+                  <!--<input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>-->
+                  <!--<input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>-->
+                  <!--<input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>-->
+                <!--</fieldset>-->
+                <!--</div><br/><br/>-->
+                <li style="font-size:14px;">{{cr.reviewContent}}</li>
               </ul>
             </div>
           </li>
+
+          <div class="text-center">
+            <button class="btn btn-primary btn-sm" @click="applyStd(sc.cName)">지원하기</button>
+            <button class="btn btn-primary btn-sm ml-2" @click="">찜하기</button>
+          </div>
 
         </ul>
       </div>
@@ -273,7 +277,53 @@
           },
           onMapEvent (event, params) {
               // console.log(`Daum Map Event(${event})`, params);
-          }
+          },
+          async pickCo(cName){//체크된 회사인지 아닌지 확인하고 if 문걸어야 할것같음 0 : 아직 찜 하지 않은 회사임 1 : 찜한한 회사임
+            console.log(cName)
+            await this.$http.get('http://localhost:8888/std/mypage/checkPickCo',{params:{sLoginID : this.user.loginId,cName:cName,applySemester:this.applyTerm.applySemester,applyOrder:this.applyTerm.applyOrder}}).then((response)=>{
+              console.log(response.data)
+              if(response.data==0){//아직 지원하지 않은 회사이므로 찜 해야함
+                this.postStdPickCo(cName);
+                return 0;
+              }
+              else{ //지원한 회사이니까 찜목록 삭제해야함
+                this.deleteStdPickCo(cName);
+                return 0;
+              }
+              return;
+            })
+          },
+          postStdPickCo(cName){
+            this.$http.post('http://localhost:8888/std/mypage/postStdPickCo',{cName : cName, sLoginID : this.user.loginId}).then((response) => {
+                  //꽉찬하트로 바꿔줘야 할것같음.
+                  if(response.data==0){
+                    // var heart = document.getElementsByClassName("fa-heart");
+                    // heart.style.font="bold";
+                    alert("찜이 되었습니다.");
+                    return ;
+                  }
+                  else{
+                    alert("찜이 되지 않았습니다. 다시 시도해주세요")
+                    return;
+                  }
+                });
+          },
+          deleteStdPickCo(cName){
+            this.$http.post('http://localhost:8888/std/mypage/deleteStdPickCo',{cName : cName, sLoginID : this.user.loginId,applySemester:this.applyTerm.applySemester,applyOrder:this.applyTerm.applyOrder}).then((response) => {
+              // var heart = document.getElementsByClassName("far fa-heart");
+              // heart.style.font="regular";
+              if(response.data==0){
+                  // var heart = document.getElementsByClassName("fa-heart");
+                  // heart.style.font="bold";
+                alert("찜이 해제되었습니다.");
+                return ;
+              }
+              else{
+                alert("찜이 되지 않았습니다. 다시 시도해주세요")
+                return 0;
+              }
+            })
+          },
       }
   }
 </script>

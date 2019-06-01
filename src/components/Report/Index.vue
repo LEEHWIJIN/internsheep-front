@@ -11,8 +11,9 @@
         <!-- 공백 -->
         <div class="col-lg-1">
         </div>
+        <v-error v-if="report_status==-1"></v-error>
         <!-- 보고서 및 후기 작성란 -->
-        <div class="col-lg-8">
+        <div v-if="report_status==1" class="col-lg-8">
             <div class="row">
               <!-- 대제목 -->
               <div class="col-lg-12 text-center">
@@ -72,6 +73,7 @@
               </div> -->
             </div>
         </div>
+       
       </div>
     </div>
     <v-footer></v-footer>
@@ -87,6 +89,7 @@ import VBase from '../Base/Index.vue'
 import VFooter from '../Footer/Index.vue'
 import VCategory from '../Category/Index.vue'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import VError from './Error.vue'
   export default{
       name: 'report',
       data() {
@@ -97,6 +100,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
             url : "",
             fileName : "",
             applyTerm :{},
+            report_status : -1,
           //uploads: [],
 		      //colors: ["#24bddf", "#5fcc9c", "#6a65d8"],
         }
@@ -105,12 +109,20 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
           VBase,
           VFooter,
           VCategory,
+          VError
       },
       async created(){
           await this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
               this.user = res.data.user;
               return this.user.loginId
           })
+          //  await this.$http.get('http://localhost:8888/std/mypage/checkReportTerm',{params:{sLoginID : this.user.loginId}}).then(res => {
+          //     if(res.data == 1){//보고서 작성기간 입니다.
+          //       this.report_status = 1;
+          //     }
+          //     else{//작성 기간이 아닙니다.
+          //       this.report_status = -1;
+          //     }
           await this.$http.get('http://localhost:8888/admin/recentApplyTerm').then((response) => {
               this.applyTerm = {
                   applyStart : response.data.applyStart,
@@ -126,12 +138,13 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
                console.log('sdfsdf'+res.data)
               if(res.data =='실습한 기업 없음'){
                   alert('실습한 기업이 없습니다.')
-                  this.$router.push({name: "Home"})
+                  this.$router.push({name: "Apply"})
               }
               else if(res.data == 0){
                    alert('보고서 작성기간이 아닙니다.')
-                  this.$router.push({name: "Home"})
+                  this.$router.push({name: "Apply"})
                }
+               else{this.report_status = 1;}
           })
 
       },
