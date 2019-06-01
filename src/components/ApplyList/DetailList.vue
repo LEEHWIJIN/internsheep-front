@@ -215,27 +215,27 @@
           }
           return this.applyTerm;
         });
-        await this.readStarScore()
+        // await this.readStarScore()
       },
       methods: {
-          readStarScore(){
-              console.log(document.getElementById("review"))
-              if(this.companyReview.length!=0) {
-
-                  for (var k = 0; k < this.companyReview.length; k++) {
-
-                      var starScore = document.getElementById("review")[k].getElementsByName("rating").length;
-                      for (var i = 0; i < starScore; i++) {
-                          if (this.companyReview[k].starScore == document.getElementsByName("rating")[i].value) {
-                              document.getElementsByName("rating")[i].checked = true;
-                          }
-                      }
-                  }
-              }
-          },
+          // readStarScore(){
+          //     console.log(document.getElementById("review"))
+          //     if(this.companyReview.length!=0) {
+          //
+          //         for (var k = 0; k < this.companyReview.length; k++) {
+          //
+          //             var starScore = document.getElementById("review")[k].getElementsByName("rating").length;
+          //             for (var i = 0; i < starScore; i++) {
+          //                 if (this.companyReview[k].starScore == document.getElementsByName("rating")[i].value) {
+          //                     document.getElementsByName("rating")[i].checked = true;
+          //                 }
+          //             }
+          //         }
+          //     }
+          // },
         applyStd(cName){
             this.$http.get('http://localhost:8888/std/mypage/applyStatus',{params:{sLoginID : this.user.loginId, applySemester : this.applyTerm.applySemester}}).then((response)=>{
-            if(response.data != '0'){
+            if(response.data == '합격하거나 심사중 상태'){
                 alert("이미 지원을 한 상태 입니다.")
             }
             else{
