@@ -136,7 +136,7 @@
         </li>
 
             <h6 class="text-dark">기업후기</h6>
-          <li v-for="cr in companyReview" class="d-flex mb-4" style="color: #1b1e21">
+          <li v-for="cr in companyReview" class="d-flex mb-4" id="review" style="color: #1b1e21">
             <div class="pl-3">
               <ul class="list-unstyled">
                 <li>제목 : {{cr.reviewTitle}}</li>
@@ -215,12 +215,16 @@
       },
       methods: {
           readStarScore(){
-              console.log(document.getElementsByClassName("d-flex mb-4"))
-              for(var k=0;k<this.companyReview.length;k++){
-                  var starScore = document.getElementsByName("rating").length;
-                  for(var i=0;i<starScore;i++){
-                      if(this.companyReview[k].starScore==document.getElementsByName("rating")[i].value){
-                          document.getElementsByName("rating")[i].checked = true;
+              console.log(document.getElementById("review"))
+              if(this.companyReview.length!=0) {
+
+                  for (var k = 0; k < this.companyReview.length; k++) {
+
+                      var starScore = document.getElementById("review")[k].getElementsByName("rating").length;
+                      for (var i = 0; i < starScore; i++) {
+                          if (this.companyReview[k].starScore == document.getElementsByName("rating")[i].value) {
+                              document.getElementsByName("rating")[i].checked = true;
+                          }
                       }
                   }
               }
