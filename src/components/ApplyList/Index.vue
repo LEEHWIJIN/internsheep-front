@@ -2,19 +2,22 @@
 <template>
   <section class="section section-lg-bottom bg-light">
     <v-base></v-base>
+    <div class="mt-4 text-center">
+    **기업 상세정보
+    </div>
     <div class="container rounded-sm bg-white shadow">
       <div id="apply">
         <!-- <v-CoList :applylist="applylist" @clickCo="clickCo"></v-CoList> -->
         <div class="row">
           <!-- 기업 목록 -->
-          <div class="company-item companyList col-lg-5">
-            <div class="comanyList">
-              <div class="search-container">
-                <form class="search-form pb-2" action="/action_page.php">
-                  <input class="search-input" type="text" placeholder="Search" name="search" style="font-size:17px; color: #555555;">
-                  <button class="search-button" type="submit"><i class="fa fa-search" style="font-size:20px; color:#555555;"></i></button>
-                </form>
-              </div>
+          <div class="companyList col-lg-5">
+            <div class="search-container pt-3">
+              <form class="search-form pb-2" action="/action_page.php">
+                <input class="search-input" type="text" placeholder="Search" name="search" style="font-size:17px; color: #555555;">
+                <button class="search-button" type="submit"><i class="fa fa-search" style="font-size:20px; color:#555555;"></i></button>
+              </form>
+            </div>
+            <div class="company-item comanyList">
               <ul class="list-styled list-bordered">
                   <div v-for='(AL,index) in applylist' :key="AL.cNoticeID" @click="clickCo(index)" v-if="AL.cName.includes(searchinput)||AL.cOccupation.includes(searchinput)||AL.cTag.includes(searchinput)">
                     <div class="zoom">
@@ -48,106 +51,133 @@
           <!-- 기업 상세 목록 -->
           <div class="company-item detailList col-lg-10 ">
               <div>
-                <v-detail-list :selectedCo="selectedCo"></v-detail-list>
+                <v-detail-list :selectedCo="selectedCo" :companyReview="companyReview" :starNum="starNum"></v-detail-list>
               </div>
           </div>
-
         </div>
       </div>
     </div>
-    <v-footer class="mt-5"></v-footer>
+    <v-footer class="mt-4"></v-footer>
   </section>
 </template>
-
-
 <script>
  import VBase from '../Base/Index.vue'
  import VFooter from '../Footer/Index.vue'
 // import VCoList from "./CoList.vue"
  import VDetailList from "./DetailList.vue"
-  export default{
-      name: 'Apply',
-      data() {
-        return {
-          applylist:[],
-          selectedCo:[],
-          applyTerm:{},
-          searchinput:"",
+export default{
+  name: 'Apply',
+  data() {
+    return {
+      applylist:[],
+      selectedCo:[],
+      applyTerm:{},
+      searchinput:"",
+      companyReview: [],
+      starNum : [],
+
+    }
+  },
+  components: {
+      //VCoList,
+      VDetailList,
+      VBase,
+      VFooter,
+  },
+  created(){
+    this.compareDate();
+  },
+  methods: {
+    applyList(){
+      this.$http.get('http://localhost:8888/std/list',{params:{applyOrder:this.applyTerm.applyOrder, applySemester: this.applyTerm.applySemester}}).then((response) => {
+        for(var i=0; i<response.data.length;i++){
+            this.applylist.push({
+              cBenefit : response.data[i].cBenefit,
+              cPay : response.data[i].cPay,
+              internTermStart : response.data[i].internTermStart,
+              internTermEnd : response.data[i].internTermEnd,
+              cManagerPhone : response.data[i].cManagerPhone,
+              cImage : response.data[i].cImage,
+              cLocation : response.data[i].cLocation,
+              cManagerName : response.data[i].cManagerName,
+              cName : response.data[i].cName,
+              cOccupation : response.data[i].cOccupation,
+              cTag : response.data[i].cTag,
+              cNumOfPeople :response.data[i].cNumOfPeople,
+              applyStdNum : response.data[i].applyStdNum,
+              cInfo : response.data[i].cInfo,
+              cEmail : response.data[i].cEmail,
+          })
         }
-      },
-      components: {
-          //VCoList,
-          VDetailList,
-          VBase,
-          VFooter,
-      },
-      created(){
-          this.compareDate();
-      },
-      methods: {
-        applyList(){
-          this.$http.get('http://api.ajou-internsheep.co/std/list',{params:{applyOrder:this.applyTerm.applyOrder, applySemester: this.applyTerm.applySemester}}).then((response) => {
-            for(var i=0; i<response.data.length;i++){
-                this.applylist.push({
-                  cBenefit : response.data[i].cBenefit,
-                  cPay : response.data[i].cPay,
-                  internTermStart : response.data[i].internTermStart,
-                  internTermEnd : response.data[i].internTermEnd,
-                  cManagerPhone : response.data[i].cManagerPhone,
-                  cImage : response.data[i].cImage,
-                  cLocation : response.data[i].cLocation,
-                  cManagerName : response.data[i].cManagerName,
-                  cName : response.data[i].cName,
-                  cOccupation : response.data[i].cOccupation,
-                  cTag : response.data[i].cTag,
-                  cNumOfPeople :response.data[i].cNumOfPeople,
-                  applyStdNum : response.data[i].applyStdNum,
-                  cInfo : response.data[i].cInfo,
-                  cEmail : response.data[i].cEmail,
-              })
-            }
-             this.selectedCo.push(this.applylist[0]);
-          })
-        },
-        clickCo(selectedNum){
-          this.selectedCo=[]
-          this.selectedCo.push({
-              cBenefit : this.applylist[selectedNum].cBenefit,
-              cPay : this.applylist[selectedNum].cPay,
-              internTermStart : this.applylist[selectedNum].internTermStart.split('T')[0],
-              internTermEnd : this.applylist[selectedNum].internTermEnd.split('T')[0],
-              cManagerPhone : this.applylist[selectedNum].cManagerPhone,
-              cImage : this.applylist[selectedNum].cImage,
-              cLocation : this.applylist[selectedNum].cLocation,
-              cManagerName : this.applylist[selectedNum].cManagerName,
-              cName : this.applylist[selectedNum].cName,
-              cOccupation : this.applylist[selectedNum].cOccupation,
-              cTag : this.applylist[selectedNum].cTag,
-              cNumOfPeople :this.applylist[selectedNum].cNumOfPeople,
-              applyStdNum : this.applylist[selectedNum].applyStdNum,
-              cInfo : this.applylist[selectedNum].cInfo,
-              cEmail : this.applylist[selectedNum].cEmail,
-          })
-        },
-        compareDate(){
-          this.$http.get('http://localhost:8888/admin/recentApplyTerm').then((response) => {
-            this.applyTerm = {
-                applyStart : response.data.applyStart,
-                applyEnd : response.data.applyEnd,
-                applySemester : response.data.applySemester,
-                applyOrder : response.data.applyOrder
-            }
-            this.applyList();
-          })
-        },
+          this.selectedCo.push(this.applylist[0]);
+      })
+    },
+    async clickCo(selectedNum) {
+      this.selectedCo = []
+      await this.selectedCo.push({
+          cBenefit: this.applylist[selectedNum].cBenefit,
+          cPay: this.applylist[selectedNum].cPay,
+          internTermStart: this.applylist[selectedNum].internTermStart,
+          internTermEnd: this.applylist[selectedNum].internTermEnd,
+          cManagerPhone: this.applylist[selectedNum].cManagerPhone,
+          cImage: this.applylist[selectedNum].cImage,
+          cLocation: this.applylist[selectedNum].cLocation,
+          cManagerName: this.applylist[selectedNum].cManagerName,
+          cName: this.applylist[selectedNum].cName,
+          cOccupation: this.applylist[selectedNum].cOccupation,
+          cTag: this.applylist[selectedNum].cTag,
+          cNumOfPeople: this.applylist[selectedNum].cNumOfPeople,
+          applyStdNum: this.applylist[selectedNum].applyStdNum,
+          cInfo: this.applylist[selectedNum].cInfo,
+          cEmail: this.applylist[selectedNum].cEmail,
+      })
+      await this.$http.get('http://localhost:8888/std/loadCoReview', {params: {cName: this.applylist[selectedNum].cName}}).then((response) => {
+        this.companyReview = []
+        for (var i = 0; i < response.data.length; i++) {
+            this.companyReview.push({
+                cName: response.data[i].cName,
+                starScore: response.data[i].starScore,
+                reviewTitle: response.data[i].reviewTitle,
+                reviewContent: response.data[i].reviewContent,
+                internTermStart: response.data[i].internTermStart,
+                internTermEnd: response.data[i].internTermEnd
+            })
+        }
+        this.starCount(this.companyReview)
+      })
+    },
+  starCount(companyReview) {
+    var zero = 0, first = 0, second = 0, three = 0, four = 0, five = 0;
+    for (var i = 0; i < this.companyReview.length; i++) {
+      for(var i =0;i<companyReview.length;i++) {
+          if(companyReview[i].starScore==0) zero++
+          else if(companyReview[i].starScore==1) first++
+          else if(companyReview[i].starScore==2) second++
+          else if(companyReview[i].starScore==3) three++
+          else if(companyReview[i].starScore==4) four++
+          else if(companyReview[i].starScore==5) five++
       }
-  }
+    }
+    this.starNum = [zero,first,second,three,four,five]
+  },
+  compareDate(){
+    this.$http.get('http://localhost:8888/admin/recentApplyTerm').then((response) => {
+      this.applyTerm = {
+          applyStart : response.data.applyStart,
+          applyEnd : response.data.applyEnd,
+          applySemester : response.data.applySemester,
+          applyOrder : response.data.applyOrder
+      }
+      this.applyList();
+    })
+  },
+}
+}
 </script>
 
 <style scoped>
-
 .section {
-  padding-top: 150px;
+  padding-top: 60px;
   padding-bottom: 0px;
 }
 
@@ -162,8 +192,20 @@
   flex-basis: 40%;
 }
 
+@media (max-width: 1000px) {
+  .companyList {
+    flex-basis: 100%;
+  }
+}
+
 .detailList {
   flex-basis: 60%;
+}
+
+@media (max-width: 1000px) {
+  .detailList {
+    flex-basis: 100%;
+  }
 }
 
 /* search bar */
@@ -200,7 +242,8 @@
  }
 
 .zoom:hover {
-  transform: scale(1.072); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-    box-shadow: 0px 2px 8px 0px rgba(51, 77, 128, 0.12) !important;
+  background-color: white;
+  transform: scale(1.072) !important; /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  box-shadow: 0px 2px 8px 0px rgba(51, 77, 128, 0.12) !important;
 }
 </style>
