@@ -45,7 +45,7 @@
                    </div>
                    <div class="btn btn-outline-primary">{{al.YN}}</div>
                  </div>
-                 <div class="col-12 text-center">
+                 <div v-if="giveupStatus == 0" class="col-12 text-center">
                    <button class="btn btn-primary" @click="giveup(index)">포기하기</button>
                  </div>
                </div>
@@ -88,6 +88,7 @@
           cOccupation: "",
           YN : "",
           current : 0,
+          giveupStatus : 0
       }
     },
     components: {
@@ -109,22 +110,23 @@
           this.$router.push({name: "Apply"})
       },
       getApplyStatus(loginId) {
-        this.$http.get('http://localhost:8888/std/mypage/applyStatus',{params:{sLoginID : loginId, applySemester : this.applyTerm.applySemester}}).then((response)=>{
-            if(response.data=='0'){
+        this.$http.get('http://localhost:8888/std/mypage/loadApplyAll',{params:{sLoginID : loginId, applySemester : this.applyTerm.applySemester}}).then((response)=>{
+            if(response.data=='지원 이력 없음'){
                 this.confirm = 2
             }
             else {
                 for(var i=0; i<response.data.length;i++) {
                     if(this.applyTerm.applyOrder == response.data[i].applyOrder){
+                        console.log('현재 지원이력 있음')
                         this.current = 1
                         this.cName = response.data[i].cName
                         this.cOccupation = response.data[i].cOccupation
                         if (response.data[i].YN == 1) this.YN = "합격";
                         else if (response.data[i].YN == -1) this.YN = "심사중";
                         else if (response.data[i].YN == 0) this.YN = "불합격";
-                        else if (response.data[i].YN == 2) this.YN = "포기";
                     }
                     else {
+                        console.log('과거 지원이력 있음')
                         this.confirm = 1
                         this.applylist.push({
                             cOccupation: response.data[i].cOccupation,
@@ -136,7 +138,10 @@
                         if (response.data[i].YN == 1) this.applylist[i].YN = "합격";
                         else if (response.data[i].YN == -1) this.applylist[i].YN = "심사중";
                         else if (response.data[i].YN == 0) this.applylist[i].YN = "불합격";
-                        else if (response.data[i].YN == 2) this.applylist[i].YN = "포기";
+                        else if (response.data[i].YN == 2) {
+                            this.applylist[i].YN = "포기";
+                            this.giveupStatus = 1;
+                        }
                     }
                 }
             }
