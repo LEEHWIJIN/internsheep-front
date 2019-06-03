@@ -109,7 +109,6 @@
                   cInfo : response.data[i].cInfo,
                   cEmail : response.data[i].cEmail,
               })
-                console.log(response.data[i].internTermStart)
             }
           })
         },

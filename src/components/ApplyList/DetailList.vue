@@ -109,7 +109,7 @@
               <h6 style="font-weight:bold"  class="text-dark">주소</h6>
               <ul class="list-unstyled">
                 <li class="mb-1">{{sc.cLocation}}</li>
-                <vue-daum-map :appKey="appKey" :center.sync="center" :level.sync="level" :mapTypeId="mapTypeId" :libraries="libraries" @load="onLoad" @center_changed="onMapEvent('center_changed', $event)" style="width:520px;height:300px;">
+                <vue-daum-map :appKey="appKey" :center.sync="center" :level.sync="level" :mapTypeId="mapTypeId" :libraries="libraries" @load="onLoad" @center_changed="onMapEvent('center_changed', $event)" @idle="onLoad"style="width:520px;height:300px;">
                 </vue-daum-map>
               </ul>
             </div>
@@ -134,7 +134,6 @@
             </ul>
           </div>
         </li>
-<<<<<<< HEAD
             <h6 style="font-weight:bold"  class="text-dark">기업후기</h6>
           <div class="col-lg-12 mb-3">
             <fieldset class="rating ml-3">
@@ -250,9 +249,34 @@
             level: 3,
             libraries: ['services', 'clusterer', 'drawing'],
             mapTypeId: VueDaumMap.MapTypeId.NORMAL, // 맵 타입
-            mapObject: null
+            mapObject: null,
         }
       },
+      // watch: {
+      //         onLoad (map) {
+      //             var geocoder = new daum.maps.services.Geocoder();
+      //             geocoder.addressSearch(this.selectedCo[0].cLocation, function(result, status) {
+      //                 if (status === daum.maps.services.Status.OK) {
+      //                     var coords = new daum.maps.LatLng(result[0].y, result[0].x);
+      //
+      //                     // 결과값으로 받은 위치를 마커로 표시합니다
+      //                     var marker = new daum.maps.Marker({
+      //                         map: map,
+      //                         position: coords
+      //                     });
+      //
+      //                     // 인포윈도우로 장소에 대한 설명을 표시합니다
+      //                     var infowindow = new daum.maps.InfoWindow({
+      //                         content: '<div style="width:150px;text-align:center;padding:6px 0;">회사</div>'
+      //                     });
+      //
+      //                     infowindow.open(map, marker);
+      //                     // console.log(coords)
+      //                     map.setCenter(coords);
+      //                 }
+      //             });
+      //         },
+      // },
       components: {
           VueDaumMap
       },
@@ -321,7 +345,6 @@
             })
         },
           onLoad (map) {
-
               var geocoder = new daum.maps.services.Geocoder();
               geocoder.addressSearch(this.selectedCo[0].cLocation, function(result, status) {
 
