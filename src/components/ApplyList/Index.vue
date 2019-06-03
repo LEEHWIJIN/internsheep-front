@@ -72,6 +72,7 @@
           applylist:[],
           selectedCo:[],
           applyTerm:{},
+          searchinput:"",
         }
       },
       components: {
