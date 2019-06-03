@@ -48,7 +48,7 @@
           <!-- 기업 상세 목록 -->
           <div class="company-item detailList col-lg-10 ">
               <div>
-                <v-detail-list :selectedCo="selectedCo"></v-detail-list>
+                <v-detail-list :selectedCo="selectedCo" :companyReview="companyReview" :starNum="starNum"></v-detail-list>
               </div>
           </div>
 
@@ -72,6 +72,9 @@
           applylist:[],
           selectedCo:[],
           applyTerm:{},
+            searchinput:"",
+            companyReview: [],
+            starNum : [],
         }
       },
       components: {
@@ -85,7 +88,7 @@
       },
       methods: {
         applyList(){
-          this.$http.get('http://api.ajou-internsheep.co/std/list',{params:{applyOrder:this.applyTerm.applyOrder, applySemester: this.applyTerm.applySemester}}).then((response) => {
+          this.$http.get('http://localhost:8888/std/list',{params:{applyOrder:this.applyTerm.applyOrder, applySemester: this.applyTerm.applySemester}}).then((response) => {
             for(var i=0; i<response.data.length;i++){
                 this.applylist.push({
                   cBenefit : response.data[i].cBenefit,
@@ -104,29 +107,59 @@
                   cInfo : response.data[i].cInfo,
                   cEmail : response.data[i].cEmail,
               })
+                console.log(response.data[i].internTermStart)
             }
           })
         },
-        clickCo(selectedNum){
-          this.selectedCo=[]
-          this.selectedCo.push({
-              cBenefit : this.applylist[selectedNum].cBenefit,
-              cPay : this.applylist[selectedNum].cPay,
-              internTermStart : this.applylist[selectedNum].internTermStart.split('T')[0],
-              internTermEnd : this.applylist[selectedNum].internTermEnd.split('T')[0],
-              cManagerPhone : this.applylist[selectedNum].cManagerPhone,
-              cImage : this.applylist[selectedNum].cImage,
-              cLocation : this.applylist[selectedNum].cLocation,
-              cManagerName : this.applylist[selectedNum].cManagerName,
-              cName : this.applylist[selectedNum].cName,
-              cOccupation : this.applylist[selectedNum].cOccupation,
-              cTag : this.applylist[selectedNum].cTag,
-              cNumOfPeople :this.applylist[selectedNum].cNumOfPeople,
-              applyStdNum : this.applylist[selectedNum].applyStdNum,
-              cInfo : this.applylist[selectedNum].cInfo,
-              cEmail : this.applylist[selectedNum].cEmail,
-          })
+         async clickCo(selectedNum) {
+             this.selectedCo = []
+             await this.selectedCo.push({
+                 cBenefit: this.applylist[selectedNum].cBenefit,
+                 cPay: this.applylist[selectedNum].cPay,
+                 internTermStart: this.applylist[selectedNum].internTermStart,
+                 internTermEnd: this.applylist[selectedNum].internTermEnd,
+                 cManagerPhone: this.applylist[selectedNum].cManagerPhone,
+                 cImage: this.applylist[selectedNum].cImage,
+                 cLocation: this.applylist[selectedNum].cLocation,
+                 cManagerName: this.applylist[selectedNum].cManagerName,
+                 cName: this.applylist[selectedNum].cName,
+                 cOccupation: this.applylist[selectedNum].cOccupation,
+                 cTag: this.applylist[selectedNum].cTag,
+                 cNumOfPeople: this.applylist[selectedNum].cNumOfPeople,
+                 applyStdNum: this.applylist[selectedNum].applyStdNum,
+                 cInfo: this.applylist[selectedNum].cInfo,
+                 cEmail: this.applylist[selectedNum].cEmail,
+             })
+             await this.$http.get('http://localhost:8888/std/loadCoReview', {params: {cName: this.applylist[selectedNum].cName}}).then((response) => {
+                 this.companyReview = []
+                 for (var i = 0; i < response.data.length; i++) {
+                     this.companyReview.push({
+                         cName: response.data[i].cName,
+                         starScore: response.data[i].starScore,
+                         reviewTitle: response.data[i].reviewTitle,
+                         reviewContent: response.data[i].reviewContent,
+                         internTermStart: response.data[i].internTermStart,
+                         internTermEnd: response.data[i].internTermEnd
+                     })
+                 }
+                 this.starCount(this.companyReview)
+             })
         },
+      starCount(companyReview) {
+          var zero = 0, first = 0, second = 0, three = 0, four = 0, five = 0;
+          for (var i = 0; i < this.companyReview.length; i++) {
+              for(var i =0;i<companyReview.length;i++) {
+                  if(companyReview[i].starScore==0) zero++
+                  else if(companyReview[i].starScore==1) first++
+                  else if(companyReview[i].starScore==2) second++
+                  else if(companyReview[i].starScore==3) three++
+                  else if(companyReview[i].starScore==4) four++
+                  else if(companyReview[i].starScore==5) five++
+              }
+
+          }
+          this.starNum = [zero,first,second,three,four,five]
+      },
         compareDate(){
           this.$http.get('http://localhost:8888/admin/recentApplyTerm').then((response) => {
             this.applyTerm = {
