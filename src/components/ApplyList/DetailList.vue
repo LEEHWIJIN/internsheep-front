@@ -125,7 +125,7 @@
             </div>
           </li>
 
-          <li class="d-flex mb-4">
+        <li class="d-flex mb-4">
           <i class="fa fa-phone icon-grey"></i>
           <div class="pl-3">
             <h6 style="font-weight:bold"  class="text-dark">담당자 성함 및 연락처</h6>
@@ -134,6 +134,7 @@
             </ul>
           </div>
         </li>
+<<<<<<< HEAD
             <h6 style="font-weight:bold"  class="text-dark">기업후기</h6>
           <div class="col-lg-12 mb-3">
             <fieldset class="rating ml-3">
@@ -223,7 +224,6 @@
               </ul>
             </div>
           </li>
-
           <div class="text-center">
             <button class="btn btn-primary btn-sm" @click="applyStd(sc.cName)">지원하기</button>
             <button class="btn btn-primary btn-sm ml-2" @click="">찜하기</button>
@@ -271,6 +271,7 @@
           }
       },
       async created(){
+        
         await this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
             this.user = res.data.user;
             return this.user;

@@ -2,19 +2,22 @@
 <template>
   <section class="section section-lg-bottom bg-light">
     <v-base></v-base>
+    <div class="mt-4 text-center">
+    **기업 상세정보
+    </div>
     <div class="container rounded-sm bg-white shadow">
       <div id="apply">
         <!-- <v-CoList :applylist="applylist" @clickCo="clickCo"></v-CoList> -->
         <div class="row">
           <!-- 기업 목록 -->
-          <div class="company-item companyList col-lg-5">
-            <div class="comanyList">
-              <div class="search-container">
-                <form class="search-form pb-2" action="/action_page.php">
-                  <input class="search-input" type="text" placeholder="Search" name="search" style="font-size:17px; color: #555555;">
-                  <button class="search-button" type="submit"><i class="fa fa-search" style="font-size:20px; color:#555555;"></i></button>
-                </form>
-              </div>
+          <div class="companyList col-lg-5">
+            <div class="search-container pt-3">
+              <form class="search-form pb-2" action="/action_page.php">
+                <input class="search-input" type="text" placeholder="Search" name="search" style="font-size:17px; color: #555555;">
+                <button class="search-button" type="submit"><i class="fa fa-search" style="font-size:20px; color:#555555;"></i></button>
+              </form>
+            </div>
+            <div class="company-item comanyList">
               <ul class="list-styled list-bordered">
                   <div v-for='(AL,index) in applylist' :key="AL.cNoticeID" @click="clickCo(index)" v-if="AL.cName.includes(searchinput)||AL.cOccupation.includes(searchinput)||AL.cTag.includes(searchinput)">
                     <div class="zoom">
@@ -51,15 +54,12 @@
                 <v-detail-list :selectedCo="selectedCo" :companyReview="companyReview" :starNum="starNum"></v-detail-list>
               </div>
           </div>
-
         </div>
       </div>
     </div>
-    <v-footer class="mt-5"></v-footer>
+    <v-footer class="mt-4"></v-footer>
   </section>
 </template>
-
-
 <script>
  import VBase from '../Base/Index.vue'
  import VFooter from '../Footer/Index.vue'
@@ -75,6 +75,7 @@
             searchinput:"",
             companyReview: [],
             starNum : [],
+
         }
       },
       components: {
@@ -85,6 +86,7 @@
       },
       created(){
           this.compareDate();
+          this.createdFirstList();
       },
       methods: {
         applyList(){
@@ -171,14 +173,16 @@
             this.applyList();
           })
         },
+        createdFirstList(){
+          this.clickCo(1);
+        },
       }
   }
 </script>
 
 <style scoped>
-
 .section {
-  padding-top: 150px;
+  padding-top: 60px;
   padding-bottom: 0px;
 }
 
@@ -193,8 +197,20 @@
   flex-basis: 40%;
 }
 
+@media (max-width: 1000px) {
+  .companyList {
+    flex-basis: 100%;
+  }
+}
+
 .detailList {
   flex-basis: 60%;
+}
+
+@media (max-width: 1000px) {
+  .detailList {
+    flex-basis: 100%;
+  }
 }
 
 /* search bar */
@@ -231,7 +247,8 @@
  }
 
 .zoom:hover {
-  transform: scale(1.072); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-    box-shadow: 0px 2px 8px 0px rgba(51, 77, 128, 0.12) !important;
+  background-color: white;
+  transform: scale(1.072) !important; /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  box-shadow: 0px 2px 8px 0px rgba(51, 77, 128, 0.12) !important;
 }
 </style>
