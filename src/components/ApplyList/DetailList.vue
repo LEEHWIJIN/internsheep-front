@@ -109,7 +109,7 @@
               <h6 style="font-weight:bold"  class="text-dark">주소</h6>
               <ul class="list-unstyled">
                 <li class="mb-1">{{sc.cLocation}}</li>
-                <vue-daum-map :appKey="appKey" :center.sync="center" :level.sync="level" :mapTypeId="mapTypeId" :libraries="libraries" @load="onLoad" @center_changed="onMapEvent('center_changed', $event)" style="width:520px;height:300px;">
+                <vue-daum-map :draggable="false" :appKey="appKey" :center.sync="center" :level.sync="level" :mapTypeId="mapTypeId" :libraries="libraries" @load="onLoad" style="width:520px;height:300px;">
                 </vue-daum-map>
               </ul>
             </div>
@@ -172,160 +172,165 @@
 
 
 <script>
-    import VueDaumMap from 'vue-daum-map';
+import VueDaumMap from 'vue-daum-map';
 
-  export default{
-      name: 'applyList',
-      data() {
-        return {
-            user : {},
-            applyTerm : {},
-            appKey: '843e68ace7c69cb699e9d969ee289d4c',
-            center: {lat:33.450701, lng:126.570667},
-            level: 3,
-            libraries: ['services', 'clusterer', 'drawing'],
-            mapTypeId: VueDaumMap.MapTypeId.NORMAL, // 맵 타입
-            mapObject: null
+export default{
+  name: 'applyList',
+  data() {
+    return {
+        user : {},
+        applyTerm : {},
+        appKey: '843e68ace7c69cb699e9d969ee289d4c',
+        center: {lat:33.450701, lng:126.570667},
+        level: 3,
+        libraries: ['services', 'clusterer', 'drawing'],
+        mapTypeId: VueDaumMap.MapTypeId.NORMAL, // 맵 타입
+        mapObject: null,
+        map:null,
+        isload : -1,
+    }
+  },
+  components: {
+      VueDaumMap
+  },
+  props:{
+    selectedCo:{
+        type:Array,
+        required: true,
+    },
+      companyReview: {
+          type:Array,
+          required: true,
+      }
+  },
+  watch:{
+    selectedCo : function(){
+      if(this.isload==1){
+        this.onLoad(this.map);
+      }
+    }
+  },
+  async created(){
+    await this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+        this.user = res.data.user;
+        return this.user;
+    });
+    await this.$http.get('http://localhost:8888/admin/recentApplyTerm').then((response) => {
+      this.applyTerm = {
+          applyStart : response.data.applyStart,
+          applyEnd : response.data.applyEnd,
+          applySemester : response.data.applySemester,
+          applyOrder : response.data.applyOrder
+      }
+      return this.applyTerm;
+    });
+    // await this.readStarScore()
+  },
+  methods: {
+    // readStarScore(){
+    //     console.log(document.getElementById("review"))
+    //     if(this.companyReview.length!=0) {
+    //
+    //         for (var k = 0; k < this.companyReview.length; k++) {
+    //
+    //             var starScore = document.getElementById("review")[k].getElementsByName("rating").length;
+    //             for (var i = 0; i < starScore; i++) {
+    //                 if (this.companyReview[k].starScore == document.getElementsByName("rating")[i].value) {
+    //                     document.getElementsByName("rating")[i].checked = true;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // },
+    applyStd(cName){
+        this.$http.get('http://localhost:8888/std/mypage/applyStatus',{params:{sLoginID : this.user.loginId, applySemester : this.applyTerm.applySemester}}).then((response)=>{
+        if(response.data == '합격하거나 심사중 상태'){
+            alert("이미 지원을 한 상태 입니다.")
         }
-      },
-      components: {
-          VueDaumMap
-      },
-      props:{
-        selectedCo:{
-            type:Array,
-            required: true,
-        },
-          companyReview: {
-              type:Array,
-              required: true,
-          }
-      },
-      async created(){
-        await this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
-            this.user = res.data.user;
-            return this.user;
-        });
-        await this.$http.get('http://localhost:8888/admin/recentApplyTerm').then((response) => {
-          this.applyTerm = {
-              applyStart : response.data.applyStart,
-              applyEnd : response.data.applyEnd,
-              applySemester : response.data.applySemester,
-              applyOrder : response.data.applyOrder
-          }
-          return this.applyTerm;
-        });
-        // await this.readStarScore()
-      },
-      methods: {
-          // readStarScore(){
-          //     console.log(document.getElementById("review"))
-          //     if(this.companyReview.length!=0) {
-          //
-          //         for (var k = 0; k < this.companyReview.length; k++) {
-          //
-          //             var starScore = document.getElementById("review")[k].getElementsByName("rating").length;
-          //             for (var i = 0; i < starScore; i++) {
-          //                 if (this.companyReview[k].starScore == document.getElementsByName("rating")[i].value) {
-          //                     document.getElementsByName("rating")[i].checked = true;
-          //                 }
-          //             }
-          //         }
-          //     }
-          // },
-        applyStd(cName){
-            this.$http.get('http://localhost:8888/std/mypage/applyStatus',{params:{sLoginID : this.user.loginId, applySemester : this.applyTerm.applySemester}}).then((response)=>{
-            if(response.data == '합격하거나 심사중 상태'){
-                alert("이미 지원을 한 상태 입니다.")
-            }
-            else{
-                this.$http.post('http://localhost:8888/std/mypage/applyCo',{cName : cName, sLoginID : this.user.loginId,applySemester: this.applyTerm.applySemester,applyOrder:this.applyTerm.applyOrder}).then((response) => {
-                    if(response.data == '0'){
-                        alert("이력서가 없습니다. 이력서를 작성해주세요")
-                    }
-                    else {
-                        alert("지원을 성공 하셨습니다.!")
-                    }
-                })
-            }
+        else{
+            this.$http.post('http://localhost:8888/std/mypage/applyCo',{cName : cName, sLoginID : this.user.loginId,applySemester: this.applyTerm.applySemester,applyOrder:this.applyTerm.applyOrder}).then((response) => {
+                if(response.data == '0'){
+                    alert("이력서가 없습니다. 이력서를 작성해주세요")
+                }
+                else {
+                    alert("지원을 성공 하셨습니다.!")
+                }
             })
-        },
-          onLoad (map) {
-
-              var geocoder = new daum.maps.services.Geocoder();
-              geocoder.addressSearch(this.selectedCo[0].cLocation, function(result, status) {
-
-                  if (status === daum.maps.services.Status.OK) {
-
-                      var coords = new daum.maps.LatLng(result[0].y, result[0].x);
-
-                      // 결과값으로 받은 위치를 마커로 표시합니다
-                      var marker = new daum.maps.Marker({
-                          map: map,
-                          position: coords
-                      });
-                      // 인포윈도우로 장소에 대한 설명을 표시합니다
-                      var infowindow = new daum.maps.InfoWindow({
-                          content: '<div style="width:150px;text-align:center;padding:6px 0;">회사</div>'
-                      });
-                      infowindow.open(map, marker);
-                      // console.log(coords)
-                      map.setCenter(coords);
-
-                  }
-              });
-          },
-          onMapEvent (event, params) {
-              // console.log(`Daum Map Event(${event})`, params);
-          },
-          async pickCo(cName){//체크된 회사인지 아닌지 확인하고 if 문걸어야 할것같음 0 : 아직 찜 하지 않은 회사임 1 : 찜한한 회사임
-            console.log(cName)
-            await this.$http.get('http://localhost:8888/std/mypage/checkPickCo',{params:{sLoginID : this.user.loginId,cName:cName,applySemester:this.applyTerm.applySemester,applyOrder:this.applyTerm.applyOrder}}).then((response)=>{
-              console.log(response.data)
-              if(response.data==0){//아직 지원하지 않은 회사이므로 찜 해야함
-                this.postStdPickCo(cName);
-                return 0;
-              }
-              else{ //지원한 회사이니까 찜목록 삭제해야함
-                this.deleteStdPickCo(cName);
-                return 0;
-              }
-              return;
-            })
-          },
-          postStdPickCo(cName){
-            this.$http.post('http://localhost:8888/std/mypage/postStdPickCo',{cName : cName, sLoginID : this.user.loginId}).then((response) => {
-                  //꽉찬하트로 바꿔줘야 할것같음.
-                  if(response.data==0){
-                    // var heart = document.getElementsByClassName("fa-heart");
-                    // heart.style.font="bold";
-                    alert("찜이 되었습니다.");
-                    return ;
-                  }
-                  else{
-                    alert("찜이 되지 않았습니다. 다시 시도해주세요")
-                    return;
-                  }
-                });
-          },
-          deleteStdPickCo(cName){
-            this.$http.post('http://localhost:8888/std/mypage/deleteStdPickCo',{cName : cName, sLoginID : this.user.loginId,applySemester:this.applyTerm.applySemester,applyOrder:this.applyTerm.applyOrder}).then((response) => {
-              // var heart = document.getElementsByClassName("far fa-heart");
-              // heart.style.font="regular";
+        }
+        })
+    },
+    onLoad (map) {
+      this.map = map;
+      this.isload = 1;
+      var geocoder = new daum.maps.services.Geocoder();
+      var self = this;
+      geocoder.addressSearch(this.selectedCo[0].cLocation, function(result, status) {
+        if (status === daum.maps.services.Status.OK) {
+          self.center.lat = result[0].y;
+          self.center.lng = result[0].x;
+          var coords = new daum.maps.LatLng(result[0].y, result[0].x);
+          // 결과값으로 받은 위치를 마커로 표시합니다
+          var marker = new daum.maps.Marker({
+              map: map,
+              position: coords
+          });
+          // 인포윈도우로 장소에 대한 설명을 표시합니다
+          var infowindow = new daum.maps.InfoWindow({
+              content: '<div style="width:150px;text-align:center;padding:6px 0;">회사</div>'
+          });
+          infowindow.open(map, marker);
+          map.setCenter(coords);
+        }
+      });
+    },
+      async pickCo(cName){//체크된 회사인지 아닌지 확인하고 if 문걸어야 할것같음 0 : 아직 찜 하지 않은 회사임 1 : 찜한한 회사임
+        console.log(cName)
+        await this.$http.get('http://localhost:8888/std/mypage/checkPickCo',{params:{sLoginID : this.user.loginId,cName:cName,applySemester:this.applyTerm.applySemester,applyOrder:this.applyTerm.applyOrder}}).then((response)=>{
+          console.log(response.data)
+          if(response.data==0){//아직 지원하지 않은 회사이므로 찜 해야함
+            this.postStdPickCo(cName);
+            return 0;
+          }
+          else{ //지원한 회사이니까 찜목록 삭제해야함
+            this.deleteStdPickCo(cName);
+            return 0;
+          }
+          return;
+        })
+      },
+      postStdPickCo(cName){
+        this.$http.post('http://localhost:8888/std/mypage/postStdPickCo',{cName : cName, sLoginID : this.user.loginId}).then((response) => {
+              //꽉찬하트로 바꿔줘야 할것같음.
               if(response.data==0){
-                  // var heart = document.getElementsByClassName("fa-heart");
-                  // heart.style.font="bold";
-                alert("찜이 해제되었습니다.");
+                // var heart = document.getElementsByClassName("fa-heart");
+                // heart.style.font="bold";
+                alert("찜이 되었습니다.");
                 return ;
               }
               else{
                 alert("찜이 되지 않았습니다. 다시 시도해주세요")
-                return 0;
+                return;
               }
-            })
-          },
-      }
+            });
+      },
+      deleteStdPickCo(cName){
+        this.$http.post('http://localhost:8888/std/mypage/deleteStdPickCo',{cName : cName, sLoginID : this.user.loginId,applySemester:this.applyTerm.applySemester,applyOrder:this.applyTerm.applyOrder}).then((response) => {
+          // var heart = document.getElementsByClassName("far fa-heart");
+          // heart.style.font="regular";
+          if(response.data==0){
+              // var heart = document.getElementsByClassName("fa-heart");
+              // heart.style.font="bold";
+            alert("찜이 해제되었습니다.");
+            return ;
+          }
+          else{
+            alert("찜이 되지 않았습니다. 다시 시도해주세요")
+            return 0;
+          }
+        })
+      },
   }
+}
 </script>
 
 <style scoped>

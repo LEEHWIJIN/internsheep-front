@@ -106,6 +106,7 @@
                   cEmail : response.data[i].cEmail,
               })
             }
+             this.selectedCo.push(this.applylist[0]);
           })
         },
         clickCo(selectedNum){
