@@ -262,10 +262,14 @@ export default{
         type:Array,
         required: true,
     },
-      companyReview: {
-          type:Array,
-          required: true,
-      }
+    companyReview: {
+        type:Array,
+        required: true,
+    },
+    starNum: {
+      type:Array,
+      required: false,
+    }
   },
   watch:{
     selectedCo : function(){
