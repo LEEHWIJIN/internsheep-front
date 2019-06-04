@@ -109,7 +109,7 @@ export default{
               cEmail : response.data[i].cEmail,
           })
         }
-          this.selectedCo.push(this.applylist[0]);
+         this.clickCo(0);
       })
     },
     async clickCo(selectedNum) {
