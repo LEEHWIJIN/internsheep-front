@@ -205,6 +205,7 @@ import VError from './Error.vue'
           // }
           upload(event){
             this.uploadFile = event.target.files[0];
+            console.log('sdfsdf'+this.file)
           },
           submitFileAndReview(){
               var data = new FormData();

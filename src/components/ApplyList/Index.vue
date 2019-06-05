@@ -109,7 +109,7 @@ export default{
               cEmail : response.data[i].cEmail,
           })
         }
-          this.selectedCo.push(this.applylist[0]);
+          this.clickCo(0);
       })
     },
     async clickCo(selectedNum) {
@@ -133,6 +133,7 @@ export default{
       })
       await this.$http.get('http://localhost:8888/std/loadCoReview', {params: {cName: this.applylist[selectedNum].cName}}).then((response) => {
         this.companyReview = []
+        console.log('sdf', this.companyReview)
         for (var i = 0; i < response.data.length; i++) {
             this.companyReview.push({
                 cName: response.data[i].cName,
