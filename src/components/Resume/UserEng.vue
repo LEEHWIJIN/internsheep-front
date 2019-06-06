@@ -208,6 +208,23 @@ export default{
     },
     methods: {
     submitResume(){
+        if(this.EnglishSearch.length==0){
+            alert("전부 작성 해 주세요.")
+            return;
+        }
+        if(this.EnglishCommunication.length==0){
+            alert("전부 작성 해 주세요.")
+            return;
+        }
+        if(this.EnglishPresentation.length==0){
+            alert("전부 작성 해 주세요.")
+            return;
+        }
+        if(this.EnglishReport.length==0){
+            alert("전부 작성 해 주세요.")
+            return;
+        }
+
         var data =[{
         EnglishSearch : this.EnglishSearch,
         EnglishCommunication : this.EnglishCommunication,

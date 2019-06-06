@@ -169,6 +169,26 @@
       },
       methods: {
         submitResume(){
+          if(this.sEmail.length==0){
+            alert("전부 작성 해 주세요.")
+            return;
+          }
+          if(this.sPhone.length==0){
+            alert("전부 작성 해 주세요.")
+            return;
+          }
+          if(this.sGrade.length==0){
+            alert("전부 작성 해 주세요.")
+            return;
+          }
+          if(this.sHopeTerm.length==0){
+            alert("전부 작성 해 주세요.")
+            return;
+          }
+          if(this.sHope.length==0){
+            alert("전부 작성 해 주세요.")
+            return;
+          }
           var data =[{
             sEmail: this.sEmail,
             sPhone : this.sPhone,

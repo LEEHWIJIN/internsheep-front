@@ -465,6 +465,47 @@ export default{
     },
     methods: {
         submitResume(){
+            if(this.computerprogramming.length==0){
+                alert("전부 작성 해 주세요.")
+                return;
+            }
+            if(this.discretemath.length==0){
+                alert("전부 작성 해 주세요.")
+                return;
+            }
+            if(this.datastructure.length==0){
+                alert("전부 작성 해 주세요.")
+                return;
+            }
+            if(this.objectiveprogramming.length==0){
+                alert("전부 작성 해 주세요.")
+                return;
+            }
+            if(this.computerstructure.length==0){
+                alert("전부 작성 해 주세요.")
+                return;
+            }
+            if(this.algorithm.length==0){
+                alert("전부 작성 해 주세요.")
+                return;
+            }
+            if(this.systemprogramming.length==0){
+                alert("전부 작성 해 주세요.")
+                return;
+            }
+            if(this.os.length==0){
+                alert("전부 작성 해 주세요.")
+                return;
+            } 
+            if(this.database.length==0){
+                alert("전부 작성 해 주세요.")
+                return;
+            }
+            if(this.network.length==0){
+                alert("전부 작성 해 주세요.")
+                return;
+            }
+
             var data =[{
                 computerprogramming : this.computerprogramming,
                 discretemath : this.discretemath,
