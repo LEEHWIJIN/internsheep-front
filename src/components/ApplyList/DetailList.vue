@@ -134,101 +134,139 @@
             </ul>
           </div>
         </li>
-            <h6 style="font-weight:bold"  class="text-dark">기업후기</h6>
-          <div class="col-lg-12 mb-3">
-            <fieldset class="rating ml-3">
-              <input type="radio" id="star5" name="rating" value="5" onclick="return false" checked="true"/><label class = "full" for="star5" title="Awesome - 5 stars"></label>
-              <!--<input type="radio" id="star4half" name="rating" value="4 and a half" onclick="return false"/><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>-->
-              <input type="radio" id="star4" name="rating" value="4" onclick="return false"/><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
-              <!--<input type="radio" id="star3half" name="rating" value="3 and a half" onclick="return false"/><label class="half" for="star3half" title="Meh - 3.5 stars"></label>-->
-              <input type="radio" id="star3" name="rating" value="3" onclick="return false"/><label class = "full" for="star3" title="Meh - 3 stars"></label>
-              <!--<input type="radio" id="star2half" name="rating" value="2 and a half" onclick="return false"/><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>-->
-              <input type="radio" id="star2" name="rating" value="2" onclick="return false"/><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
-              <!--<input type="radio" id="star1half" name="rating" value="1 and a half" onclick="return false"/><label class="half" for="star1half" title="Meh - 1.5 stars"></label>-->
-              <input type="radio" id="star1" name="rating" value="1" onclick="return false"/><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
-              <!--<input type="radio" id="starhalf" name="rating" value="half" onclick="return false"/><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>-->
-            </fieldset> : {{starNum[5]}}
+
+        <li class="d-flex ">
+          <i class="fas fa-user-edit"></i>
+          <div class="pl-3">
+            <h6 style="font-weight:bold"  class="text-dark mb-3">기업 평가</h6>
           </div>
-          <div class="col-lg-12 mb-3">
-            <fieldset class="rating ml-3">
-              <input type="radio" id="star5-2" name="rating-2" value="5" onclick="return false"/><label class = "full" for="star5" title="Awesome - 5 stars"></label>
-              <!--<input type="radio" id="star4half" name="rating" value="4 and a half" onclick="return false"/><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>-->
-              <input type="radio" id="star4-2" name="rating-2" value="4" onclick="return false" checked="true"/><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
-              <!--<input type="radio" id="star3half" name="rating" value="3 and a half" onclick="return false"/><label class="half" for="star3half" title="Meh - 3.5 stars"></label>-->
-              <input type="radio" id="star3-2" name="rating-2" value="3" onclick="return false"/><label class = "full" for="star3" title="Meh - 3 stars"></label>
-              <!--<input type="radio" id="star2half" name="rating" value="2 and a half" onclick="return false"/><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>-->
-              <input type="radio" id="star2-2" name="rating-2" value="2" onclick="return false"/><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
-              <!--<input type="radio" id="star1half" name="rating" value="1 and a half" onclick="return false"/><label class="half" for="star1half" title="Meh - 1.5 stars"></label>-->
-              <input type="radio" id="star1-2" name="rating-2" value="1" onclick="return false"/><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
-              <!--<input type="radio" id="starhalf" name="rating" value="half" onclick="return false"/><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>-->
-            </fieldset> : {{starNum[4]}}</div>
-          <div class="col-lg-12 mb-3">
-            <fieldset class="rating ml-3">
-              <input type="radio" id="star5-3" name="rating-3" value="5" onclick="return false"/><label class = "full" for="star5" title="Awesome - 5 stars"></label>
-              <!--<input type="radio" id="star4half" name="rating" value="4 and a half" onclick="return false"/><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>-->
-              <input type="radio" id="star4-3" name="rating-3" value="4" onclick="return false" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
-              <!--<input type="radio" id="star3half" name="rating" value="3 and a half" onclick="return false"/><label class="half" for="star3half" title="Meh - 3.5 stars"></label>-->
-              <input type="radio" id="star3-3" name="rating-3" value="3" onclick="return false"checked="true"/><label class = "full" for="star3" title="Meh - 3 stars"></label>
-              <!--<input type="radio" id="star2half" name="rating" value="2 and a half" onclick="return false"/><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>-->
-              <input type="radio" id="star2-3" name="rating-3" value="2" onclick="return false"/><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
-              <!--<input type="radio" id="star1half" name="rating" value="1 and a half" onclick="return false"/><label class="half" for="star1half" title="Meh - 1.5 stars"></label>-->
-              <input type="radio" id="star1-3" name="rating-3" value="1" onclick="return false"/><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
-              <!--<input type="radio" id="starhalf" name="rating" value="half" onclick="return false"/><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>-->
-            </fieldset> : {{starNum[3]}}</div>
-          <div class="col-lg-12 mb-3">
-            <fieldset class="rating ml-3">
-              <input type="radio" id="star5-4" name="rating-4" value="5" onclick="return false"/><label class = "full" for="star5" title="Awesome - 5 stars"></label>
-              <!--<input type="radio" id="star4half" name="rating" value="4 and a half" onclick="return false"/><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>-->
-              <input type="radio" id="star4-4" name="rating-4" value="4" onclick="return false" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
-              <!--<input type="radio" id="star3half" name="rating" value="3 and a half" onclick="return false"/><label class="half" for="star3half" title="Meh - 3.5 stars"></label>-->
-              <input type="radio" id="star3-4" name="rating-4" value="3" onclick="return false"/><label class = "full" for="star3" title="Meh - 3 stars"></label>
-              <!--<input type="radio" id="star2half" name="rating" value="2 and a half" onclick="return false"/><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>-->
-              <input type="radio" id="star2-4" name="rating-4" value="2" onclick="return false" checked="true"/><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
-              <!--<input type="radio" id="star1half" name="rating" value="1 and a half" onclick="return false"/><label class="half" for="star1half" title="Meh - 1.5 stars"></label>-->
-              <input type="radio" id="star1-4" name="rating-4" value="1" onclick="return false"/><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
-              <!--<input type="radio" id="starhalf" name="rating" value="half" onclick="return false"/><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>-->
-            </fieldset> : {{starNum[2]}}</div>
-          <div class="col-lg-12 mb-3">
-            <fieldset class="rating ml-3">
-              <input type="radio" id="star5-5" name="rating-5" value="5" onclick="return false"/><label class = "full" for="star5" title="Awesome - 5 stars"></label>
-              <!--<input type="radio" id="star4half" name="rating" value="4 and a half" onclick="return false"/><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>-->
-              <input type="radio" id="star4-5" name="rating-5" value="4" onclick="return false" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
-              <!--<input type="radio" id="star3half" name="rating" value="3 and a half" onclick="return false"/><label class="half" for="star3half" title="Meh - 3.5 stars"></label>-->
-              <input type="radio" id="star3-5" name="rating-5" value="3" onclick="return false"/><label class = "full" for="star3" title="Meh - 3 stars"></label>
-              <!--<input type="radio" id="star2half" name="rating" value="2 and a half" onclick="return false"/><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>-->
-              <input type="radio" id="star2-5" name="rating-5" value="2" onclick="return false" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
-              <!--<input type="radio" id="star1half" name="rating" value="1 and a half" onclick="return false"/><label class="half" for="star1half" title="Meh - 1.5 stars"></label>-->
-              <input type="radio" id="star1-5" name="rating-5" value="1" onclick="return false" checked="true"/><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
-              <!--<input type="radio" id="starhalf" name="rating" value="half" onclick="return false"/><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>-->
-            </fieldset> : {{starNum[1]}}</div>
-          <div class="col-lg-12 mb-3">
-            <fieldset class="rating ml-3">
-              <input type="radio" id="star5-6" name="rating-6" value="5" onclick="return false"/><label class = "full" for="star5" title="Awesome - 5 stars"></label>
-              <!--<input type="radio" id="star4half" name="rating" value="4 and a half" onclick="return false"/><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>-->
-              <input type="radio" id="star4-6" name="rating-6" value="4" onclick="return false" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
-              <!--<input type="radio" id="star3half" name="rating" value="3 and a half" onclick="return false"/><label class="half" for="star3half" title="Meh - 3.5 stars"></label>-->
-              <input type="radio" id="star3-6" name="rating-6" value="3" onclick="return false"/><label class = "full" for="star3" title="Meh - 3 stars"></label>
-              <!--<input type="radio" id="star2half" name="rating" value="2 and a half" onclick="return false"/><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>-->
-              <input type="radio" id="star2-6" name="rating-6" value="2" onclick="return false" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
-              <!--<input type="radio" id="star1half" name="rating" value="1 and a half" onclick="return false"/><label class="half" for="star1half" title="Meh - 1.5 stars"></label>-->
-              <input type="radio" id="star1-6" name="rating-6" value="1" onclick="return false"/><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
-              <!--<input type="radio" id="starhalf" name="rating" value="half" onclick="return false"/><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>-->
-            </fieldset> : {{starNum[0]}}</div>
-          <li v-for="cr in companyReview" class="d-flex mb-4" style="color: #1b1e21">
-            <div class="pl-3">
-              <ul class="list-unstyled">
-                <li style="font-size:14px;">제목 : {{cr.reviewTitle}}</li>
-                <li style="font-size:14px;">인턴 기간  : {{cr.internTermStart}} ~ {{cr.internTermEnd}}</li>
-                <li style="font-size:14px;">{{cr.reviewContent}}</li>
-              </ul>
+        </li>
+
+        <div v-if="!isNaN(AvgRatings())" class="row pt-4 ml-3 mb-3 " style="line-height: 100%; border: 1px solid #bcbcbc; border-radius: 2rem; margin-right:50px; padding-left:50px; padding-bottom:15px;">
+            <div class="col-lg-6">
+              <div class="">
+                <fieldset class="rating ">
+                  <input type="radio" id="star5" name="rating" value="5" onclick="return false" checked="true"/><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+                  <!--<input type="radio" id="star4half" name="rating" value="4 and a half" onclick="return false"/><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>-->
+                  <input type="radio" id="star4" name="rating" value="4" onclick="return false"/><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+                  <!--<input type="radio" id="star3half" name="rating" value="3 and a half" onclick="return false"/><label class="half" for="star3half" title="Meh - 3.5 stars"></label>-->
+                  <input type="radio" id="star3" name="rating" value="3" onclick="return false"/><label class = "full" for="star3" title="Meh - 3 stars"></label>
+                  <!--<input type="radio" id="star2half" name="rating" value="2 and a half" onclick="return false"/><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>-->
+                  <input type="radio" id="star2" name="rating" value="2" onclick="return false"/><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+                  <!--<input type="radio" id="star1half" name="rating" value="1 and a half" onclick="return false"/><label class="half" for="star1half" title="Meh - 1.5 stars"></label>-->
+                  <input type="radio" id="star1" name="rating" value="1" onclick="return false"/><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+                  <!--<input type="radio" id="starhalf" name="rating" value="half" onclick="return false"/><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>-->
+                </fieldset> <span class="ml-3 pt-1" > {{starNum[5]}}명 </span><br>
+              </div><br>
+              <div class="">
+                <fieldset class="rating ">
+                  <input type="radio" id="star5-2" name="rating-2" value="5" onclick="return false"/><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+                  <!--<input type="radio" id="star4half" name="rating" value="4 and a half" onclick="return false"/><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>-->
+                  <input type="radio" id="star4-2" name="rating-2" value="4" onclick="return false" checked="true"/><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+                  <!--<input type="radio" id="star3half" name="rating" value="3 and a half" onclick="return false"/><label class="half" for="star3half" title="Meh - 3.5 stars"></label>-->
+                  <input type="radio" id="star3-2" name="rating-2" value="3" onclick="return false"/><label class = "full" for="star3" title="Meh - 3 stars"></label>
+                  <!--<input type="radio" id="star2half" name="rating" value="2 and a half" onclick="return false"/><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>-->
+                  <input type="radio" id="star2-2" name="rating-2" value="2" onclick="return false"/><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+                  <!--<input type="radio" id="star1half" name="rating" value="1 and a half" onclick="return false"/><label class="half" for="star1half" title="Meh - 1.5 stars"></label>-->
+                  <input type="radio" id="star1-2" name="rating-2" value="1" onclick="return false"/><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+                  <!--<input type="radio" id="starhalf" name="rating" value="half" onclick="return false"/><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>-->
+                </fieldset>  <span class="ml-3 pt-1" > {{starNum[4]}}명 </span><br>
+              </div><br>
+              <div class="">
+                <fieldset class="rating">
+                  <input type="radio" id="star5-3" name="rating-3" value="5" onclick="return false"/><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+                  <!--<input type="radio" id="star4half" name="rating" value="4 and a half" onclick="return false"/><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>-->
+                  <input type="radio" id="star4-3" name="rating-3" value="4" onclick="return false" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+                  <!--<input type="radio" id="star3half" name="rating" value="3 and a half" onclick="return false"/><label class="half" for="star3half" title="Meh - 3.5 stars"></label>-->
+                  <input type="radio" id="star3-3" name="rating-3" value="3" onclick="return false"checked="true"/><label class = "full" for="star3" title="Meh - 3 stars"></label>
+                  <!--<input type="radio" id="star2half" name="rating" value="2 and a half" onclick="return false"/><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>-->
+                  <input type="radio" id="star2-3" name="rating-3" value="2" onclick="return false"/><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+                  <!--<input type="radio" id="star1half" name="rating" value="1 and a half" onclick="return false"/><label class="half" for="star1half" title="Meh - 1.5 stars"></label>-->
+                  <input type="radio" id="star1-3" name="rating-3" value="1" onclick="return false"/><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+                  <!--<input type="radio" id="starhalf" name="rating" value="half" onclick="return false"/><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>-->
+                </fieldset>  <span class="ml-3 pt-1" > {{starNum[3]}}명 </span><br>
+              </div><br>
+              <div class="">
+                <fieldset class="rating">
+                  <input type="radio" id="star5-4" name="rating-4" value="5" onclick="return false"/><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+                  <!--<input type="radio" id="star4half" name="rating" value="4 and a half" onclick="return false"/><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>-->
+                  <input type="radio" id="star4-4" name="rating-4" value="4" onclick="return false" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+                  <!--<input type="radio" id="star3half" name="rating" value="3 and a half" onclick="return false"/><label class="half" for="star3half" title="Meh - 3.5 stars"></label>-->
+                  <input type="radio" id="star3-4" name="rating-4" value="3" onclick="return false"/><label class = "full" for="star3" title="Meh - 3 stars"></label>
+                  <!--<input type="radio" id="star2half" name="rating" value="2 and a half" onclick="return false"/><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>-->
+                  <input type="radio" id="star2-4" name="rating-4" value="2" onclick="return false" checked="true"/><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+                  <!--<input type="radio" id="star1half" name="rating" value="1 and a half" onclick="return false"/><label class="half" for="star1half" title="Meh - 1.5 stars"></label>-->
+                  <input type="radio" id="star1-4" name="rating-4" value="1" onclick="return false"/><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+                  <!--<input type="radio" id="starhalf" name="rating" value="half" onclick="return false"/><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>-->
+                </fieldset>  <span class="ml-3 pt-1" > {{starNum[2]}}명 </span><br>
+              </div><br>
+              <div class="">
+                <fieldset class="rating">
+                  <input type="radio" id="star5-5" name="rating-5" value="5" onclick="return false"/><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+                  <!--<input type="radio" id="star4half" name="rating" value="4 and a half" onclick="return false"/><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>-->
+                  <input type="radio" id="star4-5" name="rating-5" value="4" onclick="return false" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+                  <!--<input type="radio" id="star3half" name="rating" value="3 and a half" onclick="return false"/><label class="half" for="star3half" title="Meh - 3.5 stars"></label>-->
+                  <input type="radio" id="star3-5" name="rating-5" value="3" onclick="return false"/><label class = "full" for="star3" title="Meh - 3 stars"></label>
+                  <!--<input type="radio" id="star2half" name="rating" value="2 and a half" onclick="return false"/><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>-->
+                  <input type="radio" id="star2-5" name="rating-5" value="2" onclick="return false" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+                  <!--<input type="radio" id="star1half" name="rating" value="1 and a half" onclick="return false"/><label class="half" for="star1half" title="Meh - 1.5 stars"></label>-->
+                  <input type="radio" id="star1-5" name="rating-5" value="1" onclick="return false" checked="true"/><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+                  <!--<input type="radio" id="starhalf" name="rating" value="half" onclick="return false"/><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>-->
+                </fieldset> <span class="ml-3 pt-1" > {{starNum[1]}}명 </span><br>
+              </div><br>
+              <div class="">
+                <fieldset class="rating">
+                  <input type="radio" id="star5-6" name="rating-6" value="5" onclick="return false"/><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+                  <!--<input type="radio" id="star4half" name="rating" value="4 and a half" onclick="return false"/><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>-->
+                  <input type="radio" id="star4-6" name="rating-6" value="4" onclick="return false" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+                  <!--<input type="radio" id="star3half" name="rating" value="3 and a half" onclick="return false"/><label class="half" for="star3half" title="Meh - 3.5 stars"></label>-->
+                  <input type="radio" id="star3-6" name="rating-6" value="3" onclick="return false"/><label class = "full" for="star3" title="Meh - 3 stars"></label>
+                  <!--<input type="radio" id="star2half" name="rating" value="2 and a half" onclick="return false"/><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>-->
+                  <input type="radio" id="star2-6" name="rating-6" value="2" onclick="return false" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+                  <!--<input type="radio" id="star1half" name="rating" value="1 and a half" onclick="return false"/><label class="half" for="star1half" title="Meh - 1.5 stars"></label>-->
+                  <input type="radio" id="star1-6" name="rating-6" value="1" onclick="return false"/><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+                  <!--<input type="radio" id="starhalf" name="rating" value="half" onclick="return false"/><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>-->
+                </fieldset> <span class="ml-3 pt-1" > {{starNum[0]}}명 </span><br>
+              </div><br>
             </div>
-          </li>
-          <div class="text-center">
+            <div class="col-lg-6">
+              <br><br><br><br>
+              <div style="margin-left: 40px;">
+                <fieldset class="rating mr-3 ">
+                  <input type="radio" id="star5" name="search" value="5" onclick="return false"/><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+                  <input type="radio" id="star4half" name="search" value="4 and a half" onclick="return false"/><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+                  <input type="radio" id="star4" name="search" value="4" onclick="return false" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+                  <input type="radio" id="star3half" name="search" value="3 and a half" onclick="return false"/><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+                  <input type="radio" id="star3" name="search" value="3" onclick="return false"/><label class = "full" for="star3" title="Meh - 3 stars"></label>
+                  <input type="radio" id="star2half" name="search" value="2 and a half" onclick="return false"/><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+                  <input type="radio" id="star2" name="search" value="2" onclick="return false" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+                  <input type="radio" id="star1half" name="search" value="1 and a half" onclick="return false"/><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+                  <input type="radio" id="star1" name="search" value="1" onclick="return false" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+                  <input type="radio" id="starhalf" name="search" value="half" onclick="return false"/><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+                </fieldset> <br><br>
+                  총 평점 <span class="h5">{{AvgRatings()}}</span> / 5
+              </div>
+            </div>
+          </div>
+          <div v-else>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 해당 기업의 평가가 존재하지 않습니다.
+          </div>
+          <!-- <li v-for="cr in companyReview" class="d-flex mb-4" style="color: #1b1e21"> -->
+          <div   v-for="cr in companyReview" class="row p-4 ml-3 mb-3 " style="line-height: 100%; border-radius: 2rem; margin-right:50px; background:#F8F8F8; padding-left:1000px;">
+            <ul class="list-unstyled">
+              <li class="mb-3" style="font-size:14px;"><span style="font-weight:bold">인턴 기간</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{cr.internTermStart}} ~ {{cr.internTermEnd}}</li>
+              <li class="mb-3" style="font-size:14px;"><span style="font-weight:bold">한줄 평가</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{cr.reviewTitle}}</li>
+              <li  style="font-size:14px;"><span style="font-weight:bold">실습 후기</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{cr.reviewContent}}</li>
+            </ul>
+          </div>
+          <!-- </li> -->
+          <div class="text-center mt-4">
             <button class="btn btn-primary btn-sm" @click="applyStd(sc.cName)">지원하기</button>
             <button class="btn btn-primary btn-sm ml-2" @click="">찜하기</button>
           </div>
 
         </ul>
+
       </div>
     </div>
   </div>
@@ -278,6 +316,25 @@ export default{
       }
     }
   },
+  async beforeMount(){
+    await this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+        this.user = res.data.user;
+        return this.user;
+
+        // var EnglishSearch = sEnglish.EnglishSearch;
+        // var chkboxSr = document.getElementsByName('search').length;
+
+        // var docheck = [];
+        // for(var i=1;i<5;i++){
+          // docheck.push(document.getElementsByName('search')[i].value);
+          // if(EnglishSearch==docheck[i]){
+          console.log(res.data.user);
+
+          // }
+        // }
+    });
+
+  },
   async created(){
     await this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
         this.user = res.data.user;
@@ -290,6 +347,53 @@ export default{
           applySemester : response.data.applySemester,
           applyOrder : response.data.applyOrder
       }
+
+      var sum = 0;
+      var avg = 0;
+      var numOfPeople = 0;
+      for(var i=0;i<=5;i++){
+        sum += (this.starNum[i])*(i);
+        numOfPeople += this.starNum[i];
+      }
+      avg = sum/numOfPeople;
+
+      // console.log(AvgRatings());
+
+      // document.getElementsByName('search')[10].checked = true;
+
+
+      if(avg<=0.7){
+        document.getElementsByName('search')[10].checked = true;
+      }
+      else if(avg<=1.2){
+        document.getElementsByName('search')[9].checked = true;
+      }
+      else if(avg<=1.7){
+        document.getElementsByName('search')[8].checked = true;
+      }
+      else if(avg<=2.2){
+        document.getElementsByName('search')[7].checked = true;
+      }
+      else if(avg<=2.7){
+        document.getElementsByName('search')[6].checked = true;
+      }
+      else if(avg<=3.2){
+        document.getElementsByName('search')[5].checked = true;
+      }
+      else if(avg<=3.7){
+        document.getElementsByName('search')[4].checked = true;
+      }
+      else if(avg<=4.2){
+        document.getElementsByName('search')[3].checked = true;
+      }
+      else if(avg<=4.7){
+        document.getElementsByName('search')[2].checked = true;
+      }
+      else if(avg<=5){
+        document.getElementsByName('search')[1].checked = true;
+      }
+
+
       return this.applyTerm;
     });
   },
@@ -309,6 +413,19 @@ export default{
     //         }
     //     }
     // },
+    AvgRatings(){
+      var sum = 0;
+      var avg = 0;
+      var numOfPeople = 0;
+      for(var i=0;i<=5;i++){
+        sum += (this.starNum[i])*(i);
+        numOfPeople += this.starNum[i];
+      }
+      avg = sum/numOfPeople;
+
+      // document.getElementsByName('search')[9].checked = true;
+      return avg;
+    },
     applyStd(cName){
         this.$http.get('http://localhost:8888/std/mypage/applyStatus',{params:{sLoginID : this.user.loginId, applySemester : this.applyTerm.applySemester}}).then((response)=>{
         if(response.data == '합격하거나 심사중 상태'){
@@ -439,8 +556,8 @@ export default{
 
 .rating > input { display: none; }
 .rating > label:before {
-  margin: 5px;
-  font-size: 1.25em;
+  margin: 3px;
+  font-size: 1em;
   font-family: FontAwesome;
   display: inline-block;
   content: "\f005";
