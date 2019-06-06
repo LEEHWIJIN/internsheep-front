@@ -428,6 +428,7 @@
                 <button class="btn btn-light" type="submit">다음</button>
             </div>
         </form>
+        <button class="btn btn-light mr-4" @click="before">이전</button>
     </div>
   </div>
 </template>
@@ -460,7 +461,6 @@
             return this.user;
         });
         await this.$http.get('http://localhost:8888/std/mypage/watchResume',{params:{sLoginID : this.user.loginId}}).then(res =>{
-             console.log(res)
             // console.log(JSON.parse(res.data.sEnglish))
             var sScore = JSON.parse(res.data.sScore);
             var computerprogramming = sScore.computerprogramming;
@@ -600,6 +600,9 @@
     //         }];
     //         this.$store.dispatch('resume/submit_userGrade', data);
             this.$store.dispatch('resume/setResumeState',3);
+        },
+        before(){
+            this.$store.dispatch('resume/setResumeState',1);
         },
       }
   }

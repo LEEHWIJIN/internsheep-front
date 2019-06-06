@@ -1226,7 +1226,7 @@
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
-                <h6 style="font-weight:bold">Flask</h6
+                <h6 style="font-weight:bold">Flask</h6>
                   <input class="inp-cbx" id="cbx121" name="fl" value="배운적 없음" type="radio" style="display: none;" onclick="return false">
                     <label class="cbx" for="cbx121">
                       <span>
@@ -2645,6 +2645,7 @@
             <button class="btn btn-primary" type="submit">제출하기</button>
         </div>
       </form>
+      <button class="btn btn-light mr-4" @click="before">이전</button>
     </div>
   </div>
 </template>
@@ -2756,7 +2757,6 @@ import { mapActions, mapGetters } from "vuex";
             var Peral = programmingLang.Peral;
             var R = programmingLang.R;
             var VBA = programmingLang.VBA;
-            console.log(Javascript)
 
             var frameworkLang = JSON.parse(res.data.frameworkLang);
             var Nodejs = frameworkLang.Nodejs;
@@ -3210,6 +3210,9 @@ import { mapActions, mapGetters } from "vuex";
         // };
         // this.$store.dispatch('resume/submit_ALL', submit_resume);
         // this.$router.push({name: "Home"})
+        },
+        before(){
+            this.$store.dispatch('resume/setResumeState',2);
         },
     }
   }

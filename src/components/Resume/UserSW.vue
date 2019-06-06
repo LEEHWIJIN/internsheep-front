@@ -1224,7 +1224,7 @@
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
-                <h6 style="font-weight:bold">Flask</h6
+                <h6 style="font-weight:bold">Flask</h6>
                   <input class="inp-cbx" id="cbx121" name="fl" value="배운적 없음" type="radio" style="display: none;">
                     <label class="cbx" for="cbx121">
                       <span>
@@ -2640,9 +2640,10 @@
         </div>
         <br>
         <div class="col-12 text-center">
-            <button class="btn btn-primary" type="submit">제출하기</button>
+          <button class="btn btn-primary" type="submit">제출하기</button>
         </div>
       </form>
+      <button class="btn btn-light mr-4" @click="before">이전</button>
     </div>
   </div>
 </template>
@@ -2654,6 +2655,7 @@ import { mapActions, mapGetters } from "vuex";
     data() {
         return {
             user:{},
+            count : 0,
             programmingLang : {
                 Javascript : [],
                 HTML : [],
@@ -2740,29 +2742,414 @@ import { mapActions, mapGetters } from "vuex";
     },
     methods: {
         submitResume(){
-        var data =[{
-            programmingLang : this.programmingLang,
-            frameworkLang : this.frameworkLang,
-            databaseLang : this.databaseLang,
-            cloudLang : this.cloudLang,
-            machineLang : this.machineLang,
-        }];
-        this.$store.dispatch('resume/submit_SW', data);
+          var chkleng = document.getElementsByName('js').length;
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('js')[i].checked = false){
+                this.count++;
+              }
+              else if(document.getElementsByName('ht')[i].checked = false){
+                this.count++;
+              }
+            };//우선 테스트
+            console.log(this.count);
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName('cs')[i].value);
+          //     if(CSS==docheck[i]){
+          //       document.getElementsByName('cs')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName('jq')[i].value);
+          //     if(jQuery==docheck[i]){
+          //       document.getElementsByName('jq')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName('sq')[i].value);
+          //     if(SQL==docheck[i]){
+          //       document.getElementsByName('sq')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName('jv')[i].value);
+          //     if(Java==docheck[i]){
+          //       document.getElementsByName('jv')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("aj")[i].value);
+          //     if(AndroidJava==docheck[i]){
+          //       document.getElementsByName('aj')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("sf")[i].value);
+          //     if(Swift==docheck[i]){
+          //       document.getElementsByName('sf')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("ob")[i].value);
+          //     if(Objective==docheck[i]){
+          //       document.getElementsByName('ob')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("py")[i].value);
+          //     if(Python==docheck[i]){
+          //       document.getElementsByName('py')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("ph")[i].value);
+          //     if(Python==docheck[i]){
+          //       document.getElementsByName('ph')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("langC")[i].value);
+          //     if(C==docheck[i]){
+          //       document.getElementsByName('langC')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("mi")[i].value);
+          //     if(Microsoft==docheck[i]){
+          //       document.getElementsByName('mi')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("kot")[i].value);
+          //     if(Kotlin==docheck[i]){
+          //       document.getElementsByName('kot')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("per")[i].value);
+          //     if(Peral==docheck[i]){
+          //       document.getElementsByName('per')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("langR")[i].value);
+          //     if(R==docheck[i]){
+          //       document.getElementsByName('langR')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("langvba")[i].value);
+          //     if(VBA==docheck[i]){
+          //       document.getElementsByName('langvba')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("nj")[i].value);
+          //     if(Nodejs==docheck[i]){
+          //       document.getElementsByName('nj')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("an")[i].value);
+          //     if(Angular==docheck[i]){
+          //       document.getElementsByName('an')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("rt")[i].value);
+          //     if(React==docheck[i]){
+          //       document.getElementsByName('rt')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("ej")[i].value);
+          //     if(Expressjs==docheck[i]){
+          //       document.getElementsByName('ej')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("net")[i].value);
+          //     if(NetCore==docheck[i]){
+          //       document.getElementsByName('net')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("spr")[i].value);
+          //     if(Spring==docheck[i]){
+          //       document.getElementsByName('spr')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("dj")[i].value);
+          //     if(Django==docheck[i]){
+          //       document.getElementsByName('dj')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("fl")[i].value);
+          //     if(Flask==docheck[i]){
+          //       document.getElementsByName('fl')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("cd")[i].value);
+          //     if(Cordova==docheck[i]){
+          //       document.getElementsByName('cd')[i].checked = true;
+          //     }
+          //   };
+          //   // var docheck = [];
+          //   // for(var i=0;i<chkleng;i++){
+          //   //   docheck.push(document.getElementsByName("langvba")[i].value);
+          //   //   if(VBA==docheck[i]){
+          //   //     document.getElementsByName('langvba')[i].checked = true;
+          //   //   }
+          //   // };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("mys")[i].value);
+          //     if(MySql==docheck[i]){
+          //       document.getElementsByName('mys')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("sqls")[i].value);
+          //     if(SQLServer==docheck[i]){
+          //       document.getElementsByName('sqls')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("mong")[i].value);
+          //     if(MongoDB==docheck[i]){
+          //       document.getElementsByName('mong')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("sqli")[i].value);
+          //     if(SQLite==docheck[i]){
+          //       document.getElementsByName('sqli')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("rdis")[i].value);
+          //     if(Redis==docheck[i]){
+          //       document.getElementsByName('rdis')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("orl")[i].value);
+          //     if(Oracle==docheck[i]){
+          //       document.getElementsByName('orl')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("fla_data")[i].value);
+          //     if(Flask_data==docheck[i]){
+          //       document.getElementsByName('fla_data')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("cor_data")[i].value);
+          //     if(Cordova_data==docheck[i]){
+          //       document.getElementsByName('cor_data')[i].checked = true;
+          //     }
+          //   };
+          //   // var docheck = [];
+          //   // for(var i=0;i<chkleng;i++){
+          //   //   docheck.push(document.getElementsByName("cor_data")[i].value);
+          //   //   if(Cordova_data==docheck[i]){
+          //   //     document.getElementsByName('cor_data')[i].checked = true;
+          //   //   }
+          //   // };
+          //   // var docheck = [];
+          //   // for(var i=0;i<chkleng;i++){
+          //   //   docheck.push(document.getElementsByName("cor_data")[i].value);
+          //   //   if(Cordova_data==docheck[i]){
+          //   //     document.getElementsByName('cor_data')[i].checked = true;
+          //   //   }
+          //   // };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("aw")[i].value);
+          //     if(AWS==docheck[i]){
+          //       document.getElementsByName('aw')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("az")[i].value);
+          //     if(Azure==docheck[i]){
+          //       document.getElementsByName('az')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("gc")[i].value);
+          //     if(GCP==docheck[i]){
+          //       document.getElementsByName('gc')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("lin")[i].value);
+          //     if(Linux==docheck[i]){
+          //       document.getElementsByName('lin')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("wp")[i].value);
+          //     if(Wordpress==docheck[i]){
+          //       document.getElementsByName('wp')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("rp")[i].value);
+          //     if(RaspberryPi==docheck[i]){
+          //       document.getElementsByName('rp')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("ard")[i].value);
+          //     if(Arduino==docheck[i]){
+          //       document.getElementsByName('ard')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("fire")[i].value);
+          //     if(Firebase==docheck[i]){
+          //       document.getElementsByName('fire')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("dock")[i].value);
+          //     if(Docker==docheck[i]){
+          //       document.getElementsByName('dock')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("goe")[i].value);
+          //     if(Go==docheck[i]){
+          //       document.getElementsByName('goe')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("tens")[i].value);
+          //     if(Tensorflow==docheck[i]){
+          //       document.getElementsByName('tens')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("caf")[i].value);
+          //     if(Caffe==docheck[i]){
+          //       document.getElementsByName('caf')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("ocv")[i].value);
+          //     if(OpenCV==docheck[i]){
+          //       document.getElementsByName('ocv')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("dli")[i].value);
+          //     if(DLib==docheck[i]){
+          //       document.getElementsByName('dli')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("ogl")[i].value);
+          //     if(OpenGL==docheck[i]){
+          //       document.getElementsByName('ogl')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("uni")[i].value);
+          //     if(Unity==docheck[i]){
+          //       document.getElementsByName('uni')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("ardu_mac")[i].value);
+          //     if(Arduino_mac==docheck[i]){
+          //       document.getElementsByName('ardu_mac')[i].checked = true;
+          //     }
+          //   };
+          //   var docheck = [];
+          //   for(var i=0;i<chkleng;i++){
+          //     docheck.push(document.getElementsByName("fir_mac")[i].value);
+          //     if(Firebase_mac==docheck[i]){
+          //       document.getElementsByName('fir_mac')[i].checked = true;
+          //     }
+          //   };
+          // var data =[{
+          //     programmingLang : this.programmingLang,
+          //     frameworkLang : this.frameworkLang,
+          //     databaseLang : this.databaseLang,
+          //     cloudLang : this.cloudLang,
+          //     machineLang : this.machineLang,
+          // }];
+          // this.$store.dispatch('resume/submit_SW', data);
 
-        var submit_resume = {
-            sLoginID : this.user.loginId,
-            getUserInfo : this.getUserInfo,
-            getUserEng : this.getUserEng,
-            getUserGrade : this.getUserGrade,
-            programmingLang : this.programmingLang,
-            frameworkLang : this.frameworkLang,
-            databaseLang : this.databaseLang,
-            cloudLang : this.cloudLang,
-            machineLang : this.machineLang,
-        };
-        this.$store.dispatch('resume/submit_ALL', submit_resume);
-        this.$store.dispatch('resume/setResumeState',6);
-        location.reload();
+          // var submit_resume = {
+          //     sLoginID : this.user.loginId,
+          //     getUserInfo : this.getUserInfo,
+          //     getUserEng : this.getUserEng,
+          //     getUserGrade : this.getUserGrade,
+          //     programmingLang : this.programmingLang,
+          //     frameworkLang : this.frameworkLang,
+          //     databaseLang : this.databaseLang,
+          //     cloudLang : this.cloudLang,
+          //     machineLang : this.machineLang,
+          // };
+          // this.$store.dispatch('resume/submit_ALL', submit_resume);
+          // this.$store.dispatch('resume/setResumeState',6);
+          // location.reload();
+        },
+        before(){
+          this.$store.dispatch('resume/setResumeState',2);
         },
     }
   }

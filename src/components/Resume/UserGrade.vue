@@ -428,41 +428,42 @@
                 <button class="btn btn-light" type="submit">다음</button>
             </div>
         </form>
+        <button class="btn btn-light mr-4" @click="before">이전</button>
     </div>
   </div>
 </template>
 
 <script>
-  export default{
-      name: 'UserGrade',
-      data() {
-        return {
-          user:{},
-          computerprogramming : [],
-          discretemath : [],
-          datastructure : [],
-          objectiveprogramming : [],
-          computerstructure : [],
-          algorithm : [],
-          systemprogramming : [],
-          os : [],
-          database : [],
-          network : [],
-        }
-      },
-      components: {
-        // VBase,
-      },
-      beforeMount(){
-        this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
-            //console.log(res.data.user);
-            this.user = res.data.user;
-        })
-      },
-      created(){
+export default{
+    name: 'UserGrade',
+    data() {
+    return {
+        user:{},
+        computerprogramming : [],
+        discretemath : [],
+        datastructure : [],
+        objectiveprogramming : [],
+        computerstructure : [],
+        algorithm : [],
+        systemprogramming : [],
+        os : [],
+        database : [],
+        network : [],
+    }
+    },
+    components: {
+    // VBase,
+    },
+    beforeMount(){
+    this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+        //console.log(res.data.user);
+        this.user = res.data.user;
+    })
+    },
+    created(){
 
-      },
-      methods: {
+    },
+    methods: {
         submitResume(){
             var data =[{
                 computerprogramming : this.computerprogramming,
@@ -479,8 +480,11 @@
             this.$store.dispatch('resume/submit_userGrade', data);
             this.$store.dispatch('resume/setResumeState',3);
         },
-      }
-  }
+        before(){
+            this.$store.dispatch('resume/setResumeState',1);
+        },
+    }
+}
 </script>
 
 <style scoped>

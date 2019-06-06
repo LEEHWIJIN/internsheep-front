@@ -18,7 +18,6 @@
           <input class="form-control mb-4" v-model="sName" placeholder="이름*">
         </div> -->
         <div class="col-lg-6">
-          <!-- <input class="form-control mb-4" v-model="sEmail" placeholder="e-mail" readonly="readonly"> -->
           <input class="form-control mb-4" v-model="sEmail" placeholder="e-mail" >
         </div>
         <!-- <div class="col-lg-6">
@@ -30,15 +29,6 @@
         <div class="col-lg-6">
           <div class="apply-list  rounded-xl  bg-white mb-4">
               <h6 style="font-weight:bold">학년정보(현재 학기 기준)*</h6>
-
-              <!--
-              <input type="radio" id="jack" value="Jack" v-model="checkedNames">
-              <label for="jack">3학년 1학기</label><br>
-              <input type="radio" id="john" value="John" v-model="checkedNames">
-              <label for="john">3학년 2학기</label><br>
-              <input type="radio" id="mike" value="Mike" v-model="checkedNames">
-              <label for="mike">4학년 1학기</label><br>
-              -->
               <input class="inp-cbx" id="cbx1" value="3학년 1학기" type="radio" v-model="sGrade" style="display: none;">
               <label class="cbx" for="cbx1">
                 <span>

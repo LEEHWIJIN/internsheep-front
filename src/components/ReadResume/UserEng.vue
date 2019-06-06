@@ -167,25 +167,35 @@
             <button class="btn btn-light" type="submit">다음</button>
         </div>
         </form>
+        <button class="btn btn-light mr-4" @click="before">이전</button>
     </div>
   </div>
 </template>
 
 <script>
+import { mapActions, mapGetters } from "vuex";
   export default{
-      name: 'UserEng',
-      data() {
-        return {
-            user:{},
-            EnglishSearch : [],
-            EnglishCommunication : [],
-            EnglishPresentation : [],
-            EnglishReport : [],
-        }
-      },
-      components: {
-        // VBase,
-      },
+    name: 'UserEng',
+    data() {
+    return {
+        user:{},
+        EnglishSearch : [],
+        EnglishCommunication : [],
+        EnglishPresentation : [],
+        EnglishReport : [],
+    }
+    },
+    components: {
+    // VBase,
+    },
+    computed: {
+        ...mapGetters({
+            getUserInfo : 'resume/getUserInfo',
+            getUserEng : 'resume/getUserEng',
+            getUserGrade : 'resume/getUserGrade',
+            getUserSW : 'resume/getUserSW',
+        }),
+    },
       async beforeMount(){
         await this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
             //console.log(res.data.user);
@@ -251,6 +261,16 @@
         //   this.$store.dispatch('resume/submit_userEng', data);
           this.$store.dispatch('resume/setResumeState',2);
         },
+        before(){
+        var data =[{
+            EnglishSearch : this.EnglishSearch,
+            EnglishCommunication : this.EnglishCommunication,
+            EnglishPresentation : this.EnglishPresentation,
+            EnglishReport : this.EnglishReport,
+        }];
+        this.$store.dispatch('resume/submit_userEng', data);
+        this.$store.dispatch('resume/setResumeState',0);
+    }
       }
   }
 </script>

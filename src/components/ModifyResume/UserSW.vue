@@ -1224,7 +1224,7 @@
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
-                <h6 style="font-weight:bold">Flask</h6
+                <h6 style="font-weight:bold">Flask</h6>
                   <input class="inp-cbx" id="cbx121" name="fl" value="배운적 없음" type="radio" style="display: none;">
                     <label class="cbx" for="cbx121">
                       <span>
@@ -2732,11 +2732,9 @@ import { mapActions, mapGetters } from "vuex";
     },
     async beforeMount(){
         await this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
-            //console.log(res.data.user);
             return this.user = res.data.user;
         });
         await this.$http.get('http://localhost:8888/std/mypage/watchResume',{params:{sLoginID : this.user.loginId}}).then(res =>{
-            //  console.log(res)
             var programmingLang = JSON.parse(res.data.programmingLang);
             var Javascript = programmingLang.Javascript;
             var HTML = programmingLang.HTML;
@@ -2755,7 +2753,6 @@ import { mapActions, mapGetters } from "vuex";
             var Peral = programmingLang.Peral;
             var R = programmingLang.R;
             var VBA = programmingLang.VBA;
-            // console.log(Javascript)
 
             var frameworkLang = JSON.parse(res.data.frameworkLang);
             var Nodejs = frameworkLang.Nodejs;
