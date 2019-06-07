@@ -176,6 +176,7 @@
 </template>
 
 <script>
+import Const from '../../constant/constant';
   export default{
       name: 'UserEng',
       data() {
@@ -191,10 +192,10 @@
         // VBase,
       },
       async beforeMount(){
-        await this.$http.get('API_SERVER/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+        await this.$http.get('Const.API_SERVER/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
             this.user = res.data.user;
         });
-        await this.$http.get('API_SERVER/std/mypage/watchResume',{params:{sLoginID : this.user.loginId}}).then(res =>{
+        await this.$http.get('Const.API_SERVER/std/mypage/watchResume',{params:{sLoginID : this.user.loginId}}).then(res =>{
             // if(res.data != false){
             //     this.$store.dispatch('resume/setResumeState',4);
             // }

@@ -434,6 +434,7 @@
 </template>
 
 <script>
+import Const from '../../constant/constant';
 export default{
     name: 'UserGrade',
     data() {
@@ -455,7 +456,7 @@ export default{
     // VBase,
     },
     beforeMount(){
-    this.$http.get('API_SERVER/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+    this.$http.get('Const.API_SERVER/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
         //console.log(res.data.user);
         this.user = res.data.user;
     })

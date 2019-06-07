@@ -275,7 +275,7 @@
 
 <script>
 import VueDaumMap from 'vue-daum-map';
-
+import Const from '../../constant/constant';
 export default{
   name: 'applyList',
   data() {
@@ -317,7 +317,7 @@ export default{
     }
   },
   async beforeMount(){
-    await this.$http.get('API_SERVER/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+    await this.$http.get('Const.API_SERVER/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
         this.user = res.data.user;
         return this.user;
 
@@ -336,11 +336,11 @@ export default{
 
   },
   async created(){
-    await this.$http.get('API_SERVER/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+    await this.$http.get('Const.API_SERVER/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
         this.user = res.data.user;
         return this.user;
     });
-    await this.$http.get('API_SERVER/admin/recentApplyTerm').then((response) => {
+    await this.$http.get('Const.API_SERVER/admin/recentApplyTerm').then((response) => {
       this.applyTerm = {
           applyStart : response.data.applyStart,
           applyEnd : response.data.applyEnd,
@@ -427,12 +427,12 @@ export default{
       return avg;
     },
     applyStd(cName){
-        this.$http.get('API_SERVER/std/mypage/applyStatus',{params:{sLoginID : this.user.loginId, applySemester : this.applyTerm.applySemester}}).then((response)=>{
+        this.$http.get('Const.API_SERVER/std/mypage/applyStatus',{params:{sLoginID : this.user.loginId, applySemester : this.applyTerm.applySemester}}).then((response)=>{
         if(response.data == '합격하거나 심사중 상태'){
             alert("이미 지원을 한 상태 입니다.")
         }
         else{
-            this.$http.post('API_SERVER/std/mypage/applyCo',{cName : cName, sLoginID : this.user.loginId,applySemester: this.applyTerm.applySemester,applyOrder:this.applyTerm.applyOrder}).then((response) => {
+            this.$http.post('Const.API_SERVER/std/mypage/applyCo',{cName : cName, sLoginID : this.user.loginId,applySemester: this.applyTerm.applySemester,applyOrder:this.applyTerm.applyOrder}).then((response) => {
                 if(response.data == '0'){
                     alert("이력서가 없습니다. 이력서를 작성해주세요")
                 }
@@ -468,7 +468,7 @@ export default{
       });
     },
       async pickCo(cName){//체크된 회사인지 아닌지 확인하고 if 문걸어야 할것같음 0 : 아직 찜 하지 않은 회사임 1 : 찜한한 회사임
-        await this.$http.get('API_SERVER/std/mypage/checkPickCo',{params:{sLoginID : this.user.loginId,cName:cName,applySemester:this.applyTerm.applySemester,applyOrder:this.applyTerm.applyOrder}}).then((response)=>{
+        await this.$http.get('Const.API_SERVER/std/mypage/checkPickCo',{params:{sLoginID : this.user.loginId,cName:cName,applySemester:this.applyTerm.applySemester,applyOrder:this.applyTerm.applyOrder}}).then((response)=>{
           if(response.data==0){//아직 지원하지 않은 회사이므로 찜 해야함
             this.postStdPickCo(cName);
             return 0;
@@ -481,7 +481,7 @@ export default{
         })
       },
       postStdPickCo(cName){
-        this.$http.post('API_SERVER/std/mypage/postStdPickCo',{cName : cName, sLoginID : this.user.loginId}).then((response) => {
+        this.$http.post('Const.API_SERVER/std/mypage/postStdPickCo',{cName : cName, sLoginID : this.user.loginId}).then((response) => {
             //꽉찬하트로 바꿔줘야 할것같음.
           if(response.data==0){
             // var heart = document.getElementsByClassName("fa-heart");
@@ -496,7 +496,7 @@ export default{
         });
       },
       deleteStdPickCo(cName){
-        this.$http.post('API_SERVER/std/mypage/deleteStdPickCo',{cName : cName, sLoginID : this.user.loginId,applySemester:this.applyTerm.applySemester,applyOrder:this.applyTerm.applyOrder}).then((response) => {
+        this.$http.post('Const.API_SERVER/std/mypage/deleteStdPickCo',{cName : cName, sLoginID : this.user.loginId,applySemester:this.applyTerm.applySemester,applyOrder:this.applyTerm.applyOrder}).then((response) => {
           // var heart = document.getElementsByClassName("far fa-heart");
           // heart.style.font="regular";
           if(response.data==0){

@@ -433,6 +433,7 @@
 </template>
 
 <script>
+import Const from '../../constant/constant';
   export default{
       name: 'UserGrade',
       data() {
@@ -454,12 +455,12 @@
         // VBase,
       },
       async beforeMount(){
-        await this.$http.get('API_SERVER/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+        await this.$http.get('Const.API_SERVER/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
             //console.log(res.data.user);
             this.user = res.data.user;
             return this.user;
         });
-        await this.$http.get('API_SERVER/std/mypage/watchResume',{params:{sLoginID : this.user.loginId}}).then(res =>{
+        await this.$http.get('Const.API_SERVER/std/mypage/watchResume',{params:{sLoginID : this.user.loginId}}).then(res =>{
             var sScore = JSON.parse(res.data.sScore);
             var computerprogramming = sScore.computerprogramming;
             var discretemath = sScore.discretemath;

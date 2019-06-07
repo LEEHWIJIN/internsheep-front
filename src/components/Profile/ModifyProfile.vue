@@ -36,6 +36,7 @@
 </template>
 
 <script>
+import Const from '../../constant/constant';
   export default{
       name: 'ModifyProfile',
       data() {
@@ -48,18 +49,18 @@
       components: {
       },
       async created(){
-        await this.$http.get('API_SERVER/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+        await this.$http.get('Const.API_SERVER/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
           this.user = res.data.user;
           return ;
         });
-        await this.$http.get('API_SERVER/std/mypage/showStudentInfo',{params:{sLoginID:this.user.loginId}}).then(res=>{
+        await this.$http.get('Const.API_SERVER/std/mypage/showStudentInfo',{params:{sLoginID:this.user.loginId}}).then(res=>{
           return this.userData=res.data[0];
         })
       },
       methods: {
         submitProfile(){
           if(this.presentPw.length!=0&&this.changepw.length!=0){
-              this.$http.post('API_SERVER/auth/std/changepw', {presentpw: this.presentPw, changepw: this.changepw, sLoginID: this.user.loginId}).then((res)=>{
+              this.$http.post('Const.API_SERVER/auth/std/changepw', {presentpw: this.presentPw, changepw: this.changepw, sLoginID: this.user.loginId}).then((res)=>{
                 if(res.data.result == 1){
                   alert("현재 비밀번호가 틀렸습니다.")
                   return;
@@ -85,7 +86,7 @@
               sName : this.userData.sName,
               sNum : this.userData.sNum,
             };
-          this.$http.post('API_SERVER/std/mypage/modifyStudentInfo',{sLoginID:this.user.loginId,data:data}).then((response) => {
+          this.$http.post('Const.API_SERVER/std/mypage/modifyStudentInfo',{sLoginID:this.user.loginId,data:data}).then((response) => {
             if(response.data==1){
               alert("성공적으로 수정 되었습니다.");
               this.$store.dispatch('profile/setProfileState',0);

@@ -26,6 +26,7 @@
 
 <script>
 //import Vue from 'vue';
+import Const from '../../constant/constant';
  import VBase from '../Base/Index.vue'
  import VFooter from '../Footer/Index.vue'
  import VCategory from '../Category/Index.vue'
@@ -51,7 +52,7 @@
         VUserSW,
       },
       created(){
-        this.$http.get('API_SERVER/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+        this.$http.get('Const.API_SERVER/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
           this.user = res.data.user;
           this.getResume(this.user.loginId);
         });
@@ -62,7 +63,7 @@
       // },
       methods: {
         getResume(loginId){
-          this.$http.get('API_SERVER/std/mypage/watchResume',{params:{sLoginID : loginId}}).then(res =>{
+          this.$http.get('Const.API_SERVER/std/mypage/watchResume',{params:{sLoginID : loginId}}).then(res =>{
             if(res.data != false){//resume가 있을때 읽기전용
                   this.$store.dispatch('resume/setResumeState',0);
             }
@@ -71,7 +72,7 @@
 
         },
         // submitResume(){
-        //   this.$http.post('API_SERVER/std/mypage/resume',{sNum:this.sNum,sName: this.sName}).then((response) => {
+        //   this.$http.post('Const.API_SERVER/std/mypage/resume',{sNum:this.sNum,sName: this.sName}).then((response) => {
         //       this.sName = "";
         //       this.sNum="";
         //     })

@@ -30,6 +30,7 @@
 </template>
 
 <script>
+import Const from '../../constant/constant';
     export default{
         name: 'modify',
         data() {
@@ -56,7 +57,7 @@
         },
         methods: {
             recentApplyTerm(){
-                this.$http.get('API_SERVER/admin/recentApplyTerm').then((response)=>{
+                this.$http.get('Const.API_SERVER/admin/recentApplyTerm').then((response)=>{
                     this.currentApplyTerm = {
                         applyStart: response.data.applyStart.split('T')[0],
                         applyEnd: response.data.applyEnd.split('T')[0],
@@ -69,7 +70,7 @@
                 })
             },
             modifysubmit(){
-                this.$http.post('API_SERVER/admin/updateApplyTerm',{applyStart:this.applyStart,applyEnd:this.applyEnd,applySemester:this.applySemester,applyOrder:this.applyOrder,oldApplySemester : this.oldApplySemester, oldApplyOrder : this.oldApplyOrder}).then((response)=>{
+                this.$http.post('Const.API_SERVER/admin/updateApplyTerm',{applyStart:this.applyStart,applyEnd:this.applyEnd,applySemester:this.applySemester,applyOrder:this.applyOrder,oldApplySemester : this.oldApplySemester, oldApplyOrder : this.oldApplyOrder}).then((response)=>{
                     this.$router.push({name: "admin"})
                 })
             }

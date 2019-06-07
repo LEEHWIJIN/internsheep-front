@@ -23,6 +23,7 @@
   import VCategory from '../Category/Index.vue'
   import VReadProfile from './ReadProfile.vue'
   import VModifyProfile from './ModifyProfile.vue'
+  import Const from '../../constant/constant';
   export default{
       name: 'Apply',
       data() {

@@ -2650,6 +2650,7 @@
 
 <script>
 import { mapActions, mapGetters } from "vuex";
+import Const from '../../constant/constant';
   export default{
     name: 'UserGrade',
     data() {
@@ -2731,10 +2732,10 @@ import { mapActions, mapGetters } from "vuex";
         }),
     },
     async beforeMount(){
-        await this.$http.get('API_SERVER/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+        await this.$http.get('Const.API_SERVER/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
             return this.user = res.data.user;
         });
-        await this.$http.get('API_SERVER/std/mypage/watchResume',{params:{sLoginID : this.user.loginId}}).then(res =>{
+        await this.$http.get('Const.API_SERVER/std/mypage/watchResume',{params:{sLoginID : this.user.loginId}}).then(res =>{
             var programmingLang = JSON.parse(res.data.programmingLang);
             var Javascript = programmingLang.Javascript;
             var HTML = programmingLang.HTML;
