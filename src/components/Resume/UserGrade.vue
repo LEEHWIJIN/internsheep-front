@@ -428,8 +428,9 @@
                 <button class="btn btn-light" type="submit">다음</button>
             </div>
         </form>
-        <button class="btn btn-light mr-4" @click="before">이전</button>
-    </div>
+        <div class="text-center mt-2">
+          <button class="btn btn-light" @click="before">이전</button>
+        </div>    </div>
   </div>
 </template>
 
@@ -497,7 +498,7 @@ export default{
             if(this.os.length==0){
                 alert("전부 작성 해 주세요.")
                 return;
-            } 
+            }
             if(this.database.length==0){
                 alert("전부 작성 해 주세요.")
                 return;

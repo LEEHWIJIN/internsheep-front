@@ -142,7 +142,7 @@
           </div>
         </li>
 
-        <div v-if="!isNaN(AvgRatings())" class="row pt-4 ml-3 mb-3 " style="line-height: 100%; border: 1px solid #bcbcbc; border-radius: 2rem; margin-right:50px; padding-left:50px; padding-bottom:15px;">
+        <div class="row text-center p-4 ml-3 mb-3 " style="line-height: 100%; border: 1px solid #bcbcbc; border-radius: 2rem; margin-right:50px; padding-left:50px; padding-bottom:0px; padding-top:20px;">
             <div class="col-lg-6">
               <div class="">
                 <fieldset class="rating ">
@@ -227,12 +227,12 @@
                   <input type="radio" id="star1-6" name="rating-6" value="1" onclick="return false"/><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
                   <!--<input type="radio" id="starhalf" name="rating" value="half" onclick="return false"/><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>-->
                 </fieldset> <span class="ml-3 pt-1" > {{starNum[0]}}명 </span><br>
-              </div><br>
+              </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 text-center">
               <br><br><br><br>
-              <div style="margin-left: 40px;">
-                <fieldset class="rating mr-3 ">
+              <div style="">
+                <fieldset class="rating" style="margin-left:45px;">
                   <input type="radio" id="star5" name="search" value="5" onclick="return false"/><label class = "full" for="star5" title="Awesome - 5 stars"></label>
                   <input type="radio" id="star4half" name="search" value="4 and a half" onclick="return false"/><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
                   <input type="radio" id="star4" name="search" value="4" onclick="return false" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
@@ -244,20 +244,25 @@
                   <input type="radio" id="star1" name="search" value="1" onclick="return false" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
                   <input type="radio" id="starhalf" name="search" value="half" onclick="return false"/><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
                 </fieldset> <br><br>
+                <div class="mr-4">
                   총 평점 <span class="h5">{{AvgRatings()}}</span> / 5
+                </div>
               </div>
             </div>
           </div>
-          <div v-else>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 해당 기업의 평가가 존재하지 않습니다.
-          </div>
+
           <!-- <li v-for="cr in companyReview" class="d-flex mb-4" style="color: #1b1e21"> -->
-          <div   v-for="cr in companyReview" class="row p-4 ml-3 mb-3 " style="line-height: 100%; border-radius: 2rem; margin-right:50px; background:#F8F8F8; padding-left:1000px;">
-            <ul class="list-unstyled">
-              <li class="mb-3" style="font-size:14px;"><span style="font-weight:bold">인턴 기간</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{cr.internTermStart}} ~ {{cr.internTermEnd}}</li>
-              <li class="mb-3" style="font-size:14px;"><span style="font-weight:bold">한줄 평가</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{cr.reviewTitle}}</li>
-              <li  style="font-size:14px;"><span style="font-weight:bold">실습 후기</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{cr.reviewContent}}</li>
-            </ul>
+          <div v-if="AvgRatings()==0" class="ml-4" >
+            현재 기업 평가 존재하지 않습니다.
+          </div>
+          <div v-else>
+            <div v-for="cr in companyReview" class="row p-4 ml-3 mb-3 " style="line-height: 100%; border-radius: 2rem; margin-right:50px; background:#F8F8F8; padding-left:1000px;">
+              <ul class="list-unstyled">
+                <li class="mb-3" style="font-size:14px;"><span style="font-weight:bold">인턴 기간</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{cr.internTermStart}} ~ {{cr.internTermEnd}}</li>
+                <li class="mb-3" style="font-size:14px;"><span style="font-weight:bold">한줄 평가</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{cr.reviewTitle}}</li>
+                <li  style="font-size:14px;"><span style="font-weight:bold">실습 후기</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{cr.reviewContent}}</li>
+              </ul>
+            </div>
           </div>
           <!-- </li> -->
           <div class="text-center mt-4">
@@ -357,42 +362,42 @@ export default{
       }
       avg = sum/numOfPeople;
 
-      // console.log(AvgRatings());
+      console.log(avg);
 
       // document.getElementsByName('search')[10].checked = true;
 
-
-      if(avg<=0.7){
-        document.getElementsByName('search')[10].checked = true;
+      if(isNaN(avg)==false){
+        if(avg<=0.7){
+          document.getElementsByName('search')[10].checked = true;
+        }
+        else if(avg<=1.2){
+          document.getElementsByName('search')[9].checked = true;
+        }
+        else if(avg<=1.7){
+          document.getElementsByName('search')[8].checked = true;
+        }
+        else if(avg<=2.2){
+          document.getElementsByName('search')[7].checked = true;
+        }
+        else if(avg<=2.7){
+          document.getElementsByName('search')[6].checked = true;
+        }
+        else if(avg<=3.2){
+          document.getElementsByName('search')[5].checked = true;
+        }
+        else if(avg<=3.7){
+          document.getElementsByName('search')[4].checked = true;
+        }
+        else if(avg<=4.2){
+          document.getElementsByName('search')[3].checked = true;
+        }
+        else if(avg<=4.7){
+          document.getElementsByName('search')[2].checked = true;
+        }
+        else if(avg<=5){
+          document.getElementsByName('search')[1].checked = true;
+        }
       }
-      else if(avg<=1.2){
-        document.getElementsByName('search')[9].checked = true;
-      }
-      else if(avg<=1.7){
-        document.getElementsByName('search')[8].checked = true;
-      }
-      else if(avg<=2.2){
-        document.getElementsByName('search')[7].checked = true;
-      }
-      else if(avg<=2.7){
-        document.getElementsByName('search')[6].checked = true;
-      }
-      else if(avg<=3.2){
-        document.getElementsByName('search')[5].checked = true;
-      }
-      else if(avg<=3.7){
-        document.getElementsByName('search')[4].checked = true;
-      }
-      else if(avg<=4.2){
-        document.getElementsByName('search')[3].checked = true;
-      }
-      else if(avg<=4.7){
-        document.getElementsByName('search')[2].checked = true;
-      }
-      else if(avg<=5){
-        document.getElementsByName('search')[1].checked = true;
-      }
-
 
       return this.applyTerm;
     });
@@ -423,8 +428,13 @@ export default{
       }
       avg = sum/numOfPeople;
 
+      if(isNaN(avg)){
+        return 0;
+      }
       // document.getElementsByName('search')[9].checked = true;
-      return avg;
+      else{
+        return avg;
+      }
     },
     applyStd(cName){
         this.$http.get('Const.API_SERVER/std/mypage/applyStatus',{params:{sLoginID : this.user.loginId, applySemester : this.applyTerm.applySemester}}).then((response)=>{
