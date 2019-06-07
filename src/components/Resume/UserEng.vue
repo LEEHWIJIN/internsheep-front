@@ -168,18 +168,19 @@
         </div>
         <br>
         <div class="col-12 text-center">
-            <button class="btn btn-light mr-4" @click="before">이전</button>
             <button class="btn btn-light" type="submit">다음</button>
         </div>
         </form>
+        <button class="btn btn-light mr-4" @click="before">이전</button>
     </div>
   </div>
 </template>
 
 <script>
-  export default{
-      name: 'UserEng',
-      data() {
+import { mapActions, mapGetters } from "vuex";
+export default{
+    name: 'UserEng',
+    data() {
         return {
             user:{},
             EnglishSearch : [],
@@ -187,35 +188,64 @@
             EnglishPresentation : [],
             EnglishReport : [],
         }
-      },
-      components: {
+    },
+    components: {
         // VBase,
-      },
-      beforeMount(){
+    },
+    beforeMount(){
         this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
             //console.log(res.data.user);
             this.user = res.data.user;
         })
-      },
-      created(){
+    },
+    created(){
 
-      },
-      methods: {
-        submitResume(){
-          var data =[{
+    },
+    computed:{
+        ...mapGetters({
+            getUserEng : 'resume/getUserEng',
+        }),
+    },
+    methods: {
+    submitResume(){
+        if(this.EnglishSearch.length==0){
+            alert("전부 작성 해 주세요.")
+            return;
+        }
+        if(this.EnglishCommunication.length==0){
+            alert("전부 작성 해 주세요.")
+            return;
+        }
+        if(this.EnglishPresentation.length==0){
+            alert("전부 작성 해 주세요.")
+            return;
+        }
+        if(this.EnglishReport.length==0){
+            alert("전부 작성 해 주세요.")
+            return;
+        }
+
+        var data =[{
+        EnglishSearch : this.EnglishSearch,
+        EnglishCommunication : this.EnglishCommunication,
+        EnglishPresentation : this.EnglishPresentation,
+        EnglishReport : this.EnglishReport,
+        }];
+        this.$store.dispatch('resume/submit_userEng', data);
+        this.$store.dispatch('resume/setResumeState',2);
+    },
+    before(){
+        var data =[{
             EnglishSearch : this.EnglishSearch,
             EnglishCommunication : this.EnglishCommunication,
             EnglishPresentation : this.EnglishPresentation,
             EnglishReport : this.EnglishReport,
-          }];
-          this.$store.dispatch('resume/submit_userEng', data);
-          this.$store.dispatch('resume/setResumeState',2);
-        },
-          before(){
-              this.$store.dispatch('resume/setResumeState',0);
-          }
-      }
-  }
+        }];
+        this.$store.dispatch('resume/submit_userEng', data);
+        this.$store.dispatch('resume/setResumeState',0);
+    }
+    }
+}
 </script>
 
 <style scoped>

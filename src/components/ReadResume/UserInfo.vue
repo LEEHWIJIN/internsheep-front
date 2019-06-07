@@ -143,8 +143,6 @@
           <button class="btn btn-light mb-2" @click="submitResume">다음</button>
         </div>
       </form>
-
-          <!-- 수정하기 버튼은 무조건 form 뒤에 있어야 합니다. -->
     </div>
   </div>
 </template>

@@ -1224,7 +1224,7 @@
         </div>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
-                <h6 style="font-weight:bold">Flask</h6
+                <h6 style="font-weight:bold">Flask</h6>
                   <input class="inp-cbx" id="cbx121" name="fl" value="배운적 없음" type="radio" style="display: none;">
                     <label class="cbx" for="cbx121">
                       <span>
@@ -1833,6 +1833,7 @@
         <br>
         <div class="col-lg-6">
             <div class="apply-list  rounded-xl  bg-white mb-4">
+              <h6 style="font-weight:bold">GCP</h6>
               <input class="inp-cbx" id="cbx181" name="gc" value="배운적 없음" type="radio" style="display: none;">
                 <label class="cbx" for="cbx181">
                   <span>
@@ -2640,9 +2641,10 @@
         </div>
         <br>
         <div class="col-12 text-center">
-            <button class="btn btn-primary" type="submit">제출하기</button>
+          <button class="btn btn-primary" type="submit">제출하기</button>
         </div>
       </form>
+      <button class="btn btn-light mr-4" @click="before">이전</button>
     </div>
   </div>
 </template>
@@ -2654,6 +2656,7 @@ import { mapActions, mapGetters } from "vuex";
     data() {
         return {
             user:{},
+            count : 0,
             programmingLang : {
                 Javascript : [],
                 HTML : [],
@@ -2740,29 +2743,198 @@ import { mapActions, mapGetters } from "vuex";
     },
     methods: {
         submitResume(){
-        var data =[{
-            programmingLang : this.programmingLang,
-            frameworkLang : this.frameworkLang,
-            databaseLang : this.databaseLang,
-            cloudLang : this.cloudLang,
-            machineLang : this.machineLang,
-        }];
-        this.$store.dispatch('resume/submit_SW', data);
+          this.count=0;
+          var chkleng = document.getElementsByName('js').length;
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('js')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('ht')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('cs')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('jq')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('sq')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('jv')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('aj')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('sf')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('ob')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('py')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('ph')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('langC')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('mi')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('kot')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('per')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('langR')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('langvba')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('nj')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('an')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('rt')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('ej')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('net')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('spr')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('dj')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('fl')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('cd')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('mys')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('sqls')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('mong')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('sqli')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('rdis')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('orl')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('fla_data')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('cor_data')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('aw')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('az')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('gc')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('lin')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('wp')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('rp')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('ard')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('fire')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('dock')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('goe')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('tens')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('caf')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('ocv')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('dli')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('ogl')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('uni')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('ardu_mac')[i].checked == true){
+                this.count++;
+              }
+              if(document.getElementsByName('fir_mac')[i].checked == true){
+                this.count++;
+              }
+            };//우선 테스트
+          if(this.count!=52){
+            alert("전부 작성 해 주세요.")
+            return;
+          }
+          var data =[{
+              programmingLang : this.programmingLang,
+              frameworkLang : this.frameworkLang,
+              databaseLang : this.databaseLang,
+              cloudLang : this.cloudLang,
+              machineLang : this.machineLang,
+          }];
+          this.$store.dispatch('resume/submit_SW', data);
 
-        var submit_resume = {
-            sLoginID : this.user.loginId,
-            getUserInfo : this.getUserInfo,
-            getUserEng : this.getUserEng,
-            getUserGrade : this.getUserGrade,
-            programmingLang : this.programmingLang,
-            frameworkLang : this.frameworkLang,
-            databaseLang : this.databaseLang,
-            cloudLang : this.cloudLang,
-            machineLang : this.machineLang,
-        };
-        this.$store.dispatch('resume/submit_ALL', submit_resume);
-        this.$store.dispatch('resume/setResumeState',6);
-        location.reload();
+          var submit_resume = {
+              sLoginID : this.user.loginId,
+              getUserInfo : this.getUserInfo,
+              getUserEng : this.getUserEng,
+              getUserGrade : this.getUserGrade,
+              programmingLang : this.programmingLang,
+              frameworkLang : this.frameworkLang,
+              databaseLang : this.databaseLang,
+              cloudLang : this.cloudLang,
+              machineLang : this.machineLang,
+          };
+          this.$store.dispatch('resume/submit_ALL', submit_resume);
+          alert("이력서 작성이 완료되었습니다.")
+          this.$store.dispatch('resume/setResumeState',6);
+          location.reload();
+        },
+        before(){
+          this.$store.dispatch('resume/setResumeState',2);
         },
     }
   }

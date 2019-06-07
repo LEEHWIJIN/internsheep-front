@@ -233,7 +233,6 @@
             sHopeTerm : this.sHopeTerm,
             sHope : this.sHope,
           }];
-
           this.$store.dispatch('resume/submit_userInfo', data);
           this.$store.dispatch('resume/setResumeState',7);
         },

@@ -3,7 +3,7 @@
   <section class="section section-lg-bottom bg-light">
     <v-base></v-base>
     <div class="mt-4 text-center">
-    **기업 상세정보
+    <br>
     </div>
     <div class="container rounded-sm bg-white shadow">
       <div id="apply">
@@ -186,7 +186,7 @@ export default{
   padding:15px;
   overflow-y: scroll;
   overflow-x: hidden;
-  height: 500px;
+  height: 510px;
 }
 
 .companyList {
@@ -201,6 +201,7 @@ export default{
 
 .detailList {
   flex-basis: 60%;
+  height:564px;
 }
 
 @media (max-width: 1000px) {

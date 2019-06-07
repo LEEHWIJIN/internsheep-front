@@ -46,31 +46,6 @@
               <div class="col-12 text-center">
                 <button class="btn btn-primary" type="submit" @click="submitFileAndReview">저장하기</button>
               </div>
-              <!-- <div id="container">
-                <div>
-                  <div class="upload" v-for="(upload, index) in uploads" :key="index">
-                      <div class="ext" :style="{'background-color': upload.color}">
-                        <p>{{upload.ext.toUpperCase()}}</p>
-                      </div>
-                      <div class="upload-details">
-                        <div class="name-container">
-                          <p class="filename">{{upload.name}}</p>
-                          <div>
-                            <p class="filesize">{{upload.size}}</p>
-                            <p @click="removeUpload(index)" class="cancel-btn" v-if="upload.progress !== '100%'">x</p>
-                          </div>
-                        </div>
-                        <div class="upload-bar" v-if="upload.progress !== '100%'">
-                          <div class="upload-progress" :style="{width: upload.progress}"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div @click="openFilePicker" id="uploader">
-                    <p><span>Click</span> to choose a file to upload :)</p>
-                    <input type="file" ref="filepicker" @change="uploadFile" />
-                  </div>
-              </div> -->
             </div>
         </div>
        
@@ -161,48 +136,6 @@ import VError from './Error.vue'
                   else {this.fileName = response.data}
               })
           },
-          // getRandomColor() { //나중에 사용할 ux/ui
-          //   const randomIndex = Math.floor(Math.random() * 2);
-          //     return this.colors[randomIndex];
-          // },
-          // removeUpload(index) {
-          //   clearInterval(this.uploads[index].progressTimer);
-          //   this.uploads.splice(index, 1);
-          // },
-          // openFilePicker() {
-          //   this.$refs.filepicker.click();
-          // },
-          // uploadFile() {
-          //   const input = this.$refs.filepicker;
-          //   const file = input.files[0];
-
-          //   const upload = {
-          //     id: this.uploads.length + 1,
-          //     name: file.name,
-          //     size: this.getFileSize(file.size),
-          //     progress: "0%",
-          //     ext: file.name.substring(file.name.lastIndexOf(".") + 1, file.name.length),
-          //     progressTimer: null,
-          //     color: this.getRandomColor()
-          //   };
-          //   console.log(upload)
-          //   this.uploads.push(upload);
-          //   const timer = setInterval(this.updateProgress, 300, upload.id);
-          //   upload.progressTimer = timer;
-          // },
-          // getFileSize(size) {
-          //   if (size < 1000000) return `${Math.ceil(size / 1024)} kb`;
-          //   else if (size >= 1000000) return `${Math.ceil(size / 1024000)} mb`;
-          // },
-          // updateProgress(id) {
-          //   const index = id - 1;
-          //   const progress = Number.parseInt(
-          //     this.uploads[index].progress.replace("%", "")
-          //   );
-
-          //   this.$set(this.uploads[index], "progress", `${progress + 10}%`);
-          //   if (progress + 10 === 100) clearInterval(this.uploads[index].progressTimer);
-          // }
           upload(event){
             this.uploadFile = event.target.files[0];
             console.log('sdfsdf'+this.file)
