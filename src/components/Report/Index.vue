@@ -129,7 +129,7 @@ import VError from './Error.vue'
               this.loadFileName(loginId)
           },
           loadFileName(loginId){
-              this.$http.get('http://localhost:8888/co/mypage/uploadImage',{params:{sLoginID : loginId}}).then((response)=>{
+              this.$http.get('http://localhost:8888/std/mypage/loadFileName',{params:{sLoginID : loginId}}).then((response)=>{
                   if(response.data == '0'){
                       this.fileName = ""
                   }
