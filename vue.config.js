@@ -4,7 +4,7 @@ module.exports = {
   devServer: {
     proxy: { // proxyTable 설정
       '/api': {
-        target: 'http://localhost:8888',
+        target: 'API_SERVER',
         changeOrigin: true
       }
     }
@@ -12,7 +12,7 @@ module.exports = {
   // realServer: {
   //   proxy: { // proxyTable 설정
   //     '/api': {
-  //       target: 'http://localhost:8888',
+  //       target: 'API_SERVER',
   //       changeOrigin: true
   //     }
   //   }

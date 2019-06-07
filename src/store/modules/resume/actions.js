@@ -1,5 +1,6 @@
 import * as mutation from './mutations.js';
 import axios from 'axios'
+import Const from '../../../constant/constant';
 
 export default {
     resetState({commit}){
@@ -23,13 +24,13 @@ export default {
     },
 
     submit_ALL({commit},data){
-        axios.post('http://localhost:8888/std/mypage/resume',{req : data}).then((response) => {
+        axios.post('Const.API_SERVER/std/mypage/resume',{req : data}).then((response) => {
                    
         })
     },
 
     submit_Modify({commit},data){
-        axios.post('http://localhost:8888/std/mypage/modifyResume',{req : data}).then((response) => {
+        axios.post('Const.API_SERVER/std/mypage/modifyResume',{req : data}).then((response) => {
                    
         })
     },
