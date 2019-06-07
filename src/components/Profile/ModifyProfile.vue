@@ -15,12 +15,11 @@
           <div class="col-lg-6">
             <input class="form-control mb-4" v-model="userData.sNum" placeholder="학번">
           </div>
-          <div>비밀번호 변경을 원하시면 작성해주세요</div><br>
           <div class="col-lg-6">
-            현재 비밀번호 : <input class="form-control mb-4" type="password" placeholder="현재 비밀번호" v-model="presentPw">
+          <input class="form-control mb-4" type="password" placeholder="현재 비밀번호" v-model="presentPw">
           </div>
           <div class="col-lg-6">
-            변경하실 비밀번호 : <input class="form-control mb-4" type="password" placeholder="변경하실 비밀번호" v-model="changepw">
+            <input class="form-control mb-4" type="password" placeholder="변경하실 비밀번호" v-model="changepw">
           </div>
           <div class="col-12">
             <button class="btn btn-primary" type="submitProfile">Submit Now</button>
