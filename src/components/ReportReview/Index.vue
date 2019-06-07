@@ -74,6 +74,7 @@ import VBase from '../Base/Index.vue'
 import VFooter from '../Footer/Index.vue'
 import VCategory from '../Category/Index.vue'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import Const from '../../constant/constant';
   export default{
       name: 'reportreview',
       data() {
@@ -92,7 +93,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
           VCategory,
       },
       created(){
-          this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+          this.$http.get('Const.API_SERVER/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
               this.user = res.data.user;
               this.downloadButton(this.user.loginId)
               this.loadFileName(this.user.loginId)
@@ -102,11 +103,11 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
       },
       methods: {
           downloadButton(loginId){
-              this.url = 'http://localhost:8888/std/mypage/downloadReport?sLoginID='+loginId
+              this.url = 'Const.API_SERVER/std/mypage/downloadReport?sLoginID='+loginId
               this.loadFileName(loginId)
           },
           loadFileName(loginId){
-              this.$http.get('http://localhost:8888/std/mypage/loadFileName',{params:{sLoginID : loginId}}).then((response)=>{
+              this.$http.get('Const.API_SERVER/std/mypage/loadFileName',{params:{sLoginID : loginId}}).then((response)=>{
                   if(response.data == '0'){
                       this.fileName = ""
                   }
@@ -114,7 +115,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
               })
           },
           loadReview(loginId){
-              this.$http.get('http://localhost:8888/std/mypage/watchReview',{params:{sLoginID : loginId}}).then((response)=>{
+              this.$http.get('Const.API_SERVER/std/mypage/watchReview',{params:{sLoginID : loginId}}).then((response)=>{
                   if(response.data != '0'){
                       this.review = response.data.reviewContent
                   }
@@ -143,20 +144,20 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
                   }
               }
               if(this.fileName==''){
-                  this.$http.post('http://localhost:8888/std/mypage/postReport', data, config).then(
+                  this.$http.post('Const.API_SERVER/std/mypage/postReport', data, config).then(
                       (response) => {
                           this.$router.push({name: "Reportreview"})
                       }
                   )
               }
               if(this.review==''){
-                  this.$http.post('http://localhost:8888/std/mypage/postReview', data, config).then(
+                  this.$http.post('Const.API_SERVER/std/mypage/postReview', data, config).then(
                       (response) => {
                       }
                   )
               }
               if(this.uploadFile == null){
-                  this.$http.post('http://localhost:8888/std/mypage/modifyReport', data, config).then(
+                  this.$http.post('Const.API_SERVER/std/mypage/modifyReport', data, config).then(
                       (response) => {
 
                       }

@@ -79,7 +79,7 @@
         }).catch(error=>{
             alert(error)
         })
-        // this.$http.post('http://localhost:8888/aimsLogin/check',{userId: this.userId,password:this.password}).then((response)=>{
+        // this.$http.post('API_SERVER/aimsLogin/check',{userId: this.userId,password:this.password}).then((response)=>{
         //     alert('success');
         // },(error)=>{
         //     console.log('err')

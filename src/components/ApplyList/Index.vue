@@ -65,6 +65,7 @@
  import VFooter from '../Footer/Index.vue'
 // import VCoList from "./CoList.vue"
  import VDetailList from "./DetailList.vue"
+ import Const from '../../constant/constant';
 export default{
   name: 'Apply',
   data() {
@@ -89,7 +90,7 @@ export default{
   },
   methods: {
     applyList(){
-      this.$http.get('http://localhost:8888/std/list',{params:{applyOrder:this.applyTerm.applyOrder, applySemester: this.applyTerm.applySemester}}).then((response) => {
+      this.$http.get('Const.API_SERVER/std/list',{params:{applyOrder:this.applyTerm.applyOrder, applySemester: this.applyTerm.applySemester}}).then((response) => {
         for(var i=0; i<response.data.length;i++){
             this.applylist.push({
               cBenefit : response.data[i].cBenefit,
@@ -131,7 +132,7 @@ export default{
           cInfo: this.applylist[selectedNum].cInfo,
           cEmail: this.applylist[selectedNum].cEmail,
       })
-      await this.$http.get('http://localhost:8888/std/loadCoReview', {params: {cName: this.applylist[selectedNum].cName}}).then((response) => {
+      await this.$http.get('Const.API_SERVER/std/loadCoReview', {params: {cName: this.applylist[selectedNum].cName}}).then((response) => {
         this.companyReview = []
         console.log('sdf', this.companyReview)
         for (var i = 0; i < response.data.length; i++) {
@@ -162,7 +163,7 @@ export default{
     this.starNum = [zero,first,second,three,four,five]
   },
   compareDate(){
-    this.$http.get('http://localhost:8888/admin/recentApplyTerm').then((response) => {
+    this.$http.get('Const.API_SERVER/admin/recentApplyTerm').then((response) => {
       this.applyTerm = {
           applyStart : response.data.applyStart,
           applyEnd : response.data.applyEnd,

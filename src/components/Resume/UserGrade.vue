@@ -428,12 +428,14 @@
                 <button class="btn btn-light" type="submit">다음</button>
             </div>
         </form>
-        <button class="btn btn-light mr-4" @click="before">이전</button>
-    </div>
+        <div class="text-center mt-2">
+          <button class="btn btn-light" @click="before">이전</button>
+        </div>    </div>
   </div>
 </template>
 
 <script>
+import Const from '../../constant/constant';
 export default{
     name: 'UserGrade',
     data() {
@@ -455,7 +457,7 @@ export default{
     // VBase,
     },
     beforeMount(){
-    this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+    this.$http.get('Const.API_SERVER/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
         //console.log(res.data.user);
         this.user = res.data.user;
     })
@@ -496,7 +498,7 @@ export default{
             if(this.os.length==0){
                 alert("전부 작성 해 주세요.")
                 return;
-            } 
+            }
             if(this.database.length==0){
                 alert("전부 작성 해 주세요.")
                 return;

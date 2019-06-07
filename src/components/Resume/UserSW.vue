@@ -2644,13 +2644,15 @@
           <button class="btn btn-primary" type="submit">제출하기</button>
         </div>
       </form>
-      <button class="btn btn-light mr-4" @click="before">이전</button>
-    </div>
+      <div class="text-center mt-2">
+        <button class="btn btn-light" @click="before">이전</button>
+      </div>    </div>
   </div>
 </template>
 
 <script>
 import { mapActions, mapGetters } from "vuex";
+import Const from '../../constant/constant';
   export default{
     name: 'UserGrade',
     data() {
@@ -2733,7 +2735,7 @@ import { mapActions, mapGetters } from "vuex";
         }),
     },
     beforeMount(){
-        this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+        this.$http.get('Const.API_SERVER/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
             //console.log(res.data.user);
             this.user = res.data.user;
         })

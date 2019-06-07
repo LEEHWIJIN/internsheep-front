@@ -142,7 +142,7 @@
           </div>
         </li>
 
-        <div v-if="!isNaN(AvgRatings())" class="row pt-4 ml-3 mb-3 " style="line-height: 100%; border: 1px solid #bcbcbc; border-radius: 2rem; margin-right:50px; padding-left:50px; padding-bottom:15px;">
+        <div class="row text-center p-4 ml-3 mb-3 " style="line-height: 100%; border: 1px solid #bcbcbc; border-radius: 2rem; margin-right:50px; padding-left:50px; padding-bottom:0px; padding-top:20px;">
             <div class="col-lg-6">
               <div class="">
                 <fieldset class="rating ">
@@ -227,12 +227,12 @@
                   <input type="radio" id="star1-6" name="rating-6" value="1" onclick="return false"/><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
                   <!--<input type="radio" id="starhalf" name="rating" value="half" onclick="return false"/><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>-->
                 </fieldset> <span class="ml-3 pt-1" > {{starNum[0]}}명 </span><br>
-              </div><br>
+              </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 text-center">
               <br><br><br><br>
-              <div style="margin-left: 40px;">
-                <fieldset class="rating mr-3 ">
+              <div style="">
+                <fieldset class="rating" style="margin-left:45px;">
                   <input type="radio" id="star5" name="search" value="5" onclick="return false"/><label class = "full" for="star5" title="Awesome - 5 stars"></label>
                   <input type="radio" id="star4half" name="search" value="4 and a half" onclick="return false"/><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
                   <input type="radio" id="star4" name="search" value="4" onclick="return false" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
@@ -244,22 +244,20 @@
                   <input type="radio" id="star1" name="search" value="1" onclick="return false" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
                   <input type="radio" id="starhalf" name="search" value="half" onclick="return false"/><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
                 </fieldset> <br><br>
+                <div class="mr-4">
                   총 평점 <span class="h5">{{AvgRatings()}}</span> / 5
+                </div>
               </div>
             </div>
           </div>
-          <div v-else>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 해당 기업의 평가가 존재하지 않습니다.
-          </div>
-          <!-- <li v-for="cr in companyReview" class="d-flex mb-4" style="color: #1b1e21"> -->
-          <div   v-for="cr in companyReview" class="row p-4 ml-3 mb-3 " style="line-height: 100%; border-radius: 2rem; margin-right:50px; background:#F8F8F8; padding-left:1000px;">
-            <ul class="list-unstyled">
-              <li class="mb-3" style="font-size:14px;"><span style="font-weight:bold">인턴 기간</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{cr.internTermStart}} ~ {{cr.internTermEnd}}</li>
-              <li class="mb-3" style="font-size:14px;"><span style="font-weight:bold">한줄 평가</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{cr.reviewTitle}}</li>
-              <li  style="font-size:14px;"><span style="font-weight:bold">실습 후기</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{cr.reviewContent}}</li>
-            </ul>
-          </div>
-          <!-- </li> -->
+
+            <div v-for="cr in companyReview" class="row p-4 ml-3 mb-3 " style="line-height: 100%; border-radius: 2rem; margin-right:50px; background:#F8F8F8; padding-left:1000px;">
+              <ul class="list-unstyled">
+                <li class="mb-3" style="font-size:14px;"><span style="font-weight:bold">인턴 기간</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{cr.internTermStart}} ~ {{cr.internTermEnd}}</li>
+                <li class="mb-3" style="font-size:14px;"><span style="font-weight:bold">한줄 평가</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{cr.reviewTitle}}</li>
+                <li  style="font-size:14px;"><span style="font-weight:bold">실습 후기</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{cr.reviewContent}}</li>
+              </ul>
+            </div>
           <div class="text-center mt-4">
             <button class="btn btn-primary btn-sm" @click="applyStd(sc.cName)">지원하기</button>
             <button class="btn btn-primary btn-sm ml-2" @click="">찜하기</button>
@@ -275,7 +273,7 @@
 
 <script>
 import VueDaumMap from 'vue-daum-map';
-
+import Const from '../../constant/constant';
 export default{
   name: 'applyList',
   data() {
@@ -317,7 +315,7 @@ export default{
     }
   },
   async beforeMount(){
-    await this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+    await this.$http.get('Const.API_SERVER/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
         this.user = res.data.user;
         return this.user;
 
@@ -336,11 +334,11 @@ export default{
 
   },
   async created(){
-    await this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+    await this.$http.get('Const.API_SERVER/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
         this.user = res.data.user;
         return this.user;
     });
-    await this.$http.get('http://localhost:8888/admin/recentApplyTerm').then((response) => {
+    await this.$http.get('Const.API_SERVER/admin/recentApplyTerm').then((response) => {
       this.applyTerm = {
           applyStart : response.data.applyStart,
           applyEnd : response.data.applyEnd,
@@ -357,42 +355,42 @@ export default{
       }
       avg = sum/numOfPeople;
 
-      // console.log(AvgRatings());
+      console.log(avg);
 
       // document.getElementsByName('search')[10].checked = true;
 
-
-      if(avg<=0.7){
-        document.getElementsByName('search')[10].checked = true;
+      if(isNaN(avg)==false){
+        if(avg<=0.7){
+          document.getElementsByName('search')[10].checked = true;
+        }
+        else if(avg<=1.2){
+          document.getElementsByName('search')[9].checked = true;
+        }
+        else if(avg<=1.7){
+          document.getElementsByName('search')[8].checked = true;
+        }
+        else if(avg<=2.2){
+          document.getElementsByName('search')[7].checked = true;
+        }
+        else if(avg<=2.7){
+          document.getElementsByName('search')[6].checked = true;
+        }
+        else if(avg<=3.2){
+          document.getElementsByName('search')[5].checked = true;
+        }
+        else if(avg<=3.7){
+          document.getElementsByName('search')[4].checked = true;
+        }
+        else if(avg<=4.2){
+          document.getElementsByName('search')[3].checked = true;
+        }
+        else if(avg<=4.7){
+          document.getElementsByName('search')[2].checked = true;
+        }
+        else if(avg<=5){
+          document.getElementsByName('search')[1].checked = true;
+        }
       }
-      else if(avg<=1.2){
-        document.getElementsByName('search')[9].checked = true;
-      }
-      else if(avg<=1.7){
-        document.getElementsByName('search')[8].checked = true;
-      }
-      else if(avg<=2.2){
-        document.getElementsByName('search')[7].checked = true;
-      }
-      else if(avg<=2.7){
-        document.getElementsByName('search')[6].checked = true;
-      }
-      else if(avg<=3.2){
-        document.getElementsByName('search')[5].checked = true;
-      }
-      else if(avg<=3.7){
-        document.getElementsByName('search')[4].checked = true;
-      }
-      else if(avg<=4.2){
-        document.getElementsByName('search')[3].checked = true;
-      }
-      else if(avg<=4.7){
-        document.getElementsByName('search')[2].checked = true;
-      }
-      else if(avg<=5){
-        document.getElementsByName('search')[1].checked = true;
-      }
-
 
       return this.applyTerm;
     });
@@ -423,16 +421,21 @@ export default{
       }
       avg = sum/numOfPeople;
 
+      if(isNaN(avg)){
+        return 0;
+      }
       // document.getElementsByName('search')[9].checked = true;
-      return avg;
+      else{
+        return avg;
+      }
     },
     applyStd(cName){
-        this.$http.get('http://localhost:8888/std/mypage/applyStatus',{params:{sLoginID : this.user.loginId, applySemester : this.applyTerm.applySemester}}).then((response)=>{
+        this.$http.get('Const.API_SERVER/std/mypage/applyStatus',{params:{sLoginID : this.user.loginId, applySemester : this.applyTerm.applySemester}}).then((response)=>{
         if(response.data == '합격하거나 심사중 상태'){
             alert("이미 지원을 한 상태 입니다.")
         }
         else{
-            this.$http.post('http://localhost:8888/std/mypage/applyCo',{cName : cName, sLoginID : this.user.loginId,applySemester: this.applyTerm.applySemester,applyOrder:this.applyTerm.applyOrder}).then((response) => {
+            this.$http.post('Const.API_SERVER/std/mypage/applyCo',{cName : cName, sLoginID : this.user.loginId,applySemester: this.applyTerm.applySemester,applyOrder:this.applyTerm.applyOrder}).then((response) => {
                 if(response.data == '0'){
                     alert("이력서가 없습니다. 이력서를 작성해주세요")
                 }
@@ -468,7 +471,7 @@ export default{
       });
     },
       async pickCo(cName){//체크된 회사인지 아닌지 확인하고 if 문걸어야 할것같음 0 : 아직 찜 하지 않은 회사임 1 : 찜한한 회사임
-        await this.$http.get('http://localhost:8888/std/mypage/checkPickCo',{params:{sLoginID : this.user.loginId,cName:cName,applySemester:this.applyTerm.applySemester,applyOrder:this.applyTerm.applyOrder}}).then((response)=>{
+        await this.$http.get('Const.API_SERVER/std/mypage/checkPickCo',{params:{sLoginID : this.user.loginId,cName:cName,applySemester:this.applyTerm.applySemester,applyOrder:this.applyTerm.applyOrder}}).then((response)=>{
           if(response.data==0){//아직 지원하지 않은 회사이므로 찜 해야함
             this.postStdPickCo(cName);
             return 0;
@@ -481,7 +484,7 @@ export default{
         })
       },
       postStdPickCo(cName){
-        this.$http.post('http://localhost:8888/std/mypage/postStdPickCo',{cName : cName, sLoginID : this.user.loginId}).then((response) => {
+        this.$http.post('Const.API_SERVER/std/mypage/postStdPickCo',{cName : cName, sLoginID : this.user.loginId}).then((response) => {
             //꽉찬하트로 바꿔줘야 할것같음.
           if(response.data==0){
             // var heart = document.getElementsByClassName("fa-heart");
@@ -496,7 +499,7 @@ export default{
         });
       },
       deleteStdPickCo(cName){
-        this.$http.post('http://localhost:8888/std/mypage/deleteStdPickCo',{cName : cName, sLoginID : this.user.loginId,applySemester:this.applyTerm.applySemester,applyOrder:this.applyTerm.applyOrder}).then((response) => {
+        this.$http.post('Const.API_SERVER/std/mypage/deleteStdPickCo',{cName : cName, sLoginID : this.user.loginId,applySemester:this.applyTerm.applySemester,applyOrder:this.applyTerm.applyOrder}).then((response) => {
           // var heart = document.getElementsByClassName("far fa-heart");
           // heart.style.font="regular";
           if(response.data==0){
