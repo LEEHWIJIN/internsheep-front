@@ -93,7 +93,7 @@ import Const from '../../constant/constant';
           VCategory,
       },
       created(){
-          this.$http.get('Const.API_SERVER/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+          this.$http.get(Const.API_SERVER+'/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
               this.user = res.data.user;
               this.downloadButton(this.user.loginId)
               this.loadFileName(this.user.loginId)
@@ -103,11 +103,11 @@ import Const from '../../constant/constant';
       },
       methods: {
           downloadButton(loginId){
-              this.url = 'Const.API_SERVER/std/mypage/downloadReport?sLoginID='+loginId
+              this.url = Const.API_SERVER+'/std/mypage/downloadReport?sLoginID='+loginId
               this.loadFileName(loginId)
           },
           loadFileName(loginId){
-              this.$http.get('Const.API_SERVER/std/mypage/loadFileName',{params:{sLoginID : loginId}}).then((response)=>{
+              this.$http.get(Const.API_SERVER+'/std/mypage/loadFileName',{params:{sLoginID : loginId}}).then((response)=>{
                   if(response.data == '0'){
                       this.fileName = ""
                   }
@@ -115,7 +115,7 @@ import Const from '../../constant/constant';
               })
           },
           loadReview(loginId){
-              this.$http.get('Const.API_SERVER/std/mypage/watchReview',{params:{sLoginID : loginId}}).then((response)=>{
+              this.$http.get(Const.API_SERVER+'/std/mypage/watchReview',{params:{sLoginID : loginId}}).then((response)=>{
                   if(response.data != '0'){
                       this.review = response.data.reviewContent
                   }
@@ -144,20 +144,20 @@ import Const from '../../constant/constant';
                   }
               }
               if(this.fileName==''){
-                  this.$http.post('Const.API_SERVER/std/mypage/postReport', data, config).then(
+                  this.$http.post(Const.API_SERVER+'/std/mypage/postReport', data, config).then(
                       (response) => {
                           this.$router.push({name: "Reportreview"})
                       }
                   )
               }
               if(this.review==''){
-                  this.$http.post('Const.API_SERVER/std/mypage/postReview', data, config).then(
+                  this.$http.post(Const.API_SERVER+'/std/mypage/postReview', data, config).then(
                       (response) => {
                       }
                   )
               }
               if(this.uploadFile == null){
-                  this.$http.post('Const.API_SERVER/std/mypage/modifyReport', data, config).then(
+                  this.$http.post(Const.API_SERVER+'/std/mypage/modifyReport', data, config).then(
                       (response) => {
 
                       }

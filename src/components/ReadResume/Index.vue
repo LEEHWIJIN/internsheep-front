@@ -71,7 +71,7 @@
         VError,
       },
       async created(){
-        await this.$http.get('Const.API_SERVER/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+        await this.$http.get(Const.API_SERVER+'/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
           this.user = res.data.user;
           this.getResume(this.user.loginId);
         });
@@ -81,7 +81,7 @@
       // },
       methods: {
         getResume(loginId){
-          this.$http.get('Const.API_SERVER/std/mypage/watchResume',{params:{sLoginID : loginId}}).then(res =>{
+          this.$http.get(Const.API_SERVER+'/std/mypage/watchResume',{params:{sLoginID : loginId}}).then(res =>{
             if(res.data != false){//resume가 있을때 읽기전용
                   this.$store.dispatch('resume/setResumeState',0);
             }
@@ -90,7 +90,7 @@
 
         },
         // submitResume(){
-        //   this.$http.post('Const.API_SERVER/std/mypage/resume',{sNum:this.sNum,sName: this.sName}).then((response) => {
+        //   this.$http.post(Const.API_SERVER+'/std/mypage/resume',{sNum:this.sNum,sName: this.sName}).then((response) => {
         //       this.sName = "";
         //       this.sNum="";
         //     })

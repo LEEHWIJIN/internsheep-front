@@ -90,7 +90,7 @@ export default{
   },
   methods: {
     applyList(){
-      this.$http.get('Const.API_SERVER/std/list',{params:{applyOrder:this.applyTerm.applyOrder, applySemester: this.applyTerm.applySemester}}).then((response) => {
+      this.$http.get(Const.API_SERVER+'/std/list',{params:{applyOrder:this.applyTerm.applyOrder, applySemester: this.applyTerm.applySemester}}).then((response) => {
         for(var i=0; i<response.data.length;i++){
             this.applylist.push({
               cBenefit : response.data[i].cBenefit,
@@ -132,8 +132,9 @@ export default{
           cInfo: this.applylist[selectedNum].cInfo,
           cEmail: this.applylist[selectedNum].cEmail,
       })
-      await this.$http.get('Const.API_SERVER/std/loadCoReview', {params: {cName: this.applylist[selectedNum].cName}}).then((response) => {
+      await this.$http.get(Const.API_SERVER+'/std/loadCoReview', {params: {cName: this.applylist[selectedNum].cName}}).then((response) => {
         this.companyReview = []
+        console.log('sdf', this.companyReview)
         for (var i = 0; i < response.data.length; i++) {
             this.companyReview.push({
                 cName: response.data[i].cName,
@@ -162,7 +163,7 @@ export default{
     this.starNum = [zero,first,second,three,four,five]
   },
   compareDate(){
-    this.$http.get('Const.API_SERVER/admin/recentApplyTerm').then((response) => {
+    this.$http.get(Const.API_SERVER+'/admin/recentApplyTerm').then((response) => {
       this.applyTerm = {
           applyStart : response.data.applyStart,
           applyEnd : response.data.applyEnd,
