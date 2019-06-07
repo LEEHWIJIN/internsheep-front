@@ -197,11 +197,11 @@ import { mapActions, mapGetters } from "vuex";
         }),
     },
       async beforeMount(){
-        await this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+        await this.$http.get('API_SERVER/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
             //console.log(res.data.user);
             this.user = res.data.user;
         });
-        await this.$http.get('http://localhost:8888/std/mypage/watchResume',{params:{sLoginID : this.user.loginId}}).then(res =>{
+        await this.$http.get('API_SERVER/std/mypage/watchResume',{params:{sLoginID : this.user.loginId}}).then(res =>{
             // console.log(res)
             // console.log(JSON.parse(res.data.sEnglish))
             var sEnglish = JSON.parse(res.data.sEnglish)

@@ -455,7 +455,7 @@ export default{
     // VBase,
     },
     beforeMount(){
-    this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+    this.$http.get('API_SERVER/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
         //console.log(res.data.user);
         this.user = res.data.user;
     })

@@ -87,18 +87,18 @@ import VError from './Error.vue'
           VError
       },
       async created(){
-          await this.$http.get('http://localhost:8888/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+          await this.$http.get('API_SERVER/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
               this.user = res.data.user;
               return this.user.loginId
           })
-          //  await this.$http.get('http://localhost:8888/std/mypage/checkReportTerm',{params:{sLoginID : this.user.loginId}}).then(res => {
+          //  await this.$http.get('API_SERVER/std/mypage/checkReportTerm',{params:{sLoginID : this.user.loginId}}).then(res => {
           //     if(res.data == 1){//보고서 작성기간 입니다.
           //       this.report_status = 1;
           //     }
           //     else{//작성 기간이 아닙니다.
           //       this.report_status = -1;
           //     }
-          await this.$http.get('http://localhost:8888/admin/recentApplyTerm').then((response) => {
+          await this.$http.get('API_SERVER/admin/recentApplyTerm').then((response) => {
               this.applyTerm = {
                   applyStart : response.data.applyStart,
                   applyEnd : response.data.applyEnd,
@@ -109,7 +109,7 @@ import VError from './Error.vue'
               this.loadFileName(this.user.loginId)
               return this.applyTerm
           })
-           await this.$http.get('http://localhost:8888/std/mypage/checkReportTerm',{params:{sLoginID : this.user.loginId, applySemester: this.applyTerm.applySemester}}).then(res => {
+           await this.$http.get('API_SERVER/std/mypage/checkReportTerm',{params:{sLoginID : this.user.loginId, applySemester: this.applyTerm.applySemester}}).then(res => {
                console.log('sdfsdf'+res.data)
               if(res.data =='실습한 기업 없음'){
                   alert('실습한 기업이 없습니다.')
@@ -125,11 +125,11 @@ import VError from './Error.vue'
       },
       methods: {
           downloadButton(loginId){
-              this.url = 'http://localhost:8888/std/mypage/downloadReport?sLoginID='+loginId
+              this.url = 'API_SERVER/std/mypage/downloadReport?sLoginID='+loginId
               this.loadFileName(loginId)
           },
           loadFileName(loginId){
-              this.$http.get('http://localhost:8888/co/mypage/uploadImage',{params:{sLoginID : loginId}}).then((response)=>{
+              this.$http.get('API_SERVER/co/mypage/uploadImage',{params:{sLoginID : loginId}}).then((response)=>{
                   if(response.data == '0'){
                       this.fileName = ""
                   }
@@ -158,14 +158,14 @@ import VError from './Error.vue'
               }
             }
             if(this.fileName == '') {
-                this.$http.post('http://localhost:8888/std/mypage/postReport', data, config).then(
+                this.$http.post('API_SERVER/std/mypage/postReport', data, config).then(
                     response => {
                         alert('저장되었습니다.')
                     }
                 )
             }
             else{
-                this.$http.post('http://localhost:8888/std/mypage/modifyReport', data, config).then(
+                this.$http.post('API_SERVER/std/mypage/modifyReport', data, config).then(
                     response => {
                         alert('수정되었습니다.')
                     }

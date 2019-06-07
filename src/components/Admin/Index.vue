@@ -73,7 +73,7 @@
         },
         methods: {
             listApplyTerm(){
-                this.$http.get('http://localhost:8888/admin/listApplyTerm').then((response)=>{
+                this.$http.get('API_SERVER/admin/listApplyTerm').then((response)=>{
                     for(var i = 0;i<response.data.length;i++) {
                         this.allApplyTerm.push( {
                             applyStart: response.data[i].applyStart.split('T')[0],
@@ -85,7 +85,7 @@
                 })
             },
             recentApplyTerm(){
-                this.$http.get('http://localhost:8888/admin/recentApplyTerm').then((response)=>{
+                this.$http.get('API_SERVER/admin/recentApplyTerm').then((response)=>{
                     this.currentApplyTerm = {
                         applyStart: response.data.applyStart.split('T')[0],
                         applyEnd: response.data.applyEnd.split('T')[0],
@@ -98,7 +98,7 @@
                 this.$router.push({name: "modify"})
             },
             submitApplyTerm(){
-                this.$http.post('http://localhost:8888/admin/postApplyTerm',{applyStart:this.applyStart,applyEnd:this.applyEnd,applySemester:this.applySemester,applyOrder:this.applyOrder}).then((response)=>{
+                this.$http.post('API_SERVER/admin/postApplyTerm',{applyStart:this.applyStart,applyEnd:this.applyEnd,applySemester:this.applySemester,applyOrder:this.applyOrder}).then((response)=>{
                     this.$router.push({name: "admin"})
                 })
             }
