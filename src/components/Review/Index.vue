@@ -137,13 +137,13 @@ import Const from '../../constant/constant';
           VCategory,
       },
       async created(){
-          await this.$http.get('Const.API_SERVER/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+          await this.$http.get(Const.API_SERVER+'/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
               this.user = res.data.user;
               console.log("유저입니다 : ",this.user.loginId)
               this.loadReview(this.user.loginId)
               return this.user.loginId
           })
-          await this.$http.get('Const.API_SERVER/admin/recentApplyTerm').then((response) => {
+          await this.$http.get(Const.API_SERVER+'/admin/recentApplyTerm').then((response) => {
                   this.applyTerm = {
                       applyStart : response.data.applyStart,
                       applyEnd : response.data.applyEnd,
@@ -151,7 +151,7 @@ import Const from '../../constant/constant';
                       applyOrder : response.data.applyOrder
                   }
               })
-          await this.$http.get('Const.API_SERVER/std/mypage/checkReportTerm',{params:{sLoginID : this.user.loginId, applySemester: this.applyTerm.applySemester}}).then(res => {
+          await this.$http.get(Const.API_SERVER+'/std/mypage/checkReportTerm',{params:{sLoginID : this.user.loginId, applySemester: this.applyTerm.applySemester}}).then(res => {
               if(res.data =='실습한 기업 없음'){
                   alert('실습한 기업이 없습니다.')
                   this.$router.push({name: "Home"})
@@ -165,7 +165,7 @@ import Const from '../../constant/constant';
       methods: {
           // applyStatus(loginId){
           //     console.log(this.applyTerm.applySemester)
-          //     this.$http.get('Const.API_SERVER/std/mypage/applyStatus',{params:{sLoginID : loginId, applySemester : this.applyTerm.applySemester}}).then((response)=>{
+          //     this.$http.get(Const.API_SERVER+'/std/mypage/applyStatus',{params:{sLoginID : loginId, applySemester : this.applyTerm.applySemester}}).then((response)=>{
           //         console.log(response.data)
           //         if (response.data.YN == 1) {
 
@@ -218,7 +218,7 @@ import Const from '../../constant/constant';
           //   if (progress + 10 === 100) clearInterval(this.uploads[index].progressTimer);
           // }
           loadReview(loginId){
-              this.$http.get('Const.API_SERVER/std/mypage/watchReview',{params:{sLoginID : loginId}}).then((response)=>{
+              this.$http.get(Const.API_SERVER+'/std/mypage/watchReview',{params:{sLoginID : loginId}}).then((response)=>{
                   if(response.data != '0'){
                       this.confirm = 1
                       this.cName = response.data.cName
@@ -257,14 +257,14 @@ import Const from '../../constant/constant';
 
             // } //이렇게 key 값과 value값을 확인하면 확인 가능하다.
               if(this.confirm == 0) {
-                  this.$http.post('Const.API_SERVER/std/mypage/postReview',{sLoginID : this.user.loginId, starScore : startScoreValue, reviewContent : this.review, reviewTitle : this.reviewTitle}).then(
+                  this.$http.post(Const.API_SERVER+'/std/mypage/postReview',{sLoginID : this.user.loginId, starScore : startScoreValue, reviewContent : this.review, reviewTitle : this.reviewTitle}).then(
                       response => {
                         alert("후기가 작성되었습니다.")
                       }
                   )
               }
               else{
-                  this.$http.post('Const.API_SERVER/std/mypage/modifyReview', {sLoginID : this.user.loginId, starScore :  startScoreValue, reviewContent : this.review, reviewTitle : this.reviewTitle}).then(
+                  this.$http.post(Const.API_SERVER+'/std/mypage/modifyReview', {sLoginID : this.user.loginId, starScore :  startScoreValue, reviewContent : this.review, reviewTitle : this.reviewTitle}).then(
                       response => {
                         alert("후기가 수정되었습니다.")
                       }

@@ -99,7 +99,7 @@ export default {
             if(this.Isuniq==-1) alert("중복을 확인하지 않았습니다. 확인하세요")
             else if(this.Isuniq == 1) alert("중복입니다.")
             else if(this.Isuniq==0){
-                this.$http.post('Const.API_SERVER/auth/std/signup', {user: this.user, email: this.email}).then((response) => {
+                this.$http.post(Const.API_SERVER+'/auth/std/signup', {user: this.user, email: this.email}).then((response) => {
                     if(response.data == '이메일을 확인해주세요.'){
                         alert(response.data)
                         this.$router.push('/login');
@@ -115,7 +115,7 @@ export default {
             }
         },
         dupcheck(){
-            this.$http.get('Const.API_SERVER/auth/std/dupcheck', {params:{id : this.user.id}}).then((res)=>{
+            this.$http.get(Const.API_SERVER+'/auth/std/dupcheck', {params:{id : this.user.id}}).then((res)=>{
             if(res.data.result == 0) {//중복아닐때
                 alert("사용 가능한 아이디 입니다.")
                 this.Isuniq = 0;

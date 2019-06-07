@@ -166,12 +166,12 @@ import Const from '../../constant/constant';
         // VBase,
       },
       async beforeMount(){
-        await this.$http.get('Const.API_SERVER/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+        await this.$http.get(Const.API_SERVER+'/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
             //console.log(res.data.user);
             this.user = res.data.user;
             return this.user
         });
-        await this.$http.get('Const.API_SERVER/std/mypage/watchResume',{params:{sLoginID : this.user.loginId}}).then(res =>{
+        await this.$http.get(Const.API_SERVER+'/std/mypage/watchResume',{params:{sLoginID : this.user.loginId}}).then(res =>{
             if(res.data != false){
                 // this.$store.dispatch('resume/setResumeState',4);
             }

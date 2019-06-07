@@ -40,11 +40,11 @@ import Const from '../../constant/constant';
       components: {
       },
       async created(){
-        await this.$http.get('Const.API_SERVER/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+        await this.$http.get(Const.API_SERVER+'/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
           this.user = res.data.user;
           return ;
         });
-        await this.$http.get('Const.API_SERVER/std/mypage/showStudentInfo',{params:{sLoginID:this.user.loginId}}).then(res=>{
+        await this.$http.get(Const.API_SERVER+'/std/mypage/showStudentInfo',{params:{sLoginID:this.user.loginId}}).then(res=>{
           this.userData=res.data[0];
         });
       },

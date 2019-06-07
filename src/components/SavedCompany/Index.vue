@@ -68,7 +68,7 @@
     },
     async created(){
         // this.getApplyStatus();
-      await this.$http.get('Const.API_SERVER/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+      await this.$http.get(Const.API_SERVER+'/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
           this.user = res.data.user;
           return this.user.loginId;
       }); 
@@ -78,7 +78,7 @@
     },
     methods: {
       async getApplyTerm(){
-        await this.$http.get('Const.API_SERVER/admin/recentApplyTerm').then((response) => {
+        await this.$http.get(Const.API_SERVER+'/admin/recentApplyTerm').then((response) => {
             this.applyTerm = {
                 applyStart : response.data.applyStart,
                 applyEnd : response.data.applyEnd,
@@ -89,7 +89,7 @@
         })
       },
       async getPickCoList(){
-        await this.$http.get('Const.API_SERVER/std/mypage/watchStdPickCo',{params:{sLoginID : this.user.loginId, applySemester:this.applyTerm.applySemester, applyOrder:this.applyTerm.applyOrder}}).then((response) => {
+        await this.$http.get(Const.API_SERVER+'/std/mypage/watchStdPickCo',{params:{sLoginID : this.user.loginId, applySemester:this.applyTerm.applySemester, applyOrder:this.applyTerm.applyOrder}}).then((response) => {
           for(var i=0; i<response.data.length;i++){
             this.pickCoList.push(response.data[i]);
           }

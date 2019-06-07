@@ -99,7 +99,7 @@
     },
     created(){
         // this.getApplyStatus();
-        this.$http.get('Const.API_SERVER/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+        this.$http.get(Const.API_SERVER+'/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
             this.user = res.data.user;
             console.log("유저입니다 : ",this.user.loginId)
             this.getApplyTerm(this.user.loginId)
@@ -111,7 +111,7 @@
           this.$router.push({name: "Apply"})
       },
       getApplyStatus(loginId) {
-        this.$http.get('Const.API_SERVER/std/mypage/loadApplyAll',{params:{sLoginID : loginId, applySemester : this.applyTerm.applySemester}}).then((response)=>{
+        this.$http.get(Const.API_SERVER+'/std/mypage/loadApplyAll',{params:{sLoginID : loginId, applySemester : this.applyTerm.applySemester}}).then((response)=>{
             if(response.data=='지원 이력 없음'){
                 this.confirm = 2
             }
@@ -149,7 +149,7 @@
         })
       },
         getApplyTerm(loginId){
-            this.$http.get('Const.API_SERVER/admin/recentApplyTerm').then((response) => {
+            this.$http.get(Const.API_SERVER+'/admin/recentApplyTerm').then((response) => {
                 this.applyTerm = {
                     applyStart : response.data.applyStart,
                     applyEnd : response.data.applyEnd,
@@ -162,7 +162,7 @@
         giveup(index){
           console.log(this.applylist)
           if(this.applylist[index].YN == '심사중'){
-            this.$http.post('Const.API_SERVER/std/mypage/giveup',{sLoginID : this.user.loginId, applySemester : this.applyTerm.applySemester, applyOrder : this.applylist[index].applyOrder}).then((response) => {
+            this.$http.post(Const.API_SERVER+'/std/mypage/giveup',{sLoginID : this.user.loginId, applySemester : this.applyTerm.applySemester, applyOrder : this.applylist[index].applyOrder}).then((response) => {
                 alert('포기되었습니다.')
                 this.$router.push({name: "Home"})
             })

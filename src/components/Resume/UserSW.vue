@@ -2735,7 +2735,7 @@ import Const from '../../constant/constant';
         }),
     },
     beforeMount(){
-        this.$http.get('Const.API_SERVER/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+        this.$http.get(Const.API_SERVER+'/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
             //console.log(res.data.user);
             this.user = res.data.user;
         })

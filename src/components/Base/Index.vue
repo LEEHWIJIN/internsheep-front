@@ -77,7 +77,7 @@
     },
     created(){
         if(localStorage.token){
-          this.$http.get('Const.API_SERVER/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
+          this.$http.get(Const.API_SERVER+'/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
               if(res.data.result==1){
                 localStorage.removeItem('token')
                 this.user={};
