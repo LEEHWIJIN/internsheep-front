@@ -251,11 +251,6 @@
             </div>
           </div>
 
-          <!-- <li v-for="cr in companyReview" class="d-flex mb-4" style="color: #1b1e21"> -->
-          <div v-if="AvgRatings()==0" class="ml-4" >
-            현재 기업 평가 존재하지 않습니다.
-          </div>
-          <div v-else>
             <div v-for="cr in companyReview" class="row p-4 ml-3 mb-3 " style="line-height: 100%; border-radius: 2rem; margin-right:50px; background:#F8F8F8; padding-left:1000px;">
               <ul class="list-unstyled">
                 <li class="mb-3" style="font-size:14px;"><span style="font-weight:bold">인턴 기간</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{cr.internTermStart}} ~ {{cr.internTermEnd}}</li>
@@ -263,8 +258,6 @@
                 <li  style="font-size:14px;"><span style="font-weight:bold">실습 후기</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{cr.reviewContent}}</li>
               </ul>
             </div>
-          </div>
-          <!-- </li> -->
           <div class="text-center mt-4">
             <button class="btn btn-primary btn-sm" @click="applyStd(sc.cName)">지원하기</button>
             <button class="btn btn-primary btn-sm ml-2" @click="">찜하기</button>
