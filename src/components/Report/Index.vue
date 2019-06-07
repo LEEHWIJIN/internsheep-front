@@ -11,7 +11,9 @@
         <!-- 공백 -->
         <div class="col-lg-1">
         </div>
-        <v-error v-if="report_status==-1"></v-error>
+        <div class="col-lg-8" v-if="report_status==-1">
+          <v-error></v-error>
+        </div>
         <!-- 보고서 및 후기 작성란 -->
         <div v-if="report_status==1" class="col-lg-8">
             <div class="row">
@@ -48,7 +50,7 @@
               </div>
             </div>
         </div>
-       
+
       </div>
     </div>
     <v-footer></v-footer>
