@@ -484,7 +484,7 @@ export default{
         })
       },
       postStdPickCo(cName){
-        this.$http.post(Const.API_SERVER+'/std/mypage/postStdPickCo',{cName : cName, sLoginID : this.user.loginId}).then((response) => {
+        this.$http.post(Const.API_SERVER+'/std/mypage/postStdPickCo',{cName : cName, sLoginID : this.user.loginId, applyOrder : this.applyTerm.applyOrder}).then((response) => {
             //꽉찬하트로 바꿔줘야 할것같음.
             // console.log(response.data)
           if(response.data==0){
