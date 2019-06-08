@@ -35,6 +35,7 @@
  import VUserGrade from './UserGrade.vue'
  import VUserSW from './UserSW.vue'
  import VError from './Error.vue'
+ import Const from '../../constant/constant';
 //  import { mapActions, mapGetters } from "vuex";
   export default{
       name: 'Resume',

@@ -70,7 +70,7 @@
         VModifyUserSW,
         VError,
       },
-      async created(){
+      async beforeMount(){
         await this.$http.get(Const.API_SERVER+'/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
           this.user = res.data.user;
           this.getResume(this.user.loginId);

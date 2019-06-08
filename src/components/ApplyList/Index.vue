@@ -134,7 +134,7 @@ export default{
       })
       await this.$http.get(Const.API_SERVER+'/std/loadCoReview', {params: {cName: this.applylist[selectedNum].cName}}).then((response) => {
         this.companyReview = []
-        console.log('sdf', this.companyReview)
+        // console.log('sdf', this.companyReview)
         for (var i = 0; i < response.data.length; i++) {
             this.companyReview.push({
                 cName: response.data[i].cName,

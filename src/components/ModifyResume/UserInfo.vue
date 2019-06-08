@@ -12,8 +12,15 @@
           <div class="text-center">
             <!-- 이미지 바꿔~!~!~! -->
             <img class="mb-4 rounded" src="images/profile.png" style="width: 110px;"alt="이력서 사진">
+<!--           
+              <div class="file-upload-form">
+                  <input type="file" @change="previewImage" accept="image/*">
+              </div>
+              <div class="image-preview" v-if="imageData.length > 0">
+                  <img class="preview" :src="imageData">
+              </div>
           </div>
-        </div>
+        </div> -->
         <!-- <div class="col-lg-6">
           <input class="form-control mb-4" v-model="sName" placeholder="이름*">
         </div> -->
@@ -156,6 +163,8 @@ import Const from '../../constant/constant';
           sEmail:[],
           user:{},
           sGrade : [],
+          // imageData: "",
+          // imageURL : null,
         }
       },
       components: {
@@ -208,6 +217,17 @@ import Const from '../../constant/constant';
 
       },
       methods: {
+          // previewImage(event) {
+          //     var input = event.target;
+          //     if (input.files && input.files[0]) {
+          //         var fr = new FileReader();
+          //         fr.onload = (e) => {
+          //             this.imageData = e.target.result;
+          //         }
+          //         fr.readAsDataURL(input.files[0]);
+          //         this.imageURL=input.files[0]
+          //     }
+          // },
         submitResume(){
           var chkbox = document.getElementsByName('grade').length;
           var chkboxhp = document.getElementsByName('hope').length;
@@ -227,6 +247,7 @@ import Const from '../../constant/constant';
               this.sHopeTerm = document.getElementsByName('hopeterm')[i].value;
             };
           }
+          // console.log(this.imageURL)
           var data =[{
             sEmail: this.sEmail,
             sPhone : this.sPhone,
@@ -242,4 +263,14 @@ import Const from '../../constant/constant';
 </script>
 
 <style scoped>
+    .file-upload-form, .image-preview {
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        padding: 20px;
+    }
+    img.preview {
+        width: 200px;
+        background-color: white;
+        border: 1px solid #DDD;
+        padding: 5px;
+    }
 </style>
