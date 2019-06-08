@@ -76,7 +76,7 @@
 <style scoped>
 .section {
   padding-top: 130px;
-  padding-bottom: 0px;
+  padding-bottom: 300px;
 }
 
 .container {

@@ -2641,9 +2641,6 @@
             </div>
         </div>
         <br>
-        <div class="col-12 text-center">
-            <button class="btn btn-primary" type="submit">제출하기</button>
-        </div>
       </form>
       <div class="text-center mt-2">
         <button class="btn btn-light" @click="before">이전</button>
