@@ -2727,12 +2727,12 @@ import Const from '../../constant/constant';
     // VBase,
     },
     computed: {
-        ...mapGetters({
-            getUserInfo : 'resume/getUserInfo',
-            getUserEng : 'resume/getUserEng',
-            getUserGrade : 'resume/getUserGrade',
-            getUserSW : 'resume/getUserSW',
-        }),
+        // ...mapGetters({
+        //     getUserInfo : 'resume/getUserInfo',
+        //     getUserEng : 'resume/getUserEng',
+        //     getUserGrade : 'resume/getUserGrade',
+        //     getUserSW : 'resume/getUserSW',
+        // }),
     },
     beforeMount(){
         this.$http.get(Const.API_SERVER+'/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
@@ -2909,6 +2909,267 @@ import Const from '../../constant/constant';
           if(this.count!=52){
             alert("전부 작성 해 주세요.")
             return;
+          }
+          var chkleng = document.getElementsByName('js').length;
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('js')[i].checked == true){
+                  this.programmingLang.Javascript = document.getElementsByName('js')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('ht')[i].checked == true){
+                  this.programmingLang.HTML = document.getElementsByName('ht')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('cs')[i].checked == true){
+                  this.programmingLang.CSS = document.getElementsByName('cs')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('jq')[i].checked == true){
+                  this.programmingLang.jQuery = document.getElementsByName('jq')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('sq')[i].checked == true){
+                  this.programmingLang.SQL = document.getElementsByName('sq')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('jv')[i].checked == true){
+                  this.programmingLang.Java = document.getElementsByName('jv')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('aj')[i].checked == true){
+                  this.programmingLang.AndroidJava = document.getElementsByName('aj')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('sf')[i].checked == true){
+                  this.programmingLang.Swift = document.getElementsByName('sf')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('ob')[i].checked == true){
+                  this.programmingLang.Objective = document.getElementsByName('ob')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('py')[i].checked == true){
+                  this.programmingLang.Python = document.getElementsByName('py')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('ph')[i].checked == true){
+                  this.programmingLang.PHP = document.getElementsByName('ph')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('langC')[i].checked == true){
+                  this.programmingLang.C = document.getElementsByName('langC')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('mi')[i].checked == true){
+                  this.programmingLang.Microsoft = document.getElementsByName('mi')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('kot')[i].checked == true){
+                  this.programmingLang.Kotlin = document.getElementsByName('kot')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('per')[i].checked == true){
+                  this.programmingLang.Peral = document.getElementsByName('per')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('langR')[i].checked == true){
+                  this.programmingLang.R = document.getElementsByName('langR')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('langvba')[i].checked == true){
+                  this.programmingLang.VBA = document.getElementsByName('langvba')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('nj')[i].checked == true){
+                  this.frameworkLang.Nodejs = document.getElementsByName('nj')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('an')[i].checked == true){
+                  this.frameworkLang.Angular = document.getElementsByName('an')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('rt')[i].checked == true){
+                  this.frameworkLang.React = document.getElementsByName('rt')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('ej')[i].checked == true){
+                  this.frameworkLang.Expressjs = document.getElementsByName('ej')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('net')[i].checked == true){
+                  this.frameworkLang.NetCore = document.getElementsByName('net')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('spr')[i].checked == true){
+                  this.frameworkLang.Spring = document.getElementsByName('spr')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('dj')[i].checked == true){
+                  this.frameworkLang.Django = document.getElementsByName('dj')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('fl')[i].checked == true){
+                  this.frameworkLang.Flask = document.getElementsByName('fl')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('cd')[i].checked == true){
+                  this.frameworkLang.Cordova = document.getElementsByName('cd')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('mys')[i].checked == true){
+                  this.databaseLang.MySql = document.getElementsByName('mys')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('sqls')[i].checked == true){
+                  this.databaseLang.SQLServer = document.getElementsByName('sqls')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('mong')[i].checked == true){
+                  this.databaseLang.MongoDB = document.getElementsByName('mong')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('sqli')[i].checked == true){
+                  this.databaseLang.SQLite = document.getElementsByName('sqli')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('rdis')[i].checked == true){
+                  this.databaseLang.Redis = document.getElementsByName('rdis')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('orl')[i].checked == true){
+                  this.databaseLang.Oracle = document.getElementsByName('orl')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('fla_data')[i].checked == true){
+                  this.databaseLang.Flask = document.getElementsByName('fla_data')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('cor_data')[i].checked == true){
+                  this.databaseLang.Cordova = document.getElementsByName('cor_data')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('aw')[i].checked == true){
+                  this.cloudLang.AWS = document.getElementsByName('aw')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('az')[i].checked == true){
+                  this.cloudLang.Azure = document.getElementsByName('az')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('gc')[i].checked == true){
+                  this.cloudLang.GCP = document.getElementsByName('gc')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('lin')[i].checked == true){
+                  this.cloudLang.Linux = document.getElementsByName('lin')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('wp')[i].checked == true){
+                  this.cloudLang.Wordpress = document.getElementsByName('wp')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('rp')[i].checked == true){
+                  this.cloudLang.RaspberryPi = document.getElementsByName('rp')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('ard')[i].checked == true){
+                  this.cloudLang.Arduino = document.getElementsByName('ard')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('fire')[i].checked == true){
+                  this.cloudLang.Firebase = document.getElementsByName('fire')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('dock')[i].checked == true){
+                  this.cloudLang.Docker = document.getElementsByName('dock')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('goe')[i].checked == true){
+                  this.cloudLang.Go = document.getElementsByName('goe')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('tens')[i].checked == true){
+                  this.machineLang.Tensorflow = document.getElementsByName('tens')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('caf')[i].checked == true){
+                  this.machineLang.Caffe = document.getElementsByName('caf')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('ocv')[i].checked == true){
+                  this.machineLang.OpenCV = document.getElementsByName('ocv')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('dli')[i].checked == true){
+                  this.machineLang.DLib = document.getElementsByName('dli')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('ogl')[i].checked == true){
+                  this.machineLang.OpenGL = document.getElementsByName('ogl')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('uni')[i].checked == true){
+                  this.machineLang.Unity = document.getElementsByName('uni')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('ardu_mac')[i].checked == true){
+                  this.machineLang.Arduino = document.getElementsByName('ardu_mac')[i].value;
+              };
+          }
+          for(var i=0;i<chkleng;i++){
+              if(document.getElementsByName('fir_mac')[i].checked == true){
+                  this.machineLang.Firebase = document.getElementsByName('fir_mac')[i].value;
+              };
           }
           var data =[{
               programmingLang : this.programmingLang,
