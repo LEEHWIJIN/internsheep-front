@@ -2727,12 +2727,12 @@ import Const from '../../constant/constant';
     // VBase,
     },
     computed: {
-        // ...mapGetters({
-        //     getUserInfo : 'resume/getUserInfo',
-        //     getUserEng : 'resume/getUserEng',
-        //     getUserGrade : 'resume/getUserGrade',
-        //     getUserSW : 'resume/getUserSW',
-        // }),
+        ...mapGetters({
+            getUserInfo : 'resume/getUserInfo',
+            getUserEng : 'resume/getUserEng',
+            getUserGrade : 'resume/getUserGrade',
+            getUserSW : 'resume/getUserSW',
+        }),
     },
     beforeMount(){
         this.$http.get(Const.API_SERVER+'/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
@@ -3191,9 +3191,10 @@ import Const from '../../constant/constant';
               cloudLang : this.cloudLang,
               machineLang : this.machineLang,
           };
+          console.log(submit_resume);
           this.$store.dispatch('resume/submit_ALL', submit_resume);
           alert("이력서 작성이 완료되었습니다.")
-          this.$store.dispatch('resume/setResumeState',6);
+          // this.$store.dispatch('resume/setResumeState',0);
           location.reload();
         },
         before(){

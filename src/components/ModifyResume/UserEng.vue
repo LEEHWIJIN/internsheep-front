@@ -200,7 +200,7 @@ import Const from '../../constant/constant';
             //     this.$store.dispatch('resume/setResumeState',4);
             // }
             // else this.$store.dispatch('resume/setResumeState',0);//맨 첫장
-            console.log(res.data.sEnglish)
+            // console.log(res.data.sEnglish)
             var sEnglish = JSON.parse(res.data.sEnglish)
             var EnglishCommunication = sEnglish.EnglishCommunication;
             var EnglishSearch = sEnglish.EnglishSearch;
