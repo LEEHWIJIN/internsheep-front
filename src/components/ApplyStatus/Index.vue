@@ -101,7 +101,7 @@
         // this.getApplyStatus();
         this.$http.get(Const.API_SERVER+'/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
             this.user = res.data.user;
-            console.log("유저입니다 : ",this.user.loginId)
+            // console.log("유저입니다 : ",this.user.loginId)
             this.getApplyTerm(this.user.loginId)
           })
 
@@ -118,7 +118,7 @@
             else {
                 for(var i=0; i<response.data.length;i++) {
                     if(this.applyTerm.applyOrder == response.data[i].applyOrder){
-                        console.log('현재 지원이력 있음')
+                        // console.log('현재 지원이력 있음')
                         this.current = 1
                         this.cName = response.data[i].cName
                         this.cOccupation = response.data[i].cOccupation
@@ -127,7 +127,7 @@
                         else if (response.data[i].YN == 0) this.YN = "불합격";
                     }
                     else {
-                        console.log('과거 지원이력 있음')
+                        // console.log('과거 지원이력 있음')
                         this.confirm = 1
                         this.applylist.push({
                             cOccupation: response.data[i].cOccupation,
@@ -160,7 +160,7 @@
             })
         },
         giveup(index){
-          console.log(this.applylist)
+          // console.log(this.applylist)
           if(this.applylist[index].YN == '심사중'){
             this.$http.post(Const.API_SERVER+'/std/mypage/giveup',{sLoginID : this.user.loginId, applySemester : this.applyTerm.applySemester, applyOrder : this.applylist[index].applyOrder}).then((response) => {
                 alert('포기되었습니다.')

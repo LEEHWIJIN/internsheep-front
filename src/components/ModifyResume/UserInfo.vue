@@ -11,8 +11,8 @@
         <div class="col-lg-12">
           <div class="text-center">
             <!-- 이미지 바꿔~!~!~! -->
-            <img class="mb-4 rounded" src="images/profile.png" style="width: 110px;"alt="이력서 사진">
-<!--           
+            <!--<img class="mb-4 rounded" src="images/profile.png" style="width: 110px;"alt="이력서 사진">
+           -->
               <div class="file-upload-form">
                   <input type="file" @change="previewImage" accept="image/*">
               </div>
@@ -20,7 +20,7 @@
                   <img class="preview" :src="imageData">
               </div>
           </div>
-        </div> -->
+        </div>
         <!-- <div class="col-lg-6">
           <input class="form-control mb-4" v-model="sName" placeholder="이름*">
         </div> -->
@@ -163,8 +163,8 @@ import Const from '../../constant/constant';
           sEmail:[],
           user:{},
           sGrade : [],
-          // imageData: "",
-          // imageURL : null,
+            imageData: "",
+            imageURL : null,
         }
       },
       components: {
@@ -217,17 +217,17 @@ import Const from '../../constant/constant';
 
       },
       methods: {
-          // previewImage(event) {
-          //     var input = event.target;
-          //     if (input.files && input.files[0]) {
-          //         var fr = new FileReader();
-          //         fr.onload = (e) => {
-          //             this.imageData = e.target.result;
-          //         }
-          //         fr.readAsDataURL(input.files[0]);
-          //         this.imageURL=input.files[0]
-          //     }
-          // },
+          previewImage(event) {
+              var input = event.target;
+              if (input.files && input.files[0]) {
+                  var fr = new FileReader();
+                  fr.onload = (e) => {
+                      this.imageData = e.target.result;
+                  }
+                  fr.readAsDataURL(input.files[0]);
+                  this.imageURL=input.files[0]
+              }
+          },
         submitResume(){
           var chkbox = document.getElementsByName('grade').length;
           var chkboxhp = document.getElementsByName('hope').length;
@@ -247,13 +247,14 @@ import Const from '../../constant/constant';
               this.sHopeTerm = document.getElementsByName('hopeterm')[i].value;
             };
           }
-          // console.log(this.imageURL)
+          console.log(this.imageURL)
           var data =[{
             sEmail: this.sEmail,
             sPhone : this.sPhone,
             sGrade : this.sGrade,
             sHopeTerm : this.sHopeTerm,
             sHope : this.sHope,
+            image : this.imageURL
           }];
           this.$store.dispatch('resume/submit_userInfo', data);
           this.$store.dispatch('resume/setResumeState',7);
