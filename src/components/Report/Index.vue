@@ -122,7 +122,7 @@ import VError from './Error.vue'
                    alert('보고서 작성기간이 아닙니다.')
                   this.$router.push({name: "Apply"})
                }
-               else{this.report_status = 1;}
+               else {this.report_status = 1;}
           })
 
       },
@@ -132,7 +132,7 @@ import VError from './Error.vue'
               this.loadFileName(loginId)
           },
           loadFileName(loginId){
-              this.$http.get(Const.API_SERVER+'/co/mypage/uploadImage',{params:{sLoginID : loginId}}).then((response)=>{
+              this.$http.get(Const.API_SERVER+'/std/mypage/loadFileName',{params:{sLoginID : loginId}}).then((response)=>{
                   if(response.data == '0'){
                       this.fileName = ""
                   }
@@ -141,7 +141,6 @@ import VError from './Error.vue'
           },
           upload(event){
             this.uploadFile = event.target.files[0];
-            console.log('sdfsdf'+this.file)
           },
           submitFileAndReview(){
               var data = new FormData();

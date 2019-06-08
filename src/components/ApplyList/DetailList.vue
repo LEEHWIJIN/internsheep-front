@@ -260,7 +260,7 @@
             </div>
           <div class="text-center mt-4">
             <button class="btn btn-primary btn-sm" @click="applyStd(sc.cName)">지원하기</button>
-            <button class="btn btn-primary btn-sm ml-2" @click="">찜하기</button>
+            <button class="btn btn-primary btn-sm ml-2" @click="pickCo(sc.cName)">찜하기</button>
           </div>
 
         </ul>
@@ -326,7 +326,7 @@ export default{
         // for(var i=1;i<5;i++){
           // docheck.push(document.getElementsByName('search')[i].value);
           // if(EnglishSearch==docheck[i]){
-          console.log(res.data.user);
+          // console.log(res.data.user);
 
           // }
         // }
@@ -355,7 +355,7 @@ export default{
       }
       avg = sum/numOfPeople;
 
-      console.log(avg);
+      // console.log(avg);
 
       // document.getElementsByName('search')[10].checked = true;
 
@@ -484,8 +484,9 @@ export default{
         })
       },
       postStdPickCo(cName){
-        this.$http.post(Const.API_SERVER+'/std/mypage/postStdPickCo',{cName : cName, sLoginID : this.user.loginId}).then((response) => {
+        this.$http.post(Const.API_SERVER+'/std/mypage/postStdPickCo',{cName : cName, sLoginID : this.user.loginId, applyOrder : this.applyTerm.applyOrder}).then((response) => {
             //꽉찬하트로 바꿔줘야 할것같음.
+            // console.log(response.data)
           if(response.data==0){
             // var heart = document.getElementsByClassName("fa-heart");
             // heart.style.font="bold";

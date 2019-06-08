@@ -35,6 +35,7 @@
  import VUserGrade from './UserGrade.vue'
  import VUserSW from './UserSW.vue'
  import VError from './Error.vue'
+ import Const from '../../constant/constant';
 //  import { mapActions, mapGetters } from "vuex";
   export default{
       name: 'Resume',
@@ -76,7 +77,7 @@
 <style scoped>
 .section {
   padding-top: 130px;
-  padding-bottom: 0px;
+  padding-bottom: 300px;
 }
 
 .container {

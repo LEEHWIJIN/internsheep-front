@@ -3045,20 +3045,6 @@ import Const from '../../constant/constant';
                 document.getElementsByName('cor_data')[i].checked = true;
               }
             };
-            // var docheck = [];
-            // for(var i=0;i<chkleng;i++){
-            //   docheck.push(document.getElementsByName("cor_data")[i].value);
-            //   if(Cordova_data==docheck[i]){
-            //     document.getElementsByName('cor_data')[i].checked = true;
-            //   }
-            // };
-            // var docheck = [];
-            // for(var i=0;i<chkleng;i++){
-            //   docheck.push(document.getElementsByName("cor_data")[i].value);
-            //   if(Cordova_data==docheck[i]){
-            //     document.getElementsByName('cor_data')[i].checked = true;
-            //   }
-            // };
             var docheck = [];
             for(var i=0;i<chkleng;i++){
               docheck.push(document.getElementsByName("aw")[i].value);
