@@ -251,7 +251,7 @@ import Const from '../../constant/constant';
           var data =[{
             sEmail: this.sEmail,
             sPhone : this.sPhone,
-            sGrade : this.sGrade,s
+            sGrade : this.sGrade,
             sHopeTerm : this.sHopeTerm,
             sHope : this.sHope,
               image : this.imageURL
