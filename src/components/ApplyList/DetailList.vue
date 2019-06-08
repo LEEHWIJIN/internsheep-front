@@ -260,7 +260,7 @@
             </div>
           <div class="text-center mt-4">
             <button class="btn btn-primary btn-sm" @click="applyStd(sc.cName)">지원하기</button>
-            <button class="btn btn-primary btn-sm ml-2" @click="">찜하기</button>
+            <button class="btn btn-primary btn-sm ml-2" @click="pickCo(sc.cName)">찜하기</button>
           </div>
 
         </ul>

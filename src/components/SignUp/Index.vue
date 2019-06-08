@@ -44,7 +44,7 @@
               </div>
 
               <div class="form-label-group">
-                <input v-model="email" type="email" name="signemail" id="inputemail" class="form-control1"  placeholder="Email" required autofocus>
+                <input v-model="email" type="email" name="signemail" id="inputEmail" class="form-control1"  placeholder="Email" required autofocus>
                 <label for="inputEmail">Email</label>
               </div>
 
