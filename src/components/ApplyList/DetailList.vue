@@ -471,6 +471,7 @@ export default{
       });
     },
       async pickCo(cName){//체크된 회사인지 아닌지 확인하고 if 문걸어야 할것같음 0 : 아직 찜 하지 않은 회사임 1 : 찜한한 회사임
+        console.log(this.applyTerm.applyOrder)
         await this.$http.get(Const.API_SERVER+'/std/mypage/checkPickCo',{params:{sLoginID : this.user.loginId,cName:cName,applySemester:this.applyTerm.applySemester,applyOrder:this.applyTerm.applyOrder}}).then((response)=>{
           if(response.data==0){//아직 지원하지 않은 회사이므로 찜 해야함
             this.postStdPickCo(cName);
@@ -484,7 +485,7 @@ export default{
         })
       },
       postStdPickCo(cName){
-        this.$http.post(Const.API_SERVER+'/std/mypage/postStdPickCo',{cName : cName, sLoginID : this.user.loginId}).then((response) => {
+        this.$http.post(Const.API_SERVER+'/std/mypage/postStdPickCo',{cName : cName, sLoginID : this.user.loginId, applyOrder : this.applyTerm.applyOrder}).then((response) => {
             //꽉찬하트로 바꿔줘야 할것같음.
           if(response.data==0){
             // var heart = document.getElementsByClassName("fa-heart");
