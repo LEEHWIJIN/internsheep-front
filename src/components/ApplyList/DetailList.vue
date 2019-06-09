@@ -426,6 +426,40 @@ export default{
       }
       // document.getElementsByName('search')[9].checked = true;
       else{
+
+              if(isNaN(avg)==false){
+                if(avg<=0.7){
+                  document.getElementsByName('search')[10].checked = true;
+                }
+                else if(avg<=1.2){
+                  document.getElementsByName('search')[9].checked = true;
+                }
+                else if(avg<=1.7){
+                  document.getElementsByName('search')[8].checked = true;
+                }
+                else if(avg<=2.2){
+                  document.getElementsByName('search')[7].checked = true;
+                }
+                else if(avg<=2.7){
+                  document.getElementsByName('search')[6].checked = true;
+                }
+                else if(avg<=3.2){
+                  document.getElementsByName('search')[5].checked = true;
+                }
+                else if(avg<=3.7){
+                  document.getElementsByName('search')[4].checked = true;
+                }
+                else if(avg<=4.2){
+                  document.getElementsByName('search')[3].checked = true;
+                }
+                else if(avg<=4.7){
+                  document.getElementsByName('search')[2].checked = true;
+                }
+                else if(avg<=5){
+                  document.getElementsByName('search')[1].checked = true;
+                }
+              }
+
         return avg;
       }
     },

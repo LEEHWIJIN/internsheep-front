@@ -42,6 +42,7 @@ export default{
   width:100%;
   height:100%;
   margin: 40px auto;
+  border-bottom: 100px;
 }
 
 .outer {
