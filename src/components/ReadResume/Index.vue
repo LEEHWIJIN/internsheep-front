@@ -11,7 +11,7 @@
           <div class="col-lg-1">
           </div>
           <!-- 이력서 정보 -->
-          <div class="col-lg-8">
+          <div class="col-lg-8 mb-4">
 
             <v-error v-if="$store.state.resume.resume_state==5"></v-error>
             <v-user-info v-else-if="$store.state.resume.resume_state==0" ></v-user-info>
@@ -106,6 +106,6 @@
 }
 
 .container {
-  padding-bottom: 50px;
+  padding-bottom: 80px;
 }
 </style>

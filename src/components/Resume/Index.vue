@@ -77,10 +77,10 @@
 <style scoped>
 .section {
   padding-top: 130px;
-  padding-bottom: 300px;
+  padding-bottom: 0px;
 }
 
 .container {
-  padding-bottom: 50px;
+  padding-bottom: 100px;
 }
 </style>
