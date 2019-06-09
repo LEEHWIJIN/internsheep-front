@@ -115,7 +115,7 @@ import myModal from './myModal'
       await this.$http.get(Const.API_SERVER+'/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
           this.user = res.data.user;
           return this.user.loginId;
-      }); 
+      });
       await this.getApplyTerm();
       await this.getPickCoList();
 
@@ -172,7 +172,7 @@ import myModal from './myModal'
 }
 
 .container {
-  padding-bottom: 170px;
+  padding-bottom: 200px;
 }
 
 .pretty {
