@@ -181,10 +181,11 @@ export default{
 .section {
   padding-top: 60px;
   padding-bottom: 0px;
+
 }
 
 .company-item {
-  padding:15px;
+  /* padding:15px; */
   overflow-y: scroll;
   overflow-x: hidden;
   height: 510px;

@@ -1,46 +1,46 @@
 <template>
   <section class="section1">
     <div class="container">
-    <div class="row">
-      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-        <div class="" style="text-align: center;">
-          <a class="" href="#" @click="goHome"><img src="images/login.png" style="text-align: center; filter: brightness(0) invert(1);"alt="Intern Sheep"></a>
-        </div>
-        <div class="card card-signin my-5">
-          <div class="card-body">
+      <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+          <div class="" style="text-align: center;">
+            <a class="" href="#" @click="goHome"><img src="images/login.png" style="text-align: center; filter: brightness(0) invert(1);"alt="Intern Sheep"></a>
+          </div>
+          <div class="card card-signin my-5">
+            <div class="card-body">
 
-            <h2 class="card-title text-center">Log In</h2>
-            <form v-on:submit.prevent='login' class="form-signin">
+              <h2 class="card-title text-center">Log In</h2>
+              <form v-on:submit.prevent='login' class="form-signin">
 
-              <div class="form-label-group">
-                <input v-model="user.id" type="id" id="loginId" class="form-control1" placeholder="Id" required autofocus>
-                <label for="loginId">Id</label>
-              </div>
+                <div class="form-label-group">
+                  <input v-model="user.id" type="id" id="loginId" class="form-control1" placeholder="Id" required autofocus>
+                  <label for="loginId">Id</label>
+                </div>
 
-              <div class="form-label-group">
-                <input v-model="user.password" type="password" id="inputPassword" class="form-control1"  placeholder="Password" required autofocus>
-                <label for="inputPassword">Password</label>
-              </div>
+                <div class="form-label-group">
+                  <input v-model="user.password" type="password" id="inputPassword" class="form-control1"  placeholder="Password" required autofocus>
+                  <label for="inputPassword">Password</label>
+                </div>
 
-              <div class="custom-control custom-checkbox mb-3">
-                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                <label class="custom-control-label" for="customCheck1">Remember password</label>
-              </div>
+                <div class="custom-control custom-checkbox mb-3">
+                  <input type="checkbox" class="custom-control-input" id="customCheck1">
+                  <label class="custom-control-label" for="customCheck1">Remember password</label>
+                </div>
 
-              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button><br>
+                <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button><br>
 
-              <div class="text-center">
-                <router-link to="/signup" id="link">Sign Up</router-link>
-              </div>
+                <div class="text-center">
+                  <router-link to="/signup" id="link">Sign Up</router-link>
+                </div>
 
-            </form>
+              </form>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
   </section>
-  </template>
+</template>
 
 <script>
 
@@ -97,17 +97,21 @@
 /* img {
   width:350px;
 } */
-
 :root {
   --input-padding-x: 1.5rem;
   --input-padding-y: .75rem;
 }
 
+.row{
+  padding-top: 10%;
+}
+
 .section1 {
   background-color: #007bff;
   background: linear-gradient(to right, #0062E6, #33AEFF);
-  padding-bottom:120px;
-  padding-top:120px;
+  /* padding-bottom:150px;
+  padding-top:150px; */
+  height:100vh;
 }
 
 .card-signin {
