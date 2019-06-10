@@ -31,8 +31,8 @@
       this.$router.push({name: "Resume"})
       },
       goReadResume(){
-      this.$router.push({name: "ReadResume"})
-      location.reload()
+        this.$router.push({name: "ReadResume"})
+        location.reload()
       },
       goHome(){
           this.$router.push({name: "Home"})

@@ -122,7 +122,7 @@ import myModal from './myModal'
     },
     methods: {
       modalId(i) {
-          console.log(i);
+          // console.log(i);
           return 'modal' + i;
       },
       async getApplyTerm(){
