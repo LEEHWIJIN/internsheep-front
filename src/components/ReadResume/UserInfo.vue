@@ -34,7 +34,7 @@
         <div class="col-lg-6">
           <div class="apply-list  rounded-xl  bg-white mb-4">
               <h6 style="font-weight:bold">학년정보(현재 학기 기준)*</h6>
-              <input class="inp-cbx" id="cbx1" value=" 3학년 1학기" type="radio" name="grade" onclick="return false" style="display: none;" >
+              <input class="inp-cbx" id="cbx1" value="3학년 1학기" type="radio" name="grade" onclick="return false" style="display: none;" >
 
               <label class="cbx" for="cbx1">
                 <span>
@@ -176,7 +176,6 @@ import Const from '../../constant/constant';
                 // this.$store.dispatch('resume/setResumeState',4);
             }
             else this.$store.dispatch('resume/setResumeState',0);//맨 첫장
-            // console.log(res)
             this.sEmail = res.data.sEmail;
             this.sPhone = res.data.sPhone;
             var grade = res.data.sGrade;
