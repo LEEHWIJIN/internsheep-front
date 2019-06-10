@@ -113,7 +113,6 @@ import VError from './Error.vue'
               return this.applyTerm
           })
            await this.$http.get(Const.API_SERVER+'/std/mypage/checkReportTerm',{params:{sLoginID : this.user.loginId, applySemester: this.applyTerm.applySemester}}).then(res => {
-               console.log('sdfsdf'+res.data)
               if(res.data =='실습한 기업 없음'){
                   alert('실습한 기업이 없습니다.')
                   this.$router.push({name: "Apply"})
@@ -170,6 +169,7 @@ import VError from './Error.vue'
             else{
                 this.$http.post(Const.API_SERVER+'/std/mypage/modifyReport', data, config).then(
                     response => {
+                        this.fileName = this.uploadFile.name;
                         alert('수정되었습니다.')
                     }
                 )

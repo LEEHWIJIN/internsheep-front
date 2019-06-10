@@ -39,13 +39,13 @@
 
               <div class="form-label-group">
                 <input v-model="user.id" type="signid" id="signupId" class="form-control1" placeholder="Id" required autofocus>
-                <label for="signupId">Id</label>
+                <label for="signupId">Id(4글자 이상 써주세요)</label>
                 <input class="btn btn-sm btn-white" type="button" v-on:click="dupcheck" value="중복확인"><br>
               </div>
 
               <div class="form-label-group">
-                <input v-model="email" type="email" name="signemail" id="inputEmail" class="form-control1"  placeholder="Email" required autofocus>
-                <label for="inputEmail">Email</label>
+                <input v-model="email" type="signid" name="signemail" id="inputEmail" class="form-control1"  placeholder="아주대 아이디" required autofocus>
+                             <label for="inputEmail">아주대 아이디</label> @ajou.ac.kr
               </div>
 
               <div class="form-label-group">
@@ -99,19 +99,29 @@ export default {
             if(this.Isuniq==-1) alert("중복을 확인하지 않았습니다. 확인하세요")
             else if(this.Isuniq == 1) alert("중복입니다.")
             else if(this.Isuniq==0){
-                this.$http.post(Const.API_SERVER+'/auth/std/signup', {user: this.user, email: this.email}).then((response) => {
-                    if(response.data == '이메일을 확인해주세요.'){
-                        alert(response.data)
-                        this.$router.push('/login');
+                var checkID = this.email.split('')
+                var path = 0
+                for(var i=0; i<checkID.length;i++){
+                    if(checkID[i]=='@'){
+                        alert("아이디만 입력해주세요")
+                        path++
                     }
-                    else
-                    {
-                      alert(response.data)
-                    }
-                },(error)=>{
-                console.log('err')
-                alert(error.response)
-                })
+                }
+                if(path==0){
+                    this.$http.post(Const.API_SERVER+'/auth/std/signup', {user: this.user, email: this.email+'@ajou.ac.kr'}).then((response) => {
+                        if(response.data == '이메일을 확인해주세요.'){
+                            alert(response.data)
+                            this.$router.push('/login');
+                        }
+                        else
+                        {
+                            alert('오류가 발생했습니다. 다시 진행해주세요')
+                        }
+                    },(error)=>{
+                        console.log('err')
+                        alert(error.response)
+                    })
+                }
             }
         },
         dupcheck(){
