@@ -73,31 +73,6 @@
               <button class="btn btn-primary" type="submit">저장하기</button>
             </div>
             </form>
-            <!-- <div id="container">
-              <div>
-                <div class="upload" v-for="(upload, index) in uploads" :key="index">
-                    <div class="ext" :style="{'background-color': upload.color}">
-                      <p>{{upload.ext.toUpperCase()}}</p>
-                    </div>
-                    <div class="upload-details">
-                      <div class="name-container">
-                        <p class="filename">{{upload.name}}</p>
-                        <div>
-                          <p class="filesize">{{upload.size}}</p>
-                          <p @click="removeUpload(index)" class="cancel-btn" v-if="upload.progress !== '100%'">x</p>
-                        </div>
-                      </div>
-                      <div class="upload-bar" v-if="upload.progress !== '100%'">
-                        <div class="upload-progress" :style="{width: upload.progress}"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div @click="openFilePicker" id="uploader">
-                  <p><span>Click</span> to choose a file to upload :)</p>
-                  <input type="file" ref="filepicker" @change="uploadFile" />
-                </div>
-            </div> -->
           </div>
         </div>
       </div>
@@ -123,12 +98,9 @@ import Const from '../../constant/constant';
           user:{},
           review : "",
           reviewTitle : "",
-          // starScore : "",
           cName : "",
           cOccupation : "",
           confirm : 0
-          //uploads: [],
-		      //colors: ["#24bddf", "#5fcc9c", "#6a65d8"],
         }
       },
       components: {
@@ -139,8 +111,6 @@ import Const from '../../constant/constant';
       async created(){
           await this.$http.get(Const.API_SERVER+'/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
               this.user = res.data.user;
-              // console.log("유저입니다 : ",this.user.loginId)
-              // this.loadReview(this.user.loginId)
               return this.user.loginId
           })
           await this.$http.get(Const.API_SERVER+'/admin/recentApplyTerm').then((response) => {
@@ -161,10 +131,11 @@ import Const from '../../constant/constant';
                   this.$router.push({name: "Home"})
               }
           })
+          await this.loadReview();
       },
       methods: {
-          loadReview(loginId){
-              this.$http.get(Const.API_SERVER+'/std/mypage/watchReview',{params:{sLoginID : loginId}}).then((response)=>{
+          loadReview(){
+              this.$http.get(Const.API_SERVER+'/std/mypage/watchReview',{params:{sLoginID : this.user.loginId}}).then((response)=>{
                   if(response.data != '0'){
                       this.confirm = 1
                       this.cName = response.data.cName
