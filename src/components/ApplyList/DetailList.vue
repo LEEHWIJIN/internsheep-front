@@ -1,7 +1,7 @@
 <template>
   <div id="applyList">
     <div class="companyList">
-      <div v-for='sc in selectedCo' :key="sc.cNoticeID">
+      <div v-for='sc in selectedCo'>
         <!-- 파란 사각형 -->
         <div class="topImage shadow-sm" style="line-height:130%">
           <div class="row">
@@ -313,25 +313,6 @@ export default{
         this.onLoad(this.map);
       }
     }
-  },
-  async beforeMount(){
-    await this.$http.get(Const.API_SERVER+'/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
-        this.user = res.data.user;
-        return this.user;
-
-        // var EnglishSearch = sEnglish.EnglishSearch;
-        // var chkboxSr = document.getElementsByName('search').length;
-
-        // var docheck = [];
-        // for(var i=1;i<5;i++){
-          // docheck.push(document.getElementsByName('search')[i].value);
-          // if(EnglishSearch==docheck[i]){
-          // console.log(res.data.user);
-
-          // }
-        // }
-    });
-
   },
   async created(){
     await this.$http.get(Const.API_SERVER+'/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
