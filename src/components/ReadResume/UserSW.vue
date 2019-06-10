@@ -2875,6 +2875,13 @@ import Const from '../../constant/constant';
             };
             var docheck = [];
             for(var i=0;i<chkleng;i++){
+              docheck.push(document.getElementsByName("ph")[i].value);
+              if(Swift==docheck[i]){
+                document.getElementsByName('ph')[i].checked = true;
+              }
+            };
+            var docheck = [];
+            for(var i=0;i<chkleng;i++){
               docheck.push(document.getElementsByName("langC")[i].value);
               if(C==docheck[i]){
                 document.getElementsByName('langC')[i].checked = true;

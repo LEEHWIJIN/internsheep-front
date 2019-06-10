@@ -139,8 +139,8 @@ import Const from '../../constant/constant';
       async created(){
           await this.$http.get(Const.API_SERVER+'/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
               this.user = res.data.user;
-              console.log("유저입니다 : ",this.user.loginId)
-              this.loadReview(this.user.loginId)
+              // console.log("유저입니다 : ",this.user.loginId)
+              // this.loadReview(this.user.loginId)
               return this.user.loginId
           })
           await this.$http.get(Const.API_SERVER+'/admin/recentApplyTerm').then((response) => {
@@ -179,7 +179,6 @@ import Const from '../../constant/constant';
                           document.getElementsByName("rating")[i].checked = true;
                       }
                   }
-                  console.log(this.starScore)
               })
           },
           submitFileAndReview(){
@@ -189,19 +188,6 @@ import Const from '../../constant/constant';
                       var startScoreValue = document.getElementsByName("rating")[i].value;
                   }
               }
-            //   console.log(startScoreValue)
-            // var data = new FormData();
-            // data.append('starScore',this.starScore)
-            //   data.append('reviewContent',this.review)
-            //   data.append('reviewTitle',this.reviewTitle)
-            //   data.append('sLoginID',this.user.loginId)
-            // for (var key of data.keys()) {
-            //   console.log(key);
-            // }
-            // for (var value of data.values()) {
-            //   console.log(value);
-
-            // } //이렇게 key 값과 value값을 확인하면 확인 가능하다.
               if(this.confirm == 0) {
                   this.$http.post(Const.API_SERVER+'/std/mypage/postReview',{sLoginID : this.user.loginId, starScore : startScoreValue, reviewContent : this.review, reviewTitle : this.reviewTitle}).then(
                       response => {

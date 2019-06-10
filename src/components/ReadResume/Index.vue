@@ -73,8 +73,8 @@
       async beforeMount(){
         await this.$http.get(Const.API_SERVER+'/',{'headers': {authorization: `Bearer ${localStorage.token}`}}).then(res => {
           this.user = res.data.user;
-          this.getResume(this.user.loginId);
         });
+        await this.getResume(this.user.loginId);
       },
       // created(){
 
@@ -82,10 +82,14 @@
       methods: {
         getResume(loginId){
           this.$http.get(Const.API_SERVER+'/std/mypage/watchResume',{params:{sLoginID : loginId}}).then(res =>{
+            // console.log(res.data)
             if(res.data != false){//resume가 있을때 읽기전용
-                  this.$store.dispatch('resume/setResumeState',0);
+              // console.log("읽기 전용입니다.")
+              this.$store.dispatch('resume/setResumeState',0);
             }
-            else this.$store.dispatch('resume/setResumeState',5);
+            else{ 
+              // console.log("이력서가 없습니다.")
+              this.$store.dispatch('resume/setResumeState',5);}
           });
 
         },
