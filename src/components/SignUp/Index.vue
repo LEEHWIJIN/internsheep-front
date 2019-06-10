@@ -109,7 +109,7 @@ export default {
                 }
                 if(path==0){
                     this.$http.post(Const.API_SERVER+'/auth/std/signup', {user: this.user, email: this.email+'@ajou.ac.kr'}).then((response) => {
-                        if(response.data == '이메일을 확인해주세요.'){
+                        if(response.data == '인증 메일을 전송 하였습니다. 이메일을 확인해주세요.'){
                             alert(response.data)
                             this.$router.push('/login');
                         }
