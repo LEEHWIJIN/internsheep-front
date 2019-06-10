@@ -120,13 +120,13 @@ import Const from '../../constant/constant';
       name: 'review',
       data() {
         return {
-            user:{},
+          user:{},
           review : "",
-            reviewTitle : "",
-            // starScore : "",
-            cName : "",
-            cOccupation : "",
-            confirm : 0
+          reviewTitle : "",
+          // starScore : "",
+          cName : "",
+          cOccupation : "",
+          confirm : 0
           //uploads: [],
 		      //colors: ["#24bddf", "#5fcc9c", "#6a65d8"],
         }
@@ -163,60 +163,6 @@ import Const from '../../constant/constant';
           })
       },
       methods: {
-          // applyStatus(loginId){
-          //     console.log(this.applyTerm.applySemester)
-          //     this.$http.get(Const.API_SERVER+'/std/mypage/applyStatus',{params:{sLoginID : loginId, applySemester : this.applyTerm.applySemester}}).then((response)=>{
-          //         console.log(response.data)
-          //         if (response.data.YN == 1) {
-
-          //         }
-          //         else {alert('실습을 하지 않으셨습니다.')
-          //             this.$router.push({name: "Home"})
-          //         }
-          //     })
-          // },
-          // getRandomColor() { //나중에 사용할 ux/ui
-          //   const randomIndex = Math.floor(Math.random() * 2);
-          //     return this.colors[randomIndex];
-          // },
-          // removeUpload(index) {
-          //   clearInterval(this.uploads[index].progressTimer);
-          //   this.uploads.splice(index, 1);
-          // },
-          // openFilePicker() {
-          //   this.$refs.filepicker.click();
-          // },
-          // uploadFile() {
-          //   const input = this.$refs.filepicker;
-          //   const file = input.files[0];
-
-          //   const upload = {
-          //     id: this.uploads.length + 1,
-          //     name: file.name,
-          //     size: this.getFileSize(file.size),
-          //     progress: "0%",
-          //     ext: file.name.substring(file.name.lastIndexOf(".") + 1, file.name.length),
-          //     progressTimer: null,
-          //     color: this.getRandomColor()
-          //   };
-          //   console.log(upload)
-          //   this.uploads.push(upload);
-          //   const timer = setInterval(this.updateProgress, 300, upload.id);
-          //   upload.progressTimer = timer;
-          // },
-          // getFileSize(size) {
-          //   if (size < 1000000) return `${Math.ceil(size / 1024)} kb`;
-          //   else if (size >= 1000000) return `${Math.ceil(size / 1024000)} mb`;
-          // },
-          // updateProgress(id) {
-          //   const index = id - 1;
-          //   const progress = Number.parseInt(
-          //     this.uploads[index].progress.replace("%", "")
-          //   );
-
-          //   this.$set(this.uploads[index], "progress", `${progress + 10}%`);
-          //   if (progress + 10 === 100) clearInterval(this.uploads[index].progressTimer);
-          // }
           loadReview(loginId){
               this.$http.get(Const.API_SERVER+'/std/mypage/watchReview',{params:{sLoginID : loginId}}).then((response)=>{
                   if(response.data != '0'){
@@ -259,14 +205,16 @@ import Const from '../../constant/constant';
               if(this.confirm == 0) {
                   this.$http.post(Const.API_SERVER+'/std/mypage/postReview',{sLoginID : this.user.loginId, starScore : startScoreValue, reviewContent : this.review, reviewTitle : this.reviewTitle}).then(
                       response => {
-                        alert("후기가 작성되었습니다.")
+                        alert("후기가 작성되었습니다.");
+                        location.reload();
                       }
                   )
               }
               else{
                   this.$http.post(Const.API_SERVER+'/std/mypage/modifyReview', {sLoginID : this.user.loginId, starScore :  startScoreValue, reviewContent : this.review, reviewTitle : this.reviewTitle}).then(
                       response => {
-                        alert("후기가 수정되었습니다.")
+                        alert("후기가 수정되었습니다.");
+                        location.reload();
                       }
                   )
               }

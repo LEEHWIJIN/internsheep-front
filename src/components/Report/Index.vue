@@ -169,6 +169,7 @@ import VError from './Error.vue'
             else{
                 this.$http.post(Const.API_SERVER+'/std/mypage/modifyReport', data, config).then(
                     response => {
+                        this.fileName = this.uploadFile.name;
                         alert('수정되었습니다.')
                     }
                 )
