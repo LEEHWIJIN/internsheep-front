@@ -84,11 +84,11 @@
           this.$http.get(Const.API_SERVER+'/std/mypage/watchResume',{params:{sLoginID : loginId}}).then(res =>{
             // console.log(res.data)
             if(res.data != false){//resume가 있을때 읽기전용
-              console.log("읽기 전용입니다.")
+              // console.log("읽기 전용입니다.")
               this.$store.dispatch('resume/setResumeState',0);
             }
             else{ 
-              console.log("이력서가 없습니다.")
+              // console.log("이력서가 없습니다.")
               this.$store.dispatch('resume/setResumeState',5);}
           });
 
