@@ -3191,10 +3191,10 @@ import Const from '../../constant/constant';
               cloudLang : this.cloudLang,
               machineLang : this.machineLang,
           };
-          console.log(submit_resume);
+          // console.log(submit_resume);
           this.$store.dispatch('resume/submit_ALL', submit_resume);
           alert("이력서 작성이 완료되었습니다.")
-          // this.$store.dispatch('resume/setResumeState',0);
+          this.$store.dispatch('resume/setResumeState',0);
           location.reload();
         },
         before(){
