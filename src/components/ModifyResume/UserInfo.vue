@@ -247,7 +247,7 @@ import Const from '../../constant/constant';
               this.sHopeTerm = document.getElementsByName('hopeterm')[i].value;
             };
           }
-          console.log(this.imageURL)
+          // console.log(this.imageURL)
           var data =[{
             sEmail: this.sEmail,
             sPhone : this.sPhone,

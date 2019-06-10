@@ -66,7 +66,7 @@ import Const from '../../constant/constant';
                     }
                     this.oldApplySemester = this.currentApplyTerm.applySemester
                     this.oldApplyOrder = this.currentApplyTerm.applyOrder
-                    console.log(response.data)
+                    // console.log(response.data)
                 })
             },
             modifysubmit(){
