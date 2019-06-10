@@ -40,7 +40,7 @@
             </div>
           </div>
         </section>
-        <section class="section1">
+        <section class="bg-light section1">
           <div class="container">
             <div class="row">
               <div class="col-lg-12 mb-5 text-center">

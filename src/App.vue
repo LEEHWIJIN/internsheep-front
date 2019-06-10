@@ -25,5 +25,6 @@
 <style scoped>
 #app {
  /* background-image: url('../public/images/background/banner.png'); */
+ background-color: white;
 }
 </style>
