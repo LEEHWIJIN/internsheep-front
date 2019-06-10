@@ -145,8 +145,8 @@ import myModal from './myModal'
         })
       },
       applyStd(cName){
-        this.$http.get(Const.API_SERVER+'/std/mypage/applyStatus',{params:{sLoginID : this.user.loginId, applySemester : this.applyTerm.applySemester}}).then((response)=>{
-        if(response.data == '합격하거나 심사중 상태'){
+        this.$http.get(Const.API_SERVER+'/std/mypage/applyStatus',{params:{sLoginID : this.user.loginId, applySemester : this.applyTerm.applySemester, applyOrder : this.applyTerm.applyOrder}}).then((response)=>{
+        if(response.data != '지원 이력 없음'){
             alert("이미 지원을 한 상태 입니다.")
         }
         else{
