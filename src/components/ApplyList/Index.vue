@@ -13,13 +13,13 @@
           <div class="companyList col-lg-5">
             <div class="search-container pt-3">
               <form class="search-form pb-2" action="/action_page.php">
-                <input class="search-input" type="text" placeholder="Search" name="search" style="font-size:17px; color: #555555;">
+                <input class="search-input" v-model="searchinput" type="text" placeholder="Search" name="search" style="font-size:17px; color: #555555;">
                 <button class="search-button" type="submit"><i class="fa fa-search" style="font-size:20px; color:#555555;"></i></button>
               </form>
             </div>
             <div class="company-item comanyList">
               <ul class="list-styled list-bordered">
-                  <div v-for='(AL,index) in applylist' :key="AL.cNoticeID" @click="clickCo(index)" v-if="AL.cName.includes(searchinput)||AL.cOccupation.includes(searchinput)||AL.cTag.includes(searchinput)">
+                  <div v-for='(AL,index) in applylist' @click="clickCo(index)" v-if="AL.cName.includes(searchinput)||AL.cOccupation.includes(searchinput)">
                     <div class="zoom">
                       <li><a class="media align-items-center flex-column flex-sm-row">
                         <!-- {{index+1}} -->
@@ -31,7 +31,7 @@
                           <!-- 기업명 -->
                           <span style="font-size: 12px; color: #8b8e93;">{{AL.cName}}<br></span>
                           <!-- 태그 -->
-                          <span style="font-size: 12px; color: #8b8e93;">{{AL.cTag}}<br></span>
+                          <button type="button" style="padding-left: 5px;padding-right: 5px;margin-right: 0px;margin-left: 0px;" class="btn tag-light btn-sm m-1" v-for="(Tag,Tindex) in cTag[0]" v-if="Tag.cName==AL.cName">{{Tag.tag}}</button>
                         </div>
                         <!-- 경쟁률 -->
                         <div class="" style="line-height:120%">
@@ -76,7 +76,7 @@ export default{
       searchinput:"",
       companyReview: [],
       starNum : [],
-
+      cTag:[],
     }
   },
   components: {
@@ -114,6 +114,7 @@ export default{
               cEmail : response.data[i].cEmail,
           })
         }
+        console.log(this.applylist)
          this.clickCo(0);
       })
     },
@@ -166,15 +167,22 @@ export default{
     }
     this.starNum = [zero,first,second,three,four,five]
   },
-  compareDate(){
-    this.$http.get(Const.API_SERVER+'/admin/recentApplyTerm').then((response) => {
+  async compareDate(){
+    await this.$http.get(Const.API_SERVER+'/admin/recentApplyTerm').then((response) => {
       this.applyTerm = {
           applyStart : response.data.applyStart,
           applyEnd : response.data.applyEnd,
           applySemester : response.data.applySemester,
           applyOrder : response.data.applyOrder
       }
-      this.applyList();
+    })
+    await this.applyList();
+    await this.getTag();
+  },
+  getTag(){
+    this.$http.get(Const.API_SERVER+'/co/mypage/getCoTagList').then((response) => {
+      this.cTag.push(response.data);
+      console.log(this.cTag);
     })
   },
 }
@@ -254,4 +262,19 @@ export default{
   transform: scale(1.072) !important; /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
   box-shadow: 0px 2px 8px 0px rgba(51, 77, 128, 0.12) !important;
 }
+
+.tag-light {
+  /* font-weight: bold; */
+  font-size: 10px;
+  background: grey;
+  color: white;
+  border: 0;
+  transition: none;
+}
+
+.tag-light:hover {
+  color: dimgrey;
+  background: silver;
+}
+
 </style>

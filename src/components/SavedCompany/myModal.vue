@@ -69,12 +69,12 @@ $module: 'my-modal';
     max-height: 412px;
     overflow-y: scroll;
   }
-  &__footer {
-    font-size: 28px;
-    font-weight: bold;
-    line-height: 1.29;
-    padding: 16px 16px 0 25px;
-    position: relative;
-  }
+  // &__footer {
+  //   font-size: 28px;
+  //   font-weight: bold;
+  //   line-height: 1.29;
+  //   padding: 16px 16px 0 25px;
+  //   position: relative;
+  // }
 }
 </style>
